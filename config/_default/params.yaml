@@ -8,13 +8,13 @@
 theme: minimal
 day_night: false
 font: native
-font_size: M
+font_size: L
 
 # SEO
 
-site_type: EducationalOrganization
+site_type: Organization
 local_business_type: ''
-org_name: 'Source ......'
+org_name: ''
 description: My research group description.
 twitter: ''
 

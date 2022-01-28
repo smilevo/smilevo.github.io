@@ -3,7 +3,7 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: SMILE Research # Website name
+title: SmileLab Research Group # Website name
 baseurl: '' # Website URL
 copyright: '' # Footer text, e.g. '© {year} Me'
 
@@ -77,3 +77,8 @@ related:
       weight: 100
     - name: categories
       weight: 70
+security:
+  funcs:
+    getenv:
+      - ^HUGO_
+      - ^WC_
