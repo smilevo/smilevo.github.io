@@ -1,37 +1,38 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Mohamed Wiem Mkaouer
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Assistant Professor of Software Engineering Department
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
+- name: Golisano College of Computing and Information Sciences
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include distributed robotics, mobile computing and programmable matter.
 
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Software Quality
+- Systems Refactoring
+- Model-driven Engineering
+- Software Testing
 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: PhD in Computer and Information Science
+    institution: University of Michigan
+    year: 2016
+  - course: MS in Computer Science
+    institution: University of Geneva (Switzerland)
+    year: 2010
+  - course: BS in Computer Science
+    institution: University of Tunis (Tunisia)
+    year: 2007
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -40,16 +41,31 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:test@example.org'
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: 'mailto:mwmvse@rit.edu'
 - icon: github
   icon_pack: fab
   link: https://github.com/gcushen
+- icon: cv
+  icon_pack: ai
+  link: https://claws.rit.edu/photos/getphotoid.php?Client=MarketingCV&UN=mwmvse&HASH=df8ae73f895634f5802b558493bc200338a56d91&T=1642625696
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/my-orcid?orcid=0000-0001-6010-7561
+- icon: google-scholar
+  icon_pack: ai
+  link: https://scholar.google.com/citations?user=UoHgCukAAAAJ&hl=en
+- icon: dblp
+  icon_pack: ai
+  link: https://dblp.org/pid/140/0883.html
+- icon: facebook
+  icon_pack: fab
+  link: https://www.facebook.com/mkaouer
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/mwmkaouer
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/mkaouer/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -68,6 +84,4 @@ user_groups:
 - Researchers
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Mohamed Wiem Mkaouer is currently an Assistant Professor in the Software Engineering Department, in the B. Thomas Golisano College of Computing and Information Sciences at the Rochester Institute of Technology. He received his PhD in 2016 from the University of Michigan-Dearborn under the supervision of Professor Marouane Kessentini. His research interests include software quality, systems refactoring, model-driven engineering and software testing. His current research focuses on the use computational search and evolutionary algorithms to address several software engineering problems such as software quality, software remodularization, software evolution and bug management.
