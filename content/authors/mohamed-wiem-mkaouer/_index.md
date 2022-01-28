@@ -1,6 +1,10 @@
 ---
 # Display name
-title: Mohamed Wiem Mkaouer
+title: "Mohamed Wiem Mkaouer"
+
+# Username (this should match the folder name and the name on publications)
+authors:
+- "mohamed-wiem-mkaouer"
 
 # Is this the primary user of the site?
 superuser: true
