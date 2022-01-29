@@ -4,14 +4,14 @@
 title: Can refactoring be self-affirmed? an exploratory study on how developers document
   their refactoring activities in commit messages
 subtitle: ''
-summary: 'Refactoring is a critical task in software maintenance and is usually performed to enforce best design practices, or to cope with design defects. Previous studies heavily rely on defining a set of keywords to identify refactoring commits from a list of general commits extracted from a small set of software systems. All approaches thus far consider all commits without checking whether refactorings had actually happened or not. In this paper, we aim at exploring how developers document their refactoring activities during the software life cycle. We call such activity Self-Affirmed Refactoring, which is an indication of the developer-related refactoring events in the commit messages. Our approach relies on text mining refactoring-related change messages and identifying refactoring patterns by only considering refactoring commits.We found that (1) developers use a variety of patterns to purposefully target refactoring-related activities; (2) developers tend to explicitly mention the improvement of specific quality attributes and code smells; and (3) commit messages with self-affirmed refactoring patterns tend to have more significant refactoring activity than those without.'
+summary: ''
 authors:
 - Eman AlOmar
 - Mohamed Wiem Mkaouer
 - Ali Ouni
 tags: []
 categories: []
-date: '2019-01-01'
+date: '2019-06-01'
 lastmod: 2022-01-26T01:34:02-05:00
 featured: false
 draft: false
@@ -33,6 +33,6 @@ projects: []
 publishDate: '2022-01-26T06:33:59.848745Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: 'Refactoring is a critical task in software maintenance and is usually performed to enforce best design practices, or to cope with design defects. Previous studies heavily rely on defining a set of keywords to identify refactoring commits from a list of general commits extracted from a small set of software systems. All approaches thus far consider all commits without checking whether refactorings had actually happened or not. In this paper, we aim at exploring how developers document their refactoring activities during the software life cycle. We call such activity Self-Affirmed Refactoring, which is an indication of the developer-related refactoring events in the commit messages. Our approach relies on text mining refactoring-related change messages and identifying refactoring patterns by only considering refactoring commits.We found that (1) developers use a variety of patterns to purposefully target refactoring-related activities; (2) developers tend to explicitly mention the improvement of specific quality attributes and code smells; and (3) commit messages with self-affirmed refactoring patterns tend to have more significant refactoring activity than those without.'
 publication: '*2019 IEEE/ACM 3rd International Workshop on Refactoring (IWoR)*'
 ---
