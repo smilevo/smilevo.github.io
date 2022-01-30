@@ -6,11 +6,11 @@ title: Can refactoring be self-affirmed? an exploratory study on how developers 
 subtitle: ''
 summary: ''
 authors:
-- Eman AlOmar
+- Eman Abdullah AlOmar
 - Mohamed Wiem Mkaouer
 - Ali Ouni
-tags: []
-categories: []
+tags: [refactoring]
+categories: [refactoring-documentation]
 date: '2019-06-01'
 lastmod: 2022-01-26T01:34:02-05:00
 featured: false
