@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: Research interests software refactoring.
+bio: Research interests software refactoring and quality.
 
 interests:
 - Software Quality
