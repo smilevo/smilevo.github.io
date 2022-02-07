@@ -1,10 +1,10 @@
 ---
 # Display name
-title: "Eman Abdullah AlOmar"
+title: "Devan Lad"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "emanabdullah-alomar"
+- "devan-lad"
 
 # Is this the primary user of the site?
 superuser: false
@@ -50,12 +50,15 @@ social:
   link: https://scholar.google.com/citations?user=PERSON-ID
 - icon: github
   icon_pack: fab
-  link: https://github.com/USERNAME
+  link: https://github.com/devandhrew
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/devan-lad/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+- icon: cv
+  icon_pack: ai
+  link: files/Devan_Lad_Resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -66,6 +69,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Group 1
-- Group 2
+- Researchers
 ---
+
+I'm a current Hard of Hearing Software Engineering master's student at Rochester Institute of Technology(RIT). I will be finishing my master's in May 2022. I completed my undergraduates with a Bachelors's in Software engineering at RIT in 2020. My passions are Software Engineering, Games, and Reading. I am currently doing my thesis on Testing Recurrent Neural Networks. I like walking through the process of software development life cycle and learning strategies on how to approach each of the steps. I enjoy a team environment as it makes projects enjoyable and a great learning experience.
