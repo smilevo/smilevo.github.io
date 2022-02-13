@@ -5,7 +5,7 @@
 
 main:
   - name: News
-    url: post
+    url: newsfeed
     weight: 20
   - name: People
     url: people
