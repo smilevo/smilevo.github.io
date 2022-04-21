@@ -1,0 +1,137 @@
+{{ $page := .root }}
+{{ $section := .page }}
+
+<div class="universal-wrapper pt-3">
+    <h1>{{ $section.Params.title }}</h1>
+  </div>
+  
+  <style>
+    .fb-feed-row {
+      margin: 30px -15px !important;
+    }
+  
+    .pagination-container {
+      margin-top: 100px;
+    }
+  </style>
+  
+  
+  <div id="fb-post-container">
+  </div>
+  <div class="pagination-container d-flex justify-content-center">
+    <nav aria-label="Page navigation">
+      <ul class="pagination" id="pagination">
+      </ul>
+    </nav>
+  </div>
+  
+  <script>
+    window.currentPage = 1;
+    window.fbFeedData = '{{ $section.Params.fbFeed }}'.replace(/\[|\]/g, '').split(' ');
+    window.totalItem = fbFeedData.length;
+    window.totalPage = (Math.floor (((fbFeedData.length)/10))) + 1;
+    function fbFeedUpdated() {
+      var HTMLData = "";
+      if (window.fbFeedData.length) {
+        HTMLData += '<div class="container">';
+        HTMLData += '<div class="row fb-feed-row">';
+        for (var itr = 0 + (10 * (window.currentPage - 1)); itr < (totalItem - (10 * (window.currentPage)) > 0 ? (10 * (window.currentPage)) : totalItem); itr = itr + 2) {
+          if (window.fbFeedData[itr]) {
+            HTMLData += `<div class="col"><div class="fb-post" 
+          data-href="${window.fbFeedData[itr]}"
+          data-width="700"></div></div>`;
+          }
+          if (window.fbFeedData[itr + 1]) {
+            HTMLData += `<div class="col"><div class="fb-post" 
+          data-href="${window.fbFeedData[itr + 1]}"
+          data-width="700"></div></div>`;
+          } else {
+            HTMLData += `<div class="col"><div></div></div>`;
+          }
+          if (window.fbFeedData[itr + 2]) {
+            HTMLData += `</div><div class="row fb-feed-row">`;
+          }
+        }
+  
+        HTMLData += '</div></div>';
+        document.getElementById("fb-post-container").innerHTML = HTMLData;
+      }
+    }
+    window.paginationIconUpdate=function(){
+      var activeElem = document.getElementsByClassName("num-item active");
+      activeElem[0].classList.remove("active");
+      var allNumItem = document.getElementsByClassName("num-item");
+      allNumItem[window.currentPage - 1].classList.add("active");
+    };
+    window.paginationUpdate = function (pageNumber) {
+      if(pageNumber != window.currentPage){
+      if (window.totalPage >= pageNumber) {
+        window.currentPage = pageNumber;
+        fbFeedUpdated();
+        paginationIconUpdate();
+        setTimeout(function () {
+          window.FB.XFBML.parse();
+        }, 1000);
+      }
+      }
+    }
+    window.prevPagination = function(){
+      if(window.currentPage > 1){
+        window.currentPage = window.currentPage - 1;
+        fbFeedUpdated();
+        paginationIconUpdate();
+        setTimeout(function () {
+          window.FB.XFBML.parse();
+        }, 1000);
+      }
+    }
+    window.nextPagination = function(){
+      if(window.currentPage < window.totalPage){
+        window.currentPage = window.currentPage + 1;
+        fbFeedUpdated();
+        paginationIconUpdate();
+        setTimeout(function () {
+          window.FB.XFBML.parse();
+        }, 1000);
+      }
+    }
+    window.paginationTabCreation = function (){
+      var root = document.getElementById("pagination");
+  
+      var prevElem = document.createElement("li");
+      prevElem.classList.add("page-item");
+      var prevAnchor = document.createElement("a");
+      prevAnchor.classList.add("page-link");
+      prevAnchor.setAttribute("onclick", "prevPagination()");
+      prevAnchor.innerHTML="Previous";
+      prevElem.append(prevAnchor);
+      root.append(prevElem);
+  
+      for(var itr=1;itr<=totalPage;itr++){
+        prevElem = document.createElement("li");
+        prevElem.classList.add("page-item");
+        prevElem.classList.add("num-item");
+        prevAnchor = document.createElement("a");
+        prevAnchor.classList.add("page-link");
+        if(itr == window.currentPage){
+          prevElem.classList.add("active");
+        }
+        prevAnchor.setAttribute("onclick", `paginationUpdate(${itr})`);
+        prevAnchor.innerHTML=itr;
+        prevElem.append(prevAnchor);
+        root.append(prevElem);
+      }
+  
+      prevElem = document.createElement("li");
+      prevElem.classList.add("page-item");
+      prevAnchor = document.createElement("a");
+      prevAnchor.classList.add("page-link");
+      prevAnchor.setAttribute("onclick", "nextPagination()");
+      prevAnchor.innerHTML="Next";
+      prevElem.append(prevAnchor);
+      root.append(prevElem);    
+    }
+    fbFeedUpdated();
+    paginationTabCreation();
+  </script>
+  <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>

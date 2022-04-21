@@ -1,6 +1,6 @@
 ---
 # Replace <USERNAME> and <WIDGET-NAME> with your GitHub username and widget name, respectively.
-widget: 'github.ravichandranvigneshwaran.news'
+widget: newsfeed
 
 # This file represents a page section.
 headless: true
