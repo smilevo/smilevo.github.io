@@ -24,10 +24,6 @@ module:
   imports:
     - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms
     - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy
-    - path: github.com/ravichandranvigneshwaran/wowchemy-widget-news
-    - path: github.com/ravichandranvigneshwaran/wowchemy-widget-homeCarousel
-    - path: github.com/ravichandranvigneshwaran/wowchemy-widget-homeDescription
-    - path: github.com/ravichandranvigneshwaran/wowchemy-widget-project
   hugoVersion:
     min: '0.84.1'
     extended: true
