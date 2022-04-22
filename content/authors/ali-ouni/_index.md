@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: 
+bio: Research interests software refactoring and quality.
 
 # List each interest with a dash
 interests:
