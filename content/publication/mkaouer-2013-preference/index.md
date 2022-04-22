@@ -5,7 +5,7 @@ title: Preference-based multi-objective software modelling
 subtitle: ''
 summary: ''
 authors:
-- Mohamed W Mkaouer
+- Mohamed Wiem Mkaouer
 - Marouane Kessentini
 - Slim Bechikh
 - Daniel R Tauritz
