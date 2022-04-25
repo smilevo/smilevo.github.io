@@ -47,7 +47,7 @@
     ]
 },
 {
-    "title": "Quality Attributes in Mobile Apps",
+    "title": "Software Refactoring",
     "data": [{
             "title": "Self Affirmed Refactoring",
             "description": "Zilicio, an automation framework that allows inexperienced and experienced developers to build real world apps in minutes for the two dominant mobile platforms. Zilicio creates both Android and iOS versions of a mobile application, which is connected to an automatically generated RESTful backend, all through a friendly end-user web application.",
