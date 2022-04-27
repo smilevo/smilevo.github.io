@@ -1,20 +1,17 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: 'Tracking bad updates in mobile apps: a search-based approach'
+title: 'Improving the prediction of continuous integration build failures using deep learning'
 subtitle: ''
 summary: ''
 authors:
 - Islem Saidani
 - Ali Ouni
-- Md Ahasanuzzaman
-- Safwat Hassan
 - Mohamed Wiem Mkaouer
-- Ahmed E Hassan
 tags: []
 categories: []
-date: '2022-03-26'
-lastmod: 2022-03-26T01:31:43-05:00
+date: '2022-04-29'
+lastmod: 2022-04-29T01:31:43-05:00
 featured: false
 draft: false
 
@@ -32,9 +29,9 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-publishDate: '2022-03-26T06:31:41.642520Z'
+publishDate: '2022-04-29T06:31:41.642520Z'
 publication_types:
 - '2'
 abstract: ''
-publication: '*Empirical Software Engineering*'
+publication: '*Automated Software Engineering*'
 ---
