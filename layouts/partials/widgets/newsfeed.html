@@ -27,9 +27,22 @@
   
   <script>
     window.currentPage = 1;
-    window.fbFeedData = '{{ $section.Params.fbFeed }}'.replace(/\[|\]/g, '').split(' ');
-    window.totalItem = fbFeedData.length;
-    window.totalPage = (Math.floor (((fbFeedData.length)/10))) + 1;
+    
+    function readyCall(){
+      var context = new XMLHttpRequest();
+        context.responseType = 'json';
+        context.open('GET', "/files/fbFeed.json",true);
+        context.onreadystatechange = function () {
+            if (context.readyState === 4) {
+              window.fbFeedData = this.response.data;
+              window.totalItem = fbFeedData.length;
+              window.totalPage = (Math.floor (((fbFeedData.length)/10))) + 1;
+              fbFeedUpdated();
+              paginationTabCreation();
+        }
+        };
+        context.send();
+    }
     function fbFeedUpdated() {
       var HTMLData = "";
       if (window.fbFeedData.length) {
@@ -131,7 +144,6 @@
       prevElem.append(prevAnchor);
       root.append(prevElem);    
     }
-    fbFeedUpdated();
-    paginationTabCreation();
+    readyCall();
   </script>
   <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
