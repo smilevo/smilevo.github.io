@@ -1,7 +1,6 @@
 {{ $page := .root }}
 {{ $section := .page }}
 
-
 <style>
     .carousel-item{
       min-height: 600px !important;
@@ -30,24 +29,9 @@
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     
   
-      <div class="carousel-inner">
-        
-        {{ range $index, $value := $section.Params.fbFeed}}
-        
-        <div class="carousel-item {{ if eq $index 0 }} active {{ end }}">
-          <div class="fb-post" 
-            data-href="{{$value}}"
-            data-height="600"
-            data-width="750"
-            data-lazy="true"></div>
-          </div>
-       
-        {{ end }}
+      <div class="carousel-inner" id="carousel-inner">
       </div>
-      <ol class="carousel-indicators">
-        {{ range $index, $value := $section.Params.fbFeed}}
-        <li data-target="#carouselExampleIndicators" data-slide-to="{{$index}}" {{ if eq $index 0 }}class="active"{{ end }} ></li>
-        {{ end }}
+      <ol class="carousel-indicators" id="carousel-indicators">
       </ol>
       
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -63,7 +47,50 @@
    
     <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
   <script>
-    window.sectionData = '{{ $section.Params }}';
-    window.pageData ='{{ $page.Params }}';
-  
+
+    function readyCall(){
+      var context = new XMLHttpRequest();
+        context.responseType = 'json';
+        context.open('GET', "/files/fbFeed.json",true);
+        context.onreadystatechange = function () {
+            if (context.readyState === 4) {
+              window.fbData = this.response.data;
+              init();
+        }
+        };
+        context.send();
+    }
+
+    function init(){
+    for (var itr=0;itr<5;itr++){
+      var a=document.getElementById("carousel-inner");
+      var parent = document.createElement("div");
+      parent.classList.add("carousel-item");
+      if(itr == 0){
+      parent.classList.add("active");
+      }
+      var child = document.createElement("div");
+      child.classList.add("fb-post");
+      child.setAttribute("data-href", `${window.fbData[itr]}`);
+      child.setAttribute("data-height", `600`);
+      child.setAttribute("data-width", "750");
+      child.setAttribute("data-lazy", `true`);
+      parent.append(child);
+      document.getElementById("carousel-inner").append(parent);
+    }
+    
+    for (var itr=0;itr<5;itr++){
+      
+      var a=document.getElementById("carousel-indicators");
+      var li = document.createElement("li");
+      if(itr == 0){
+      li.classList.add("active");
+      }
+      li.setAttribute("data-target", "#carouselExampleIndicators");
+      li.setAttribute("data-slide-to", `${itr}`);
+      a.append(li);
+
+    }
+  }
+  readyCall();
   </script>
