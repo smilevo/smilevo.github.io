@@ -1,0 +1,75 @@
+[{
+    "title": "Automated Software Engineering",
+    "data": [{
+            "title": "Software Unit Test Smells",
+            "description": "Unit test code, just like regular/production source code, is subject to bad programming practices, known also as anti-patterns, defects and smells [1]. Smells, being symptoms of bad design or implementation decisions, has been proven to be responsible for decreasing the quality of software systems from various aspects, such as making it harder to understand, more complex to maintain, and more prone to errors and bugs [2]. Test smells are defined as bad programming practices in unit test code (such as how test cases are organized, implemented and interact with each other) that indicate potential design problems in the test source code [3], [4], [5], [6]. The objective of this project is to educate developers on the types of unit testing smells that developers typically introduce or encounter when writing unit tests. To this extent, this site provides definitions (along with examples) of unit test smells and an open-source tool to detect the different smell types in the source code.",
+            "imageURL": "https://media.istockphoto.com/vectors/software-engineering-banner-and-icons-vector-id636526232?k=20&m=636526232&s=170667a&w=0&h=Gr4lG-mwzctLhPganTlK5SFaEKKXqjnmPQbWWavBLFA=",
+            "url": "https://www.google.com",
+            "author": [{
+                    "name": "Mohamed Wiem Mkaouer",
+                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+                    "url": "/author/mohamed-wiem-mkaouer/"
+                },
+                {
+                    "name": "Mohamed Wiem Mkaouer",
+                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+                    "url": "/author/mohamed-wiem-mkaouer/"
+                },
+                {
+                    "name": "Mohamed Wiem Mkaouer",
+                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+                    "url": "/author/mohamed-wiem-mkaouer/"
+                }
+            ]
+        },
+        {
+            "title": "Library Migration",
+            "description": "Modern software systems rely heavily on third-party library functionality as a mean to save time, reduce implementation costs, and increase their software quality when offering rich, robust and up-to-date features. However, as software systems evolve frequently, the need for better services and more secure, reliable and quality functionalities causes developers to often replace their old libraries with more recent ones. This process of replacing a library with a different one, while preserving the same functionality, is known as library migration . Learn more about evolution migration that happened over year of development. We track library migration in around 321k open source projects",
+            "imageURL": "https://media.istockphoto.com/vectors/software-engineering-banner-and-icons-vector-id636526232?k=20&m=636526232&s=170667a&w=0&h=Gr4lG-mwzctLhPganTlK5SFaEKKXqjnmPQbWWavBLFA=",
+            "url": "https://www.google.com",
+            "author": [{
+                    "name": "Mohamed Wiem Mkaouer",
+                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+                    "url": "/author/mohamed-wiem-mkaouer/"
+                },
+                {
+                    "name": "Mohamed Wiem Mkaouer",
+                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+                    "url": "/author/mohamed-wiem-mkaouer/"
+                },
+                {
+                    "name": "Mohamed Wiem Mkaouer",
+                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+                    "url": "/author/mohamed-wiem-mkaouer/"
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Software Refactoring",
+    "data": [{
+            "title": "Self Affirmed Refactoring",
+            "description": "Zilicio, an automation framework that allows inexperienced and experienced developers to build real world apps in minutes for the two dominant mobile platforms. Zilicio creates both Android and iOS versions of a mobile application, which is connected to an automatically generated RESTful backend, all through a friendly end-user web application.",
+            "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
+            "url": "https://www.google.com",
+            "author": [{
+                    "name": "Mohamed Wiem Mkaouer",
+                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+                    "url": "/author/mohamed-wiem-mkaouer/"
+                },
+                {
+                    "name": "Eman Abdullah AlOmar",
+                    "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+                    "url": "/author/eman-abdullah-alomar/"
+                },
+                {
+                    "name": "Mohamed Wiem Mkaouer",
+                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
+                    "url": "/author/mohamed-wiem-mkaouer/"
+                }
+            ]
+        }
+    ]
+}
+]
