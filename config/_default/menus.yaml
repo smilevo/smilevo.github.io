@@ -22,3 +22,6 @@ main:
   - name: Project
     url: project
     weight: 70
+  - name: Teaching
+    url: teaching
+    weight: 80
