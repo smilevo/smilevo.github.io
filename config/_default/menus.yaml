@@ -28,3 +28,6 @@ main:
   - name: Code
     url: code
     weight: 90
+  - name: Service
+    url: service
+    weight: 100
