@@ -37,10 +37,10 @@ featured: false
 # Set `preview_only` to `true` to just use the image for thumbnails.
 image:
   placement: 1
-  caption: "Photo by [Geo](https://github.com/gcushen/)"
+  caption: "Photo by Mkaouer"
   focal_point: "Center"
   preview_only: true
-  alt_text: An optional description of the image for screen readers.
+  alt_text: The first slide of the presentation.
 
 
 url_code: ""

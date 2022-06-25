@@ -1,5 +1,5 @@
 ---
-title: Hussein Al-Rubaye Presentation @ ICSR2021
+title: Hussein Al-Rubaye Presentation @ ICSR2020
 
 event: International Conference on Software and Systems Reuse (ICSR)
 event_url: https://icsr2020.wordpress.com
@@ -12,17 +12,17 @@ address:
   postcode: 
   country: United States
 
-summary: Hussein Al-Rubaye Presentation @ International Conference on Software and Systems Reuse (ICSR) 2021.
-abstract: "Hussein Al-Rubaye Presentation @ International Conference on Software and Systems Reuse (ICSR) 2021."
+summary: How Does Library Migration Impact Software Quality and Comprehension? An Empirical Study.
+abstract: "How Does Library Migration Impact Software Quality and Comprehension? An Empirical Study."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2022-04-17T13:00:00Z"
-date_end: "2022-04-17T15:00:00Z"
+date: "2020-12-17T13:00:00Z"
+date_end: "2020-12-17T15:00:00Z"
 all_day: true
 
 # Schedule page publish date (NOT talk date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2020-12-01T00:00:00Z"
 
 authors: []
 tags: []
@@ -30,9 +30,18 @@ tags: []
 # Is this a featured talk? (true/false)
 featured: false
 
+# Featured image
+# To use, place an image named `featured.jpg/png` in your page's folder.
+# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
+# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+# Set `preview_only` to `true` to just use the image for thumbnails.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
-  focal_point: Right
+  placement: 1
+  caption: "Photo by Mkaouer"
+  focal_point: "Center"
+  preview_only: true
+  alt_text: The first slide of the presentation.
+
 
 url_code: ""
 url_pdf: ""
@@ -54,10 +63,4 @@ slides:
 projects:
 ---
 
-Slides can be added in a few ways:
-
-- **Create** slides using Wowchemy's [*Slides*](https://wowchemy.com/docs/managing-content/#create-slides) feature and link using `slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://wowchemy.com/docs/writing-markdown-latex/).
-
-Further event details, including page elements such as image galleries, can be added to the body of this page.
+{{< youtube VfaYeDqMj70 >}}
