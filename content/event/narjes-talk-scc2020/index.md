@@ -33,9 +33,7 @@ tags: []
 # Is this a featured talk? (true/false)
 featured: false
 
-# image:
-#  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
-#  focal_point: Right
+
 
 url_code: ""
 url_pdf: ""
