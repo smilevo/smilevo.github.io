@@ -27,12 +27,11 @@ interests:
 
 education:
   courses:
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
+  - course: PhD in Computer and Information Science
+    institution: Rochester Institute of Technology
+    # year: 2016
+  - course: MS in Computer Science
+    institution: Rochester Institute of Technology
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
