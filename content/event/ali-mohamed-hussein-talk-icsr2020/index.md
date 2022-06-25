@@ -30,9 +30,18 @@ tags: []
 # Is this a featured talk? (true/false)
 featured: false
 
+# Featured image
+# To use, place an image named `featured.jpg/png` in your page's folder.
+# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
+# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+# Set `preview_only` to `true` to just use the image for thumbnails.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/bzdhc5b3Bxs)'
-  focal_point: Right
+  placement: 1
+  caption: "Photo by Mkaouer"
+  focal_point: "Center"
+  preview_only: true
+  alt_text: The first slide of the presentation.
+
 
 url_code: ""
 url_pdf: ""
@@ -54,10 +63,4 @@ slides:
 projects:
 ---
 
-Slides can be added in a few ways:
-
-- **Create** slides using Wowchemy's [*Slides*](https://wowchemy.com/docs/managing-content/#create-slides) feature and link using `slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://wowchemy.com/docs/writing-markdown-latex/).
-
-Further event details, including page elements such as image galleries, can be added to the body of this page.
+{{< youtube cnwV4HQGdRs >}}
