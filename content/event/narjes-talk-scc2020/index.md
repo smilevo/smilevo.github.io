@@ -1,9 +1,6 @@
 ---
 title: Narjes Bessghaier Presentation @ SCC2020
 
-{{< youtube okIvtZslOa8 >}}
-
-
 event: IEEE International Conference on Services Computing (SCC)
 event_url: https://conferences.computer.org/scc/2020/
 
@@ -15,8 +12,8 @@ address:
   postcode: 
   country: United States
 
-summary: SCC2020 On the Diffusion and Impact of Code Smells in Web Applications.
-abstract: "SCC2020 On the Diffusion and Impact of Code Smells in Web Applications."
+summary: On the Diffusion and Impact of Code Smells in Web Applications.
+abstract: "On the Diffusion and Impact of Code Smells in Web Applications."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
