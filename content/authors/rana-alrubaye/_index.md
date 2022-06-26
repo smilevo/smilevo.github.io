@@ -13,8 +13,8 @@ superuser: false
 role: TEALS Teacher Volunteer 
 
 # Organizations/Affiliations
-organizations: Microsoft 
-- name: 
+organizations: 
+- name: Golisano College of Computing and Information Sciences
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
