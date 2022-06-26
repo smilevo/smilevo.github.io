@@ -1,75 +1,229 @@
 [{
-    "title": "Automated Software Engineering",
-    "data": [{
-            "title": "Software Unit Test Smells",
-            "description": "Unit test code, just like regular/production source code, is subject to bad programming practices, known also as anti-patterns, defects and smells [1]. Smells, being symptoms of bad design or implementation decisions, has been proven to be responsible for decreasing the quality of software systems from various aspects, such as making it harder to understand, more complex to maintain, and more prone to errors and bugs [2]. Test smells are defined as bad programming practices in unit test code (such as how test cases are organized, implemented and interact with each other) that indicate potential design problems in the test source code [3], [4], [5], [6]. The objective of this project is to educate developers on the types of unit testing smells that developers typically introduce or encounter when writing unit tests. To this extent, this site provides definitions (along with examples) of unit test smells and an open-source tool to detect the different smell types in the source code.",
-            "imageURL": "https://media.istockphoto.com/vectors/software-engineering-banner-and-icons-vector-id636526232?k=20&m=636526232&s=170667a&w=0&h=Gr4lG-mwzctLhPganTlK5SFaEKKXqjnmPQbWWavBLFA=",
-            "url": "https://www.google.com",
-            "author": [{
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                },
-                {
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                },
-                {
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                }
-            ]
+  "title": "Currrent Teaching",
+  "data": [{
+    "title": "Software Testing (2017-Present)",
+    "description": "Welcome to SE 352 - Software Testing. The purpose of this course is to instruct the students on the importance of software testing, exposure to tools available, and some best practices.",
+    "imageURL": "https://media.istockphoto.com/vectors/software-engineering-banner-and-icons-vector-id636526232?k=20&m=636526232&s=170667a&w=0&h=Gr4lG-mwzctLhPganTlK5SFaEKKXqjnmPQbWWavBLFA=",
+    "url": "https://www.google.com",
+    "author": [{
+      "name": "Mohamed Wiem Mkaouer",
+      "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+      "url": "/author/mohamed-wiem-mkaouer/"
+    },
+      {
+        "name": "Mohamed Wiem Mkaouer",
+        "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+        "url": "/author/mohamed-wiem-mkaouer/"
+      },
+      {
+        "name": "Mohamed Wiem Mkaouer",
+        "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+        "url": "/author/mohamed-wiem-mkaouer/"
+      }
+    ]
+  },
+    {
+      "title": "SWEN 749 - Software Evolution and Re-Engineering (2017-Present)",
+      "description": "This course explores the concepts of software evolution and reengineering and introduces approaches and support tools used to extract the information needed to assess existing software systems. Major maintenance activities are presented including estimating maintenance costs, managing change and predicting maintainability with software quality metrics. Organizational issues relative to product maintenance are discussed. Principles of software reuse and reverse engineering techniques are demonstrated through the use of class activities, team projects and case studies.",
+      "imageURL": "https://media.istockphoto.com/vectors/software-engineering-banner-and-icons-vector-id636526232?k=20&m=636526232&s=170667a&w=0&h=Gr4lG-mwzctLhPganTlK5SFaEKKXqjnmPQbWWavBLFA=",
+      "url": "https://www.google.com",
+      "author": [{
+        "name": "Mohamed Wiem Mkaouer",
+        "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+        "url": "/author/mohamed-wiem-mkaouer/"
+      },
+        {
+          "name": "Mohamed Wiem Mkaouer",
+          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+          "url": "/author/mohamed-wiem-mkaouer/"
         },
         {
-            "title": "Library Migration",
-            "description": "Modern software systems rely heavily on third-party library functionality as a mean to save time, reduce implementation costs, and increase their software quality when offering rich, robust and up-to-date features. However, as software systems evolve frequently, the need for better services and more secure, reliable and quality functionalities causes developers to often replace their old libraries with more recent ones. This process of replacing a library with a different one, while preserving the same functionality, is known as library migration . Learn more about evolution migration that happened over year of development. We track library migration in around 321k open source projects",
-            "imageURL": "https://media.istockphoto.com/vectors/software-engineering-banner-and-icons-vector-id636526232?k=20&m=636526232&s=170667a&w=0&h=Gr4lG-mwzctLhPganTlK5SFaEKKXqjnmPQbWWavBLFA=",
-            "url": "https://www.google.com",
-            "author": [{
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                },
-                {
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                },
-                {
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                }
-            ]
+          "name": "Mohamed Wiem Mkaouer",
+          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+          "url": "/author/mohamed-wiem-mkaouer/"
         }
-    ]
+      ]
+    },
+    {
+      "title": "SWEN 772 - Software Quality (2016-2017)",
+      "description": "This course begins with an exploration of the concepts underlying quality systems and the use of metrics. Students are encouraged to discuss the advantages as well as the limitations of systems and quantitative approaches, with a view to understanding the importance of interpretation in metrics usage and of matching quality systems choices to organizational objectives and culture. They learn the use of modern metrics such as DRE, PCE, COQ/COPQ, reliability objectives and SUMI scores through exercises in analyzing and interpreting charts. This is complemented with a project where they work in teams to design an appropriate quality system for a specific project/software, and discuss the application and analysis of its evaluation experimentation as a means of improving the quality aspects of subject project/design, testing and maintenance of the software. (SWEN 722) Class 3, Credit 3 (Fall).",
+      "imageURL": "https://media.istockphoto.com/vectors/software-engineering-banner-and-icons-vector-id636526232?k=20&m=636526232&s=170667a&w=0&h=Gr4lG-mwzctLhPganTlK5SFaEKKXqjnmPQbWWavBLFA=",
+      "url": "https://www.google.com",
+      "author": [{
+        "name": "Mohamed Wiem Mkaouer",
+        "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+        "url": "/author/mohamed-wiem-mkaouer/"
+      },
+        {
+          "name": "Mohamed Wiem Mkaouer",
+          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+          "url": "/author/mohamed-wiem-mkaouer/"
+        },
+        {
+          "name": "Mohamed Wiem Mkaouer",
+          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+          "url": "/author/mohamed-wiem-mkaouer/"
+        }
+      ]
+    }
+  ]
 },
-{
-    "title": "Software Refactoring",
+  {
+    "title": "Teaching History ",
     "data": [{
-            "title": "Self Affirmed Refactoring",
-            "description": "Zilicio, an automation framework that allows inexperienced and experienced developers to build real world apps in minutes for the two dominant mobile platforms. Zilicio creates both Android and iOS versions of a mobile application, which is connected to an automatically generated RESTful backend, all through a friendly end-user web application.",
-            "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
-            "url": "https://www.google.com",
-            "author": [{
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                },
-                {
-                    "name": "Eman Abdullah AlOmar",
-                    "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/eman-abdullah-alomar/"
-                },
-                {
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                }
-            ]
+      "title": "CIS 375 Software Engineering I | University of Michigan-Dearborn (2014-2016)",
+      "description": "CIS 375 Software Engineering I: this course covers all aspects of software production ranging from the early stage of requirements definition to design and implementation then post-delivery maintenance. Moreover, through group projects, students can obtain hands‐on experiences on entire phases and workflow of the software process.",
+      "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
+      "url": "https://www.google.com",
+      "author": [{
+        "name": "Mohamed Wiem Mkaouer",
+        "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+        "url": "/author/mohamed-wiem-mkaouer/"
+      },
+        {
+          "name": "Eman Abdullah AlOmar",
+          "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+          "url": "/author/eman-abdullah-alomar/"
+        },
+        {
+          "name": "Mohamed Wiem Mkaouer",
+          "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
+          "url": "/author/mohamed-wiem-mkaouer/"
         }
+      ]
+    },
+      {
+        "title": "CIS 350/3501 (Online) Data Structures and Algorithm Analysis | University of Michigan-Dearborn (2016-2016)",
+        "description": "This course focuses on data design and algorithm design. Data design topics include object-oriented discussions of hashing, advanced tree structures, graphs, and sets. Algorithm design topics include the greedy, divide-and-conquer, dynamic programming, backtracking, and branch-and-bound techniques. A significant discussion of algorithm complexity theory, including time and space trade-offs and elementary computability theory is included. Students should be able to use the Standard Template Library. Be able to know when and use various data structures including, hash tables, sets, priority queues, binary trees, search trees and graphs. Be able to design and document small programs. Be able to design algorithms using greedy, divide and conquer, dynamic programming, backtracking and branch and bound techniques.",
+        "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
+        "url": "https://www.google.com",
+        "author": [{
+          "name": "Mohamed Wiem Mkaouer",
+          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+          "url": "/author/mohamed-wiem-mkaouer/"
+        },
+          {
+            "name": "Eman Abdullah AlOmar",
+            "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+            "url": "/author/eman-abdullah-alomar/"
+          },
+          {
+            "name": "Mohamed Wiem Mkaouer",
+            "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
+            "url": "/author/mohamed-wiem-mkaouer/"
+          }
+        ]
+      },
+      {
+        "title": "CIS 405|505 (Online) Algorithm Analysis and Design | University of Michigan-Dearborn (2015-2015)",
+        "description": "This course discusses how to design efficient algorithms. Topics include asymptotic analysis, average-case and worst-case analysis, recurrence analysis, classical algorithms, computational complexity analysis and NP-completeness. In addition, the course investigates approaches to algorithm design including: Greedy Algorithms, divide and conquer, dynamic programming, randomization, and branch and bound. I have not used this book before so all dates are an approximation.",
+        "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
+        "url": "https://www.google.com",
+        "author": [{
+          "name": "Mohamed Wiem Mkaouer",
+          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+          "url": "/author/mohamed-wiem-mkaouer/"
+        },
+          {
+            "name": "Eman Abdullah AlOmar",
+            "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+            "url": "/author/eman-abdullah-alomar/"
+          },
+          {
+            "name": "Mohamed Wiem Mkaouer",
+            "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
+            "url": "/author/mohamed-wiem-mkaouer/"
+          }
+        ]
+      },
+      {
+        "title": "CIS 296 - Java Programming | University of Michigan-Dearborn (2014-2014)",
+        "description": "Gain a solid understanding of the fundamentals of the Java programming language and the Java Core API. Be able to author Java classes, applets, and applications. Gain experience with client-server interaction and multithreading in a Java environment. Use the Abstract Windowing Toolkit to build platform-independent GUIs and animations.",
+        "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
+        "url": "https://www.google.com",
+        "author": [{
+          "name": "Mohamed Wiem Mkaouer",
+          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+          "url": "/author/mohamed-wiem-mkaouer/"
+        },
+          {
+            "name": "Eman Abdullah AlOmar",
+            "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+            "url": "/author/eman-abdullah-alomar/"
+          },
+          {
+            "name": "Mohamed Wiem Mkaouer",
+            "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
+            "url": "/author/mohamed-wiem-mkaouer/"
+          }
+        ]
+      },
+      {
+        "title": "CIS 476 - Software Architecture and Design Patterns | University of Michigan-Dearborn (2013-2013)",
+        "description": "A Design Pattern is a catalogued solution that has been applied and tested in multiple situations to produce well-designed reusable object-oriented software. Designing with reusability is an art, typically acquired after many years of software development, refining and iterating over designed software modules. In this course, each pattern session will start with theoretical understanding followed by practical use. The design patterns will be described using Intent, Motivation, Sample Code, Applicability, Structure, Consequences and its Known Uses. The students will also test their understanding by completing a practical assignment for few very popular design patterns.",
+        "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
+        "url": "https://www.google.com",
+        "author": [{
+          "name": "Mohamed Wiem Mkaouer",
+          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+          "url": "/author/mohamed-wiem-mkaouer/"
+        },
+          {
+            "name": "Eman Abdullah AlOmar",
+            "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+            "url": "/author/eman-abdullah-alomar/"
+          },
+          {
+            "name": "Mohamed Wiem Mkaouer",
+            "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
+            "url": "/author/mohamed-wiem-mkaouer/"
+          }
+        ]
+      },
+      {
+        "title": "CIS 150 - Introduction to Computer Science (Lab Assistant) | University of Michigan-Dearborn (2013-2015)",
+        "description": "This course provides a foundation for further studies in computer and information science. It emphasizes a structured approach to problem solving and algorithm development. Topics include principles of program design, coding, debugging, testing and documentation. Students are introduced to the Unified Modeling Language for requirements analysis using use-cases and activity diagrams, an object-oriented programming language (C++), and the fundamentals of computer hardware, system software and components. The course will consist of three lecture hours and one two-hour laboratory. .",
+        "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
+        "url": "https://www.google.com",
+        "author": [{
+          "name": "Mohamed Wiem Mkaouer",
+          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+          "url": "/author/mohamed-wiem-mkaouer/"
+        },
+          {
+            "name": "Eman Abdullah AlOmar",
+            "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+            "url": "/author/eman-abdullah-alomar/"
+          },
+          {
+            "name": "Mohamed Wiem Mkaouer",
+            "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
+            "url": "/author/mohamed-wiem-mkaouer/"
+          }
+        ]
+      },
+      {
+        "title": "CIS 315 - Web Development | University of Tunis (Lab Assisitant) (2009-2010)",
+        "description": "This course is about the web development using HTML, CSS and PHP. This course will introduce the fundamentals of the web and get the students familiar with the 3-tier web architectures. Recommended for student who want to know and practice the latest web development technologies.",
+        "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
+        "url": "https://www.google.com",
+        "author": [{
+          "name": "Mohamed Wiem Mkaouer",
+          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+          "url": "/author/mohamed-wiem-mkaouer/"
+        },
+          {
+            "name": "Eman Abdullah AlOmar",
+            "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+            "url": "/author/eman-abdullah-alomar/"
+          },
+          {
+            "name": "Mohamed Wiem Mkaouer",
+            "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
+            "url": "/author/mohamed-wiem-mkaouer/"
+          }
+        ]
+      }
     ]
-}
+  }
 ]
