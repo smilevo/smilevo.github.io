@@ -139,18 +139,9 @@
       {
         "title": "CIS 296 - Java Programming | University of Michigan-Dearborn (2014-2014)",
         "description": "Gain a solid understanding of the fundamentals of the Java programming language and the Java Core API. Be able to author Java classes, applets, and applications. Gain experience with client-server interaction and multithreading in a Java environment. Use the Abstract Windowing Toolkit to build platform-independent GUIs and animations.",
-        "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
-        "url": "https://www.google.com",
-        "author": [{
-          "name": "Mohamed Wiem Mkaouer",
-          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-          "url": "/author/mohamed-wiem-mkaouer/"
-        },
-          {
-            "name": "Eman Abdullah AlOmar",
-            "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-            "url": "/author/eman-abdullah-alomar/"
-          },
+        "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/teaching/java.jpg",
+        "url": "http://catalog.umd.umich.edu/undergraduate/coursesaz/cis/",
+        "author": [
           {
             "name": "Mohamed Wiem Mkaouer",
             "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
@@ -161,18 +152,9 @@
       {
         "title": "CIS 476 - Software Architecture and Design Patterns | University of Michigan-Dearborn (2013-2013)",
         "description": "A Design Pattern is a catalogued solution that has been applied and tested in multiple situations to produce well-designed reusable object-oriented software. Designing with reusability is an art, typically acquired after many years of software development, refining and iterating over designed software modules. In this course, each pattern session will start with theoretical understanding followed by practical use. The design patterns will be described using Intent, Motivation, Sample Code, Applicability, Structure, Consequences and its Known Uses. The students will also test their understanding by completing a practical assignment for few very popular design patterns.",
-        "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
-        "url": "https://www.google.com",
-        "author": [{
-          "name": "Mohamed Wiem Mkaouer",
-          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-          "url": "/author/mohamed-wiem-mkaouer/"
-        },
-          {
-            "name": "Eman Abdullah AlOmar",
-            "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-            "url": "/author/eman-abdullah-alomar/"
-          },
+        "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/teaching/dpatterns.jpg",
+        "url": "http://catalog.umd.umich.edu/undergraduate/coursesaz/cis/",
+        "author": [
           {
             "name": "Mohamed Wiem Mkaouer",
             "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
