@@ -205,23 +205,13 @@
       {
         "title": "CIS 315 - Web Development | University of Tunis (Lab Assisitant) (2009-2010)",
         "description": "This course is about the web development using HTML, CSS and PHP. This course will introduce the fundamentals of the web and get the students familiar with the 3-tier web architectures. Recommended for student who want to know and practice the latest web development technologies.",
-        "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
-        "url": "https://www.google.com",
+        "imageURL": "https://github.com/smilevo/smilevo.github.io/blob/574492889652c9976c3243affa3542accbd1a16c/images/teaching/web-dev.jpg",
+        "url": "https://isg.rnu.tn/files/mastere/Mastere%20de%20recherche/Maquette_MR_ESE.pdf",
         "author": [{
           "name": "Mohamed Wiem Mkaouer",
           "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
           "url": "/author/mohamed-wiem-mkaouer/"
-        },
-          {
-            "name": "Eman Abdullah AlOmar",
-            "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-            "url": "/author/eman-abdullah-alomar/"
-          },
-          {
-            "name": "Mohamed Wiem Mkaouer",
-            "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
-            "url": "/author/mohamed-wiem-mkaouer/"
-          }
+        } 
         ]
       }
     ]
