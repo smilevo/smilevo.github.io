@@ -183,7 +183,7 @@
       {
         "title": "CIS 150 - Introduction to Computer Science (Lab Main Instructor) | University of Michigan-Dearborn (2013-2015)",
         "description": "This course provides a foundation for further studies in computer and information science. It emphasizes a structured approach to problem solving and algorithm development. Topics include principles of program design, coding, debugging, testing and documentation. Students are introduced to the Unified Modeling Language for requirements analysis using use-cases and activity diagrams, an object-oriented programming language (C++), and the fundamentals of computer hardware, system software and components. The course will consist of three lecture hours and one two-hour laboratory. .",
-        "imageURL": "https://github.com/smilevo/smilevo.github.io/blob/main/images/teaching/cpluscplus.jpg",
+        "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/teaching/cpluscplus.jpg",
         "url": "http://catalog.umd.umich.edu/undergraduate/coursesaz/cis/",
         "author": [{
           "name": "Mohamed Wiem Mkaouer",
@@ -195,7 +195,7 @@
       {
         "title": "CIS 315 - Web Development | University of Tunis (Lab Assisitant) (2009-2010)",
         "description": "This course is about the web development using HTML, CSS and PHP. This course will introduce the fundamentals of the web and get the students familiar with the 3-tier web architectures. Recommended for student who want to know and practice the latest web development technologies.",
-        "imageURL": "https://github.com/smilevo/smilevo.github.io/blob/574492889652c9976c3243affa3542accbd1a16c/images/teaching/web-dev.jpg",
+        "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/teaching/web-dev.jpg",
         "url": "https://isg.rnu.tn/files/mastere/Mastere%20de%20recherche/Maquette_MR_ESE.pdf",
         "author": [{
           "name": "Mohamed Wiem Mkaouer",
