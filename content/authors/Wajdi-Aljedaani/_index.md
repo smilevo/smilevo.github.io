@@ -1,6 +1,6 @@
 ---
 # Display name
-title: "Wajdi Aljedaaniiiiii"
+title: "Wajdi Aljedaani"
 
 # Username (this should match the folder name and the name on publications)
 authors:
