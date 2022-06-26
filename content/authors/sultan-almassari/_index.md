@@ -13,9 +13,9 @@ superuser: false
 role: QA Team Lead
 
 # Organizations/Affiliations
-organizations: Saudi Authority for Data and Artificial Intelligence
+organizations: 
 
-- name: 
+- name: Saudi Authority for Data and Artificial Intelligence
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
