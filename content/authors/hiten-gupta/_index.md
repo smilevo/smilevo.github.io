@@ -1,20 +1,20 @@
 ---
 # Display name
-title: "Rana Alrubaye"
+title: "Hiten Gupta"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "rana-alrubaye"
+- "hiten-gupta"
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: TEALS Teacher Volunteer 
+role: Software Developer 2
 
 # Organizations/Affiliations
-organizations: Microsoft 
-- name: 
+organizations:
+- name: IBM 
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -22,14 +22,14 @@ bio:
 
 # List each interest with a dash
 interests:
-- Interest 1
-- Interest 2
+- Software Engineering
 
 education:
   courses:
   - course: MS in Software Engineering
     institution: Rochester Institute of Technology
-    year: 2021
+    # year: 2016
+
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
@@ -38,12 +38,15 @@ education:
 social:
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/rana90alrubaye/
+  link: https://www.linkedin.com/in/hiten1928/
+
+
+  
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
 #   icon_pack: ai
-#   link: files/cv.pdf
+#   link: files/AlOmar_resume.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -57,4 +60,3 @@ user_groups:
 - Researchers
 ---
 
-Rana Alrubaye received her bachelor's degree from the University of Diyala College of Engineering in the computer engineering department.  Currently, she is a master student at software engineering in Rochester Institute of Technology in Rochester. Her research interest is API migration, machine learning, modeling, data mining. She worked as a research assistant in a different research area for three semesters.

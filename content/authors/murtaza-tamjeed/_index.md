@@ -1,20 +1,20 @@
 ---
 # Display name
-title: "Hussein Alrubaye"
+title: "Murtaza Tamjeed"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "hussein-alrubaye"
+- "murtaza-tamjeed"
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: Senior Software Engineer
+role: PhD student in Software Engineering Department
 
 # Organizations/Affiliations
 organizations:
-- name: Microsoft
+- name: Golisano College of Computing and Information Sciences
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -23,8 +23,7 @@ bio:
 # List each interest with a dash
 interests:
 - Software Engineering
-- Machine Learning
-- Deep Learning
+- Software Accessibility
 
 education:
   courses:
@@ -42,25 +41,24 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:hussien89aa@outlook.com'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:mt1256@g.rit.edu'  # For a direct email link, use "mailto:test@example.org".
 - icon: github
   icon_pack: fab
-  link: https://github.com/hussien89aa
-- icon: google-scholar
+  link: https://github.com/murtazatamjeed
+- icon: dblp
   icon_pack: ai
-  link: https://scholar.google.com/citations?user=Qq_cPWUAAAAJ&hl=en
+  link: https://dblp.org/pid/292/6208.html
 - icon: researchgate
   icon_pack: ai
-  link: https://www.researchgate.net/profile/Hussein-Alrubaye
+  link: https://www.researchgate.net/profile/Murtaza-Tamjeed
 - icon: twitter
   icon_pack: fab
-  link: https://mobile.twitter.com/husseinphd20
+  link: https://mobile.twitter.com/murtazatamjeed
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/halrubaye/
+  link: https://www.linkedin.com/in/murtaza-tamjeed/
 # - icon: envelope
-#   icon_pack: fas
-#   link: 'https://people.rit.edu/eaa6167/'
+
   
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -80,4 +78,3 @@ user_groups:
 - Researchers
 ---
 
-Hussein Alrubaye working as a Senior Software Engineer at Microsoft Corporation. I am working on research in machine learning and AI to build tools and algorithms that automate the process of API Migration. I have 8 successful apps in Google and iOS stores with millions of users who are using my apps. Also, I am working as software developer for 9 years with .NET, C++, and web security, and have a successfully paid tutorial in Udemy. Also, I got Microsoft Most Valuable Professional.

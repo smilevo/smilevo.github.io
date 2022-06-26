@@ -1,20 +1,20 @@
 ---
 # Display name
-title: "Hussein Alrubaye"
+title: "Deema ALShoaibi"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "hussein-alrubaye"
+- "deema-aLShoaibi"
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: Senior Software Engineer
+role: PhD student in Software Engineering Department
 
 # Organizations/Affiliations
 organizations:
-- name: Microsoft
+- name: Golisano College of Computing and Information Sciences
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -22,18 +22,16 @@ bio:
 
 # List each interest with a dash
 interests:
-- Software Engineering
-- Machine Learning
-- Deep Learning
+- Performance Regression
+- Regression Testing
+- Search Based Software Engineering
 
 education:
   courses:
   - course: PhD in Computer and Information Science
     institution: Rochester Institute of Technology
     # year: 2016
-  - course: MS in Software Engineering
-    institution: Rochester Institute of Technology
-    # year: 2010
+
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
@@ -42,22 +40,22 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:hussien89aa@outlook.com'  # For a direct email link, use "mailto:test@example.org".
-- icon: github
-  icon_pack: fab
-  link: https://github.com/hussien89aa
+  link: 'mailto:da3352@g.rit.edu'  # For a direct email link, use "mailto:test@example.org".
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.com/citations?user=Qq_cPWUAAAAJ&hl=en
+  link: https://scholar.google.com/citations?user=d4XPjhkAAAAJ&hl=en
+- icon: dblp
+  icon_pack: ai
+  link: https://dblp.org/pid/247/6457.html
 - icon: researchgate
   icon_pack: ai
-  link: https://www.researchgate.net/profile/Hussein-Alrubaye
+  link: https://www.researchgate.net/profile/Deema-Alshoaibi
 - icon: twitter
   icon_pack: fab
-  link: https://mobile.twitter.com/husseinphd20
-- icon: linkedin
-  icon_pack: fab
-  link: https://www.linkedin.com/in/halrubaye/
+  link: https://twitter.com/dndoor
+# - icon: linkedin
+#   icon_pack: fab
+#   link: https://www.linkedin.com/in/mkaouer/
 # - icon: envelope
 #   icon_pack: fas
 #   link: 'https://people.rit.edu/eaa6167/'
@@ -80,4 +78,3 @@ user_groups:
 - Researchers
 ---
 
-Hussein Alrubaye working as a Senior Software Engineer at Microsoft Corporation. I am working on research in machine learning and AI to build tools and algorithms that automate the process of API Migration. I have 8 successful apps in Google and iOS stores with millions of users who are using my apps. Also, I am working as software developer for 9 years with .NET, C++, and web security, and have a successfully paid tutorial in Udemy. Also, I got Microsoft Most Valuable Professional.
