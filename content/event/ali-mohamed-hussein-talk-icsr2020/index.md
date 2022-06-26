@@ -40,7 +40,7 @@ image:
   caption: "Photo by Mkaouer"
   focal_point: "Center"
   preview_only: true
-  alt_text: The first slide of the presentation.
+  alt_text: The first slide of the tutorial presentation.
 
 
 url_code: ""
