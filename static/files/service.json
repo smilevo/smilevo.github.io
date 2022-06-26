@@ -1,16 +1,18 @@
-[{
-    "Date": "04-April-2022",
-    "Content":"IEEE/ACM International Conference on Program Comprehension (ICPC)  <a href='https://magazine.polymtl.ca/polytechnique-montreal/magazine-poly-printemps-2022/' target='_blank'> Happy reading </a>"
-},
-{
-    "Date": "04-April-2022",
-    "Content":"Curious about what we do for Trustworthy AI? Check out my interview (in french) in Polytechnique Magazine :  <a href='https://magazine.polymtl.ca/polytechnique-montreal/magazine-poly-printemps-2022/' target='_blank'> Happy reading </a>"
-},
-{
-    "Date": "04-April-2022",
-    "Content":"Curious about what we do for Trustworthy AI? Check out my interview (in french) in Polytechnique Magazine :  <a href='https://magazine.polymtl.ca/polytechnique-montreal/magazine-poly-printemps-2022/' target='_blank'> Happy reading </a>"
-},
-{
-    "Date": "04-April-2022",
-    "Content":"Curious about what we do for Trustworthy AI? Check out my interview (in french) in Polytechnique Magazine :  <a href='https://magazine.polymtl.ca/polytechnique-montreal/magazine-poly-printemps-2022/' target='_blank'> Happy reading </a>"
-}]
+[
+    {
+        "Date": "01-January-2022",
+        "Content": "IEEE/ACM International Conference on Program Comprehension (ICPC)  <a href='https://conf.researchr.org/committee/icpc-2022/icpc-2022-research-program-committee' target='_blank'> Link </a>"
+    },
+    {
+        "Date": "01-January-2022",
+        "Content": "International Conference on the Applications of Evolutionary Computation (EvoAPP)  <a href='http://www.evostar.org/2022/evoapps/' target='_blank'> Link </a>"
+    },
+    {
+        "Date": "01-January-2022",
+        "Content": "IEEE/ACM International Conference on Mobile Software Engineering and Systems (MobileSoft)  <a href='https://conf.researchr.org/committee/mobilesoft-2022/mobilesoft-2022-technical-papers-committee' target='_blank'> Link </a>"
+    },
+    {
+        "Date": "01-January-2022",
+        "Content": "IEEE/ACM International Conference on Software Engineering (ICSE-SEET)  <a href='https://conf.researchr.org/committee/icse-2022/icse-2022-seet-program-committee' target='_blank'> Link </a>"
+    }
+]
