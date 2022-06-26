@@ -181,25 +181,15 @@
         ]
       },
       {
-        "title": "CIS 150 - Introduction to Computer Science (Lab Assistant) | University of Michigan-Dearborn (2013-2015)",
+        "title": "CIS 150 - Introduction to Computer Science (Lab Main Instructor) | University of Michigan-Dearborn (2013-2015)",
         "description": "This course provides a foundation for further studies in computer and information science. It emphasizes a structured approach to problem solving and algorithm development. Topics include principles of program design, coding, debugging, testing and documentation. Students are introduced to the Unified Modeling Language for requirements analysis using use-cases and activity diagrams, an object-oriented programming language (C++), and the fundamentals of computer hardware, system software and components. The course will consist of three lecture hours and one two-hour laboratory. .",
-        "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
-        "url": "https://www.google.com",
+        "imageURL": "https://github.com/smilevo/smilevo.github.io/blob/b291c5b6ee7c978a9785c0ad716f3e27d17ba68a/images/teaching/cpluscplus.jpg",
+        "url": "http://catalog.umd.umich.edu/undergraduate/coursesaz/cis/",
         "author": [{
           "name": "Mohamed Wiem Mkaouer",
           "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
           "url": "/author/mohamed-wiem-mkaouer/"
-        },
-          {
-            "name": "Eman Abdullah AlOmar",
-            "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-            "url": "/author/eman-abdullah-alomar/"
-          },
-          {
-            "name": "Mohamed Wiem Mkaouer",
-            "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
-            "url": "/author/mohamed-wiem-mkaouer/"
-          }
+        }
         ]
       },
       {
