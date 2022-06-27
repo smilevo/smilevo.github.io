@@ -389,6 +389,42 @@
     },
     {
         "Date": "01-01-2015",
-        "Content": "  <a href='' target='_blank'> Link </a>"
+        "Content": "Web chair of the North American Search-Based Software Engineering Symposium (NasBASE)  <a href='http://www.nasbase.org/?fbclid=IwAR2u_lO6lqVvscMpp0mOXXhGu0fUwP1jGRM9DHytL_JmPPgKJ-rY2fe_bTs' target='_blank'> Link </a>"
+    },
+    {
+        "Date": "01-01-2015",
+        "Content": "North American Search-Based Software Engineering Symposium (NasBASE)  <a href=''http://www.nasbase.org/?fbclid=IwAR2u_lO6lqVvscMpp0mOXXhGu0fUwP1jGRM9DHytL_JmPPgKJ-rY2fe_bTs' target='_blank'> Link </a>"
+    },
+    {
+        "Date": "01-01-2015",
+        "Content": "Journal of Software Evolution and Process  <a href='https://onlinelibrary.wiley.com/journal/20477481' target='_blank'> Link </a>"
+    },
+    {
+        "Date": "01-01-2015",
+        "Content": "International Journal of Pattern Recognition and Artificial Intelligence  <a href='https://www.worldscientific.com/worldscinet/ijprai' target='_blank'> Link </a>"
+    },
+    {
+        "Date": "01-01-2015",
+        "Content": "International Journal of modeling and simulation  <a href='https://www.tandfonline.com/toc/tjms20/current' target='_blank'> Link </a>"
+    },
+    {
+        "Date": "01-01-2015",
+        "Content": "Journal of Engineering Research and Technology  <a href='https://journals.iugaza.edu.ps/index.php/JERT' target='_blank'> Link </a>"
+    },
+    {
+        "Date": "01-01-2015",
+        "Content": "Journal of Automated Software Engineering  <a href='https://www.springer.com/journal/10515' target='_blank'> Link </a>"
+    },
+    {
+        "Date": "01-01-2015",
+        "Content": "Journal of Scientific Research  <a href='https://www.banglajol.info/index.php/JSR' target='_blank'> Link </a>"
+    },
+    {
+        "Date": "01-01-2014",
+        "Content": "Journal of Systems and Software  <a href='https://www.journals.elsevier.com/journal-of-systems-and-software' target='_blank'> Link </a>"
+    },
+    {
+        "Date": "01-01-2014",
+        "Content": "Journal of Software Engineering and Applications  <a href='https://www.scirp.org/journal/journalarticles.aspx?journalid=45' target='_blank'> Link </a>"
     }
 ]
