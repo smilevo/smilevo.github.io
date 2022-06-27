@@ -85,7 +85,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Principal Investigators
 ---
 
 Mohamed Wiem Mkaouer is currently an Assistant Professor in the Software Engineering Department, in the B. Thomas Golisano College of Computing and Information Sciences at the Rochester Institute of Technology. He received his PhD in 2016 from the University of Michigan-Dearborn under the supervision of Professor Marouane Kessentini. His research interests include software quality, systems refactoring, model-driven engineering and software testing. His current research focuses on the use computational search and evolutionary algorithms to address several software engineering problems such as software quality, software remodularization, software evolution and bug management.
