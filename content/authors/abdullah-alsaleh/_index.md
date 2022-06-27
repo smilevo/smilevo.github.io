@@ -69,9 +69,9 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Alumni
 ---
 
-This is Abdullah Alsaleh a data science master's student from Saudi Arabia, currently in Rochester, NY.
+Abdullah Alsaleh a data science master's student from Saudi Arabia, currently in Rochester, NY.
 I have a bachelor's degree in information technology, and my main areas of interest are Data applications and Web development. Before I decided to pursue my master's degree in data science at Rochester Institute of Technology(RIT), I have worked as a web developer and system administrator in the Education sector for almost 3 years.
 Over the years, my passion for gaining experience, enhancing my skills, and expanding my knowledge in data and analytics of a bigdata have evolved. I always believe in data science as one of the most important success factors in all fields

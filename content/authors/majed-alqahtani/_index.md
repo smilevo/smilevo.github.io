@@ -69,7 +69,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Alumni
 ---
 
 Majed from Saudi Arabia, a master's graduate student, I have worked as a web developer (front-end, back-end) as a freelance for a year and a half. In my spare time, I like to listen to podcasts interested in industries and aerospace, in addition to playing physical games such as soccer.

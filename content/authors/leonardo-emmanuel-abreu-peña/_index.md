@@ -69,7 +69,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Alumni
 ---
 
 Leonardo Emmanuel Abreu Peña was born in Santo Domingo, Dominican Republic. Currently pursuing his software engineering master’s degree at Rochester Institute of Technology. During his time at RIT, he worked as a software developer at the Golisano College of Computer And Information Science, as a graduate research assistant at the Software Design and Productivity Laboratory, and as a Teaching Assistant of the Software Engineering for Data Science course.
