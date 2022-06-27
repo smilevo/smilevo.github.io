@@ -69,7 +69,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Alumni
 ---
 
 I am currently a student pursuing my Masters Degree in Software Engineering in Rochester Institute of Technology. I completed my undergrad degree in Computer Science in 2016. I have 2.5 years of work experience as a Quality Assurance Engineer, including automation of testing and system performance evaluation. My interests lie mostly in Software Development and Data Science, having worked in projects pertaining to both areas.

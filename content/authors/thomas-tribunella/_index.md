@@ -70,7 +70,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Alumni
 ---
 
 Thomas Tribunella completed his bachelor's degree in Computer and Information Science at Niagara University and is currently pursuing his master's degree in Software Engineering at RIT. He has experience with web development and traditional software development.  His research interests include API migration and bug report classification. He also has published one paper, "Understanding Digital and Crypto Currency ", at the  Business Research Consortium of Western New York conference.

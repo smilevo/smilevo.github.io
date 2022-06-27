@@ -69,7 +69,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Alumni
 ---
 
 Passionate about leveraging Data Science and its branches to bring about a new take on Software Engineering. I am very keen when it comes to both the practices and principles of software engineering and the out-of-box thinking solution that data science brings with information. Strongly feel that today having only one side of knowledge isn't enough and want to be able to imbibe the best of both worlds and bring about a breed of smarter technology-based solutions and thinking. Topics, I can always be approached for are Data Analytics, Machine Learning, Object-Oriented Software Programming. Would love to connect and collaborate with anyone with a passion for technology and a learning curve.

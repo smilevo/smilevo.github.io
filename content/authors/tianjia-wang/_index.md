@@ -66,7 +66,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Alumni
 ---
 
 I'm a second-year master student in software engineering at RIT. My research interests are in software reuse and natural language processing. My current work is on studying how developers refactor their code to improve code reusability. In my free time, I enjoy listening to music, traveling and hiking. 

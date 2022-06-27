@@ -91,7 +91,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Principal Investigators
 ---
 
 Eman Abdullah AlOmar is a Ph.D. candidate in Computing and Information Sciences at Rochester Institute of Technology (RIT). She has an M.Sc. in Software Engineering from RIT and a B.Sc. in Computer Science. During her master's, she was a graduate research assistant at RIT, in which she has been researching about Software Refactoring. Her main research interests are at the intersection of Software Engineering and Artificial Intelligence. Specifically, Software Maintenance, Software Refactoring, Empirical Software Engineering, Mining Software Repositories, Natural Language Processing, Technical Debt, and Machine Learning.

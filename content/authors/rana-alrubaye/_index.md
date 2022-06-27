@@ -54,7 +54,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Alumni
 ---
 
 Rana Alrubaye received her bachelor's degree from the University of Diyala College of Engineering in the computer engineering department.  Currently, she is a master student at software engineering in Rochester Institute of Technology in Rochester. Her research interest is API migration, machine learning, modeling, data mining. She worked as a research assistant in a different research area for three semesters.

@@ -61,7 +61,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Alumni
 ---
 
 Sultan Almassari is a master student in Software Engineering at Rochester Institute of Technology (RIT). He has had a quality assurance experience at Elm information security for three years, Saudi Arabia. He works as a research assistant at RIT. His research interests are quality assurance, refactoring, text mining, and machine learning.
