@@ -69,7 +69,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- MSC Students
+- MSc Students
 ---
 
 Kemar James is currently Software Engineering Masters student ad Rochester Institute of Technology.  Currently Kemar’s interest lies in understanding various Data Science technique and applying them to areas of Software Engineering. 
