@@ -12,8 +12,8 @@ address:
   postcode: 
   country: United States
 
-summary: Third-Party Software Library Reuse From Adoption to Migration Presentation.
-abstract: "Third-Party Software Library Reuse From Adoption to Migration Presentation."
+summary: Interim Presentation of The Curators
+abstract: "Interim Presentation of The Curators"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
