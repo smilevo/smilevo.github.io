@@ -1,8 +1,8 @@
 ---
 title: Wajdi Aljedaani Presentation @CHI2020
 
-event: event 1
-event_url: https://icsr2020.wordpress.com/
+event: Conference on Human Factors in Computing Systems 2020
+event_url: https://chi2020.acm.org/
 
 location: Virtual Conference
 address:
