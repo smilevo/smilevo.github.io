@@ -12,8 +12,8 @@ address:
   postcode: 
   country: United States
 
-summary: Finding the Needle in a Haystack: On the Automatic Identification of Accessibility User Reviews.
-abstract: "Finding the Needle in a Haystack: On the Automatic Identification of Accessibility User Reviews."
+summary: Third-Party Software Library Reuse From Adoption to Migration Presentation.
+abstract: "Third-Party Software Library Reuse From Adoption to Migration Presentation." 
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
