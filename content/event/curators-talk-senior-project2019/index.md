@@ -1,12 +1,12 @@
 ---
 title: Curators Senior Design Project Presentation
 
-event: event 4
-event_url: https://icsr2020.wordpress.com/
+event: RIT Software Engineering Senior Design Project
+event_url: https://seniorproject.se.rit.edu/
 
-location: Virtual Conference
+location: Golisano Building 70
 address:
-  street: Zoom
+  street:
   city: 
   region: 
   postcode: 
