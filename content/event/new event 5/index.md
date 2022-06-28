@@ -12,8 +12,8 @@ address:
   postcode: 
   country: United States
 
-summary: Hussein Research Potential Assessment
-abstract: "Hussein Research Potential Assessment"
+summary: Hussein Research Potential Assessment.
+abstract: "Hussein Research Potential Assessment."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

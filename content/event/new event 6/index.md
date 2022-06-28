@@ -12,8 +12,8 @@ address:
   postcode: 
   country: United States
 
-summary: Meteor interim senior design presentation
-abstract: "Meteor interim senior design presentation"
+summary: Meteor interim senior design presentation.
+abstract: "Meteor interim senior design presentation."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

@@ -12,8 +12,8 @@ address:
   postcode: 
   country: United States
 
-summary: 2021 International Workshop on Refactoring (IWoR)
-abstract: "2021 International Workshop on Refactoring (IWoR)"
+summary: 2021 International Workshop on Refactoring (IWoR).
+abstract: "2021 International Workshop on Refactoring (IWoR)."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

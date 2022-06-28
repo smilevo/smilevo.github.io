@@ -12,8 +12,8 @@ address:
   postcode: 
   country: United States
 
-summary: Interim Presentation of The Curators
-abstract: "Interim Presentation of The Curators"
+summary: Interim Presentation of The Curators.
+abstract: "Interim Presentation of The Curators."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.

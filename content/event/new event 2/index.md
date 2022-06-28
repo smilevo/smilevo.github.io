@@ -12,8 +12,8 @@ address:
   postcode: 
   country: United States
 
-summary: My Graduate Study: 3 Takeaways
-abstract: "My Graduate Study: 3 Takeaways"
+summary: My Graduate Study: 3 Takeaways.
+abstract: "My Graduate Study: 3 Takeaways."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
