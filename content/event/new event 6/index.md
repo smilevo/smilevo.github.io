@@ -1,5 +1,5 @@
 ---
-title: new event 6
+title: Meteor Senior Design Presentation
 
 event: event 6
 event_url: https://icsr2020.wordpress.com/
@@ -17,12 +17,12 @@ abstract: "Meteor interim senior design presentation."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2020-12-01T13:00:00Z"
-date_end: "2020-12-04T15:00:00Z"
+date: "2017-12-01T13:00:00Z"
+date_end: "2017-12-04T15:00:00Z"
 all_day: true
 
 # Schedule page publish date (NOT talk date).
-publishDate: "2020-12-08T00:00:00Z"
+publishDate: "2017-12-08T00:00:00Z"
 
 authors: []
 tags: []
