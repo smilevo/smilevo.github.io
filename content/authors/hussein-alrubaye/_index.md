@@ -77,7 +77,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- Researchers
+- Alumni
 ---
 
 Hussein Alrubaye working as a Senior Software Engineer at Microsoft Corporation. I am working on research in machine learning and AI to build tools and algorithms that automate the process of API Migration. I have 8 successful apps in Google and iOS stores with millions of users who are using my apps. Also, I am working as software developer for 9 years with .NET, C++, and web security, and have a successfully paid tutorial in Udemy. Also, I got Microsoft Most Valuable Professional.
