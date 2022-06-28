@@ -1,7 +1,7 @@
 ---
-title: Ali Ouni, Mohamed Wiem Mkaouer, Hussein Alrubaye Presentation @ ICSR2020
+title: new event 4
 
-event: The International Conference on Software and Systems Reuse (ICSR)
+event: event 4
 event_url: https://icsr2020.wordpress.com/
 
 location: Virtual Conference
