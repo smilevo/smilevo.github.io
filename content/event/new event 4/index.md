@@ -1,5 +1,5 @@
 ---
-title: new event 4
+title: Curators Senior Design Project Presentation
 
 event: event 4
 event_url: https://icsr2020.wordpress.com/
@@ -17,12 +17,12 @@ abstract: "Interim Presentation of The Curators."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: "2020-12-01T13:00:00Z"
-date_end: "2020-12-04T15:00:00Z"
+date: "2019-12-01T13:00:00Z"
+date_end: "2019-12-04T15:00:00Z"
 all_day: true
 
 # Schedule page publish date (NOT talk date).
-publishDate: "2020-12-08T00:00:00Z"
+publishDate: "2019-12-08T00:00:00Z"
 
 authors: []
 tags: []
