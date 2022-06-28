@@ -1,8 +1,8 @@
 ---
 title: International Workshop on Refactoring 2021
 
-event: event 3
-event_url: https://icsr2020.wordpress.com/
+event: International Workshop on Refactoring 2021
+event_url: https://iwor.github.io/iwor2021/
 
 location: Virtual Conference
 address:
