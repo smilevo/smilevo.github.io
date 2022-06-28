@@ -1,5 +1,5 @@
 ---
-title: new event 5
+title: Hussein Presentation @ RIT RPA
 
 event: event 5
 event_url: https://icsr2020.wordpress.com/
@@ -12,8 +12,8 @@ address:
   postcode: 
   country: United States
 
-summary: Hussein Research Potential Assessment.
-abstract: "Hussein Research Potential Assessment."
+summary: Hussein Research Potential Assessment's Presentation.
+abstract: "Hussein Research Potential Assessment's Presentation."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
