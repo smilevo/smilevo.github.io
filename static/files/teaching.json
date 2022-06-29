@@ -3,7 +3,7 @@
   "data": [{
     "title": "SWEN 352 Software Testing (2017-Present)",
     "description": "Welcome to SE 352 - Software Testing. The purpose of this course is to instruct the students on the importance of software testing, exposure to tools available, and some best practices.",
-    "imageURL": "https://media.istockphoto.com/vectors/software-engineering-banner-and-icons-vector-id636526232?k=20&m=636526232&s=170667a&w=0&h=Gr4lG-mwzctLhPganTlK5SFaEKKXqjnmPQbWWavBLFA=",
+    "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/teaching/testing.jpg",
     "url": "https://www.se.rit.edu/~swen-352/",
     "author": [{
       "name": "Mohamed Wiem Mkaouer",
