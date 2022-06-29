@@ -9,13 +9,18 @@
       "name": "Mohamed Wiem Mkaouer",
       "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
       "url": "/author/mohamed-wiem-mkaouer/"
+    },
+    {
+      "name": "Eman Abdullah AlOmar",
+      "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+      "url": "/author/eman-abdullah-alomar/"
     }
     ]
   },
     {
       "title": "SWEN 749 - Software Evolution and Re-Engineering (2017-2019)",
       "description": "This course explores the concepts of software evolution and reengineering and introduces approaches and support tools used to extract the information needed to assess existing software systems. Major maintenance activities are presented including estimating maintenance costs, managing change and predicting maintainability with software quality metrics. Organizational issues relative to product maintenance are discussed. Principles of software reuse and reverse engineering techniques are demonstrated through the use of class activities, team projects and case studies.",
-      "imageURL": "https://media.istockphoto.com/vectors/software-engineering-banner-and-icons-vector-id636526232?k=20&m=636526232&s=170667a&w=0&h=Gr4lG-mwzctLhPganTlK5SFaEKKXqjnmPQbWWavBLFA=",
+      "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/teaching/maintenance.jpg",
       "url": "https://www.se.rit.edu/~swen-749/syllabus.html",
       "author": [{
         "name": "Mohamed Wiem Mkaouer",
@@ -27,20 +32,15 @@
     {
       "title": "SWEN 772 - Software Quality (2016-2017)",
       "description": "This course begins with an exploration of the concepts underlying quality systems and the use of metrics. Students are encouraged to discuss the advantages as well as the limitations of systems and quantitative approaches, with a view to understanding the importance of interpretation in metrics usage and of matching quality systems choices to organizational objectives and culture. They learn the use of modern metrics such as DRE, PCE, COQ/COPQ, reliability objectives and SUMI scores through exercises in analyzing and interpreting charts. This is complemented with a project where they work in teams to design an appropriate quality system for a specific project/software, and discuss the application and analysis of its evaluation experimentation as a means of improving the quality aspects of subject project/design, testing and maintenance of the software. (SWEN 722) Class 3, Credit 3 (Fall).",
-      "imageURL": "https://media.istockphoto.com/vectors/software-engineering-banner-and-icons-vector-id636526232?k=20&m=636526232&s=170667a&w=0&h=Gr4lG-mwzctLhPganTlK5SFaEKKXqjnmPQbWWavBLFA=",
-      "url": "https://www.google.com",
+      "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/teaching/quality-eng.jpg",
+      "url": "https://www.se.rit.edu/~swen-772/syllabus.html",
       "author": [{
         "name": "Mohamed Wiem Mkaouer",
         "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
         "url": "/author/mohamed-wiem-mkaouer/"
       },
         {
-          "name": "Mohamed Wiem Mkaouer",
-          "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-          "url": "/author/mohamed-wiem-mkaouer/"
-        },
-        {
-          "name": "Mohamed Wiem Mkaouer",
+          "name": "Christian Newman",
           "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
           "url": "/author/mohamed-wiem-mkaouer/"
         }
