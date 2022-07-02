@@ -29,4 +29,4 @@ design:
   columns: '1'
 ---
 
-Contact me through my email.
+Contact me through my email!
