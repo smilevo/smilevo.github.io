@@ -22,8 +22,9 @@ bio:
 
 # List each interest with a dash
 interests:
-- Interest 1
-- Interest 2
+- Software Quality
+- Software Refactoring
+- Test Smells
 
 education:
   courses:
