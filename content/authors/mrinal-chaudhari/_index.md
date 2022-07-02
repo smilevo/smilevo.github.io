@@ -31,7 +31,7 @@ education:
   courses:
   - course: Data Science
     institution: Rochester Institute of Technology
-    # year: 2022
+    year: 2022
 
 
 # Social/Academic Networking
