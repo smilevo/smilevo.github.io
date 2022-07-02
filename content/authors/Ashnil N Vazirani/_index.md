@@ -30,9 +30,15 @@ interests:
 
 education:
   courses:
-  - course: Data Science
-    institution: Rochester institute of technology
-    # year: 2022
+  - course: Diploma in Computer Science and Technology
+    institution: 
+    # year: 2014-2017
+  - course: BS in Computer Science
+    institution:
+    # year: 2017-2020
+  - course: MS in Software Engineering
+      institution:
+    # year: 2020-2022
 
 
 # Social/Academic Networking

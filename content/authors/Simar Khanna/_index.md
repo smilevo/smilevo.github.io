@@ -32,15 +32,9 @@ interests:
 
 education:
   courses:
-  - course: PhD in Computer Science and Engineering
-    institution: University of North Texas
-    # year: 2023
-  - course: MS in Software Engineering
+  - course: MS Software Engineering
     institution: Rochester Institute of Technology
-    # year: 2017
-  - course: BS in Software Engineering
-    institution: Athlone Institute of Technology
-    # year: 2014
+    # year: 2022
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons

@@ -34,9 +34,9 @@ interests:
 
 education:
   courses:
-  - course: PhD in Computer Science and Engineering
-    institution: University of North Texas
-    # year: 2023
+  - course: Capstone Research Project
+    institution: Rochester Institute of Technology
+    # year: 2022
   - course: MS in Software Engineering
     institution: Rochester Institute of Technology
     # year: 2017
