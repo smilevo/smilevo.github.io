@@ -66,9 +66,9 @@ social:
 # - icon: facebook
 #   icon_pack: fab
 #   link: https://www.facebook.com/mkaouer
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/Wajdialjedaani
+#- icon: twitter
+# icon_pack: fab
+# link: https://twitter.com/Wajdialjedaani
 # - icon: linkedin
 #   icon_pack: fab
 #   link: https://www.linkedin.com/in/mkaouer/
