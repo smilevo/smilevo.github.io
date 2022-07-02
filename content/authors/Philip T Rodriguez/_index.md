@@ -67,9 +67,9 @@ social:
 #- icon: dblp
 #  icon_pack: ai
 #  link: https://dblp.uni-trier.de/pers/hd/a/AlOmar:Eman_Abdullah
-- icon: researchgate
-  icon_pack: ai
-  link: https://www.researchgate.net/profile/Wajdi-Aljedaani-2
+#- icon: researchgate
+# icon_pack: ai
+# link: https://www.researchgate.net/profile/Wajdi-Aljedaani-2
 # - icon: facebook
 #   icon_pack: fab
 #   link: https://www.facebook.com/mkaouer
