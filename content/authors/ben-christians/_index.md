@@ -26,9 +26,9 @@ interests:
 
 education:
   courses:
-  - course: BS in Software Engineering
+  - course: MS in Software Engineering
     institution: Rochester Institute of Technology
-    # year: 2010
+    year: 2019
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons

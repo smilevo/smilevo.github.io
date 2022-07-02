@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Assistant Professor of Software Engineering Department
+role: Assistant Professor of Software Engineering
 
 # Organizations/Affiliations
 organizations:
