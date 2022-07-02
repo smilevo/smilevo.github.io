@@ -10,11 +10,11 @@ authors:
 superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: 
+role: Database Administrator
 
 # Organizations/Affiliations
 organizations:
-- name: Computer Science and Engineering 
+- name: Rochester Institute of Technology
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -24,7 +24,7 @@ bio:
 interests:
 - Machine learning
 - Python
-- Statistic
+- Statistics
 
 
 education:
