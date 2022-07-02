@@ -4,7 +4,7 @@ title: "Philip T Rodriguez"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "Philip T Rodriguez"
+- "Philip-t-rodriguez"
 
 # Is this the primary user of the site?
 superuser: false
@@ -34,11 +34,11 @@ interests:
 
 education:
   courses:
-  - course: Capstone Research Project
-    institution: Rochester Institute of Technology
-    # year: 2022
   - course: MS in Software Engineering
     institution: Rochester Institute of Technology
+    # year: 2022
+  - course: BS in Software Engineering
+    institution: Athlone Institute of Technology
     # year: 2017
   - course: BS in Software Engineering
     institution: Athlone Institute of Technology
