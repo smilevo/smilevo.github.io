@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: Ph.D. Candidate at University of North Texas
+role: 
 
 # Organizations/Affiliations
 organizations:
@@ -52,9 +52,9 @@ social:
 # - icon: orcid
 #   icon_pack: ai
 #   link: https://orcid.org/my-orcid?orcid=0000-0001-6010-7561
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=7nKDsRAAAAAJ&hl=en
+#- icon: google-scholar
+# icon_pack: ai
+# link: https://scholar.google.com/citations?user=7nKDsRAAAAAJ&hl=en
 #- icon: dblp
 #  icon_pack: ai
 #  link: https://dblp.uni-trier.de/pers/hd/a/AlOmar:Eman_Abdullah

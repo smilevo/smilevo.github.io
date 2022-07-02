@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: Ph.D. Candidate at University of North Texas
+role: 
 
 # Organizations/Affiliations
 organizations:
@@ -22,9 +22,12 @@ bio:
 
 # List each interest with a dash
 interests:
-- Software Engineering
-- Accessibility
-- Artificial Intelligence
+- Research
+- Software Design
+- Game Design & Dev
+- XR(VR/AR)
+- UI/UX
+- Mobile Applications
 
 
 education:
