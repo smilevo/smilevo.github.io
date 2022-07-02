@@ -31,13 +31,13 @@ interests:
 education:
   courses:
   - course: Diploma in Computer Science and Technology
-    institution: 
+    institution: SHM institute of Technology
     # year: 2014-2017
   - course: BS in Computer Science
-    institution:
+    institution: Vivekanand Education Society's Institute Of Technology
     # year: 2017-2020
   - course: MS in Software Engineering
-      institution:
+      institution: Rochester Institute of Technology
     # year: 2020-2022
 
 
