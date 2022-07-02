@@ -99,4 +99,4 @@ user_groups:
 - PhD Students
 ---
 
-Simar Khanna received a bachelor's degree in Software Engineering from the Athlone institute of technology, Ireland, in 2014, and received his master's degree in Software Engineering from Rochester Institute of Technology, New York, in 2017. He is currently a computer science and engineering Ph.D. candidate at the University of North Texas. He worked as a lecturer for three years (2017-2020) at Al-Khari College of Technology, Saudi Arabia. His research interests are software engineering, mining software repository, accessibility, machine learning, and text mining.
+My name is Simar, and I strive to be the most complete software engineer on the planet

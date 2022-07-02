@@ -94,5 +94,4 @@ user_groups:
 - PhD Students
 ---
 
-Benjamin Adepoju
-Wajdi Aljedaani received a bachelor's degree in Software Engineering from the Athlone institute of technology, Ireland, in 2014, and received his master's degree in Software Engineering from Rochester Institute of Technology, New York, in 2017. He is currently a computer science and engineering Ph.D. candidate at the University of North Texas. He worked as a lecturer for three years (2017-2020) at Al-Khari College of Technology, Saudi Arabia. His research interests are software engineering, mining software repository, accessibility, machine learning, and text mining.
+While my main focus is on android development, I am increasingly focusing on the domain of software architecture, design patterns and architecture smells.

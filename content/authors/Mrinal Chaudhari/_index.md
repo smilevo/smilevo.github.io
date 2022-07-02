@@ -96,5 +96,4 @@ user_groups:
 - PhD Students
 ---
 
-Mrinal Chaudhari
-Wajdi Aljedaani received a bachelor's degree in Software Engineering from the Athlone institute of technology, Ireland, in 2014, and received his master's degree in Software Engineering from Rochester Institute of Technology, New York, in 2017. He is currently a computer science and engineering Ph.D. candidate at the University of North Texas. He worked as a lecturer for three years (2017-2020) at Al-Khari College of Technology, Saudi Arabia. His research interests are software engineering, mining software repository, accessibility, machine learning, and text mining.
+I am data science masters student at RIT. I have worked two years in TATA consultancy services as a database administrator. I did my undergrad in information technology from India. I have extensively worked on different databases technologies such as SQL, MySQL, Oracle etc in my prior company. In my master's I have worked on different project based on machine learning and python. Currently, I am interested in building ML models and statistical model and eager to understand how real life business problem can be solved using data science technology. Apart from my education and technical skills, I love to sketch and paint. Mostly I like to sketch natural landscape and that's the reason why I like to explore new places.
