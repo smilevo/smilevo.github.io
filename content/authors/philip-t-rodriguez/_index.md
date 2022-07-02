@@ -10,11 +10,11 @@ authors:
 superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: 
+role: Software Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: Computer Science and Engineering 
+- name: Paychex 
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -40,9 +40,7 @@ education:
   - course: BS in Software Engineering
     institution: Athlone Institute of Technology
     # year: 2017
-  - course: BS in Software Engineering
-    institution: Athlone Institute of Technology
-    # year: 2014
+
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
