@@ -36,10 +36,10 @@ education:
   courses:
   - course: MS in Software Engineering
     institution: Rochester Institute of Technology
-    # year: 2022
+    year: 2022
   - course: BS in Software Engineering
     institution: Athlone Institute of Technology
-    # year: 2017
+    year: 2017
 
 
 # Social/Academic Networking

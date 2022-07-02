@@ -34,7 +34,7 @@ education:
   courses:
   - course: MS Software Engineering
     institution: Rochester Institute of Technology
-    # year: 2022
+    year: 2022
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
@@ -90,7 +90,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- PhD Students
+- MSc Students
 ---
 
 My name is Simar, and I strive to be the most complete software engineer on the planet
