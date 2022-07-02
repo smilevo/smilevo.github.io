@@ -4,7 +4,7 @@ title: "Benjamin Adepoju"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "Benjamin Adepoju"
+- "benjamin-adepoju"
 
 # Is this the primary user of the site?
 superuser: false
@@ -88,7 +88,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- PhD Students
+- MSc Students
 ---
 
 While my main focus is on android development, I am increasingly focusing on the domain of software architecture, design patterns and architecture smells.
