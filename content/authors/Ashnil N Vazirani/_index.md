@@ -34,10 +34,10 @@ education:
     institution: SHM institute of Technology
     # year: 2014-2017
   - course: BS in Computer Science
-    institution: Vivekanand Education Society's Institute Of Technology
+    institution: Vivekanand Education Society Institute Of Technology
     # year: 2017-2020
   - course: MS in Software Engineering
-      institution: Rochester Institute of Technology
+    institution: Rochester Institute of Technology
     # year: 2020-2022
 
 
