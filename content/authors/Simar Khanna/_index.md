@@ -49,7 +49,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:wajdi.j1@gmail.com'  # For a direct email link, use "mailto:test@example.org".
+  link: 'mailto:simarkhanna76@gmail.com'  # For a direct email link, use "mailto:test@example.org".
 - icon: github
   icon_pack: fab
   link: https://github.com/s1mar
