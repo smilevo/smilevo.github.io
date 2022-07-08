@@ -49,14 +49,14 @@
 {
     "title": "Software Refactoring",
     "data": [{
-            "title": "Self Affirmed Refactoring",
+            "title": "Self-Affirmed Refactoring",
             "description": "Zilicio, an automation framework that allows inexperienced and experienced developers to build real world apps in minutes for the two dominant mobile platforms. Zilicio creates both Android and iOS versions of a mobile application, which is connected to an automatically generated RESTful backend, all through a friendly end-user web application.",
             "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
             "url": "https://www.google.com",
             "author": [{
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
+                    "name": "Eman Abdullah AlOmar",
+                    "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+                    "url": "/author/eman-abdullah-alomar/"
                 },
                 {
                     "name": "Eman Abdullah AlOmar",
