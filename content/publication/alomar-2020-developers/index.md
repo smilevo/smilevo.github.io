@@ -38,6 +38,8 @@ projects: []
 publishDate: '2022-01-26T06:34:49.048753Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: 'Refactoring is the de-facto practice to optimize software health. While there has been several studies proposing refactoring strate-gies to optimize software design through applying design patterns and removing design defects, little is known about how developers actually refactor their code to improve its reuse. Therefore, we extract, from 1,828 open source projects, a set of refactorings which were intended to improve the software reusability. We analyze the impact of reusability refactorings on state-of-the-art reusability metrics, and we compare the distribution of reusability refactoring types, with the distribution of the remaining mainstream refactorings. Overall, we found that the distribution of refac-toring types, applied in the context of reusability, is diffrerent from the distribution of refactoring types in mainstream development. In the refac-
+torings performed to improve reusability, source files are subject to more design level types of refactorings. Reusability refactorings significantly
+impact, high-level code elements, such as packages, classes, and methods, while typical refactorings, impact all code elements, including identifiers, and parameters.'
 publication: '*International Conference on Software and Software Reuse*'
 ---
