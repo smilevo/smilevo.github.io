@@ -51,7 +51,7 @@
     "data": [{
             "title": "Self-Affirmed Refactoring",
             "description": "SAR refers to developers documentation if their refactoring activities. SAR is key to understand various aspects of refactoring, including the motivation, and procedure, and the consequences of the peformed code change. All documented by the code authors themselves. This website contains all the research related to SAR. You will find all papers, artifacts, datasets, and scripts that we publicly share for replication and extension. If you have questions please email us at ealomar@stevens.edu or mwmvse@rit.edu.",
-            "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
+            "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/projects/SAR.jpg",
             "url": "https://www.google.com",
             "author": [{
                     "name": "Eman Abdullah AlOmar",
