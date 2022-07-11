@@ -36,7 +36,7 @@
             if (context.readyState === 4) {
               window.fbFeedData = this.response.data;
               window.totalItem = fbFeedData.length;
-              window.totalPage = (Math.floor (((fbFeedData.length)/10))) + 1;
+              window.totalPage = (Math.floor (((fbFeedData.length)/20))) + 1;
               fbFeedUpdated();
               paginationTabCreation();
         }
@@ -48,7 +48,7 @@
       if (window.fbFeedData.length) {
         HTMLData += '<div class="container">';
         HTMLData += '<div class="row fb-feed-row">';
-        for (var itr = 0 + (10 * (window.currentPage - 1)); itr < (totalItem - (10 * (window.currentPage)) > 0 ? (10 * (window.currentPage)) : totalItem); itr = itr + 2) {
+        for (var itr = 0 + (20 * (window.currentPage - 1)); itr < (totalItem - (20 * (window.currentPage)) > 0 ? (20 * (window.currentPage)) : totalItem); itr = itr + 2) {
           if (window.fbFeedData[itr]) {
             HTMLData += `<div class="col"><div class="fb-post" 
           data-href="${window.fbFeedData[itr]}"
