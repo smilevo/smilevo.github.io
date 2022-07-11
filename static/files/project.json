@@ -26,7 +26,7 @@
             "title": "Library Migration",
             "description": "Modern software systems rely heavily on third-party library functionality as a mean to save time, reduce implementation costs, and increase their software quality when offering rich, robust and up-to-date features. However, as software systems evolve frequently, the need for better services and more secure, reliable and quality functionalities causes developers to often replace their old libraries with more recent ones. This process of replacing a library with a different one, while preserving the same functionality, is known as library migration . Learn more about evolution migration that happened over year of development. We track library migration in around 321k open source projects",
             "imageURL": "https://media.istockphoto.com/vectors/software-engineering-banner-and-icons-vector-id636526232?k=20&m=636526232&s=170667a&w=0&h=Gr4lG-mwzctLhPganTlK5SFaEKKXqjnmPQbWWavBLFA=",
-            "url": "https://www.google.com",
+            "url": "http://migrationlab.net",
             "author": [{
                     "name": "Hussein AlRubaye",
                     "image": "/author/hussein-alrubaye/avatar.jpg",
