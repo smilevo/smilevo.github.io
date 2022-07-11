@@ -50,7 +50,7 @@
     "title": "Software Refactoring",
     "data": [{
             "title": "Self-Affirmed Refactoring",
-            "description": "Zilicio, an automation framework that allows inexperienced and experienced developers to build real world apps in minutes for the two dominant mobile platforms. Zilicio creates both Android and iOS versions of a mobile application, which is connected to an automatically generated RESTful backend, all through a friendly end-user web application.",
+            "description": "SAR refers to developers documentation if their refactoring activities. SAR is key to understand various aspects of refactoring, including the motivation, and procedure, and the consequences of the peformed code change. All documented by the code authors themselves. This website contains all the research related to SAR. You will find all papers, artifacts, datasets, and scripts that we publicly share for replication and extension. If you have questions please email us at ealomar@stevens.edu or mwmvse@rit.edu.",
             "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
             "url": "https://www.google.com",
             "author": [{
