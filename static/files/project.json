@@ -19,6 +19,11 @@
                     "name": "Wajdi Aljedaani",
                     "image": "/author/wajdi-aljedaani/avatar.jpg",
                     "url": "/author/wajdi-aljedaani/"
+                },
+                {
+                    "name": "Ali Ouni",
+                    "image": "/author/ali-ouni/avatar.jpg",
+                    "url": "/author/ali-ouni/"
                 }
             ]
         },
@@ -41,6 +46,11 @@
                     "name": "Mohamed Wiem Mkaouer",
                     "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
                     "url": "/author/mohamed-wiem-mkaouer/"
+                },
+                {
+                    "name": "Ali Ouni",
+                    "image": "/author/ali-ouni/avatar.jpg",
+                    "url": "/author/ali-ouni/"
                 }
             ]
         }
@@ -59,14 +69,14 @@
                     "url": "/author/eman-abdullah-alomar/"
                 },
                 {
-                    "name": "Ali Ouni",
-                    "image": "/author/ali-ouni/avatar.jpg",
-                    "url": "/author/ali-ouni/"
-                },
-                {
                     "name": "Mohamed Wiem Mkaouer",
                     "image": "/author/mohamed-wiem-mkaouer/avatar.jpg",
                     "url": "/author/mohamed-wiem-mkaouer/"
+                },
+                {
+                    "name": "Ali Ouni",
+                    "image": "/author/ali-ouni/avatar.jpg",
+                    "url": "/author/ali-ouni/"
                 }
             ]
         }
