@@ -53,7 +53,7 @@
     "data": [{
       "title": "CIS 375 Software Engineering I | University of Michigan-Dearborn (2014-2016)",
       "description": "CIS 375 Software Engineering I: this course covers all aspects of software production ranging from the early stage of requirements definition to design and implementation then post-delivery maintenance. Moreover, through group projects, students can obtain hands‐on experiences on entire phases and workflow of the software process.",
-      "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
+      "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/teaching/data-se.jpg",
       "url": "https://www.google.com",
       "author": [{
         "name": "Mohamed Wiem Mkaouer",
@@ -62,20 +62,16 @@
       },
         {
           "name": "Eman Abdullah AlOmar",
-          "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+          "image": "/author/eman-abdullah-alomar/avatar.jpg",
           "url": "/author/eman-abdullah-alomar/"
-        },
-        {
-          "name": "Mohamed Wiem Mkaouer",
-          "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
-          "url": "/author/mohamed-wiem-mkaouer/"
         }
+        
       ]
     },
       {
         "title": "CIS 350/3501 (Online) Data Structures and Algorithm Analysis | University of Michigan-Dearborn (2016-2016)",
         "description": "This course focuses on data design and algorithm design. Data design topics include object-oriented discussions of hashing, advanced tree structures, graphs, and sets. Algorithm design topics include the greedy, divide-and-conquer, dynamic programming, backtracking, and branch-and-bound techniques. A significant discussion of algorithm complexity theory, including time and space trade-offs and elementary computability theory is included. Students should be able to use the Standard Template Library. Be able to know when and use various data structures including, hash tables, sets, priority queues, binary trees, search trees and graphs. Be able to design and document small programs. Be able to design algorithms using greedy, divide and conquer, dynamic programming, backtracking and branch and bound techniques.",
-        "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
+        "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/teaching/data-struct.jpg",
         "url": "http://catalog.umd.umich.edu/undergraduate/coursesaz/cis/",
         "author": [{
           "name": "Mohamed Wiem Mkaouer",
