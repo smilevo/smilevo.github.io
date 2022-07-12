@@ -97,23 +97,13 @@
       {
         "title": "CIS 405|505 (Online) Algorithm Analysis and Design | University of Michigan-Dearborn (2015-2015)",
         "description": "This course discusses how to design efficient algorithms. Topics include asymptotic analysis, average-case and worst-case analysis, recurrence analysis, classical algorithms, computational complexity analysis and NP-completeness. In addition, the course investigates approaches to algorithm design including: Greedy Algorithms, divide and conquer, dynamic programming, randomization, and branch and bound. I have not used this book before so all dates are an approximation.",
-        "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
-        "url": "https://www.google.com",
+        "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/teaching/algorithms.jpg",
+        "url": "http://catalog.umd.umich.edu/undergraduate/coursesaz/cis/",
         "author": [{
           "name": "Mohamed Wiem Mkaouer",
           "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
           "url": "/author/mohamed-wiem-mkaouer/"
-        },
-          {
-            "name": "Eman Abdullah AlOmar",
-            "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-            "url": "/author/eman-abdullah-alomar/"
-          },
-          {
-            "name": "Mohamed Wiem Mkaouer",
-            "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
-            "url": "/author/mohamed-wiem-mkaouer/"
-          }
+        }
         ]
       },
       {
