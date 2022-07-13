@@ -94,7 +94,7 @@
       },
       {
         "title": "CIS 296 - Java Programming | University of Michigan-Dearborn (2014-2014)",
-        "description": "Gain a solid understanding of the fundamentals of the Java programming language and the Java Core API. Be able to author Java classes, applets, and applications. Gain experience with client-server interaction and multithreading in a Java environment. Use the Abstract Windowing Toolkit to build platform-independent GUIs and animations.",
+        "description": "Gain a solid understanding of Java programming language fundamentals and the Java Core API. Be able to author Java classes, applets, and applications. Gain experience with client-server interaction and multithreading in a Java environment. Use the Abstract Windowing Toolkit to build platform-independent GUIs and animations.",
         "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/teaching/java.jpg",
         "url": "http://catalog.umd.umich.edu/undergraduate/coursesaz/cis/",
         "author": [
