@@ -32,6 +32,7 @@ projects: []
 publishDate: '2022-01-26T06:31:20.520818Z'
 publication_types:
 - '2'
-abstract: ''
+abstract: 'The concept of Self-Affirmed Refactoring (SAR) was introduced to explore how developers document their refactoring activities in commit messages, i.e., developers explicit documentation of refactoring operations intentionally introduced during a code change. 
+In our previous study, we have manually identified refactoring patterns and defined three main common quality improvement categories including internal quality attributes, external quality attributes, and code smells, by only considering refactoring-related commits. However, this approach heavily depends on the manual inspection of commit messages. In this paper, we propose a two-step approach to first identify whether a commit describes developer-related refactoring events, then to classify it according to the refactoring common quality improvement categories. Specifically, we combine the N-Gram TF-IDF feature selection with binary and multiclass classifiers to build a new model to automate the classification of refactorings based on their quality improvement categories. We challenge our model using a total of 2,867 commit messages extracted from well engineered open-source Java projects. Our findings show that (1) our model is able to accurately classify SAR commits, outperforming the pattern-based and random classifier approaches, and allowing the discovery of 40 more relevant SAR patterns, and (2) our model reaches an F-measure of up to 90% even with a relatively small training dataset.'
 publication: '*Journal of Systems and Software*'
 ---
