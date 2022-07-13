@@ -33,6 +33,12 @@ projects: []
 publishDate: '2022-01-26T06:31:46.312781Z'
 publication_types:
 - '2'
-abstract: ''
+abstract: 'Context: Refactoring is the art of modifying the design of a system without altering its behavior. 
+The idea is to reorganize variables, classes and methods to facilitate their future adaptations and comprehension.
+As the concept of behavior preservation is fundamental for refactoring, several studies, using formal verification, language transformation and dynamic analysis, have been proposed to monitor the execution of refactoring operations and their impact on the program semantics. However, there is no existing study that examines the available behavior preservation strategies for each refactoring operation.
+Objective: This paper identifies behavior preservation approaches in the research literature.
+Method: We conduct, in this paper, a systematic mapping study, to capture all existing behavior preservation approaches that we classify based on several criteria including their methodology, applicability, and their degree of automation.
+Results: The results indicate that several behavior preservation approaches have been proposed in the literature. The approaches vary between using formalisms and techniques, developing automatic refactoring safety tools, and performing a manual analysis of the source code.
+Conclusion: Our taxonomy reveals that there exist some types of refactoring operations whose behavior preservation is under-researched. Our classification also indicates that several possible strategies can be combined to better detect any violation of the program semantics.'
 publication: '*Information and Software Technology*'
 ---
