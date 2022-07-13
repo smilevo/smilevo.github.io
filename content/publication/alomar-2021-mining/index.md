@@ -33,6 +33,13 @@ projects: []
 publishDate: '2022-01-26T06:39:27.082351Z'
 publication_types:
 - '5'
-abstract: ''
+abstract: 'Refactoring is a set of code changes applied to improve the internal structure of a program, without altering its external behavior. 
+With the rise of continuous integration and the awareness of the necessity of managing technical debt, refactoring has become even more popular in recent software builds.
+Recent studies indicate that developers often perform refactorings. If we consider all refactorings performed across all projects, this consists of the refactoring knowledge that represents a rich
+source of information that can be useful for both developers and practitioners to better understand how refactoring is being applied in practice.
+However, mining, processing, and extracting useful insights, from this plethora of refactorings, seems to be challenging. 
+In this book chapter, we take a dive into how refactoring can be mined and preprocessed. We discuss all design concepts and structural metrics that can also be mined along with refactoring operations to understand their impact better.
+We further investigate the many practical challenges for such extraction. The volume, velocity, and variety of extracted data require careful planning.
+We outline the appropriate techniques from a large number of available technologies for such system implementation.'
 publication: '*Knowledge Management in the Development of Data-Intensive Systems*'
 ---
