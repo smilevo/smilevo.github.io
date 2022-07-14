@@ -36,6 +36,12 @@ projects: []
 publishDate: '2022-01-26T06:30:52.182607Z'
 publication_types:
 - '2'
-abstract: ''
+abstract: 'Programmers need documentation to comprehend software, but they often lack the time to write it. Thus, programmers must prioritize
+their documentation effort to ensure that sections of code important to program comprehension are thoroughly explained. In this paper, we
+explore the possibility of automatically prioritizing documentation effort.
+We performed two user studies to evaluate the effectiveness of static source code attributes and textual analysis of source code towards
+prioritizing documentation effort. The first study used open-source API Libraries while the second study was conducted using closed-source
+industrial software from ABB. Our findings suggest that static source code attributes are poor predictors of documentation effort priority,
+whereas textual analysis of source code consistently performed well as a predictor of documentation effort priority'
 publication: '*IEEE Transactions on Software Engineering*'
 ---

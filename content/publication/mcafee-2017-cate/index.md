@@ -32,7 +32,12 @@ projects: []
 publishDate: '2022-01-26T06:33:28.929449Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: 'Like all software systems, Android applications are not immune to bugs, security vulnerabilities, and a wide range
+of other runtime errors. Concolic analysis, a hybrid software verification technique which performs symbolic execution along
+with a concrete execution path, has been used for a variety of purposes including software testing, code clone detection, and
+security-related activities. We created a new publicly available concolic analysis tool for analyzing Android applications: Concolic Android TEster (CATE). Building on Java Path Finder
+(JPF-SPF), this tool performs concolic analysis on a raw Android application file (or source code) and provides output in a useful
+and easy to understand format'
 publication: '*2017 IEEE/ACM 4th International Conference on Mobile Software Engineering
   and Systems (MOBILESoft)*'
 ---
