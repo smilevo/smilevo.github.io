@@ -54,7 +54,7 @@ social:
   link: https://github.com/ashnilvazirani
 - icon: cv
   icon_pack: ai
-  link: files/AlOmar_resume.pdf
+  link: files/AshnilVazirani.pdf
 # - icon: orcid
 #   icon_pack: ai
 #   link: https://orcid.org/my-orcid?orcid=0000-0001-6010-7561
