@@ -33,6 +33,12 @@ projects: []
 publishDate: '2022-01-26T06:30:54.534215Z'
 publication_types:
 - '2'
-abstract: ''
+abstract: 'Search-based software engineering (SBSE) solutions are still not scalable enough to handle high-dimensional objectives space. The majority of existing work treats software
+  engineering problems from a single or bi-objective point of view, where the main goal is to maximize or minimize one or two objectives. However, most software engineering problems
+  are naturally complex in which many conflicting objectives need to be optimized. Software refactoring is one of these problems involving finding a compromise between several quality
+  attributes to improve the quality of the system while preserving the behavior. To this end, we propose a novel representation of the refactoring problem as a many-objective one where every quality attribute to improve is considered as an independent objective to be optimized. In our
+  approach based on the recent NSGA-III algorithm, the refactoring solutions are evaluated using a set of 8 distinct objectives. We evaluated this approach on one industrial project and seven open source systems. We compared our findings to: several other many-objective
+  techniques (IBEA, MOEA/D, GrEA, and DBEA-Eps), an existing multi-objective approach a mono-objective technique and an existing refactoring technique not based on heuristic
+  search. Statistical analysis of our experiments over 31 runs shows the efficiency of our approach.'
 publication: '*Empirical Software Engineering*'
 ---
