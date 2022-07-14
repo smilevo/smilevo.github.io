@@ -34,7 +34,10 @@ projects: []
 publishDate: '2022-01-26T06:33:21.851720Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: 'Refactoring large systems involves several sources of uncertainty related to the severity levels of code smells to be corrected and the
+  importance of the classes in which the smells are located. Due to the dynamic nature of software development, these values cannot be
+  accurately determined in practice, leading to refactoring sequences that lack robustness. To address this problem, we introduced a multiobjective robust model, based on NSGA-II, for the software
+  refactoring problem that tries to find the best trade-off between quality and robustness. '
 publication: '*Proceedings of the Companion Publication of the 2014 Annual Conference
   on Genetic and Evolutionary Computation*'
 ---
