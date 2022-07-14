@@ -33,7 +33,10 @@ projects: []
 publishDate: '2022-01-26T06:33:33.670309Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: 'Android apps operate under a permissions-based system where access to specific APIs are restricted through the use of permissions. Unfortunately, there is no built-in verification system to ensure that apps do not request too many or too few
+permissions, which could lead to serious quality and/or privacy concerns. Apps requesting too many permissions create unnecessary vulnerabilities, leaving the potential for abuse by SDKs within the app or other malicious apps installed on the device.
+In order to assist with the discovery of misused permissions, we created a new detection tool, M-Perm, which combines static and dynamic analysis in a computationally efficient manner compared to existing tools. M-Perm also identifies permission
+usage in apps including requested normal, dangerous, and 3rd party permissions. The tool, complete usage instructions, and screencast are available online: http://www.m-perm.com'
 publication: '*2017 IEEE/ACM 4th International Conference on Mobile Software Engineering
   and Systems (MOBILESoft)*'
 ---

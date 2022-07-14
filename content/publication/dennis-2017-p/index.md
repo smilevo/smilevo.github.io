@@ -32,7 +32,15 @@ projects: []
 publishDate: '2022-01-26T06:33:36.049260Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: '—Android is built upon a permission-based structure, where apps require access to specific permissions in order to
+carry out specific functionalities. While Android has provided a set of best practices intended to aid the developer in properly
+defining and manipulating these permissions on their source code, developers do not always adhere to these guidelines. Although
+some of the resulting issues may be minor and lead to slight user confusion, other mistakes may create more serious privacy
+and security related issues. We’ve defined improper usage of these permission best practices to be permission smells to indicate
+possible permissions related syntactic issues and have created a tool P-Lint to assist in the identification of these smells on the
+source code. P-Lint’s goal is to not only help developers create better, more secure apps by providing guidance on properly using
+permissions, but also in allowing researchers to better understand the common permission smells through empirical analysis on
+existing apps. P-Lint is publicly available on the project website: https://p-lint.github.io'
 publication: '*2017 IEEE/ACM 4th International Conference on Mobile Software Engineering
   and Systems (MOBILESoft)*'
 ---
