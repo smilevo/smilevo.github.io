@@ -33,7 +33,10 @@ projects: []
 publishDate: '2022-01-26T06:34:27.763853Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: 'In software development, maintaining good design is essential. The process of refactoring enables developers to improve this design during development without altering the
+program’s existing behavior. However, this process can be time-consuming, introduce semantic errors, and be difficult for developers inexperienced with refactoring or unfamiliar with a given code base. Automated refactoring tools can help
+not only by applying these changes, but by identifying opportunities for refactoring. Yet, developers have not been quick to adopt these tools due to a lack of trust between the developer and the tool. We propose an approach in the form of a
+visualization to aid developers in understanding these suggested operations and increasing familiarity with automated refactoring tools. We also provide a manual validation of this approach and identify options to continue experimentation.'
 publication: '*Proceedings of the IEEE/ACM 42nd International Conference on Software
   Engineering Workshops*'
 ---
