@@ -52,9 +52,9 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/ashnilvazirani
-#- icon: cv
-#  icon_pack: ai
-#  link: files/AlOmar_resume.pdf
+- icon: cv
+  icon_pack: ai
+  link: files/AlOmar_resume.pdf
 # - icon: orcid
 #   icon_pack: ai
 #   link: https://orcid.org/my-orcid?orcid=0000-0001-6010-7561
@@ -82,9 +82,9 @@ social:
   
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
- - icon: cv
-   icon_pack: ai
-   link: files/AshnilVazirani.pdf
+# - icon: cv
+#   icon_pack: ai
+#   link: files/AshnilVazirani.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
