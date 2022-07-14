@@ -35,7 +35,16 @@ projects: []
 publishDate: '2022-01-26T06:33:19.499839Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: 'There is a growing need for scalable search-based software engineering approaches that address software engineering problems
+  where a large number of objectives are to be optimized. Software refactoring is one of these problems where a refactoring sequence is
+  sought that optimizes several software metrics. Most of the existing refactoring work uses a large set of quality metrics to evaluate the
+  software design after applying refactoring operations, but current search-based software engineering approaches are limited to using a
+  maximum of five metrics. We propose for the first time a scalable search-based software engineering approach based on a newly
+  proposed evolutionary optimization method NSGA-III where there are 15 different objectives to be optimized. In our approach,
+  automated refactoring solutions are evaluated using a set of 15 distinct quality metrics. We evaluated this approach on seven large
+  open source systems and found that, on average, more than 92% of code smells were corrected. Statistical analysis of our experiments
+  over 31 runs shows that NSGA-III performed significantly better than two other many-objective techniques (IBEA and MOEA/D), a multiobjective algorithm (NSGA-II) and two mono-objective approaches,
+  hence demonstrating that our NSGA-III approach represents the new state of the art in fully-automated refactoring.'
 publication: '*Proceedings of the 2014 Annual Conference on Genetic and Evolutionary
   Computation*'
 ---
