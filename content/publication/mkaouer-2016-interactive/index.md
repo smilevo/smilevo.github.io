@@ -30,6 +30,11 @@ projects: []
 publishDate: '2022-01-26T06:33:24.188427Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: 'In this paper, we introduced a novel technique to generate more user-oriented detection rules by taking into account their feedback. Our techniques initially generate a set of detection rules that will be used to detect
+  candidate code smells, these reported code smells will be exposed in an interactive fashion to the developer who will give his/her feedback by either
+  approving or rejecting the identified code smell in the code fragment. This feedback will be fed to the GP as constraints and additional examples in order to
+  converge towards more user-preferred detection rules. We initially investigated the detection of three types of code smells in four open source systems and
+  reported that the interactive code smell detection achieves a precision of 89 % and recall on average when detecting infected classes. Results show that our
+  approach can best imitate the user’s decision while omitting the complexity of manual tuning the detection rules.'
 publication: '*International Symposium on Search Based Software Engineering*'
 ---
