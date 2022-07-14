@@ -35,7 +35,16 @@ projects: []
 publishDate: '2022-01-26T06:35:07.598539Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: 'Mobile applications must continuously evolve, sometimes under such time pressure that poor design or implementation choices are made, which inevitably result in structural
+software quality problems. Refactoring is the widely-accepted approach to ameliorating such quality problems. While the
+impact of refactoring on software quality has been widely studied in object-oriented software, its impact is still unclear in the
+context of mobile apps. This paper reports on the first empirical study that aims to address this gap. We conduct a large empirical
+study that analyses the evolution history of 300 open-source Android apps exhibiting a total of 42,181 refactoring operations.
+We analyze the impact of these refactoring operations on 10 common quality metrics using a causal inference method based
+on the Difference-in-Differences (DiD) model. Our results indicate that when refactoring affects the metrics it generally improves
+them. In many cases refactoring has no significant impact on the metrics, whereas one metric (LCOM) deteriorates overall as
+a result of refactoring. These findings provide practical insights into the current practice of refactoring in the context of Android
+app development.'
 publication: '*2021 IEEE/ACM 8th International Conference on Mobile Software Engineering
   and Systems (MobileSoft)*'
 ---
