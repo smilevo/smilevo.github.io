@@ -5,6 +5,7 @@ title: An Exploratory Study on How Software Reuse is Discussed in Stack Overflow
 subtitle: ''
 summary: ''
 authors:
+- Eman Abdullah AlOmar
 - Mohamed Wiem Mkaouer
 - Ali Ouni
 - Christian Newman
