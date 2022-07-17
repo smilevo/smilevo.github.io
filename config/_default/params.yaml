@@ -5,10 +5,17 @@
 
 # Appearance
 
-theme: minimal
-day_night: false
-font: native
-font_size: L
+#theme: minimal
+#day_night: false
+#font: native
+#font_size: L
+
+appearance:
+  theme_day: minimal
+  theme_night: dark
+  font: minimal
+  font_size: L
+
 
 # SEO
 
