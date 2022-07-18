@@ -27,54 +27,89 @@
             }
         ]
     },
-        {
-            "title": "Library Migration",
-            "description": "Modern software systems rely heavily on third-party library functionality as a mean to save time, reduce implementation costs, and increase their software quality when offering rich, robust and up-to-date features. However, as software systems evolve frequently, the need for better services and more secure, reliable and quality functionalities causes developers to often replace their old libraries with more recent ones. This process of replacing a library with a different one, while preserving the same functionality, is known as library migration . Learn more about evolution migration that happened over year of development. We track library migration in around 321k open source projects",
-            "imageURL": "https://media.istockphoto.com/vectors/software-engineering-banner-and-icons-vector-id636526232?k=20&m=636526232&s=170667a&w=0&h=Gr4lG-mwzctLhPganTlK5SFaEKKXqjnmPQbWWavBLFA=",
-            "url": "https://www.google.com",
-            "author": [{
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                },
-                {
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                },
-                {
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                }
-            ]
-        }
+    {
+        "title": "Migration Miner",
+        "description": "Modern software systems rely heavily on third-party library functionality as a mean to save time, reduce implementation costs, and increase their software quality when offering rich, robust and up-to-date features. However, as software systems evolve frequently, the need for better services and more secure, reliable and quality functionalities causes developers to often replace their old libraries with more recent ones. This process of replacing a library with a different one, while preserving the same functionality, is known as library migration . Learn more about evolution migration that happened over year of development. We track library migration in around 321k open source projects",
+        "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/projects/migration.png",
+        "url": "https://github.com/hussien89aa/MigrationMiner",
+        "author": [{
+                "name": "Hussein AlRubaye",
+                "image": "/author/hussein-alrubaye/avatar.jpg",
+                "url": "/author/hussein-alrubaye/"
+            },
+            {
+                "name": "Rana AlRubaye",
+                "image": "/author/rana-alrubaye/avatar.PNG",
+                "url": "/author/rana-alrubaye/"
+            },
+            {
+                "name": "Mohamed Wiem Mkaouer",
+                "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+                "url": "/author/mohamed-wiem-mkaouer/"
+            },
+            {
+                "name": "Ali Ouni",
+                "image": "/author/ali-ouni/avatar.jpg",
+                "url": "/author/ali-ouni/"
+            }
+        ]
+    }
+    
+    {
+        "title": "Migration Mapper",
+        "description": "Modern software systems rely heavily on third-party library functionality as a mean to save time, reduce implementation costs, and increase their software quality when offering rich, robust and up-to-date features. However, as software systems evolve frequently, the need for better services and more secure, reliable and quality functionalities causes developers to often replace their old libraries with more recent ones. This process of replacing a library with a different one, while preserving the same functionality, is known as library migration . Learn more about evolution migration that happened over year of development. We track library migration in around 321k open source projects",
+        "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/projects/migration.png",
+        "url": "https://github.com/hussien89aa/MigrationMapper",
+        "author": [{
+                "name": "Hussein AlRubaye",
+                "image": "/author/hussein-alrubaye/avatar.jpg",
+                "url": "/author/hussein-alrubaye/"
+            },
+            {
+                "name": "Rana AlRubaye",
+                "image": "/author/rana-alrubaye/avatar.PNG",
+                "url": "/author/rana-alrubaye/"
+            },
+            {
+                "name": "Mohamed Wiem Mkaouer",
+                "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
+                "url": "/author/mohamed-wiem-mkaouer/"
+            },
+            {
+                "name": "Ali Ouni",
+                "image": "/author/ali-ouni/avatar.jpg",
+                "url": "/author/ali-ouni/"
+            }
+        ]
+    }
+
+
     ]
-},
+}, 
 {
     "title": "Software Refactoring",
     "data": [{
-            "title": "Self Affirmed Refactoring",
-            "description": "Zilicio, an automation framework that allows inexperienced and experienced developers to build real world apps in minutes for the two dominant mobile platforms. Zilicio creates both Android and iOS versions of a mobile application, which is connected to an automatically generated RESTful backend, all through a friendly end-user web application.",
-            "imageURL": "https://smilevo.github.io/self-affirmed-refactoring/Images/SAR.PNG",
-            "url": "https://www.google.com",
-            "author": [{
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                },
-                {
-                    "name": "Eman Abdullah AlOmar",
-                    "image": "/author/eman-abdullah-alomar/avatar_hu6ff10dbe48222c87eaa06aa61a713322_27020_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/eman-abdullah-alomar/"
-                },
-                {
-                    "name": "Mohamed Wiem Mkaouer",
-                    "image": "/author/mohamed-wiem-mkaouer/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_270x270_fill_q75_lanczos_center.jpg",
-                    "url": "/author/mohamed-wiem-mkaouer/"
-                }
-            ]
-        }
+        "title": "SATDBailiff: SATD refatoring detector",
+        "description": "SAR refers to developers documentation if their refactoring activities. SAR is key to understand various aspects of refactoring, including the motivation, and procedure, and the consequences of the peformed code change. All documented by the code authors themselves. This website contains all the research related to SAR. You will find all papers, artifacts, datasets, and scripts that we publicly share for replication and extension. If you have questions please email us at ealomar@stevens.edu or mwmvse@rit.edu.",
+        "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/projects/SAR.jpg",
+        "url": "https://github.com/smilevo/SATDBailiff",
+        "author": [{
+                "name": "Eman Abdullah AlOmar",
+                "image": "/author/eman-abdullah-alomar/avatar.jpg",
+                "url": "/author/eman-abdullah-alomar/"
+            },
+            {
+                "name": "Mohamed Wiem Mkaouer",
+                "image": "/author/mohamed-wiem-mkaouer/avatar.jpg",
+                "url": "/author/mohamed-wiem-mkaouer/"
+            },
+            {
+                "name": "Ali Ouni",
+                "image": "/author/ali-ouni/avatar.jpg",
+                "url": "/author/ali-ouni/"
+            }
+        ]
+    }
     ]
 }
 ]
