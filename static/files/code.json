@@ -97,6 +97,11 @@
         "imageURL": "https://raw.githubusercontent.com/smilevo/smilevo.github.io/main/images/projects/SAR.jpg",
         "url": "https://github.com/smilevo/SATDBailiff",
         "author": [{
+            "name": "Ben Christians",
+            "image": "/author/ben-christians/avatar.jpg",
+            "url": "/author/ben-christians/"
+            },
+            {
                 "name": "Eman Abdullah AlOmar",
                 "image": "/author/eman-abdullah-alomar/avatar.jpg",
                 "url": "/author/eman-abdullah-alomar/"
