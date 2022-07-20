@@ -14,7 +14,7 @@ role: Assistant Professor
 
 # Organizations/Affiliations
 organizations:
-- name: Golisano College of Computing and Information Sciences
+- name: Golisano College of Computing and Information Sciences at Rochester Institute of Technology
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -22,17 +22,22 @@ bio: Research interests software refactoring and quality.
 
 # List each interest with a dash
 interests:
-- Interest 1
-- Interest 2
+- Program Comprehension
+- Static Analysis
+- Natural language processing
+
 
 education:
   courses:
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
+  - course: PhD in Computer Science
+    institution: Kent State University, Ohio, USA
+    year: 2017
+  - course: MSc in Computer Science
+    institution: Kent State University, Ohio, USA
+    year: 2013
+  - course: BSc in Computer Science
+    institution: Kent State University, Ohio, USA
+    year: 2010
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
