@@ -14,7 +14,7 @@ role: Assistant Professor of Software Engineering
 
 # Organizations/Affiliations
 organizations:
-- name: Golisano College of Computing and Information Sciences
+- name: Golisano College of Computing and Information Sciences at Rochester Institute of Technology
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
