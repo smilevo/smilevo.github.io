@@ -47,33 +47,33 @@ social:
 - icon: envelope
   icon_pack: fas
   link: 'mailto:moataz.chouchen.1@ens.etsmtl.ca'  # For a direct email link, use "mailto:test@example.org".
-- icon: github
-  icon_pack: fab
-  link: https://github.com/wajdialjedaani
+#- icon: github
+#  icon_pack: fab
+#  link: https://github.com/wajdialjedaani
 #- icon: cv
 #  icon_pack: ai
 #  link: files/AlOmar_resume.pdf
 # - icon: orcid
 #   icon_pack: ai
 #   link: https://orcid.org/my-orcid?orcid=0000-0001-6010-7561
-- icon: google-scholar
-  icon_pack: ai
-  link: https://scholar.google.com/citations?user=7nKDsRAAAAAJ&hl=en
+#- icon: google-scholar
+#  icon_pack: ai
+#  link: https://scholar.google.com/citations?user=7nKDsRAAAAAJ&hl=en
 #- icon: dblp
 #  icon_pack: ai
 #  link: https://dblp.uni-trier.de/pers/hd/a/AlOmar:Eman_Abdullah
-- icon: researchgate
-  icon_pack: ai
-  link: https://www.researchgate.net/profile/Wajdi-Aljedaani-2
+#- icon: researchgate
+#  icon_pack: ai
+#  link: https://www.researchgate.net/profile/Wajdi-Aljedaani-2
 # - icon: facebook
 #   icon_pack: fab
 #   link: https://www.facebook.com/mkaouer
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/Wajdialjedaani
-# - icon: linkedin
-#   icon_pack: fab
-#   link: https://www.linkedin.com/in/mkaouer/
+#- icon: twitter
+#  icon_pack: fab
+#  link: https://twitter.com/Wajdialjedaani
+ - icon: linkedin
+   icon_pack: fab
+   link: https://tn.linkedin.com/in/moataz-chouchen
 # - icon: envelope
 #   icon_pack: fas
 #   link: 'https://people.rit.edu/eaa6167/'
