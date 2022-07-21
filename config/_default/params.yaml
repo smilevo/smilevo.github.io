@@ -129,6 +129,9 @@ marketing:
   google_site_verification: ''
   baidu_site_verification: ''
   baidu_tongji: ''
+  analytics:
+    microsoft_clarity: 'cv0a1pmuxz'
+
 cms:
   branch: main
   local_backend: false
