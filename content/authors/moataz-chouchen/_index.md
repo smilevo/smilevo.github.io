@@ -14,7 +14,7 @@ role: Ph.D. Candidate at ETS Montreal
 
 # Organizations/Affiliations
 organizations:
-- name: Computer Science and Engineering 
+- name: Computer Science
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -93,7 +93,9 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- PhD Students
+- Collaborators
 ---
 
-Wajdi Aljedaani received a bachelor's degree in Software Engineering from the Athlone institute of technology, Ireland, in 2014, and received his master's degree in Software Engineering from Rochester Institute of Technology, New York, in 2017. He is currently a computer science and engineering Ph.D. candidate at the University of North Texas. He worked as a lecturer for three years (2017-2020) at Al-Khari College of Technology, Saudi Arabia. His research interests are software engineering, mining software repository, accessibility, machine learning, and text mining.
+AI enthusiast
+Future Computer Science Engineer
+Want to pursue a PhD degree in SE and AI
