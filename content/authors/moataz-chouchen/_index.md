@@ -33,7 +33,7 @@ education:
     institution: ETS Montreal
     # year: 2023
   - course: MS in Software Engineering
-    institution: Ecole Nationale des Sciences de l'Informatique
+    institution: Ecole Nationale des Sciences de lInformatique
     # year: 2017
  #  - course: BS in Software Engineering
    #  institution: Athlone Institute of Technology
