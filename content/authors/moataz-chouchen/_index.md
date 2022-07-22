@@ -31,10 +31,10 @@ education:
   courses:
   - course: PhD in Computer Science and Engineering
     institution: ETS Montreal
-     year: 2023
+    # year: 2023
   - course: MS in Software Engineering
     institution: Ecole Nationale des Sciences de l'Informatique
-     year: 2017
+    # year: 2017
  #  - course: BS in Software Engineering
    #  institution: Athlone Institute of Technology
     # year: 2014
