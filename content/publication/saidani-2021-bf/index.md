@@ -33,7 +33,11 @@ projects: []
 publishDate: '2022-01-26T06:35:12.257163Z'
 publication_types:
 - '1'
-abstract: ''
+abstract: 'Continuous Integration (CI) aims at supporting developers in integrating code changes quickly through automated building. However, there is a consensus that CI build failure is a major barrier
+  that developers face, which prevents them from proceeding further with development. In this paper, we introduce BF-Detector, an automated tool to detect CI build failure. Based on the adaptation
+  of Non-dominated Sorting Genetic Algorithm (NSGA-II), our tool aims at finding the best prediction rules based on two conflicting objective functions to deal with both minority and majority classes.
+  We evaluated the effectiveness of our tool on a benchmark of 56,019 CI builds. The results reveal that our technique outperforms state-of-the-art approaches by providing a better balance between both
+  failed and passed builds. BF-Detector tool is publicly available, with a demo video, at: https://github.com/stilab-ets/BF-Detector'
 publication: '*Proceedings of the 29th ACM Joint Meeting on European Software Engineering
   Conference and Symposium on the Foundations of Software Engineering*'
 ---
