@@ -71,9 +71,9 @@ social:
 #- icon: twitter
 #  icon_pack: fab
 #  link: https://twitter.com/Wajdialjedaani
-# - icon: linkedin
-#   icon_pack: fab
-#   link: https://tn.linkedin.com/in/moataz-chouchen
+- icon: linkedin
+  icon_pack: fab
+  link: https://tn.linkedin.com/in/moataz-chouchen
 # - icon: envelope
 #   icon_pack: fas
 #   link: 'https://people.rit.edu/eaa6167/'
