@@ -1,10 +1,10 @@
 ---
 # Display name
-title: "Andrew Di Stasi"
+title: "Khalid Saeed Almalki"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "andrew-di-stasi"
+- "khalid-almalki"
 
 # Is this the primary user of the site?
 superuser: false
@@ -14,7 +14,7 @@ role: Software Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: Innovative Solutions
+- name: STC
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -37,7 +37,7 @@ education:
 social:
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/andrew-distasi/
+  link: https://sa.linkedin.com/in/khalid-saeed-almalki-80642baa
 
 
   
