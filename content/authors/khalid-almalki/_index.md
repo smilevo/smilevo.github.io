@@ -23,6 +23,7 @@ bio:
 # List each interest with a dash
 interests:
 - Software Engineering
+- mobile development
 
 education:
   courses:
@@ -59,3 +60,4 @@ user_groups:
 - Alumni
 ---
 
+Software Engineering. Interests include: software quality, refactoring and mobile development (SWIFT)
