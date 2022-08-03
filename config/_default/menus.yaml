@@ -34,6 +34,3 @@ main:
   - name: Stuff
     url: landing
     weight: 101
-  - name: Tour
-    url: tour
-    weight: 102
