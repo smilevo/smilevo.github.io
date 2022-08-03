@@ -19,8 +19,8 @@ main:
   - name: Contact
     url: contact
     weight: 60
-  - name: Project
-    url: project
+  - name: Projects
+    url: projects
     weight: 70
   - name: Teaching
     url: teaching
