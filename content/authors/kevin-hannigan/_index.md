@@ -38,7 +38,7 @@ education:
 social:
 - icon: linkedin
   icon_pack: fab
-  link: 
+  link: https://www.linkedin.com/in/kevin-hannigan-63570bb4/
 
 
   
