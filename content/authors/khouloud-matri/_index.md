@@ -47,19 +47,7 @@ social:
   link: https://github.com/KhouloudMatri
 - icon: cv
   icon_pack: ai
-  link: 
-# - icon: orcid
-#  icon_pack: ai
-#  link: https://orcid.org/my-orcid?orcid=0000-0001-6010-7561
-# - icon: google-scholar
-#  icon_pack: ai
-#  link: https://scholar.google.com/citations?user=UoHgCukAAAAJ&hl=en
-# - icon: dblp
-#   icon_pack: ai
-#   link: https://dblp.org/pid/140/0883.html
-# - icon: facebook
-#   icon_pack: fab
-#   link: https://www.facebook.com/mkaouer
+  link:
 - icon: twitter
   icon_pack: fab
   link: 
@@ -84,3 +72,5 @@ user_groups:
 - Developers
 ---
 
+A motivated student with a solid background in mathematics, logic analysis and computer science.
+I'm interested specially in web development , AI and Iot.
