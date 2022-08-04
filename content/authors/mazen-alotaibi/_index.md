@@ -38,7 +38,7 @@ education:
 social:
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/andrew-distasi/
+  link: 
 
 
   
