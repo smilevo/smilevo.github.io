@@ -48,7 +48,7 @@ social:
   link: 'mailto:mwmvse@rit.edu'
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/mkaouer
 - icon: cv
   icon_pack: ai
   link: https://claws.rit.edu/photos/getphotoid.php?Client=MarketingCV&UN=mwmvse&HASH=df8ae73f895634f5802b558493bc200338a56d91&T=1642625696
