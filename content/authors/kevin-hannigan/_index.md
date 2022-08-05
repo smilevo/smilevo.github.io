@@ -10,11 +10,11 @@ authors:
 superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: Software Engineer at Regard
+role: Software Engineer 
 
 # Organizations/Affiliations
 organizations:
-- name: 
+- name: Regard
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
