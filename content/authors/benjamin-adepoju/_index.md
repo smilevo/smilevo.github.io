@@ -88,7 +88,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- MSc Students
+- Alumni
 ---
 
 While my main focus is on android development, I am increasingly focusing on the domain of software architecture, design patterns and architecture smells.
