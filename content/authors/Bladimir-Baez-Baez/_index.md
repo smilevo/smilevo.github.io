@@ -14,7 +14,7 @@ role: Software Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: Innovative Solutions
+- name: 
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
