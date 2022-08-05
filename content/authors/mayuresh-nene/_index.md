@@ -88,7 +88,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- MSc Students
+- Alumni
 ---
 
 I am a second year M.S in Data Science student at RIT. I have worked as a Data Analytics Co-op at RIT for the past 5 months, where I extensively utilized Tableau, MS-Excel and SQL to handle and represent data critical to the institute. I have worked as a Software Engineer Intern for 6 months at Symantec Corporation during my undergraduate study in Computer Science.
