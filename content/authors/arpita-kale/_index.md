@@ -58,11 +58,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- MSc Students
+- Alumni
 ---
 
-Detail oriented and performance focused professional interested in
-seeking a challenging role as a Software Developer, Java Developer, Full Stack
-Developer or Front End Developer to fully utilize knowledge and skills in software
-development life cycle honed from solid educational background and hands-on
-experience
+Detail oriented and performance focused professional interested in seeking a challenging role as a Software Developer, Java Developer, Full Stack Developer or Front End Developer to fully utilize knowledge and skills in software development life cycle honed from solid educational background and hands-on experience
