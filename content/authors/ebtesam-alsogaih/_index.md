@@ -27,7 +27,7 @@ interests:
 
 education:
   courses:
-  - course: MSc in Computer Software Engineering
+  - course: MS in Computer Software Engineering
     institution: Rochester Institute of Technology
     year: 2018-2019
   - course: Bachelor's degree in Computer Software Engineering
