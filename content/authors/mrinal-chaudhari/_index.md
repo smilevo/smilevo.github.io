@@ -88,7 +88,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- MSc Students
+- Alumni
 ---
 
 I am data science masters student at RIT. I have worked two years in TATA consultancy services as a database administrator. I did my undergrad in information technology from India. I have extensively worked on different databases technologies such as SQL, MySQL, Oracle etc in my prior company. In my master's I have worked on different project based on machine learning and python. Currently, I am interested in building ML models and statistical model and eager to understand how real life business problem can be solved using data science technology. Apart from my education and technical skills, I love to sketch and paint. Mostly I like to sketch natural landscape and that's the reason why I like to explore new places.
