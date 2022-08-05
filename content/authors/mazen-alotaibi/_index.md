@@ -14,7 +14,7 @@ role: Software Engineer
 
 # Organizations/Affiliations
 organizations:
-- name: 
+- name: SDAIA
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -38,7 +38,7 @@ education:
 social:
 - icon: linkedin
   icon_pack: fab
-  link: 
+  link: https://www.linkedin.com/in/mazen-alotaibi/?fbclid=IwAR1rENUSVz5MYmzPCY4y4SdDXOze8lpFcNVgo_3FfJNZ62gDxECtr132Iao
 
 
   
