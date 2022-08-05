@@ -37,7 +37,7 @@ education:
 social:
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/dante-secada-oz/
+  link: https://www.linkedin.com/in/eric-t-a3a598138/
 
 
   
