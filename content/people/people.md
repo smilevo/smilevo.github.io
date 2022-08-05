@@ -31,4 +31,3 @@ design:
   show_social: true
 ---
 
-IN THE POEPLE
