@@ -27,9 +27,9 @@ interests:
 
 education:
   courses:
-  - course: PhD in Computer and Information Science
+  - course: MSc in Computer Software Engineering
     institution: Rochester Institute of Technology
-    year: 2017-2019
+    year: 2018-2019
   - course: Bachelor's degree in Computer Software Engineering
     institution: University of Hail
     year: 2008-2013
