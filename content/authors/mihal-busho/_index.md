@@ -13,8 +13,8 @@ superuser: false
 role: Senior Associate, Cloud & Digital
 
 # Organizations/Affiliations
-organizations: PwC
-- name: 
+organizations:
+- name: PwC
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
