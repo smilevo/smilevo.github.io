@@ -30,7 +30,7 @@ education:
   - course: MS in Software Engineering
     institution: Rochester Institute of Technology
     year: 2018-2020
-  - course:Bachelor's degree, Computer Software Engineering
+  - course: Bachelor's degree, Computer Software Engineering
     institution: Instituto Tecnológico de Santo Domingo
     year: 2012 - 2016
 
