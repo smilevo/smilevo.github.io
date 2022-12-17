@@ -1,7 +1,7 @@
 ---
 title: Wiem Presentation @ Never Works In Theory 2022
 
-event: Never Works In Theory 2022
+event: Never Works In Theory @ Strange Loop 2022
 event_url: https://neverworkintheory.org/
 
 location: Saint Louis Station Hotel
