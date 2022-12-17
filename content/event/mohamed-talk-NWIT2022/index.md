@@ -2,7 +2,7 @@
 title: Wiem Presentation @ Never Works In Theory 2022
 
 event: Never Works In Theory 2022
-event_url: https://www.rit.edu/admissions/blog
+event_url: https://neverworkintheory.org/
 
 location: Saint Louis Station Hotel
 address:
