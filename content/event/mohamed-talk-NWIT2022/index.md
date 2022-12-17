@@ -1,19 +1,19 @@
 ---
-title: Wiem Presentation @ RIT Tiger Talks
+title: Wiem Presentation @ Never Works In Theory 2022
 
-event: RIT Tiger Talks
+event: Never Works In Theory 2022
 event_url: https://www.rit.edu/admissions/blog
 
-location: Virtual Conference
+location: Saint Louis Station Hotel
 address:
-  street: Zoom
-  city: 
+  street:
+  city: Saint Louis
   region: 
   postcode: 
   country: United States
 
-summary: My Graduate Study - 3 Takeaways.
-abstract: "My Graduate Study - 3 Takeaways."
+summary: A Large-Scale Survey on Refactoring
+abstract: "A Large-Scale Survey on Refactoring"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
