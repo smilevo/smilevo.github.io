@@ -74,7 +74,7 @@ social:
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
   icon_pack: ai
-  link: files/Almassari_SultanCVv9.1.pdf
+  link: files/Mkaouer_Resume_V_2023_01_01_Beta.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
