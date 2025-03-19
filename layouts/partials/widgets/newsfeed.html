@@ -30,11 +30,25 @@
         color: white;
     }
 
-    .hidden {
-        display: none;
+    .debug-container {
+        background: #f8f9fa;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 20px 0;
+        font-size: 14px;
+        color: #333;
+        max-height: 200px;
+        overflow-y: auto;
     }
 </style>
 
+<!-- Debug Output -->
+<div class="debug-container">
+    <h3>Debug Output</h3>
+    <div id="debug-output"></div>
+</div>
+
+<!-- Facebook Feed -->
 <div id="fb-post-container"></div>
 
 <div class="pagination-container d-flex justify-content-center">
@@ -48,8 +62,18 @@
     const itemsPerPage = 10;
     let fbFeedData = [];
 
+    function logDebug(message, data = null) {
+        const debugOutput = document.getElementById("debug-output");
+        let logMessage = `<p><strong>${message}</strong></p>`;
+        if (data) {
+            logMessage += `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+        }
+        debugOutput.innerHTML += logMessage;
+        console.log(message, data);
+    }
+
     function readyCall() {
-        console.log("🚀 Fetching fbFeed.json..."); // Debug message
+        logDebug("🚀 Fetching fbFeed.json...");
 
         fetch("/files/fbFeed.json")
             .then(response => {
@@ -59,27 +83,28 @@
                 return response.json();
             })
             .then(data => {
-                console.log("✅ JSON Data Loaded:", data); // Debug message
+                logDebug("✅ JSON Data Loaded:", data);
 
-                if (!data || data.length === 0) {
-                    console.warn("⚠️ No Facebook data available.");
+                fbFeedData = Array.isArray(data) ? data : data.data || [];
+
+                if (!fbFeedData.length) {
+                    logDebug("⚠️ No Facebook data available.");
                     document.getElementById("fb-post-container").innerHTML = "<p>No posts available.</p>";
                     return;
                 }
 
-                fbFeedData = data;
                 window.totalItems = fbFeedData.length;
                 window.totalPages = Math.ceil(window.totalItems / itemsPerPage);
-                console.log(`📄 Total posts: ${window.totalItems}, Total pages: ${window.totalPages}`);
+                logDebug(`📄 Total posts: ${window.totalItems}, Total pages: ${window.totalPages}`);
 
                 updateFeed();
                 createPagination();
             })
-            .catch(error => console.error("❌ Error loading FB feed:", error));
+            .catch(error => logDebug("❌ Error loading FB feed:", error));
     }
 
     function updateFeed() {
-        console.log(`🔄 Rendering page ${window.currentPage}...`);
+        logDebug(`🔄 Rendering page ${window.currentPage}...`);
 
         if (!fbFeedData.length) return;
 
@@ -98,22 +123,22 @@
         HTMLData += '</div></div>';
         document.getElementById("fb-post-container").innerHTML = HTMLData;
 
-        console.log("✅ Feed updated successfully.");
+        logDebug("✅ Feed updated successfully.");
 
         // Ensure Facebook SDK parses new content
         setTimeout(() => {
             if (typeof FB !== "undefined" && FB.XFBML && typeof FB.XFBML.parse === "function") {
-                console.log("🔄 Parsing Facebook posts...");
+                logDebug("🔄 Parsing Facebook posts...");
                 FB.XFBML.parse();
             } else {
-                console.error("❌ Facebook SDK not loaded.");
+                logDebug("❌ Facebook SDK not loaded.");
             }
         }, 500);
     }
 
     function createPagination() {
-        console.log("📌 Creating pagination...");
-        if (!fbFeedData.length || window.totalPages < 2) return; // No pagination needed if only 1 page
+        logDebug("📌 Creating pagination...");
+        if (!fbFeedData.length || window.totalPages < 2) return;
 
         let root = document.getElementById("pagination");
         root.innerHTML = "";
@@ -153,18 +178,17 @@
         nextElem.append(nextAnchor);
         root.append(nextElem);
 
-        console.log("✅ Pagination created.");
+        logDebug("✅ Pagination created.");
     }
 
     function changePage(newPage) {
         if (newPage < 1 || newPage > window.totalPages) return;
-        console.log(`📄 Changing to page ${newPage}...`);
+        logDebug(`📄 Changing to page ${newPage}...`);
         window.currentPage = newPage;
         updateFeed();
         createPagination();
     }
 
-    // Run script on page load
     document.addEventListener("DOMContentLoaded", readyCall);
 </script>
 
