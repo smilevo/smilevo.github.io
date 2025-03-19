@@ -14,7 +14,7 @@
       margin-top: 50px;
   }
 
-  /* ✅ Black & Gray Styled Pagination Buttons */
+  /* ✅ Styled Pagination Buttons */
   .pagination {
       display: flex;
       justify-content: center;
@@ -29,29 +29,29 @@
   .pagination .page-item .page-link {
       padding: 10px 15px;
       margin: 2px;
-      border: 1px solid black;
+      border: 1px solid #007bff;
       border-radius: 5px;
-      background: gray;
-      color: black;
+      background: white;
+      color: #007bff;
       text-decoration: none;
       transition: all 0.3s ease;
       font-weight: bold;
   }
 
   .pagination .page-item .page-link:hover {
-      background: black;
+      background: #007bff;
       color: white;
   }
 
   .pagination .page-item.active .page-link {
-      background: black;
+      background: #007bff;
       color: white;
-      border-color: black;
+      border-color: #007bff;
   }
 
   .pagination .page-item.disabled .page-link {
-      background: #ccc;
-      color: #666;
+      background: #ddd;
+      color: #999;
       cursor: not-allowed;
   }
 
@@ -67,13 +67,6 @@
   }
 </style>
 
-
-<!-- Debug Output -->
-<div class="debug-container">
-    <h3>Debug Output</h3>
-    <div id="debug-output"></div>
-</div>
-
 <!-- Facebook Feed -->
 <div id="fb-post-container"></div>
 
@@ -88,158 +81,111 @@
     const itemsPerPage = 10;
     let fbFeedData = [];
 
-    function logDebug(message, data = null) {
-        const debugOutput = document.getElementById("debug-output");
-        let logMessage = `<p><strong>${message}</strong></p>`;
-        if (data) {
-            logMessage += `<pre>${JSON.stringify(data, null, 2)}</pre>`;
-        }
-        debugOutput.innerHTML += logMessage;
-        console.log(message, data);
-    }
-
     function readyCall() {
-        logDebug("🚀 Fetching fbFeed.json...");
-
         fetch("/files/fbFeed.json")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`❌ Failed to fetch JSON. Status: ${response.status}`);
-                }
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
-                logDebug("✅ JSON Data Loaded:", data);
-
-                // Fix JSON structure if needed
                 fbFeedData = Array.isArray(data) ? data : data.data || [];
-
                 if (!fbFeedData.length) {
-                    logDebug("⚠️ No Facebook data available.");
                     document.getElementById("fb-post-container").innerHTML = "<p>No posts available.</p>";
                     return;
                 }
 
                 window.totalItems = fbFeedData.length;
                 window.totalPages = Math.ceil(window.totalItems / itemsPerPage);
-                logDebug(`📄 Total posts: ${window.totalItems}, Total pages: ${window.totalPages}`);
 
                 updateFeed();
                 createPagination();
             })
-            .catch(error => logDebug("❌ Error loading FB feed:", error));
+            .catch(error => console.error("❌ Error loading FB feed:", error));
     }
 
     function updateFeed() {
-    logDebug(`🔄 Rendering page ${window.currentPage}...`);
+        if (!fbFeedData.length) return;
 
-    if (!fbFeedData.length) return;
+        let start = (window.currentPage - 1) * itemsPerPage;
+        let end = Math.min(start + itemsPerPage, fbFeedData.length);
+        let pageData = fbFeedData.slice(start, end);
 
-    let start = (window.currentPage - 1) * itemsPerPage;
-    let end = Math.min(start + itemsPerPage, fbFeedData.length);
-    let pageData = fbFeedData.slice(start, end);
+        let fbPostContainer = document.getElementById("fb-post-container");
+        fbPostContainer.innerHTML = "";
 
-    // ✅ CLEAR OLD POSTS before adding new ones
-    let fbPostContainer = document.getElementById("fb-post-container");
-    fbPostContainer.innerHTML = ""; 
+        let HTMLData = '<div class="container"><div class="row fb-feed-row">';
+        pageData.forEach((post, index) => {
+            HTMLData += `<div class="col-md-6">
+                            <div class="fb-post" data-href="${post}" data-width="700"></div>
+                        </div>`;
+            if (index % 2 !== 0) HTMLData += `</div><div class="row fb-feed-row">`;
+        });
 
-    let HTMLData = '<div class="container"><div class="row fb-feed-row">';
-    pageData.forEach((post, index) => {
-        HTMLData += `<div class="col-md-6">
-                        <div class="fb-post" data-href="${post}" data-width="700"></div>
-                    </div>`;
-        if (index % 2 !== 0) HTMLData += `</div><div class="row fb-feed-row">`;
-    });
+        HTMLData += '</div></div>';
+        fbPostContainer.innerHTML = HTMLData;
 
-    HTMLData += '</div></div>';
-    fbPostContainer.innerHTML = HTMLData; // ✅ Insert new posts
-
-    logDebug("✅ Feed updated successfully. New posts displayed.");
-
-    // ✅ Ensure Facebook SDK parses new content
-    setTimeout(() => {
-        if (typeof FB !== "undefined" && FB.XFBML && typeof FB.XFBML.parse === "function") {
-            logDebug("🔄 Re-parsing Facebook posts for new page...");
-            FB.XFBML.parse();
-        } else {
-            logDebug("❌ Facebook SDK not loaded.");
-        }
-    }, 500);
-}
-function createPagination() {
-    logDebug("📌 Creating pagination...");
-    
-    let root = document.getElementById("pagination");
-    root.innerHTML = "";
-
-    // Previous button
-    let prevElem = document.createElement("li");
-    prevElem.classList.add("page-item");
-    if (window.currentPage === 1) prevElem.classList.add("disabled");
-    let prevAnchor = document.createElement("a");
-    prevAnchor.classList.add("page-link");
-    prevAnchor.innerHTML = "Previous";
-    prevAnchor.href = "#";  // ✅ Prevents page reload
-    prevAnchor.onclick = (event) => {
-        event.preventDefault();  // ✅ Stops browser from refreshing
-        changePage(window.currentPage - 1);
-    };
-    prevElem.append(prevAnchor);
-    root.append(prevElem);
-
-    // Page numbers
-    for (let i = 1; i <= window.totalPages; i++) {
-        let pageElem = document.createElement("li");
-        pageElem.classList.add("page-item");
-        if (i === window.currentPage) pageElem.classList.add("active");
-        let pageAnchor = document.createElement("a");
-        pageAnchor.classList.add("page-link");
-        pageAnchor.innerHTML = i;
-        pageAnchor.href = "#";  // ✅ Prevents page reload
-        pageAnchor.onclick = (event) => {
-            event.preventDefault();  // ✅ Stops browser from refreshing
-            changePage(i);
-        };
-        pageElem.append(pageAnchor);
-        root.append(pageElem);
+        setTimeout(() => {
+            if (typeof FB !== "undefined" && FB.XFBML && typeof FB.XFBML.parse === "function") {
+                FB.XFBML.parse();
+            }
+        }, 500);
     }
 
-    // Next button
-    let nextElem = document.createElement("li");
-    nextElem.classList.add("page-item");
-    if (window.currentPage === window.totalPages) nextElem.classList.add("disabled");
-    let nextAnchor = document.createElement("a");
-    nextAnchor.classList.add("page-link");
-    nextAnchor.innerHTML = "Next";
-    nextAnchor.href = "#";  // ✅ Prevents page reload
-    nextAnchor.onclick = (event) => {
-        event.preventDefault();  // ✅ Stops browser from refreshing
-        changePage(window.currentPage + 1);
-    };
-    nextElem.append(nextAnchor);
-    root.append(nextElem);
+    function createPagination() {
+        let root = document.getElementById("pagination");
+        root.innerHTML = "";
 
-    logDebug("✅ Pagination updated for page " + window.currentPage);
-}
+        let prevElem = document.createElement("li");
+        prevElem.classList.add("page-item");
+        if (window.currentPage === 1) prevElem.classList.add("disabled");
+        let prevAnchor = document.createElement("a");
+        prevAnchor.classList.add("page-link");
+        prevAnchor.innerHTML = "Previous";
+        prevAnchor.href = "#";
+        prevAnchor.onclick = (event) => {
+            event.preventDefault();
+            changePage(window.currentPage - 1);
+        };
+        prevElem.append(prevAnchor);
+        root.append(prevElem);
 
+        for (let i = 1; i <= window.totalPages; i++) {
+            let pageElem = document.createElement("li");
+            pageElem.classList.add("page-item");
+            if (i === window.currentPage) pageElem.classList.add("active");
+            let pageAnchor = document.createElement("a");
+            pageAnchor.classList.add("page-link");
+            pageAnchor.innerHTML = i;
+            pageAnchor.href = "#";
+            pageAnchor.onclick = (event) => {
+                event.preventDefault();
+                changePage(i);
+            };
+            pageElem.append(pageAnchor);
+            root.append(pageElem);
+        }
+
+        let nextElem = document.createElement("li");
+        nextElem.classList.add("page-item");
+        if (window.currentPage === window.totalPages) nextElem.classList.add("disabled");
+        let nextAnchor = document.createElement("a");
+        nextAnchor.classList.add("page-link");
+        nextAnchor.innerHTML = "Next";
+        nextAnchor.href = "#";
+        nextAnchor.onclick = (event) => {
+            event.preventDefault();
+            changePage(window.currentPage + 1);
+        };
+        nextElem.append(nextAnchor);
+        root.append(nextElem);
+    }
 
     function changePage(newPage) {
         if (newPage < 1 || newPage > window.totalPages) return;
-        
-        logDebug(`📄 Changing to page ${newPage}...`);
-        
         window.currentPage = newPage;
-        
-        updateFeed(); // ✅ Refreshes the posts on the page
-        createPagination(); // ✅ Re-creates pagination to highlight active page
+        updateFeed();
+        createPagination();
 
-        // ✅ Ensure Facebook SDK re-parses the new posts
         setTimeout(() => {
             if (typeof FB !== "undefined" && FB.XFBML && typeof FB.XFBML.parse === "function") {
-                logDebug("🔄 Re-parsing Facebook posts for new page...");
                 FB.XFBML.parse();
-            } else {
-                logDebug("❌ Facebook SDK not loaded.");
             }
         }, 500);
     }
