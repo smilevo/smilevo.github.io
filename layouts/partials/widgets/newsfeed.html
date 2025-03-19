@@ -105,38 +105,41 @@
     }
 
     function updateFeed() {
-        logDebug(`🔄 Rendering page ${window.currentPage}...`);
+    logDebug(`🔄 Rendering page ${window.currentPage}...`);
 
-        if (!fbFeedData.length) return;
+    if (!fbFeedData.length) return;
 
-        let start = (window.currentPage - 1) * itemsPerPage;
-        let end = Math.min(start + itemsPerPage, fbFeedData.length);
-        let pageData = fbFeedData.slice(start, end);
+    let start = (window.currentPage - 1) * itemsPerPage;
+    let end = Math.min(start + itemsPerPage, fbFeedData.length);
+    let pageData = fbFeedData.slice(start, end);
 
-        let HTMLData = '<div class="container"><div class="row fb-feed-row">';
-        pageData.forEach((post, index) => {
-            HTMLData += `<div class="col-md-6">
-                            <div class="fb-post" data-href="${post}" data-width="700"></div>
-                        </div>`;
-            if (index % 2 !== 0) HTMLData += `</div><div class="row fb-feed-row">`;
-        });
+    // ✅ CLEAR OLD POSTS before adding new ones
+    let fbPostContainer = document.getElementById("fb-post-container");
+    fbPostContainer.innerHTML = ""; 
 
-        HTMLData += '</div></div>';
-        document.getElementById("fb-post-container").innerHTML = HTMLData;
+    let HTMLData = '<div class="container"><div class="row fb-feed-row">';
+    pageData.forEach((post, index) => {
+        HTMLData += `<div class="col-md-6">
+                        <div class="fb-post" data-href="${post}" data-width="700"></div>
+                    </div>`;
+        if (index % 2 !== 0) HTMLData += `</div><div class="row fb-feed-row">`;
+    });
 
-        logDebug("✅ Feed updated successfully.");
+    HTMLData += '</div></div>';
+    fbPostContainer.innerHTML = HTMLData; // ✅ Insert new posts
 
-        // Ensure Facebook SDK parses new content
-        setTimeout(() => {
-            if (typeof FB !== "undefined" && FB.XFBML && typeof FB.XFBML.parse === "function") {
-                logDebug("🔄 Re-parsing Facebook posts for new page...");
-                FB.XFBML.parse();
-            } else {
-                logDebug("❌ Facebook SDK not loaded.");
-            }
-        }, 500);
-    }
+    logDebug("✅ Feed updated successfully. New posts displayed.");
 
+    // ✅ Ensure Facebook SDK parses new content
+    setTimeout(() => {
+        if (typeof FB !== "undefined" && FB.XFBML && typeof FB.XFBML.parse === "function") {
+            logDebug("🔄 Re-parsing Facebook posts for new page...");
+            FB.XFBML.parse();
+        } else {
+            logDebug("❌ Facebook SDK not loaded.");
+        }
+    }, 500);
+}
     function createPagination() {
         logDebug("📌 Creating pagination...");
         
