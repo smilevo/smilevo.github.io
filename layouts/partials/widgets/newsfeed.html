@@ -140,49 +140,62 @@
         }
     }, 500);
 }
-    function createPagination() {
-        logDebug("📌 Creating pagination...");
-        
-        let root = document.getElementById("pagination");
-        root.innerHTML = "";
+function createPagination() {
+    logDebug("📌 Creating pagination...");
+    
+    let root = document.getElementById("pagination");
+    root.innerHTML = "";
 
-        // Previous button
-        let prevElem = document.createElement("li");
-        prevElem.classList.add("page-item");
-        if (window.currentPage === 1) prevElem.classList.add("disabled");
-        let prevAnchor = document.createElement("a");
-        prevAnchor.classList.add("page-link");
-        prevAnchor.innerHTML = "Previous";
-        prevAnchor.onclick = () => changePage(window.currentPage - 1);
-        prevElem.append(prevAnchor);
-        root.append(prevElem);
+    // Previous button
+    let prevElem = document.createElement("li");
+    prevElem.classList.add("page-item");
+    if (window.currentPage === 1) prevElem.classList.add("disabled");
+    let prevAnchor = document.createElement("a");
+    prevAnchor.classList.add("page-link");
+    prevAnchor.innerHTML = "Previous";
+    prevAnchor.href = "#";  // ✅ Prevents page reload
+    prevAnchor.onclick = (event) => {
+        event.preventDefault();  // ✅ Stops browser from refreshing
+        changePage(window.currentPage - 1);
+    };
+    prevElem.append(prevAnchor);
+    root.append(prevElem);
 
-        // Page numbers
-        for (let i = 1; i <= window.totalPages; i++) {
-            let pageElem = document.createElement("li");
-            pageElem.classList.add("page-item");
-            if (i === window.currentPage) pageElem.classList.add("active");
-            let pageAnchor = document.createElement("a");
-            pageAnchor.classList.add("page-link");
-            pageAnchor.innerHTML = i;
-            pageAnchor.onclick = () => changePage(i);
-            pageElem.append(pageAnchor);
-            root.append(pageElem);
-        }
-
-        // Next button
-        let nextElem = document.createElement("li");
-        nextElem.classList.add("page-item");
-        if (window.currentPage === window.totalPages) nextElem.classList.add("disabled");
-        let nextAnchor = document.createElement("a");
-        nextAnchor.classList.add("page-link");
-        nextAnchor.innerHTML = "Next";
-        nextAnchor.onclick = () => changePage(window.currentPage + 1);
-        nextElem.append(nextAnchor);
-        root.append(nextElem);
-
-        logDebug("✅ Pagination updated for page " + window.currentPage);
+    // Page numbers
+    for (let i = 1; i <= window.totalPages; i++) {
+        let pageElem = document.createElement("li");
+        pageElem.classList.add("page-item");
+        if (i === window.currentPage) pageElem.classList.add("active");
+        let pageAnchor = document.createElement("a");
+        pageAnchor.classList.add("page-link");
+        pageAnchor.innerHTML = i;
+        pageAnchor.href = "#";  // ✅ Prevents page reload
+        pageAnchor.onclick = (event) => {
+            event.preventDefault();  // ✅ Stops browser from refreshing
+            changePage(i);
+        };
+        pageElem.append(pageAnchor);
+        root.append(pageElem);
     }
+
+    // Next button
+    let nextElem = document.createElement("li");
+    nextElem.classList.add("page-item");
+    if (window.currentPage === window.totalPages) nextElem.classList.add("disabled");
+    let nextAnchor = document.createElement("a");
+    nextAnchor.classList.add("page-link");
+    nextAnchor.innerHTML = "Next";
+    nextAnchor.href = "#";  // ✅ Prevents page reload
+    nextAnchor.onclick = (event) => {
+        event.preventDefault();  // ✅ Stops browser from refreshing
+        changePage(window.currentPage + 1);
+    };
+    nextElem.append(nextAnchor);
+    root.append(nextElem);
+
+    logDebug("✅ Pagination updated for page " + window.currentPage);
+}
+
 
     function changePage(newPage) {
         if (newPage < 1 || newPage > window.totalPages) return;
