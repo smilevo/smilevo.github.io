@@ -22,17 +22,14 @@ bio:
 
 # List each interest with a dash
 interests:
-- software engineering
-- web design
+- Software engineering
+- Web devolopement
 
 education:
   courses:
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
+  - course: Computer Science
+    institution: ESSECT
+    year: 2024
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
@@ -53,12 +50,12 @@ social:
   link: https://github.com/AbdullahA93
 - icon: linkedin
   icon_pack: fab
-  link: http://linkedin.com/in/abdullah-alsaleh-730334a7
+  link: https://www.linkedin.com/in/belhassen-khefacha-75498b293/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
   icon_pack: ai
-  link: files/Abdullah_CV_2021.pdf
+  link: files/Belhassen Khefacha's resumeW.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -72,6 +69,4 @@ user_groups:
 - MSc Students
 ---
 
-Abdullah Alsaleh a data science master's student from Saudi Arabia, currently in Rochester, NY.
-I have a bachelor's degree in information technology, and my main areas of interest are Data applications and Web development. Before I decided to pursue my master's degree in data science at Rochester Institute of Technology(RIT), I have worked as a web developer and system administrator in the Education sector for almost 3 years.
-Over the years, my passion for gaining experience, enhancing my skills, and expanding my knowledge in data and analytics of a bigdata have evolved. I always believe in data science as one of the most important success factors in all fields
+I'm a Computer Science graduate student at the University of Michigan-Flint, with a Bachelor's degree in Business Computing from the Higher School of Economic and Commercial Sciences. He has experience in software development, specializing in web and application development using technologies like HTML, CSS, JavaScript, PHP, ReactJS, Symfony, Java, and Python.
