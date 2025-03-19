@@ -6,40 +6,65 @@
 </div>
 
 <style>
-    .fb-feed-row {
-        margin: 30px -15px !important;
-    }
+  .fb-feed-row {
+      margin: 30px -15px !important;
+  }
 
-    .pagination-container {
-        margin-top: 50px;
-    }
+  .pagination-container {
+      margin-top: 50px;
+  }
 
-    .pagination .page-item.active .page-link {
-        background-color: #007bff;
-        color: white;
-        border-color: #007bff;
-    }
+  /* ✅ Styled Pagination Buttons */
+  .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+  }
 
-    .pagination .page-item .page-link {
-        color: #007bff;
-        cursor: pointer;
-    }
+  .pagination .page-item {
+      list-style: none;
+  }
 
-    .pagination .page-item .page-link:hover {
-        background-color: #0056b3;
-        color: white;
-    }
+  .pagination .page-item .page-link {
+      padding: 10px 15px;
+      margin: 2px;
+      border: 1px solid #007bff;
+      border-radius: 5px;
+      background: white;
+      color: #007bff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: bold;
+  }
 
-    .debug-container {
-        background: #f8f9fa;
-        border: 1px solid #ccc;
-        padding: 10px;
-        margin: 20px 0;
-        font-size: 14px;
-        color: #333;
-        max-height: 300px;
-        overflow-y: auto;
-    }
+  .pagination .page-item .page-link:hover {
+      background: #007bff;
+      color: white;
+  }
+
+  .pagination .page-item.active .page-link {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+  }
+
+  .pagination .page-item.disabled .page-link {
+      background: #ddd;
+      color: #999;
+      cursor: not-allowed;
+  }
+
+  .debug-container {
+      background: #f8f9fa;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #333;
+      max-height: 300px;
+      overflow-y: auto;
+  }
 </style>
 
 <!-- Debug Output -->
