@@ -3,147 +3,128 @@
 
 <div class="universal-wrapper pt-3">
     <h1>{{ $section.Params.title }}</h1>
-  </div>
-  
-  <style>
+</div>
+
+<style>
     .fb-feed-row {
-      margin: 30px -15px !important;
+        margin: 30px -15px !important;
     }
-  
+
     .pagination-container {
-      margin-top: 100px;
+        margin-top: 50px;
     }
-  </style>
-  
-  
-  <div id="fb-post-container">
-  </div>
-  <div class="pagination-container d-flex justify-content-center">
+
+    .pagination .page-item.active .page-link {
+        background-color: #007bff;
+        color: white;
+        border-color: #007bff;
+    }
+
+    .pagination .page-item .page-link {
+        color: #007bff;
+        cursor: pointer;
+    }
+
+    .pagination .page-item .page-link:hover {
+        background-color: #0056b3;
+        color: white;
+    }
+</style>
+
+<div id="fb-post-container"></div>
+
+<div class="pagination-container d-flex justify-content-center">
     <nav aria-label="Page navigation">
-      <ul class="pagination" id="pagination">
-      </ul>
+        <ul class="pagination" id="pagination"></ul>
     </nav>
-  </div>
-  
-  <script>
+</div>
+
+<script>
     window.currentPage = 1;
-    
-    function readyCall(){
-      var context = new XMLHttpRequest();
-        context.responseType = 'json';
-        context.open('GET', "/files/fbFeed.json",true);
-        context.onreadystatechange = function () {
-            if (context.readyState === 4) {
-              window.fbFeedData = this.response.data;
-              window.totalItem = fbFeedData.length;
-              window.totalPage = (Math.floor (((fbFeedData.length)/20))) + 1;
-              fbFeedUpdated();
-              paginationTabCreation();
-        }
-        };
-        context.send();
+    const itemsPerPage = 10;
+    let fbFeedData = [];
+
+    function readyCall() {
+        fetch("/files/fbFeed.json")
+            .then(response => response.json())
+            .then(data => {
+                fbFeedData = data;
+                window.totalItems = fbFeedData.length;
+                window.totalPages = Math.ceil(window.totalItems / itemsPerPage);
+                updateFeed();
+                createPagination();
+            })
+            .catch(error => console.error("Error loading FB feed:", error));
     }
-    function fbFeedUpdated() {
-      var HTMLData = "";
-      if (window.fbFeedData.length) {
-        HTMLData += '<div class="container">';
-        HTMLData += '<div class="row fb-feed-row">';
-        for (var itr = 0 + (20 * (window.currentPage - 1)); itr < (totalItem - (20 * (window.currentPage)) > 0 ? (20 * (window.currentPage)) : totalItem); itr = itr + 2) {
-          if (window.fbFeedData[itr]) {
-            HTMLData += `<div class="col"><div class="fb-post" 
-          data-href="${window.fbFeedData[itr]}"
-          data-width="700"></div></div>`;
-          }
-          if (window.fbFeedData[itr + 1]) {
-            HTMLData += `<div class="col"><div class="fb-post" 
-          data-href="${window.fbFeedData[itr + 1]}"
-          data-width="700"></div></div>`;
-          } else {
-            HTMLData += `<div class="col"><div></div></div>`;
-          }
-          if (window.fbFeedData[itr + 2]) {
-            HTMLData += `</div><div class="row fb-feed-row">`;
-          }
-        }
-  
+
+    function updateFeed() {
+        let start = (window.currentPage - 1) * itemsPerPage;
+        let end = start + itemsPerPage;
+        let pageData = fbFeedData.slice(start, end);
+
+        let HTMLData = '<div class="container"><div class="row fb-feed-row">';
+        pageData.forEach((post, index) => {
+            HTMLData += `<div class="col-md-6">
+                            <div class="fb-post" data-href="${post}" data-width="700"></div>
+                        </div>`;
+            if (index % 2 !== 0) HTMLData += `</div><div class="row fb-feed-row">`;
+        });
+
         HTMLData += '</div></div>';
         document.getElementById("fb-post-container").innerHTML = HTMLData;
-      }
+
+        // Ensure Facebook SDK parses new content
+        setTimeout(() => window.FB.XFBML.parse(), 500);
     }
-    window.paginationIconUpdate=function(){
-      var activeElem = document.getElementsByClassName("num-item active");
-      activeElem[0].classList.remove("active");
-      var allNumItem = document.getElementsByClassName("num-item");
-      allNumItem[window.currentPage - 1].classList.add("active");
-    };
-    window.paginationUpdate = function (pageNumber) {
-      if(pageNumber != window.currentPage){
-      if (window.totalPage >= pageNumber) {
-        window.currentPage = pageNumber;
-        fbFeedUpdated();
-        paginationIconUpdate();
-        setTimeout(function () {
-          window.FB.XFBML.parse();
-        }, 1000);
-      }
-      }
-    }
-    window.prevPagination = function(){
-      if(window.currentPage > 1){
-        window.currentPage = window.currentPage - 1;
-        fbFeedUpdated();
-        paginationIconUpdate();
-        setTimeout(function () {
-          window.FB.XFBML.parse();
-        }, 1000);
-      }
-    }
-    window.nextPagination = function(){
-      if(window.currentPage < window.totalPage){
-        window.currentPage = window.currentPage + 1;
-        fbFeedUpdated();
-        paginationIconUpdate();
-        setTimeout(function () {
-          window.FB.XFBML.parse();
-        }, 1000);
-      }
-    }
-    window.paginationTabCreation = function (){
-      var root = document.getElementById("pagination");
-  
-      var prevElem = document.createElement("li");
-      prevElem.classList.add("page-item");
-      var prevAnchor = document.createElement("a");
-      prevAnchor.classList.add("page-link");
-      prevAnchor.setAttribute("onclick", "prevPagination()");
-      prevAnchor.innerHTML="Previous";
-      prevElem.append(prevAnchor);
-      root.append(prevElem);
-  
-      for(var itr=1;itr<=totalPage;itr++){
-        prevElem = document.createElement("li");
+
+    function createPagination() {
+        let root = document.getElementById("pagination");
+        root.innerHTML = "";
+
+        // Previous button
+        let prevElem = document.createElement("li");
         prevElem.classList.add("page-item");
-        prevElem.classList.add("num-item");
-        prevAnchor = document.createElement("a");
+        if (window.currentPage === 1) prevElem.classList.add("disabled");
+        let prevAnchor = document.createElement("a");
         prevAnchor.classList.add("page-link");
-        if(itr == window.currentPage){
-          prevElem.classList.add("active");
-        }
-        prevAnchor.setAttribute("onclick", `paginationUpdate(${itr})`);
-        prevAnchor.innerHTML=itr;
+        prevAnchor.innerHTML = "Previous";
+        prevAnchor.onclick = () => changePage(window.currentPage - 1);
         prevElem.append(prevAnchor);
         root.append(prevElem);
-      }
-  
-      prevElem = document.createElement("li");
-      prevElem.classList.add("page-item");
-      prevAnchor = document.createElement("a");
-      prevAnchor.classList.add("page-link");
-      prevAnchor.setAttribute("onclick", "nextPagination()");
-      prevAnchor.innerHTML="Next";
-      prevElem.append(prevAnchor);
-      root.append(prevElem);    
+
+        // Page numbers
+        for (let i = 1; i <= window.totalPages; i++) {
+            let pageElem = document.createElement("li");
+            pageElem.classList.add("page-item");
+            if (i === window.currentPage) pageElem.classList.add("active");
+            let pageAnchor = document.createElement("a");
+            pageAnchor.classList.add("page-link");
+            pageAnchor.innerHTML = i;
+            pageAnchor.onclick = () => changePage(i);
+            pageElem.append(pageAnchor);
+            root.append(pageElem);
+        }
+
+        // Next button
+        let nextElem = document.createElement("li");
+        nextElem.classList.add("page-item");
+        if (window.currentPage === window.totalPages) nextElem.classList.add("disabled");
+        let nextAnchor = document.createElement("a");
+        nextAnchor.classList.add("page-link");
+        nextAnchor.innerHTML = "Next";
+        nextAnchor.onclick = () => changePage(window.currentPage + 1);
+        nextElem.append(nextAnchor);
+        root.append(nextElem);
     }
+
+    function changePage(newPage) {
+        if (newPage < 1 || newPage > window.totalPages) return;
+        window.currentPage = newPage;
+        updateFeed();
+        createPagination();
+    }
+
     readyCall();
-  </script>
-  <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+</script>
+
+<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
