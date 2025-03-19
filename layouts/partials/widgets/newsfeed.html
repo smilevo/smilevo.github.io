@@ -49,30 +49,38 @@
     let fbFeedData = [];
 
     function readyCall() {
-        console.log("Fetching data from JSON...");
+        console.log("🚀 Fetching fbFeed.json..."); // Debug message
+
         fetch("/files/fbFeed.json")
             .then(response => {
                 if (!response.ok) {
-                    throw new Error("Failed to fetch fbFeed.json");
+                    throw new Error(`❌ Failed to fetch JSON. Status: ${response.status}`);
                 }
                 return response.json();
             })
             .then(data => {
+                console.log("✅ JSON Data Loaded:", data); // Debug message
+
                 if (!data || data.length === 0) {
-                    console.warn("No Facebook data available.");
+                    console.warn("⚠️ No Facebook data available.");
                     document.getElementById("fb-post-container").innerHTML = "<p>No posts available.</p>";
                     return;
                 }
+
                 fbFeedData = data;
                 window.totalItems = fbFeedData.length;
                 window.totalPages = Math.ceil(window.totalItems / itemsPerPage);
+                console.log(`📄 Total posts: ${window.totalItems}, Total pages: ${window.totalPages}`);
+
                 updateFeed();
                 createPagination();
             })
-            .catch(error => console.error("Error loading FB feed:", error));
+            .catch(error => console.error("❌ Error loading FB feed:", error));
     }
 
     function updateFeed() {
+        console.log(`🔄 Rendering page ${window.currentPage}...`);
+
         if (!fbFeedData.length) return;
 
         let start = (window.currentPage - 1) * itemsPerPage;
@@ -90,18 +98,22 @@
         HTMLData += '</div></div>';
         document.getElementById("fb-post-container").innerHTML = HTMLData;
 
+        console.log("✅ Feed updated successfully.");
+
         // Ensure Facebook SDK parses new content
         setTimeout(() => {
-            if (window.FB && typeof FB.XFBML !== "undefined") {
+            if (typeof FB !== "undefined" && FB.XFBML && typeof FB.XFBML.parse === "function") {
+                console.log("🔄 Parsing Facebook posts...");
                 FB.XFBML.parse();
             } else {
-                console.error("Facebook SDK not loaded.");
+                console.error("❌ Facebook SDK not loaded.");
             }
         }, 500);
     }
 
     function createPagination() {
-        if (!fbFeedData.length || window.totalPages < 2) return; // No need for pagination if only 1 page
+        console.log("📌 Creating pagination...");
+        if (!fbFeedData.length || window.totalPages < 2) return; // No pagination needed if only 1 page
 
         let root = document.getElementById("pagination");
         root.innerHTML = "";
@@ -140,10 +152,13 @@
         nextAnchor.onclick = () => changePage(window.currentPage + 1);
         nextElem.append(nextAnchor);
         root.append(nextElem);
+
+        console.log("✅ Pagination created.");
     }
 
     function changePage(newPage) {
         if (newPage < 1 || newPage > window.totalPages) return;
+        console.log(`📄 Changing to page ${newPage}...`);
         window.currentPage = newPage;
         updateFeed();
         createPagination();
