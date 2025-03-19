@@ -29,6 +29,10 @@
         background-color: #0056b3;
         color: white;
     }
+
+    .hidden {
+        display: none;
+    }
 </style>
 
 <div id="fb-post-container"></div>
@@ -45,9 +49,20 @@
     let fbFeedData = [];
 
     function readyCall() {
+        console.log("Fetching data from JSON...");
         fetch("/files/fbFeed.json")
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Failed to fetch fbFeed.json");
+                }
+                return response.json();
+            })
             .then(data => {
+                if (!data || data.length === 0) {
+                    console.warn("No Facebook data available.");
+                    document.getElementById("fb-post-container").innerHTML = "<p>No posts available.</p>";
+                    return;
+                }
                 fbFeedData = data;
                 window.totalItems = fbFeedData.length;
                 window.totalPages = Math.ceil(window.totalItems / itemsPerPage);
@@ -58,8 +73,10 @@
     }
 
     function updateFeed() {
+        if (!fbFeedData.length) return;
+
         let start = (window.currentPage - 1) * itemsPerPage;
-        let end = start + itemsPerPage;
+        let end = Math.min(start + itemsPerPage, fbFeedData.length);
         let pageData = fbFeedData.slice(start, end);
 
         let HTMLData = '<div class="container"><div class="row fb-feed-row">';
@@ -74,10 +91,18 @@
         document.getElementById("fb-post-container").innerHTML = HTMLData;
 
         // Ensure Facebook SDK parses new content
-        setTimeout(() => window.FB.XFBML.parse(), 500);
+        setTimeout(() => {
+            if (window.FB && typeof FB.XFBML !== "undefined") {
+                FB.XFBML.parse();
+            } else {
+                console.error("Facebook SDK not loaded.");
+            }
+        }, 500);
     }
 
     function createPagination() {
+        if (!fbFeedData.length || window.totalPages < 2) return; // No need for pagination if only 1 page
+
         let root = document.getElementById("pagination");
         root.innerHTML = "";
 
@@ -124,7 +149,8 @@
         createPagination();
     }
 
-    readyCall();
+    // Run script on page load
+    document.addEventListener("DOMContentLoaded", readyCall);
 </script>
 
 <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
