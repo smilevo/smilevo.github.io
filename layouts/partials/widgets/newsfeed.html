@@ -37,7 +37,7 @@
         margin: 20px 0;
         font-size: 14px;
         color: #333;
-        max-height: 200px;
+        max-height: 300px;
         overflow-y: auto;
     }
 </style>
@@ -85,6 +85,7 @@
             .then(data => {
                 logDebug("✅ JSON Data Loaded:", data);
 
+                // Fix JSON structure if needed
                 fbFeedData = Array.isArray(data) ? data : data.data || [];
 
                 if (!fbFeedData.length) {
@@ -128,7 +129,7 @@
         // Ensure Facebook SDK parses new content
         setTimeout(() => {
             if (typeof FB !== "undefined" && FB.XFBML && typeof FB.XFBML.parse === "function") {
-                logDebug("🔄 Parsing Facebook posts...");
+                logDebug("🔄 Re-parsing Facebook posts for new page...");
                 FB.XFBML.parse();
             } else {
                 logDebug("❌ Facebook SDK not loaded.");
@@ -138,8 +139,7 @@
 
     function createPagination() {
         logDebug("📌 Creating pagination...");
-        if (!fbFeedData.length || window.totalPages < 2) return;
-
+        
         let root = document.getElementById("pagination");
         root.innerHTML = "";
 
@@ -178,15 +178,28 @@
         nextElem.append(nextAnchor);
         root.append(nextElem);
 
-        logDebug("✅ Pagination created.");
+        logDebug("✅ Pagination updated for page " + window.currentPage);
     }
 
     function changePage(newPage) {
         if (newPage < 1 || newPage > window.totalPages) return;
+        
         logDebug(`📄 Changing to page ${newPage}...`);
+        
         window.currentPage = newPage;
-        updateFeed();
-        createPagination();
+        
+        updateFeed(); // ✅ Refreshes the posts on the page
+        createPagination(); // ✅ Re-creates pagination to highlight active page
+
+        // ✅ Ensure Facebook SDK re-parses the new posts
+        setTimeout(() => {
+            if (typeof FB !== "undefined" && FB.XFBML && typeof FB.XFBML.parse === "function") {
+                logDebug("🔄 Re-parsing Facebook posts for new page...");
+                FB.XFBML.parse();
+            } else {
+                logDebug("❌ Facebook SDK not loaded.");
+            }
+        }, 500);
     }
 
     document.addEventListener("DOMContentLoaded", readyCall);
