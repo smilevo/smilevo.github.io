@@ -22,17 +22,15 @@ bio:
 
 # List each interest with a dash
 interests:
-- software engineering
-- web design
+- Software Engineering 
+- SE for AI
 
 education:
   courses:
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
+  - course: IT
+    institution: Tunis Business School
+    year: 2023
+
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
@@ -72,6 +70,4 @@ user_groups:
 - MSc Students
 ---
 
-Abdullah Alsaleh a data science master's student from Saudi Arabia, currently in Rochester, NY.
-I have a bachelor's degree in information technology, and my main areas of interest are Data applications and Web development. Before I decided to pursue my master's degree in data science at Rochester Institute of Technology(RIT), I have worked as a web developer and system administrator in the Education sector for almost 3 years.
-Over the years, my passion for gaining experience, enhancing my skills, and expanding my knowledge in data and analytics of a bigdata have evolved. I always believe in data science as one of the most important success factors in all fields
+Taha Draoui is a computer science graduate student with experience in software engineering, backend development, and SE for AI research. He has contributed to industry and academic projects involving web technologies and research in software quality assurance for machine learning projects.
