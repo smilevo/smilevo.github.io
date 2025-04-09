@@ -48,7 +48,7 @@ social:
   link: https://scholar.google.com/citations?user=PERSON-ID
 - icon: github
   icon_pack: fab
-  link: https://github.com/masmoudi662
+  link: https://github.com/chawkibs6
 - icon: linkedin
   icon_pack: fab
   link: ""
