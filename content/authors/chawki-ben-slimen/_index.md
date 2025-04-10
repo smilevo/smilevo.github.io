@@ -1,10 +1,10 @@
 ---
 # Display name
-title: "Taha Draoui"
+title: "Chawki Ben Slimen"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "taha-draoui"
+- "chawki-ben-slimen"
 
 # Is this the primary user of the site?
 superuser: false
@@ -22,14 +22,14 @@ bio:
 
 # List each interest with a dash
 interests:
-- Software Engineering 
-- SE for AI
+- Software engineering
+- Computer Science
 
 education:
   courses:
-  - course: IT
-    institution: Tunis Business School
-    year: 2023
+  - course: Master’s degree in big data
+    institution: Institute of Computer Science and Management of Nabeul
+    year: 2022
 
 
 # Social/Academic Networking
@@ -42,21 +42,21 @@ social:
   link: '#contact'  # For a direct email link, use "mailto:test@example.org".
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/USERNAME
+  link: https://x.com/masmoudi2003
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=PERSON-ID
 - icon: github
   icon_pack: fab
-  link: https://github.com/tahh1
+  link: https://github.com/chawkibs6
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/tahadraoui/
+  link: ""
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
   icon_pack: ai
-  link: files/RESUME_taha.pdf
+  link: files/Resume_chawki.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -70,4 +70,4 @@ user_groups:
 - MSc Students
 ---
 
-Taha Draoui is a computer science graduate student with experience in software engineering, backend development, and SE for AI research. He has contributed to industry and academic projects involving web technologies and research in software quality assurance for machine learning projects.
+Dedicated software developer with a strong background in Big Data and cross-platform application development using Flutter. Skilled in machine learning, data analysis Currently pursuing a Master’s degree in Computer Science, with a focus on building data-driven solutions and leveraging predictive analytics to solve real-world problems.
