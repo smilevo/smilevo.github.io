@@ -48,15 +48,15 @@ social:
   link: https://scholar.google.com/citations?user=PERSON-ID
 - icon: github
   icon_pack: fab
-  link: https://github.com/AbdullahA93
+  link: https://github.com/tahh1
 - icon: linkedin
   icon_pack: fab
-  link: http://linkedin.com/in/abdullah-alsaleh-730334a7
+  link: https://www.linkedin.com/in/tahadraoui/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
   icon_pack: ai
-  link: files/Abdullah_CV_2021.pdf
+  link: files/RESUME_taha.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
