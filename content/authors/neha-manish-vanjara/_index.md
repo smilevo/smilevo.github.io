@@ -1,10 +1,10 @@
 ---
 # Display name
-title: "Chawki Ben Slimen"
+title: "Neha Manish Vanjara"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "chawki-ben-slimen"
+- "neha-manish-vanjara"
 
 # Is this the primary user of the site?
 superuser: false
@@ -27,9 +27,9 @@ interests:
 
 education:
   courses:
-  - course: Master’s degree in big data
-    institution: Institute of Computer Science and Management of Nabeul
-    year: 2022
+  - course:
+    institution: 
+    year: 
 
 
 # Social/Academic Networking
@@ -48,10 +48,10 @@ social:
   link: https://scholar.google.com/citations?user=PERSON-ID
 - icon: github
   icon_pack: fab
-  link: https://github.com/chawkibs6
+  link: https://github.com/nehavanjara
 - icon: linkedin
   icon_pack: fab
-  link: ""
+  link: "https://www.linkedin.com/in/neha-vanjara"
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
@@ -70,4 +70,5 @@ user_groups:
 - MSc Students
 ---
 
-Dedicated software developer with a strong background in Big Data and cross-platform application development using Flutter. Skilled in machine learning, data analysis Currently pursuing a Master’s degree in Computer Science, with a focus on building data-driven solutions and leveraging predictive analytics to solve real-world problems.
+Hi, my name is Neha Vanjara and I am a graduate student at Rochester Institute of Technology pursuing masters in Data Science. I have done my undergrad in Computer Engineering, and I will be graduating in May 2024. I have interned with AMD for about 8 months where I worked for Product Yield Engineering Team. I enjoy working in a fast-paced environment and always up for learning and working with new technologies and I am comfortable working with tools like JmpPro, Python, MySQL, RStudio, Minitab, Snowflake.
+In my spare time, I like to go on hikes or practice singing.
