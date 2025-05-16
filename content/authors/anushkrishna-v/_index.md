@@ -32,7 +32,7 @@ education:
   - course: Ms in Data Science
     institution: Rochester Institute of Technology
     year: ""
-- course: BSc in Computer Science with a minor in Data Science
+  - course: BSc in Computer Science with a minor in Data Science
     institution: PSG College of Science and Technology
     year: ""
 
