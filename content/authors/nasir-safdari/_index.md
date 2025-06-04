@@ -10,7 +10,7 @@ authors:
 superuser: false
 
 # Role/position (e.g., Professor of Artificial Intelligence)
-role: Senior Data Scientist
+role: Senior data Scientist
 
 # Organizations/Affiliations
 organizations:
