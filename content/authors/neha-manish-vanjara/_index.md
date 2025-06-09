@@ -1,10 +1,10 @@
 ---
 # Display name
-title: "Devan Lad"
+title: "Neha Manish Vanjara"
 
 # Username (this should match the folder name and the name on publications)
 authors:
-- "devan-lad"
+- "neha-manish-vanjara"
 
 # Is this the primary user of the site?
 superuser: false
@@ -22,17 +22,15 @@ bio:
 
 # List each interest with a dash
 interests:
-- Interest 1
-- Interest 2
+- Software engineering
+- Computer Science
 
 education:
   courses:
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
-  - course: Title course 1
-    institution: Name of Institution
-    year: 2012
+  - course:
+    institution: 
+    year: 
+
 
 # Social/Academic Networking
 # For available icons, see: https://wowchemy.com/docs/page-builder/#icons
@@ -44,21 +42,21 @@ social:
   link: '#contact'  # For a direct email link, use "mailto:test@example.org".
 - icon: twitter
   icon_pack: fab
-  link: https://twitter.com/USERNAME
+  link: 
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=PERSON-ID
 - icon: github
   icon_pack: fab
-  link: https://github.com/devandhrew
+  link: https://github.com/nehavanjara
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/devan-lad/
+  link: "https://www.linkedin.com/in/neha-vanjara"
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
   icon_pack: ai
-  link: files/Devan_Lad_Resume.pdf
+  link: files/Neha_Vanjara-DataScience - Neha Vanjara.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -68,8 +66,9 @@ highlight_name: false
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-user_groups:
-- Alumni
+user_groups: 
+- MSc Students
 ---
 
-I'm a current Hard of Hearing Software Engineering master's student at Rochester Institute of Technology(RIT). I will be finishing my master's in May 2022. I completed my undergraduates with a Bachelors's in Software engineering at RIT in 2020. My passions are Software Engineering, Games, and Reading. I am currently doing my thesis on Testing Recurrent Neural Networks. I like walking through the process of software development life cycle and learning strategies on how to approach each of the steps. I enjoy a team environment as it makes projects enjoyable and a great learning experience.
+Hi, my name is Neha Vanjara and I am a graduate student at Rochester Institute of Technology pursuing masters in Data Science. I have done my undergrad in Computer Engineering, and I will be graduating in May 2024. I have interned with AMD for about 8 months where I worked for Product Yield Engineering Team. I enjoy working in a fast-paced environment and always up for learning and working with new technologies and I am comfortable working with tools like JmpPro, Python, MySQL, RStudio, Minitab, Snowflake.
+In my spare time, I like to go on hikes or practice singing.
