@@ -21,29 +21,29 @@ appearance:
 
 site_type: Organization
 local_business_type: ''
-org_name: ''
-description: My research group description.
+org_name: 'SMILE Research Group - University of Michigan-Flint'
+description: 'The Software Maintenance and Intelligent Evolution (SMILE) Research Group at University of Michigan-Flint focuses on designing and implementing intelligent algorithms to tackle software engineering problems.'
 twitter: 'https://twitter.com/mwmkaouer'
 
 # Contact (edit or remove options as required)
 
-email: mwmvse@rit.edu
+email: mmkaouer@umich.edu
 phone: (313) 338 48 two 9
 address:
-  street: 92 Lomb Memorial Drive
-  city: Rochester
-  region: NY
-  postcode: '14623-5608'
+  street: 415 E Kearsley St
+  city: Flint
+  region: MI
+  postcode: '48503'
   country: United States
   country_code: US
 coordinates:
-  latitude: '43.091969'
-  longitude: '-77.674690'
-directions: Enter Golisano Building and find Office 70-1519 on ground Floor
+  latitude: '43.0195'
+  longitude: '-83.6895'
+directions: Enter MSB Building and find Office MSB 383J on 3rd Floor
 office_hours:
   - 'Tuesday 03:00 PM to 04:00 PM'
   - 'Thursday 03:00 PM to 04:00 PM'
-appointment_url: 'mailto:mwmvse@rit.edu'
+appointment_url: 'mailto:mmkaouer@umich.edu'
 contact_links:
 #  - icon: comments
 #    icon_pack: fas

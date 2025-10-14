@@ -1,0 +1,20 @@
+courses:
+  - title: "SWEN-561: Software Construction"
+    semester: "Fall 2024"
+    description: "This course provides a foundation in software construction fundamentals and best practices. Students learn about design patterns, code quality, and maintainable software development."
+    image: "teaching/java.jpg"
+    
+  - title: "SWEN-610: Foundations of Software Engineering"
+    semester: "Spring 2024"
+    description: "Graduate-level course covering advanced software engineering concepts, software architecture, and project management in large-scale software development."
+    image: "teaching/maintenance.jpg"
+    
+  - title: "CSCI-261: Analysis of Algorithms"
+    semester: "Fall 2023"
+    description: "Study of fundamental algorithms and data structures, including complexity analysis, sorting, searching, and graph algorithms."
+    image: "teaching/algorithms.jpg"
+    
+  - title: "SWEN-746: Applied Software Quality Engineering"
+    semester: "Spring 2023"
+    description: "Advanced course focusing on software quality assurance, testing strategies, code analysis, and software metrics."
+    image: "teaching/quality-eng.jpg"
