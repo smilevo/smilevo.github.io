@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmileLab Admin Dashboard</title>
+<style>
+:root[data-theme="dark"]{
+  --bg: #0d0f18; --bg2: #161927; --bg3: #1e2235; --card: #181b2a;
+  --txt: #e4e8f5; --txt2: #8b93b8; --muted: #555d7a;
+  --accent: #6c63ff; --accent2: #a78bfa; --acl: rgba(108,99,255,.14);
+  --border: #252a42; --border2: #31374f;
+  --ok: #4ecb8d; --err: #f06292; --warn: #ffb340;
+  --shadow: 0 8px 32px rgba(0,0,0,.45); --shadow-sm: 0 2px 10px rgba(0,0,0,.3);
+}
+:root[data-theme="light"]{
+  --bg: #f0f2fa; --bg2: #fff; --bg3: #e8ecf7; --card: #fff;
+  --txt: #1a1d2e; --txt2: #4a5270; --muted: #8890b0;
+  --accent: #6c63ff; --accent2: #7c74ff; --acl: rgba(108,99,255,.1);
+  --border: #dde1f0; --border2: #c8ceea;
+  --ok: #2e9e6e; --err: #d32f2f; --warn: #e65c00;
+  --shadow: 0 4px 20px rgba(0,0,0,.09); --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;transition:background .3s,color .3s}
+
+/* ── Login ── */
+#login-screen{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--bg);z-index:900}
+.login-wrap{width:100%;max-width:420px;padding:20px}
+.login-card{background:var(--bg2);border:1px solid var(--border);border-radius:18px;padding:44px 40px;box-shadow:var(--shadow)}
+.login-brand{display:flex;align-items:center;gap:14px;margin-bottom:36px}
+.brand-icon{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.brand-name{font-size:20px;font-weight:700}
+.brand-sub{font-size:12px;color:var(--muted);margin-top:2px}
+.login-title{font-size:18px;font-weight:600;margin-bottom:6px}
+.login-desc{font-size:13px;color:var(--txt2);margin-bottom:28px;line-height:1.5}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:12px;font-weight:600;color:var(--txt2);margin-bottom:7px;letter-spacing:.03em;text-transform:uppercase}
+.form-control{width:100%;background:var(--bg3);border:1.5px solid var(--border);border-radius:9px;padding:10px 14px;color:var(--txt);font-size:14px;transition:border-color .2s,box-shadow .2s;outline:none;font-family:inherit}
+.form-control:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--acl)}
+.form-control::placeholder{color:var(--muted)}
+select.form-control option{background:var(--bg2)}
+textarea.form-control{resize:vertical;font-family:inherit;min-height:80px;line-height:1.5}
+.hint{font-size:11px;color:var(--muted);margin-top:5px}
+.err-msg{background:rgba(240,98,146,.1);border:1px solid rgba(240,98,146,.3);border-radius:7px;padding:9px 13px;font-size:13px;color:var(--err);margin-top:10px}
+
+/* ── Buttons ── */
+.btn{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:8px;border:none;cursor:pointer;font-size:14px;font-weight:500;transition:all .2s;text-decoration:none;white-space:nowrap}
+.btn-primary{background:var(--accent);color:#fff;width:100%;justify-content:center}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-1px)}
+.btn-secondary{background:var(--bg3);color:var(--txt);border:1.5px solid var(--border)}
+.btn-secondary:hover{background:var(--border)}
+.btn-danger{background:rgba(240,98,146,.12);color:var(--err);border:1px solid rgba(240,98,146,.28)}
+.btn-danger:hover{background:rgba(240,98,146,.22)}
+.btn-ghost{background:transparent;color:var(--txt2);border:none;padding:8px}
+.btn-ghost:hover{background:var(--bg3);color:var(--txt)}
+.btn-sm{padding:6px 12px;font-size:12px;border-radius:6px}
+.btn-icon{width:32px;height:32px;padding:0;justify-content:center;border-radius:7px}
+.btn-full{width:100%;justify-content:center}
+.mt8{margin-top:8px}
+
+/* ── App Shell ── */
+#app{display:none;min-height:100vh}
+.sidebar{position:fixed;top:0;left:0;width:230px;height:100vh;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;z-index:100}
+.sidebar-head{padding:18px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.s-logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.s-title{font-size:15px;font-weight:700}
+.s-sub{font-size:10px;color:var(--muted)}
+.sidebar-nav{flex:1;padding:14px 10px;overflow-y:auto;display:flex;flex-direction:column;gap:3px}
+.nav-label{font-size:10px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;padding:8px 8px 4px}
+.nav-item{display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:9px;cursor:pointer;font-size:13.5px;color:var(--txt2);transition:all .15s;border:none;background:transparent;width:100%;text-align:left}
+.nav-item:hover{background:var(--bg3);color:var(--txt)}
+.nav-item.active{background:var(--acl);color:var(--accent);font-weight:600}
+.nav-ico{font-size:17px;width:20px;text-align:center}
+.sidebar-foot{padding:14px;border-top:1px solid var(--border)}
+.user-row{display:flex;align-items:center;gap:9px;padding:8px;border-radius:9px;background:var(--bg3)}
+.u-av{width:30px;height:30px;border-radius:8px;background:var(--acl);display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:14px;flex-shrink:0}
+.u-name{font-size:12px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.u-repo{font-size:10px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.u-logout{margin-left:auto;cursor:pointer;color:var(--muted);font-size:14px;padding:4px;border-radius:5px;background:none;border:none;flex-shrink:0}
+.u-logout:hover{color:var(--err)}
+
+/* ── Main ── */
+.main{margin-left:230px;min-height:100vh;display:flex;flex-direction:column}
+.topbar{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;backdrop-filter:blur(10px)}
+.tb-left .tb-title{font-size:20px;font-weight:700}
+.tb-left .tb-sub{font-size:12px;color:var(--muted);margin-top:2px}
+.tb-right{display:flex;align-items:center;gap:10px}
+.theme-btn{width:38px;height:38px;border-radius:9px;background:var(--bg2);border:1.5px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;transition:all .2s}
+.theme-btn:hover{background:var(--bg3)}
+.content{flex:1;padding:28px}
+
+/* ── Loading ── */
+.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 20px;color:var(--muted);gap:16px}
+.spinner{width:38px;height:38px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── Dashboard Overview ── */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-bottom:28px}
+.stat-card{background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:22px 20px;display:flex;align-items:center;gap:14px;transition:all .2s}
+.stat-card:hover{border-color:var(--accent);box-shadow:0 0 0 3px var(--acl)}
+.stat-ico{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.stat-val{font-size:26px;font-weight:700;line-height:1}
+.stat-lbl{font-size:12px;color:var(--muted);margin-top:3px}
+.welcome-card{background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:16px;padding:28px 32px;color:#fff;margin-bottom:28px}
+.welcome-card h2{font-size:22px;font-weight:700;margin-bottom:6px}
+.welcome-card p{font-size:14px;opacity:.85;line-height:1.6}
+
+/* ── Section Header ── */
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.sec-head h2{font-size:20px;font-weight:700}
+.sec-head p{font-size:12px;color:var(--muted);margin-top:3px}
+
+/* ── Filter Tabs ── */
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.f-tab{padding:6px 14px;border-radius:20px;border:1.5px solid var(--border);background:var(--bg2);color:var(--txt2);font-size:12.5px;cursor:pointer;transition:all .15s;font-weight:500}
+.f-tab:hover{background:var(--bg3)}
+.f-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* ── Search ── */
+.search-wrap{display:flex;align-items:center;gap:10px;background:var(--bg2);border:1.5px solid var(--border);border-radius:10px;padding:8px 14px;flex:1;max-width:280px;transition:border-color .2s}
+.search-wrap:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px var(--acl)}
+.search-wrap input{background:none;border:none;outline:none;color:var(--txt);font-size:13.5px;width:100%}
+.search-wrap input::placeholder{color:var(--muted)}
+.search-ico{color:var(--muted);font-size:16px;flex-shrink:0}
+.controls-row{display:flex;align-items:center;gap:10px;margin-bottom:22px;flex-wrap:wrap}
+
+/* ── People ── */
+.group-section{margin-bottom:36px}
+.group-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.group-head h3{font-size:14px;font-weight:600;color:var(--txt2)}
+.group-badge{background:var(--acl);color:var(--accent);border-radius:20px;padding:2px 10px;font-size:11px;font-weight:600}
+.people-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.person-card{background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:20px;transition:all .2s;cursor:default}
+.person-card:hover{border-color:var(--accent);box-shadow:0 0 0 3px var(--acl),var(--shadow-sm);transform:translateY(-2px)}
+.p-av{width:52px;height:52px;border-radius:13px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;color:#fff;margin-bottom:13px;flex-shrink:0}
+.p-name{font-size:15px;font-weight:600;margin-bottom:3px}
+.p-role{font-size:11px;color:var(--accent);font-weight:600;margin-bottom:7px;text-transform:uppercase;letter-spacing:.03em}
+.p-bio{font-size:12.5px;color:var(--txt2);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.tag{background:var(--bg3);border:1px solid var(--border);border-radius:5px;padding:2px 8px;font-size:10.5px;color:var(--txt2)}
+.socials{display:flex;gap:6px;margin-bottom:12px}
+.soc-link{width:26px;height:26px;border-radius:6px;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:12px;text-decoration:none;color:var(--txt2);transition:all .15s}
+.soc-link:hover{background:var(--accent);color:#fff}
+.card-actions{display:flex;gap:7px;padding-top:12px;border-top:1px solid var(--border)}
+
+/* ── Events ── */
+.list-items{display:flex;flex-direction:column;gap:11px}
+.event-card{background:var(--card);border:1.5px solid var(--border);border-radius:13px;padding:18px 22px;display:flex;gap:18px;align-items:flex-start;transition:all .2s}
+.event-card:hover{border-color:var(--accent);box-shadow:var(--shadow-sm)}
+.ev-date{min-width:58px;background:var(--acl);border-radius:10px;padding:10px 8px;text-align:center;color:var(--accent);flex-shrink:0}
+.ev-day{font-size:22px;font-weight:700;line-height:1}
+.ev-mon{font-size:10px;font-weight:600;text-transform:uppercase}
+.ev-info{flex:1;min-width:0}
+.ev-title{font-size:15px;font-weight:600;margin-bottom:4px}
+.ev-loc{font-size:12px;color:var(--muted);margin-bottom:7px;display:flex;align-items:center;gap:5px}
+.ev-sum{font-size:12.5px;color:var(--txt2);line-height:1.5}
+.ev-actions{display:flex;gap:7px;flex-shrink:0;align-self:center}
+
+/* ── Posts ── */
+.post-card{background:var(--card);border:1.5px solid var(--border);border-radius:13px;padding:18px 22px;display:flex;gap:16px;align-items:center;transition:all .2s}
+.post-card:hover{border-color:var(--accent);box-shadow:var(--shadow-sm)}
+.post-date{background:var(--bg3);border-radius:7px;padding:5px 12px;font-size:11.5px;color:var(--muted);white-space:nowrap;flex-shrink:0}
+.post-info{flex:1;min-width:0}
+.post-title{font-size:15px;font-weight:600;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post-sum{font-size:12.5px;color:var(--txt2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.post-actions{display:flex;gap:7px;flex-shrink:0}
+
+/* ── Sort controls ── */
+.sort-row{display:flex;align-items:center;gap:8px;margin-bottom:18px}
+.sort-lbl{font-size:12px;color:var(--muted)}
+.sort-btn{padding:5px 12px;border-radius:6px;border:1.5px solid var(--border);background:var(--bg2);color:var(--txt2);font-size:12px;cursor:pointer;transition:all .15s}
+.sort-btn.active{background:var(--acl);color:var(--accent);border-color:var(--accent)}
+
+/* ── Modal ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(5px);z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .2s}
+.modal-overlay.open{opacity:1;pointer-events:auto}
+.modal{background:var(--bg2);border:1.5px solid var(--border);border-radius:17px;width:100%;max-width:620px;max-height:92vh;overflow:hidden;display:flex;flex-direction:column;transform:scale(.95) translateY(12px);transition:transform .2s;box-shadow:var(--shadow)}
+.modal-overlay.open .modal{transform:scale(1) translateY(0)}
+.modal-head{padding:18px 22px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.modal-title{font-size:16px;font-weight:600}
+.modal-x{width:30px;height:30px;border-radius:7px;border:none;background:var(--bg3);color:var(--txt2);cursor:pointer;font-size:17px;display:flex;align-items:center;justify-content:center;transition:all .15s;line-height:1}
+.modal-x:hover{background:var(--border);color:var(--txt)}
+.modal-body{padding:22px;overflow-y:auto;flex:1}
+.modal-foot{padding:14px 22px;border-top:1px solid var(--border);display:flex;justify-content:flex-end;gap:9px;flex-shrink:0}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{margin-bottom:16px}
+.fg label{display:block;font-size:11.5px;font-weight:600;color:var(--txt2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.03em}
+.divider{height:1px;background:var(--border);margin:18px 0}
+.sec-lbl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+
+/* ── Tags Input ── */
+.tags-field{background:var(--bg3);border:1.5px solid var(--border);border-radius:9px;padding:7px 10px;display:flex;flex-wrap:wrap;gap:5px;min-height:40px;cursor:text;transition:border-color .2s,box-shadow .2s}
+.tags-field:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px var(--acl)}
+.t-chip{background:var(--acl);color:var(--accent);border-radius:5px;padding:3px 8px;font-size:11.5px;display:flex;align-items:center;gap:4px}
+.t-chip button{background:none;border:none;cursor:pointer;color:var(--accent);font-size:14px;line-height:1;padding:0 1px;opacity:.7}
+.t-chip button:hover{opacity:1}
+.tags-inp{border:none;background:transparent;outline:none;color:var(--txt);font-size:13.5px;min-width:80px;flex:1}
+
+/* ── Checkboxes ── */
+.cb-group{display:flex;flex-direction:column;gap:9px}
+.cb-item{display:flex;align-items:center;gap:9px;cursor:pointer;font-size:13.5px;color:var(--txt2)}
+.cb-item input[type=checkbox]{width:15px;height:15px;accent-color:var(--accent);cursor:pointer}
+
+/* ── Markdown editor ── */
+.md-tabs{display:flex;border:1.5px solid var(--border);border-bottom:none;border-radius:9px 9px 0 0;overflow:hidden}
+.md-tab{padding:7px 16px;font-size:12.5px;cursor:pointer;background:var(--bg3);color:var(--txt2);border:none;transition:all .15s;border-right:1px solid var(--border)}
+.md-tab:last-child{border-right:none}
+.md-tab.active{background:var(--bg2);color:var(--txt)}
+.md-area{border:1.5px solid var(--border);border-radius:0 0 9px 9px;overflow:hidden}
+.md-area textarea{width:100%;min-height:180px;background:var(--bg3);border:none;padding:12px;color:var(--txt);font-family:'Courier New',monospace;font-size:13px;line-height:1.6;resize:vertical;outline:none}
+.md-preview{min-height:180px;padding:12px;background:var(--bg2);font-size:13.5px;line-height:1.7;color:var(--txt2)}
+.md-preview p{margin-bottom:10px}
+
+/* ── Confirm ── */
+.confirm-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);z-index:600;display:flex;align-items:center;justify-content:center;padding:20px}
+.confirm-box{background:var(--bg2);border:1.5px solid var(--border);border-radius:16px;padding:28px;max-width:370px;width:100%;box-shadow:var(--shadow)}
+.conf-ico{width:46px;height:46px;border-radius:12px;background:rgba(240,98,146,.14);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:14px}
+.conf-title{font-size:17px;font-weight:600;margin-bottom:7px}
+.conf-msg{font-size:13px;color:var(--txt2);margin-bottom:22px;line-height:1.55}
+.conf-actions{display:flex;gap:9px;justify-content:flex-end}
+
+/* ── Toast ── */
+.toasts{position:fixed;bottom:22px;right:22px;z-index:800;display:flex;flex-direction:column;gap:8px}
+.toast{background:var(--bg2);border:1.5px solid var(--border);border-radius:11px;padding:11px 16px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow);min-width:260px;font-size:13.5px;animation:toastIn .3s ease}
+.toast.ok{border-left:3px solid var(--ok)}
+.toast.err{border-left:3px solid var(--err)}
+.toast.info{border-left:3px solid var(--accent)}
+@keyframes toastIn{from{transform:translateX(110%);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes toastOut{from{transform:translateX(0);opacity:1}to{transform:translateX(110%);opacity:0}}
+
+/* ── Empty state ── */
+.empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.empty .e-ico{font-size:46px;margin-bottom:14px}
+.empty h3{font-size:17px;color:var(--txt2);margin-bottom:7px}
+.empty p{font-size:13px}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--border2)}
+
+/* ── Responsive ── */
+@media(max-width:768px){
+  .sidebar{transform:translateX(-100%);transition:transform .3s}
+  .sidebar.open{transform:translateX(0)}
+  .main{margin-left:0}
+  .form-row{grid-template-columns:1fr}
+  .people-grid{grid-template-columns:1fr}
+  .topbar .search-wrap{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ LOGIN ═══ -->
+<div id="login-screen">
+  <div class="login-wrap">
+    <div class="login-card">
+      <div class="login-brand">
+        <div class="brand-icon">🧪</div>
+        <div><div class="brand-name">SmileLab</div><div class="brand-sub">Admin Dashboard</div></div>
+      </div>
+      <div class="login-title">Connect to GitHub</div>
+      <div class="login-desc">Enter your GitHub Personal Access Token to manage your lab website content. Your token is stored locally and never sent anywhere except GitHub.</div>
+      <div class="form-group">
+        <label>Repository</label>
+        <input class="form-control" id="login-repo" type="text" value="masmoudi662/smilevo.github.io" placeholder="owner/repo">
+      </div>
+      <div class="form-group">
+        <label>Personal Access Token</label>
+        <input class="form-control" id="login-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+        <div class="hint">Needs <strong>repo</strong> scope. <a href="https://github.com/settings/tokens" target="_blank" style="color:var(--accent)">Generate here →</a></div>
+      </div>
+      <div id="login-err" class="err-msg" style="display:none"></div>
+      <button class="btn btn-primary mt8" id="login-btn">
+        <span>🔑</span> Connect to Repository
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ APP ═══ -->
+<div id="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-head">
+      <div class="s-logo">🧪</div>
+      <div><div class="s-title">SmileLab</div><div class="s-sub">Admin Dashboard</div></div>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-label">Overview</div>
+      <button class="nav-item active" data-section="dashboard">
+        <span class="nav-ico">🏠</span> Dashboard
+      </button>
+      <div class="nav-label">Content</div>
+      <button class="nav-item" data-section="people">
+        <span class="nav-ico">👥</span> People
+      </button>
+      <button class="nav-item" data-section="events">
+        <span class="nav-ico">📅</span> Events
+      </button>
+      <button class="nav-item" data-section="posts">
+        <span class="nav-ico">📝</span> News &amp; Posts
+      </button>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="user-row">
+        <div class="u-av">🔑</div>
+        <div style="overflow:hidden">
+          <div class="u-name" id="u-name">Connected</div>
+          <div class="u-repo" id="u-repo">...</div>
+        </div>
+        <button class="u-logout" title="Logout" onclick="logout()">⏏</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="tb-left">
+        <div class="tb-title" id="tb-title">Dashboard</div>
+        <div class="tb-sub" id="tb-sub">SmileLab content management</div>
+      </div>
+      <div class="tb-right">
+        <div class="search-wrap" id="global-search" style="display:none">
+          <span class="search-ico">🔍</span>
+          <input id="search-inp" placeholder="Search..." oninput="onSearch(this.value)">
+        </div>
+        <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle theme">🌙</button>
+        <button class="btn btn-primary btn-sm" id="add-btn" style="display:none" onclick="openAddModal()">
+          <span>＋</span> <span id="add-lbl">Add</span>
+        </button>
+      </div>
+    </header>
+    <div class="content" id="content-area">
+      <div class="loading"><div class="spinner"></div><div>Loading…</div></div>
+    </div>
+  </main>
+</div>
+
+<!-- ═══ MODAL ═══ -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal" id="modal">
+    <div class="modal-head">
+      <div class="modal-title" id="modal-title">Edit</div>
+      <button class="modal-x" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-foot">
+      <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" id="modal-save" onclick="saveModal()">
+        <span id="save-ico">💾</span> <span id="save-lbl">Save</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CONFIRM ═══ -->
+<div class="confirm-overlay" id="confirm-overlay" style="display:none">
+  <div class="confirm-box">
+    <div class="conf-ico">🗑️</div>
+    <div class="conf-title" id="conf-title">Delete item</div>
+    <div class="conf-msg" id="conf-msg">Are you sure? This cannot be undone.</div>
+    <div class="conf-actions">
+      <button class="btn btn-secondary" onclick="closeConfirm()">Cancel</button>
+      <button class="btn btn-danger" id="conf-ok">Delete</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ TOASTS ═══ -->
+<div class="toasts" id="toasts"></div>
+
+<script>
+// ════════════════════════════════
+//  STATE
+// ════════════════════════════════
+let TOKEN = '', REPO = '', OWNER = '', REPO_NAME = '';
+let currentSection = 'dashboard';
+let modalSaveCallback = null;
+let confirmCallback = null;
+let cache = { people: null, events: null, posts: null };
+let sortField = 'date', sortDir = -1;
+let filterGroup = 'all';
+let searchQuery = '';
+let editingItem = null;
+
+// ════════════════════════════════
+//  UTILS
+// ════════════════════════════════
+const $ = id => document.getElementById(id);
+const slugify = s => s.toLowerCase().replace(/[^\w\s-]/g,'').replace(/[\s_]+/g,'-').replace(/^-+|-+$/g,'');
+
+function toBase64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let binary = '';
+  bytes.forEach(b => binary += String.fromCharCode(b));
+  return btoa(binary);
+}
+function fromBase64(str) {
+  const binary = atob(str.replace(/\s/g,''));
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  return new TextDecoder().decode(bytes);
+}
+function fmtDate(d) {
+  if (!d) return '';
+  const dt = new Date(d);
+  if (isNaN(dt)) return d;
+  return dt.toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'});
+}
+function fmtDateShort(d) {
+  if (!d) return '--';
+  const dt = new Date(d);
+  if (isNaN(dt)) return String(d).substring(0,10);
+  return dt.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+}
+function dateToInput(d) {
+  if (!d) return '';
+  const s = String(d).replace(/["']/g,'').trim();
+  const dt = new Date(s);
+  if (isNaN(dt)) return s.substring(0,16);
+  return dt.toISOString().substring(0,16);
+}
+function inputToISO(s) {
+  if (!s) return '';
+  const dt = new Date(s);
+  return isNaN(dt) ? s : dt.toISOString();
+}
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function initials(name) {
+  return String(name||'?').split(' ').map(w=>w[0]||'').join('').substring(0,2).toUpperCase();
+}
+
+// ════════════════════════════════
+//  YAML PARSER
+// ════════════════════════════════
+function parseFrontmatter(content) {
+  const m = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+  if (!m) return { fm: {}, body: content.trim() };
+  return { fm: parseYAML(m[1]), body: m[2].trim() };
+}
+
+function parseYAML(text) {
+  const lines = text.split('\n');
+  const result = {};
+  let i = 0;
+  const indent = l => (l.match(/^(\s*)/)||['',''])[1].length;
+
+  while (i < lines.length) {
+    const line = lines[i];
+    const t = line.trim();
+    if (!t || t.startsWith('#')) { i++; continue; }
+    if (indent(line) > 0) { i++; continue; } // only root keys
+
+    const ci = t.indexOf(':');
+    if (ci === -1) { i++; continue; }
+
+    const key = t.substring(0, ci).trim();
+    let val = t.substring(ci + 1).trim().replace(/\s+#.*$/,'').trim();
+
+    if (!val) {
+      // Gather nested lines
+      let j = i + 1;
+      const nested = [];
+      while (j < lines.length && (lines[j].startsWith(' ') || lines[j].startsWith('\t'))) {
+        if (!lines[j].trim().startsWith('#')) nested.push(lines[j]);
+        j++;
+      }
+      if (!nested.length) { result[key] = ''; i++; continue; }
+
+      const first = nested.find(l => l.trim());
+      if (first && first.trim().startsWith('-')) {
+        result[key] = parseYAMLList(nested);
+      } else {
+        result[key] = parseYAMLObject(nested);
+      }
+      i = j;
+    } else {
+      if (val.startsWith('[') && val.endsWith(']')) {
+        result[key] = val.slice(1,-1).split(',').map(s=>s.trim().replace(/^['"]|['"]$/g,'')).filter(Boolean);
+      } else {
+        result[key] = val.replace(/^['"]|['"]$/g,'');
+      }
+      i++;
+    }
+  }
+  return result;
+}
+
+function parseYAMLList(lines) {
+  const items = [];
+  let i = 0;
+  const indent = l => (l.match(/^(\s*)/)||['',''])[1].length;
+
+  while (i < lines.length) {
+    const line = lines[i];
+    const t = line.trim();
+    if (!t) { i++; continue; }
+
+    if (t.startsWith('- ') || t === '-') {
+      const rest = t.substring(2).trim();
+      if (!rest || rest === '') {
+        // empty dash — skip
+        i++;
+      } else if (rest.indexOf(':') !== -1) {
+        // Object starting on same line: "- icon: xxx"
+        const obj = {};
+        const ci = rest.indexOf(':');
+        obj[rest.substring(0,ci).trim()] = rest.substring(ci+1).trim().replace(/^['"]|['"]$/g,'');
+        const baseInd = indent(line);
+        i++;
+        while (i < lines.length) {
+          const nl = lines[i];
+          const ni = indent(nl);
+          const nt = nl.trim();
+          if (!nt || nt.startsWith('#')) { i++; continue; }
+          if (nt.startsWith('-') || ni <= baseInd) break;
+          const nci = nt.indexOf(':');
+          if (nci !== -1) obj[nt.substring(0,nci).trim()] = nt.substring(nci+1).trim().replace(/^['"]|['"]$/g,'');
+          i++;
+        }
+        items.push(obj);
+      } else {
+        items.push(rest.replace(/^['"]|['"]$/g,''));
+        i++;
+      }
+    } else {
+      i++;
+    }
+  }
+  return items;
+}
+
+function parseYAMLObject(lines) {
+  const obj = {};
+  lines.forEach(l => {
+    const t = l.trim();
+    if (!t || t.startsWith('#')) return;
+    const ci = t.indexOf(':');
+    if (ci !== -1) obj[t.substring(0,ci).trim()] = t.substring(ci+1).trim().replace(/^['"]|['"]$/g,'');
+  });
+  return obj;
+}
+
+// ════════════════════════════════
+//  YAML SERIALIZER
+// ════════════════════════════════
+function serializeFM(data) {
+  let y = '';
+  for (const [k, v] of Object.entries(data)) {
+    if (v === null || v === undefined) { y += `${k}: \n`; continue; }
+    if (Array.isArray(v)) {
+      if (!v.length) { y += `${k}: []\n`; continue; }
+      y += `${k}:\n`;
+      v.forEach(item => {
+        if (typeof item === 'object' && item !== null) {
+          const entries = Object.entries(item);
+          entries.forEach(([ik,iv],idx) => {
+            y += idx===0 ? `- ${ik}: ${yq(iv)}\n` : `  ${ik}: ${yq(iv)}\n`;
+          });
+        } else {
+          y += `- ${yq(String(item))}\n`;
+        }
+      });
+    } else if (typeof v === 'object' && v !== null) {
+      y += `${k}:\n`;
+      for (const [ok,ov] of Object.entries(v)) y += `  ${ok}: ${yq(ov)}\n`;
+    } else {
+      y += `${k}: ${yq(String(v))}\n`;
+    }
+  }
+  return y;
+}
+
+function yq(s) {
+  if (s === '' || s === null || s === undefined) return '""';
+  s = String(s);
+  if (/[:#\[\]{}&*?|<>=!%@`,]/.test(s) || s.startsWith("'") || s.includes('"') || /^\s|\s$/.test(s)) {
+    return `"${s.replace(/\\/g,'\\\\').replace(/"/g,'\\"')}"`;
+  }
+  return s;
+}
+
+function buildMarkdown(fm, body) {
+  return `---\n${serializeFM(fm)}---\n\n${body||''}`;
+}
+
+// ════════════════════════════════
+//  GITHUB API
+// ════════════════════════════════
+const GH = 'https://api.github.com';
+
+async function ghFetch(path, opts={}) {
+  const r = await fetch(`${GH}/repos/${REPO}/${path}`, {
+    ...opts,
+    headers: {
+      'Authorization': `token ${TOKEN}`,
+      'Accept': 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json',
+      ...(opts.headers||{})
+    }
+  });
+  if (!r.ok) {
+    const e = await r.json().catch(()=>({message:r.statusText}));
+    throw new Error(e.message || r.statusText);
+  }
+  return r.json();
+}
+
+async function listDir(path) {
+  return ghFetch(`contents/${path}`);
+}
+
+async function readFile(path) {
+  const data = await ghFetch(`contents/${path}`);
+  return { content: fromBase64(data.content), sha: data.sha, path: data.path };
+}
+
+async function writeFile(path, content, sha, msg) {
+  const body = { message: msg || `Update ${path}`, content: toBase64(content) };
+  if (sha) body.sha = sha;
+  return ghFetch(`contents/${path}`, { method:'PUT', body: JSON.stringify(body) });
+}
+
+async function deleteFile(path, sha, msg) {
+  return ghFetch(`contents/${path}`, {
+    method: 'DELETE',
+    body: JSON.stringify({ message: msg || `Delete ${path}`, sha })
+  });
+}
+
+// ════════════════════════════════
+//  TOAST & CONFIRM
+// ════════════════════════════════
+function toast(msg, type='info', duration=4000) {
+  const el = document.createElement('div');
+  el.className = `toast ${type}`;
+  const icons = {ok:'✅',err:'❌',info:'ℹ️'};
+  el.innerHTML = `<span>${icons[type]||'ℹ️'}</span> <span>${esc(msg)}</span>`;
+  $('toasts').appendChild(el);
+  setTimeout(() => {
+    el.style.animation='toastOut .3s ease forwards';
+    setTimeout(()=>el.remove(),300);
+  }, duration);
+}
+
+function confirm(title, msg) {
+  return new Promise(resolve => {
+    $('conf-title').textContent = title;
+    $('conf-msg').textContent = msg;
+    $('confirm-overlay').style.display = 'flex';
+    $('conf-ok').onclick = () => { closeConfirm(); resolve(true); };
+    confirmCallback = () => resolve(false);
+  });
+}
+function closeConfirm() {
+  $('confirm-overlay').style.display = 'none';
+  if (confirmCallback) { confirmCallback(); confirmCallback = null; }
+}
+
+// ════════════════════════════════
+//  MODAL
+// ════════════════════════════════
+function openModal(title, bodyHTML, saveCb, saveLabel='Save Changes') {
+  $('modal-title').textContent = title;
+  $('modal-body').innerHTML = bodyHTML;
+  $('save-lbl').textContent = saveLabel;
+  $('save-ico').textContent = '💾';
+  modalSaveCallback = saveCb;
+  $('modal-overlay').classList.add('open');
+}
+
+function closeModal() {
+  $('modal-overlay').classList.remove('open');
+  modalSaveCallback = null;
+  editingItem = null;
+}
+
+async function saveModal() {
+  if (!modalSaveCallback) return;
+  const btn = $('modal-save');
+  btn.disabled = true;
+  $('save-ico').textContent = '⏳';
+  $('save-lbl').textContent = 'Saving…';
+  try {
+    await modalSaveCallback();
+    closeModal();
+  } catch(e) {
+    toast('Save failed: ' + e.message, 'err');
+  } finally {
+    btn.disabled = false;
+    $('save-ico').textContent = '💾';
+    $('save-lbl').textContent = 'Save Changes';
+  }
+}
+
+// ════════════════════════════════
+//  TAGS INPUT
+// ════════════════════════════════
+function buildTagsField(id, values=[]) {
+  return `
+  <div class="tags-field" id="tf-${id}" onclick="document.getElementById('ti-${id}').focus()">
+    ${values.map(v=>`<span class="t-chip">${esc(v)}<button type="button" onclick="removeTag('${id}',this)">×</button></span>`).join('')}
+    <input class="tags-inp" id="ti-${id}" placeholder="Add, press Enter…"
+      onkeydown="handleTagKey(event,'${id}')" oninput="this.style.width=(this.value.length+5)+'ch'">
+  </div>`;
+}
+function handleTagKey(e, id) {
+  if (e.key==='Enter'||e.key===',') {
+    e.preventDefault();
+    const inp = $(`ti-${id}`);
+    const v = inp.value.trim().replace(/,$/,'');
+    if (v) addTag(id, v);
+    inp.value='';
+  } else if (e.key==='Backspace' && !e.target.value) {
+    const tf = $(`tf-${id}`);
+    const chips = tf.querySelectorAll('.t-chip');
+    if (chips.length) chips[chips.length-1].remove();
+  }
+}
+function addTag(id, val) {
+  const tf = $(`tf-${id}`);
+  const inp = $(`ti-${id}`);
+  const chip = document.createElement('span');
+  chip.className='t-chip';
+  chip.innerHTML=`${esc(val)}<button type="button" onclick="removeTag('${id}',this)">×</button>`;
+  tf.insertBefore(chip, inp);
+}
+function removeTag(id, btn) { btn.closest('.t-chip').remove(); }
+function getTags(id) {
+  return [...$(`tf-${id}`).querySelectorAll('.t-chip')].map(c=>c.textContent.replace('×','').trim()).filter(Boolean);
+}
+
+// ════════════════════════════════
+//  PEOPLE SECTION
+// ════════════════════════════════
+const USER_GROUPS = ['Principal Investigators','PhD Students','MSc Students','Alumni','Collaborators','Visitors'];
+
+function extractSocial(arr) {
+  const s = {email:'',twitter:'',github:'',linkedin:''};
+  if (!Array.isArray(arr)) return s;
+  arr.forEach(item => {
+    if (!item||typeof item!=='object') return;
+    const icon = (item.icon||'').toLowerCase();
+    const link = item.link||'';
+    if (icon==='envelope') s.email = link.replace(/^mailto:/i,'');
+    else if (icon==='twitter') s.twitter = link;
+    else if (icon==='github') s.github = link;
+    else if (icon==='linkedin') s.linkedin = link;
+  });
+  return s;
+}
+
+function buildSocialArray(email, twitter, github, linkedin) {
+  const arr = [];
+  if (email) arr.push({icon:'envelope',icon_pack:'fas',link:`mailto:${email}`});
+  if (twitter) arr.push({icon:'twitter',icon_pack:'fab',link:twitter});
+  if (github) arr.push({icon:'github',icon_pack:'fab',link:github});
+  if (linkedin) arr.push({icon:'linkedin',icon_pack:'fab',link:linkedin});
+  return arr;
+}
+
+async function loadPeople(force=false) {
+  if (cache.people && !force) return cache.people;
+  const dirs = await listDir('content/authors');
+  const people = [];
+  const reads = dirs.filter(d=>d.type==='dir').map(async dir => {
+    try {
+      const file = await readFile(`content/authors/${dir.name}/_index.md`);
+      const { fm } = parseFrontmatter(file.content);
+      const soc = extractSocial(fm.social);
+      people.push({
+        slug: dir.name,
+        path: `content/authors/${dir.name}/_index.md`,
+        sha: file.sha,
+        name: fm.title || dir.name,
+        role: fm.role || '',
+        bio: fm.bio || '',
+        email: soc.email || fm.email || '',
+        twitter: soc.twitter,
+        github: soc.github,
+        linkedin: soc.linkedin,
+        interests: Array.isArray(fm.interests) ? fm.interests : (fm.interests?[fm.interests]:[]),
+        user_groups: Array.isArray(fm.user_groups) ? fm.user_groups : (fm.user_groups?[fm.user_groups]:[]),
+        raw: file.content,
+        rawFm: fm,
+      });
+    } catch(_) {}
+  });
+  await Promise.all(reads);
+  people.sort((a,b)=>a.name.localeCompare(b.name));
+  cache.people = people;
+  return people;
+}
+
+async function renderPeople() {
+  const area = $('content-area');
+  area.innerHTML=`<div class="loading"><div class="spinner"></div><div>Loading people…</div></div>`;
+  const all = await loadPeople();
+
+  // Group by user_group order
+  const grouped = {};
+  USER_GROUPS.forEach(g=>grouped[g]=[]);
+  const other = [];
+  all.forEach(p => {
+    let placed=false;
+    (p.user_groups||[]).forEach(g=>{
+      if(grouped[g]) { grouped[g].push(p); placed=true; }
+      else { other.push(p); placed=true; }
+    });
+    if(!placed) other.push(p);
+  });
+  if(other.length) grouped['Other']=other;
+
+  // Filter
+  let display = filterGroup==='all' ? all : (grouped[filterGroup]||[]);
+  if(searchQuery) display = display.filter(p=>(p.name+p.role+p.bio).toLowerCase().includes(searchQuery.toLowerCase()));
+
+  // Count per group for tabs
+  const counts = {};
+  USER_GROUPS.forEach(g=>counts[g]=(grouped[g]||[]).length);
+
+  let tabs = `<div class="filter-bar">
+    <button class="f-tab ${filterGroup==='all'?'active':''}" onclick="setGroup('all')">All (${all.length})</button>`;
+  USER_GROUPS.forEach(g=>{
+    if((grouped[g]||[]).length)
+      tabs+=`<button class="f-tab ${filterGroup===g?'active':''}" onclick="setGroup('${g}')">${g} (${counts[g]})</button>`;
+  });
+  tabs+='</div>';
+
+  let body='';
+  if(filterGroup==='all'){
+    USER_GROUPS.forEach(g=>{
+      const gp=(grouped[g]||[]).filter(p=>!searchQuery||((p.name+p.role+p.bio).toLowerCase().includes(searchQuery.toLowerCase())));
+      if(!gp.length) return;
+      body+=`<div class="group-section"><div class="group-head"><h3>${esc(g)}</h3><span class="group-badge">${gp.length}</span></div><div class="people-grid">${gp.map(personCard).join('')}</div></div>`;
+    });
+  } else {
+    body=`<div class="people-grid">${display.map(personCard).join('')}</div>`;
+  }
+
+  if(!body||!display.length) body=`<div class="empty"><div class="e-ico">👥</div><h3>No people found</h3><p>Try a different filter or add someone new.</p></div>`;
+
+  area.innerHTML=`
+    <div class="sec-head"><div><h2>People</h2><p>Lab members and collaborators</p></div></div>
+    <div class="controls-row">
+      <div class="search-wrap"><span class="search-ico">🔍</span><input placeholder="Search people…" value="${esc(searchQuery)}" oninput="searchQuery=this.value;renderPeople()"></div>
+    </div>
+    ${tabs}${body}`;
+}
+
+function personCard(p) {
+  const av = initials(p.name);
+  const socHtml = [
+    p.email ? `<a class="soc-link" href="mailto:${esc(p.email)}" title="Email">✉</a>` : '',
+    p.twitter ? `<a class="soc-link" href="${esc(p.twitter)}" target="_blank" title="Twitter">𝕏</a>` : '',
+    p.github ? `<a class="soc-link" href="${esc(p.github)}" target="_blank" title="GitHub">⎔</a>` : '',
+    p.linkedin ? `<a class="soc-link" href="${esc(p.linkedin)}" target="_blank" title="LinkedIn">in</a>` : '',
+  ].join('');
+
+  const interests = (p.interests||[]).slice(0,3).map(i=>`<span class="tag">${esc(i)}</span>`).join('');
+  const groups = (p.user_groups||[]).map(g=>`<span class="tag" style="color:var(--accent);border-color:var(--accent);background:var(--acl)">${esc(g)}</span>`).join('');
+
+  return `<div class="person-card">
+    <div class="p-av">${av}</div>
+    <div class="p-name">${esc(p.name)}</div>
+    <div class="p-role">${esc(p.role||'Lab Member')}</div>
+    ${p.bio?`<div class="p-bio">${esc(p.bio)}</div>`:''}
+    ${interests?`<div class="tags">${interests}</div>`:''}
+    ${groups?`<div class="tags">${groups}</div>`:''}
+    ${socHtml?`<div class="socials">${socHtml}</div>`:''}
+    <div class="card-actions">
+      <button class="btn btn-secondary btn-sm" onclick='editPerson(${JSON.stringify(p.slug)})'>✏️ Edit</button>
+      <button class="btn btn-danger btn-sm" onclick='deletePerson(${JSON.stringify(p.slug)},${JSON.stringify(p.sha)},${JSON.stringify(p.path)})'>🗑</button>
+    </div>
+  </div>`;
+}
+
+function setGroup(g) { filterGroup=g; renderPeople(); }
+
+function openAddModal() {
+  if(currentSection==='people') openPersonModal();
+  else if(currentSection==='events') openEventModal();
+  else if(currentSection==='posts') openPostModal();
+}
+
+function openPersonModal(person=null) {
+  const isEdit = !!person;
+  const p = person || { name:'', role:'', bio:'', email:'', twitter:'', github:'', linkedin:'', interests:[], user_groups:[] };
+  const slugVal = person ? person.slug : '';
+
+  const cbGroups = USER_GROUPS.map(g=>`
+    <label class="cb-item">
+      <input type="checkbox" name="ug" value="${esc(g)}" ${(p.user_groups||[]).includes(g)?'checked':''}>
+      ${esc(g)}
+    </label>`).join('');
+
+  openModal(isEdit?`Edit: ${p.name}`:'Add Person', `
+    <div class="form-row fg">
+      <div><label>Full Name *</label><input class="form-control" id="p-name" value="${esc(p.name)}" placeholder="Jane Smith" oninput="if(!editingItem)$('p-slug').value=slugify(this.value)"></div>
+      <div><label>Slug (folder name)</label><input class="form-control" id="p-slug" value="${esc(slugVal)}" placeholder="jane-smith" ${isEdit?'readonly':''}></div>
+    </div>
+    <div class="fg"><label>Role / Position</label><input class="form-control" id="p-role" value="${esc(p.role)}" placeholder="PhD Student"></div>
+    <div class="fg"><label>Bio</label><textarea class="form-control" id="p-bio" rows="3" placeholder="Short bio…">${esc(p.bio)}</textarea></div>
+    <div class="fg"><label>Email</label><input class="form-control" id="p-email" type="email" value="${esc(p.email)}" placeholder="jane@example.com"></div>
+    <div class="divider"></div>
+    <div class="sec-lbl">Research Interests</div>
+    <div class="fg">${buildTagsField('interests',p.interests||[])}</div>
+    <div class="divider"></div>
+    <div class="sec-lbl">User Groups</div>
+    <div class="fg"><div class="cb-group">${cbGroups}</div></div>
+    <div class="divider"></div>
+    <div class="sec-lbl">Social Links</div>
+    <div class="form-row fg">
+      <div><label>Twitter / X URL</label><input class="form-control" id="p-twitter" value="${esc(p.twitter||'')}" placeholder="https://twitter.com/…"></div>
+      <div><label>GitHub URL</label><input class="form-control" id="p-github" value="${esc(p.github||'')}" placeholder="https://github.com/…"></div>
+    </div>
+    <div class="fg"><label>LinkedIn URL</label><input class="form-control" id="p-linkedin" value="${esc(p.linkedin||'')}" placeholder="https://linkedin.com/in/…"></div>
+  `, async () => {
+    const name = $('p-name').value.trim();
+    if(!name) throw new Error('Name is required');
+    const slug = $('p-slug').value.trim() || slugify(name);
+    if(!slug) throw new Error('Slug is required');
+    const interests = getTags('interests');
+    const userGroups = [...document.querySelectorAll('input[name=ug]:checked')].map(c=>c.value);
+    const email = $('p-email').value.trim();
+    const twitter = $('p-twitter').value.trim();
+    const github = $('p-github').value.trim();
+    const linkedin = $('p-linkedin').value.trim();
+    const social = buildSocialArray(email,twitter,github,linkedin);
+
+    // Build frontmatter preserving extra fields if editing
+    let fm = isEdit && person.rawFm ? {...person.rawFm} : {};
+    fm.title = name;
+    if (!isEdit) fm.authors = [slug]; // preserve original authors slug when editing
+    fm.superuser = fm.superuser !== undefined ? fm.superuser : false;
+    fm.role = $('p-role').value.trim();
+    fm.bio = $('p-bio').value.trim();
+    fm.interests = interests;
+    fm.social = social;
+    fm.email = email;
+    fm.highlight_name = fm.highlight_name || false;
+    fm.user_groups = userGroups;
+
+    const content = buildMarkdown(fm, '');
+    const filePath = `content/authors/${slug}/_index.md`;
+    const sha = isEdit ? person.sha : undefined;
+    await writeFile(filePath, content, sha, `${isEdit?'Update':'Add'} person: ${name}`);
+    cache.people = null;
+    toast(`${isEdit?'Updated':'Added'} ${name}`, 'ok');
+    renderPeople();
+  }, isEdit ? 'Save Changes' : 'Add Person');
+
+  if(isEdit) editingItem = person;
+}
+
+async function editPerson(slug) {
+  const people = cache.people || await loadPeople();
+  const p = people.find(x=>x.slug===slug);
+  if(p) openPersonModal(p);
+}
+
+async function deletePerson(slug, sha, path) {
+  const ok = await confirm('Delete Person', `Delete "${slug}" and remove them from the website?`);
+  if(!ok) return;
+  try {
+    await deleteFile(path, sha, `Delete person: ${slug}`);
+    cache.people = null;
+    toast(`Deleted ${slug}`, 'ok');
+    renderPeople();
+  } catch(e) { toast('Delete failed: '+e.message,'err'); }
+}
+
+// ════════════════════════════════
+//  EVENTS SECTION
+// ════════════════════════════════
+async function loadEvents(force=false) {
+  if(cache.events && !force) return cache.events;
+  const items = await listDir('content/event');
+  const events = [];
+  const reads = items.filter(d=>d.type==='dir').map(async dir=>{
+    try {
+      const file = await readFile(`content/event/${dir.name}/index.md`);
+      const { fm, body } = parseFrontmatter(file.content);
+      events.push({
+        slug: dir.name,
+        path: `content/event/${dir.name}/index.md`,
+        sha: file.sha,
+        title: fm.title || dir.name,
+        event: fm.event || '',
+        event_url: fm.event_url || '',
+        location: fm.location || '',
+        date: fm.date || '',
+        date_end: fm.date_end || '',
+        summary: fm.summary || '',
+        abstract: fm.abstract || '',
+        raw: file.content,
+        rawFm: fm,
+        body,
+      });
+    } catch(_) {}
+  });
+  await Promise.all(reads);
+  events.sort((a,b)=>new Date(b.date)-new Date(a.date));
+  cache.events = events;
+  return events;
+}
+
+async function renderEvents() {
+  const area = $('content-area');
+  area.innerHTML=`<div class="loading"><div class="spinner"></div><div>Loading events…</div></div>`;
+  let all = await loadEvents();
+
+  if(searchQuery) all=all.filter(e=>(e.title+e.location+e.summary).toLowerCase().includes(searchQuery.toLowerCase()));
+
+  const sorted = [...all].sort((a,b)=>{
+    if(sortField==='date') return sortDir*(new Date(b.date)-new Date(a.date));
+    if(sortField==='title') return sortDir*a.title.localeCompare(b.title);
+    return 0;
+  });
+
+  const items = sorted.map(e=>{
+    const dt = new Date(e.date);
+    const day = isNaN(dt)?'--':dt.getDate();
+    const mon = isNaN(dt)?'':dt.toLocaleDateString('en-US',{month:'short'});
+    return `<div class="event-card">
+      <div class="ev-date"><div class="ev-day">${day}</div><div class="ev-mon">${mon}</div></div>
+      <div class="ev-info">
+        <div class="ev-title">${esc(e.title)}</div>
+        ${e.location?`<div class="ev-loc">📍 ${esc(e.location)}</div>`:''}
+        ${e.summary?`<div class="ev-sum">${esc(e.summary)}</div>`:''}
+      </div>
+      <div class="ev-actions">
+        <button class="btn btn-secondary btn-sm" onclick='editEvent(${JSON.stringify(e.slug)})'>✏️</button>
+        <button class="btn btn-danger btn-sm" onclick='deleteEvent(${JSON.stringify(e.slug)},${JSON.stringify(e.sha)},${JSON.stringify(e.path)})'>🗑</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  area.innerHTML=`
+    <div class="sec-head"><div><h2>Events</h2><p>Conferences, talks, and seminars</p></div></div>
+    <div class="controls-row">
+      <div class="search-wrap"><span class="search-ico">🔍</span><input placeholder="Search events…" value="${esc(searchQuery)}" oninput="searchQuery=this.value;renderEvents()"></div>
+      <div class="sort-row" style="margin:0">
+        <span class="sort-lbl">Sort:</span>
+        <button class="sort-btn ${sortField==='date'?'active':''}" onclick="setSortE('date')">Date ${sortField==='date'?(sortDir>0?'↑':'↓'):''}</button>
+        <button class="sort-btn ${sortField==='title'?'active':''}" onclick="setSortE('title')">Title ${sortField==='title'?(sortDir>0?'↑':'↓'):''}</button>
+      </div>
+    </div>
+    <div class="list-items">${items||`<div class="empty"><div class="e-ico">📅</div><h3>No events found</h3><p>Add your first event.</p></div>`}</div>`;
+}
+
+function setSortE(field) {
+  if(sortField===field) sortDir*=-1; else { sortField=field; sortDir=-1; }
+  renderEvents();
+}
+
+function openEventModal(event=null) {
+  const isEdit = !!event;
+  const e = event || { title:'', event:'', event_url:'', location:'', date:'', date_end:'', summary:'', abstract:'' };
+
+  openModal(isEdit?`Edit: ${e.title}`:'Add Event', `
+    <div class="fg"><label>Event Title *</label><input class="form-control" id="e-title" value="${esc(e.title)}" placeholder="My Conference Talk" oninput="if(!editingItem)$('e-slug').value=slugify(this.value)"></div>
+    <div class="fg"><label>Slug (folder name)</label><input class="form-control" id="e-slug" value="${esc(isEdit?e.slug:'')}" placeholder="my-conference-talk" ${isEdit?'readonly':''}></div>
+    <div class="form-row fg">
+      <div><label>Conference / Event Name</label><input class="form-control" id="e-event" value="${esc(e.event)}" placeholder="ICSE 2024"></div>
+      <div><label>Event URL</label><input class="form-control" id="e-url" value="${esc(e.event_url)}" placeholder="https://…"></div>
+    </div>
+    <div class="fg"><label>Location</label><input class="form-control" id="e-loc" value="${esc(e.location)}" placeholder="Lisbon, Portugal"></div>
+    <div class="form-row fg">
+      <div><label>Start Date &amp; Time</label><input class="form-control" id="e-date" type="datetime-local" value="${esc(dateToInput(e.date))}"></div>
+      <div><label>End Date &amp; Time</label><input class="form-control" id="e-datend" type="datetime-local" value="${esc(dateToInput(e.date_end))}"></div>
+    </div>
+    <div class="fg"><label>Summary</label><textarea class="form-control" id="e-sum" rows="2" placeholder="Brief summary…">${esc(e.summary)}</textarea></div>
+    <div class="fg"><label>Abstract</label><textarea class="form-control" id="e-abs" rows="4" placeholder="Full abstract…">${esc(e.abstract)}</textarea></div>
+  `, async () => {
+    const title = $('e-title').value.trim();
+    if(!title) throw new Error('Title is required');
+    const slug = $('e-slug').value.trim() || slugify(title);
+    const fm = {
+      ...(isEdit&&event.rawFm?event.rawFm:{}),
+      title,
+      event: $('e-event').value.trim(),
+      event_url: $('e-url').value.trim(),
+      location: $('e-loc').value.trim(),
+      summary: $('e-sum').value.trim(),
+      abstract: $('e-abs').value.trim(),
+      date: inputToISO($('e-date').value),
+      date_end: inputToISO($('e-datend').value),
+      all_day: false,
+      publishDate: new Date().toISOString(),
+      authors: fm_get(isEdit, event, 'authors', []),
+      tags: fm_get(isEdit, event, 'tags', []),
+      featured: fm_get(isEdit, event, 'featured', false),
+    };
+    const content = buildMarkdown(fm, isEdit?event.body:'');
+    const path = `content/event/${slug}/index.md`;
+    await writeFile(path, content, isEdit?event.sha:undefined, `${isEdit?'Update':'Add'} event: ${title}`);
+    cache.events = null;
+    toast(`${isEdit?'Updated':'Added'} event: ${title}`, 'ok');
+    renderEvents();
+  }, isEdit?'Save Changes':'Add Event');
+
+  if(isEdit) editingItem = event;
+}
+
+function fm_get(isEdit, item, key, def) {
+  if(isEdit && item && item.rawFm && item.rawFm[key] !== undefined) return item.rawFm[key];
+  return def;
+}
+
+async function editEvent(slug) {
+  const events = cache.events || await loadEvents();
+  const e = events.find(x=>x.slug===slug);
+  if(e) openEventModal(e);
+}
+
+async function deleteEvent(slug, sha, path) {
+  const ok = await confirm('Delete Event', `Delete event "${slug}"?`);
+  if(!ok) return;
+  try {
+    await deleteFile(path, sha, `Delete event: ${slug}`);
+    cache.events = null;
+    toast('Event deleted', 'ok');
+    renderEvents();
+  } catch(e) { toast('Delete failed: '+e.message,'err'); }
+}
+
+// ════════════════════════════════
+//  POSTS SECTION
+// ════════════════════════════════
+async function loadPosts(force=false) {
+  if(cache.posts && !force) return cache.posts;
+  const dirs = await listDir('content/post');
+  const posts = [];
+  const reads = dirs.filter(d=>d.type==='dir').map(async dir=>{
+    try {
+      const file = await readFile(`content/post/${dir.name}/index.md`);
+      const { fm, body } = parseFrontmatter(file.content);
+      posts.push({
+        slug: dir.name,
+        path: `content/post/${dir.name}/index.md`,
+        sha: file.sha,
+        title: fm.title || dir.name,
+        date: fm.date || '',
+        summary: fm.summary || '',
+        body,
+        raw: file.content,
+        rawFm: fm,
+      });
+    } catch(_) {}
+  });
+  await Promise.all(reads);
+  posts.sort((a,b)=>new Date(b.date)-new Date(a.date));
+  cache.posts = posts;
+  return posts;
+}
+
+async function renderPosts() {
+  const area = $('content-area');
+  area.innerHTML=`<div class="loading"><div class="spinner"></div><div>Loading posts…</div></div>`;
+  let all = await loadPosts();
+
+  if(searchQuery) all=all.filter(p=>(p.title+p.summary+p.body).toLowerCase().includes(searchQuery.toLowerCase()));
+
+  const items = all.map(p=>`
+    <div class="post-card">
+      <div class="post-date">${fmtDateShort(p.date)}</div>
+      <div class="post-info">
+        <div class="post-title">${esc(p.title)}</div>
+        ${p.summary?`<div class="post-sum">${esc(p.summary)}</div>`:''}
+      </div>
+      <div class="post-actions">
+        <button class="btn btn-secondary btn-sm" onclick='editPost(${JSON.stringify(p.slug)})'>✏️ Edit</button>
+        <button class="btn btn-danger btn-sm" onclick='deletePost(${JSON.stringify(p.slug)},${JSON.stringify(p.sha)},${JSON.stringify(p.path)})'>🗑</button>
+      </div>
+    </div>`).join('');
+
+  area.innerHTML=`
+    <div class="sec-head"><div><h2>News &amp; Posts</h2><p>Lab announcements and news</p></div></div>
+    <div class="controls-row">
+      <div class="search-wrap"><span class="search-ico">🔍</span><input placeholder="Search posts…" value="${esc(searchQuery)}" oninput="searchQuery=this.value;renderPosts()"></div>
+    </div>
+    <div class="list-items">${items||`<div class="empty"><div class="e-ico">📝</div><h3>No posts found</h3><p>Add your first news post.</p></div>`}</div>`;
+}
+
+function openPostModal(post=null) {
+  const isEdit = !!post;
+  const p = post || { title:'', date:'', summary:'', body:'' };
+
+  openModal(isEdit?`Edit: ${p.title}`:'Add Post', `
+    <div class="fg"><label>Title *</label><input class="form-control" id="pt-title" value="${esc(p.title)}" placeholder="Post title" oninput="if(!editingItem)$('pt-slug').value=slugify(this.value)"></div>
+    <div class="form-row fg">
+      <div><label>Slug (folder name)</label><input class="form-control" id="pt-slug" value="${esc(isEdit?p.slug:'')}" placeholder="my-post-title" ${isEdit?'readonly':''}></div>
+      <div><label>Date</label><input class="form-control" id="pt-date" type="date" value="${esc(String(p.date||'').substring(0,10))}"></div>
+    </div>
+    <div class="fg"><label>Summary</label><textarea class="form-control" id="pt-summary" rows="2" placeholder="Brief summary for listings…">${esc(p.summary)}</textarea></div>
+    <div class="fg">
+      <label>Content (Markdown)</label>
+      <div class="md-tabs">
+        <button class="md-tab active" onclick="switchMdTab(this,'write')">✍️ Write</button>
+        <button class="md-tab" onclick="switchMdTab(this,'preview')">👁 Preview</button>
+      </div>
+      <div class="md-area">
+        <textarea id="pt-body" oninput="updateMdPreview()" style="display:block">${esc(p.body||'')}</textarea>
+        <div id="md-preview" class="md-preview" style="display:none"></div>
+      </div>
+    </div>
+  `, async () => {
+    const title = $('pt-title').value.trim();
+    if(!title) throw new Error('Title is required');
+    const slug = $('pt-slug').value.trim() || slugify(title);
+    const fm = {
+      ...(isEdit&&post.rawFm?post.rawFm:{}),
+      title,
+      date: $('pt-date').value || new Date().toISOString().substring(0,10),
+      summary: $('pt-summary').value.trim(),
+    };
+    const body = $('pt-body').value;
+    const content = buildMarkdown(fm, body);
+    const path = `content/post/${slug}/index.md`;
+    await writeFile(path, content, isEdit?post.sha:undefined, `${isEdit?'Update':'Add'} post: ${title}`);
+    cache.posts = null;
+    toast(`${isEdit?'Updated':'Added'} post: ${title}`, 'ok');
+    renderPosts();
+  }, isEdit?'Save Changes':'Add Post');
+
+  if(isEdit) editingItem = post;
+}
+
+function switchMdTab(btn, mode) {
+  const area = btn.closest('.fg');
+  area.querySelectorAll('.md-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  const ta = $('pt-body'), prev = $('md-preview');
+  if(mode==='preview') {
+    updateMdPreview();
+    ta.style.display='none'; prev.style.display='block';
+  } else {
+    ta.style.display='block'; prev.style.display='none';
+  }
+}
+function updateMdPreview() {
+  const ta = $('pt-body'), prev = $('md-preview');
+  if(!ta||!prev||prev.style.display==='none') return;
+  prev.innerHTML = simpleMarkdown(ta.value);
+}
+function simpleMarkdown(md) {
+  return md
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/^### (.+)$/gm,'<h3>$1</h3>')
+    .replace(/^## (.+)$/gm,'<h2>$1</h2>')
+    .replace(/^# (.+)$/gm,'<h1>$1</h1>')
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g,'<em>$1</em>')
+    .replace(/`(.+?)`/g,'<code>$1</code>')
+    .replace(/\[(.+?)\]\((.+?)\)/g,'<a href="$2" target="_blank">$1</a>')
+    .replace(/^\- (.+)$/gm,'<li>$1</li>')
+    .replace(/(<li>.+<\/li>)/s,'<ul>$1</ul>')
+    .replace(/\n\n/g,'</p><p>')
+    .replace(/^(?!<[h|u|l|p])/gm,'')
+    .trim();
+}
+
+async function editPost(slug) {
+  const posts = cache.posts || await loadPosts();
+  const p = posts.find(x=>x.slug===slug);
+  if(p) openPostModal(p);
+}
+
+async function deletePost(slug, sha, path) {
+  const ok = await confirm('Delete Post', `Delete post "${slug}"?`);
+  if(!ok) return;
+  try {
+    await deleteFile(path, sha, `Delete post: ${slug}`);
+    cache.posts = null;
+    toast('Post deleted', 'ok');
+    renderPosts();
+  } catch(e) { toast('Delete failed: '+e.message,'err'); }
+}
+
+// ════════════════════════════════
+//  DASHBOARD OVERVIEW
+// ════════════════════════════════
+async function renderDashboard() {
+  const area = $('content-area');
+  area.innerHTML=`<div class="loading"><div class="spinner"></div><div>Loading overview…</div></div>`;
+
+  let pCount='…', eCount='…', nCount='…';
+  try {
+    const [pd,ed,nd] = await Promise.all([
+      listDir('content/authors'),
+      listDir('content/event'),
+      listDir('content/post'),
+    ]);
+    pCount = pd.filter(d=>d.type==='dir').length;
+    eCount = ed.filter(d=>d.type==='dir').length;
+    nCount = nd.filter(d=>d.type==='dir').length;
+  } catch(e) { pCount = eCount = nCount = '?'; }
+
+  area.innerHTML=`
+    <div class="welcome-card">
+      <h2>Welcome to SmileLab Admin 🧪</h2>
+      <p>Manage your lab website content directly from this dashboard. Changes are committed to GitHub and deployed automatically via Netlify.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card" onclick="navigate('people')" style="cursor:pointer">
+        <div class="stat-ico" style="background:var(--acl)">👥</div>
+        <div><div class="stat-val">${pCount}</div><div class="stat-lbl">Lab Members</div></div>
+      </div>
+      <div class="stat-card" onclick="navigate('events')" style="cursor:pointer">
+        <div class="stat-ico" style="background:rgba(78,203,141,.14)">📅</div>
+        <div><div class="stat-val">${eCount}</div><div class="stat-lbl">Events</div></div>
+      </div>
+      <div class="stat-card" onclick="navigate('posts')" style="cursor:pointer">
+        <div class="stat-ico" style="background:rgba(255,179,64,.14)">📝</div>
+        <div><div class="stat-val">${nCount}</div><div class="stat-lbl">News Posts</div></div>
+      </div>
+    </div>
+    <div style="background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:22px">
+      <h3 style="margin-bottom:14px;font-size:15px;color:var(--txt2);font-weight:600">⚡ Quick Actions</h3>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn btn-secondary" onclick="navigate('people');setTimeout(openAddModal,300)">➕ Add Person</button>
+        <button class="btn btn-secondary" onclick="navigate('events');setTimeout(openAddModal,300)">➕ Add Event</button>
+        <button class="btn btn-secondary" onclick="navigate('posts');setTimeout(openAddModal,300)">➕ Add Post</button>
+        <a class="btn btn-secondary" href="https://github.com/${REPO}" target="_blank">🔗 View Repository</a>
+      </div>
+    </div>`;
+}
+
+// ════════════════════════════════
+//  NAVIGATION
+// ════════════════════════════════
+const SECTIONS = {
+  dashboard: { title:'Dashboard', sub:'Overview and quick actions', icon:'🏠', add:false },
+  people:    { title:'People',    sub:'Manage lab members',          icon:'👥', add:true,  addLbl:'Add Person' },
+  events:    { title:'Events',    sub:'Conferences, talks & seminars',icon:'📅', add:true,  addLbl:'Add Event' },
+  posts:     { title:'News & Posts',sub:'Lab announcements & news',  icon:'📝', add:true,  addLbl:'Add Post' },
+};
+
+function navigate(section) {
+  currentSection = section;
+  searchQuery = '';
+  filterGroup = 'all';
+  sortField = 'date'; sortDir = -1;
+
+  // Update nav items
+  document.querySelectorAll('.nav-item').forEach(el=>{
+    el.classList.toggle('active', el.dataset.section===section);
+  });
+
+  // Update topbar
+  const s = SECTIONS[section]||{};
+  $('tb-title').textContent = s.title||section;
+  $('tb-sub').textContent = s.sub||'';
+  const addBtn = $('add-btn');
+  if(s.add) { addBtn.style.display=''; $('add-lbl').textContent = s.addLbl||'Add'; }
+  else addBtn.style.display='none';
+
+  // Render
+  if(section==='dashboard') renderDashboard();
+  else if(section==='people') renderPeople();
+  else if(section==='events') renderEvents();
+  else if(section==='posts') renderPosts();
+}
+
+function onSearch(q) { searchQuery=q; navigate(currentSection); }
+
+// ════════════════════════════════
+//  THEME
+// ════════════════════════════════
+function toggleTheme() {
+  const html = document.documentElement;
+  const t = html.dataset.theme==='dark'?'light':'dark';
+  html.dataset.theme = t;
+  $('theme-btn').textContent = t==='dark'?'🌙':'☀️';
+  localStorage.setItem('smilelab_theme', t);
+}
+
+// ════════════════════════════════
+//  AUTH
+// ════════════════════════════════
+async function doLogin() {
+  const token = $('login-token').value.trim();
+  const repo = $('login-repo').value.trim();
+  if(!token||!repo) { showLoginErr('Please fill in all fields'); return; }
+
+  const btn = $('login-btn');
+  btn.disabled=true; btn.textContent='🔄 Connecting…';
+  $('login-err').style.display='none';
+
+  try {
+    const r = await fetch(`https://api.github.com/repos/${repo}`, {
+      headers: { 'Authorization': `token ${token}` }
+    });
+    if(!r.ok) throw new Error(r.status===401?'Invalid token':'Repository not found or no access');
+    const data = await r.json();
+
+    TOKEN = token; REPO = repo;
+    const parts = repo.split('/');
+    OWNER = parts[0]; REPO_NAME = parts[1];
+
+    localStorage.setItem('smilelab_token', token);
+    localStorage.setItem('smilelab_repo', repo);
+
+    $('u-name').textContent = OWNER;
+    $('u-repo').textContent = REPO_NAME;
+    $('login-screen').style.display='none';
+    $('app').style.display='';
+    navigate('dashboard');
+  } catch(e) {
+    showLoginErr(e.message);
+  } finally {
+    btn.disabled=false; btn.textContent='🔑 Connect to Repository';
+  }
+}
+
+function showLoginErr(msg) {
+  const el=$('login-err');
+  el.textContent=msg;
+  el.style.display='block';
+}
+
+function logout() {
+  localStorage.removeItem('smilelab_token');
+  localStorage.removeItem('smilelab_repo');
+  TOKEN=''; REPO=''; cache={people:null,events:null,posts:null};
+  $('app').style.display='none';
+  $('login-screen').style.display='flex';
+  $('login-token').value='';
+}
+
+// ════════════════════════════════
+//  INIT
+// ════════════════════════════════
+document.addEventListener('DOMContentLoaded', () => {
+  // Theme
+  const savedTheme = localStorage.getItem('smilelab_theme')||'dark';
+  document.documentElement.dataset.theme = savedTheme;
+  $('theme-btn').textContent = savedTheme==='dark'?'🌙':'☀️';
+
+  // Nav clicks
+  document.querySelectorAll('.nav-item[data-section]').forEach(btn=>{
+    btn.addEventListener('click', ()=>navigate(btn.dataset.section));
+  });
+
+  // Login button
+  $('login-btn').addEventListener('click', doLogin);
+  $('login-token').addEventListener('keydown', e=>{ if(e.key==='Enter') doLogin(); });
+
+  // Modal close on overlay click
+  $('modal-overlay').addEventListener('click', e=>{ if(e.target===$('modal-overlay')) closeModal(); });
+
+  // Confirm close on overlay click
+  $('confirm-overlay').addEventListener('click', e=>{ if(e.target===$('confirm-overlay')) closeConfirm(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', e=>{
+    if(e.key==='Escape') { closeModal(); closeConfirm(); }
+  });
+
+  // Auto-login
+  const savedToken = localStorage.getItem('smilelab_token');
+  const savedRepo = localStorage.getItem('smilelab_repo');
+  if(savedToken && savedRepo) {
+    $('login-token').value = savedToken;
+    $('login-repo').value = savedRepo;
+    doLogin();
+  }
+});
+</script>
+</body>
+</html>
