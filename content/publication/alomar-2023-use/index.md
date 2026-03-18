@@ -1,10 +1,10 @@
 ---
-title: "On the use of static analysis to engage students with software quality improvement: An experience with PMD"
+title: "On the Use of Static Analysis to Engage Students with Software Quality Improvement: An Experience with PMD"
 date: "2023-01-01"
 authors: ["Eman Abdullah AlOmar","Salma Abdullah AlOmar","Mohamed Wiem Mkaouer"]
-publication: "SEET@ICSE"
-publication_types: ["1"]
+publication: "CoRR"
+publication_types: ["2"]
 abstract: ""
 url_pdf: ""
-doi: "10.1109/ICSE-SEET58685.2023.00023"
+doi: "10.48550/arXiv.2302.05554"
 ---
