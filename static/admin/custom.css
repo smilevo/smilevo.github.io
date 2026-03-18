@@ -1,0 +1,73 @@
+/* Dark mode base */
+#nc-root {
+  --primary-color: #4A90E2;
+  --primary-color-dark: #357ABD;
+}
+
+#nc-root .css-typing {
+  background: #1a1a2e !important;
+}
+
+/* Sidebar */
+#nc-root [class*="sidebar"] {
+  background: #16213e !important;
+  border-right: 1px solid #0f3460 !important;
+}
+
+/* Main content area */
+#nc-root [class*="container"],
+#nc-root [class*="main"] {
+  background: #1a1a2e !important;
+  color: #e0e0e0 !important;
+}
+
+/* Cards and list items */
+#nc-root [class*="card"],
+#nc-root [class*="listItem"],
+#nc-root [class*="entryCard"] {
+  background: #16213e !important;
+  border: 1px solid #0f3460 !important;
+  border-radius: 8px !important;
+  color: #e0e0e0 !important;
+}
+
+/* Buttons */
+#nc-root button[class*="primary"] {
+  background: #4A90E2 !important;
+  border-radius: 6px !important;
+}
+
+/* Inputs */
+#nc-root input,
+#nc-root textarea,
+#nc-root select {
+  background: #0f3460 !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #4A90E2 !important;
+  border-radius: 6px !important;
+}
+
+/* Top bar */
+#nc-root [class*="header"],
+#nc-root [class*="topBar"] {
+  background: #0f3460 !important;
+  border-bottom: 1px solid #4A90E2 !important;
+}
+
+/* Text colors */
+#nc-root h1, #nc-root h2, #nc-root h3,
+#nc-root h4, #nc-root p, #nc-root span,
+#nc-root label {
+  color: #e0e0e0 !important;
+}
+
+/* Links */
+#nc-root a {
+  color: #4A90E2 !important;
+}
+
+/* Search bar */
+#nc-root input[type="search"] {
+  background: #0f3460 !important;
+  color: #e0e0e0 !important;
+}
