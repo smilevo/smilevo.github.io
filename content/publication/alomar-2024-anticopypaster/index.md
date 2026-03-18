@@ -1,10 +1,10 @@
 ---
-title: "AntiCopyPaster 2.0: Whitebox just-in-time code duplicates extraction"
+title: "AntiCopyPaster: An Open-Source Ecosystem for Just-in-time Code Duplicates Extraction"
 date: "2024-01-01"
-authors: ["Eman Abdullah AlOmar","Benjamin Knobloch","Thomas Kain","Christopher Kalish","Mohamed Wiem Mkaouer","Ali Ouni"]
-publication: "CoRR"
-publication_types: ["2"]
+authors: ["Eman Abdullah AlOmar","Mohamed Wiem Mkaouer"]
+publication: "SIGCSE (2)"
+publication_types: ["1"]
 abstract: ""
 url_pdf: ""
-doi: "10.48550/arXiv.2402.06035"
+doi: "10.1145/3626253.3635436"
 ---
