@@ -289,7 +289,7 @@ input,textarea,select{font-family:inherit;font-size:14px;color:var(--tx)}
         <div class="fg"><label>Slug</label><input id="pSlug" type="text" placeholder="john-doe"><span class="fh">Directory name &mdash; cannot change after creation</span></div>
         <div class="fg"><label>Display Name</label><input id="pName" type="text"></div>
         <div class="fg"><label>Role / Title</label><input id="pRole" type="text" placeholder="PhD Student"></div>
-        <div class="fg"><label>User Group</label><select id="pGrp"><option>Authors</option><option>PhD Students</option><option>Master Students</option><option>Alumni</option><option>Visitors</option></select></div>
+        <div class="fg"><label>User Group</label><select id="pGrp"><option>Principal Investigators</option><option>PhD Students</option><option>MSc Students</option><option>BSc Students</option><option>Collaborators</option><option>Developers</option><option>Alumni</option></select></div>
         <div class="fg full"><label>Bio</label><textarea id="pBio" rows="3"></textarea></div>
         <div class="fg"><label>Email</label><input id="pEmail" type="email"></div>
         <div class="fg"><label>Website URL</label><input id="pWeb" type="url" placeholder="https://..."></div>
@@ -603,7 +603,7 @@ async function loadPeople() {
 function renderPeople() {
   const el=document.getElementById('ppl-wrap');
   if (!S.people.length) { el.innerHTML='<div class="empty">No people found. Add the first one!</div>'; return; }
-  const ORDER=['Authors','PhD Students','Master Students','Alumni','Visitors'];
+  const ORDER=['Principal Investigators','PhD Students','MSc Students','BSc Students','Collaborators','Developers','Alumni'];
   const grps={};
   S.people.forEach(p=>{
     const g=(Array.isArray(p.data.user_groups)?p.data.user_groups[0]:p.data.user_groups)||'Other';
@@ -636,7 +636,7 @@ function openPersonModal(slug) {
     document.getElementById('pSlug').value=slug;
     document.getElementById('pName').value=p.data.title||'';
     document.getElementById('pRole').value=p.data.role||'';
-    document.getElementById('pGrp').value=(Array.isArray(p.data.user_groups)?p.data.user_groups[0]:'')||'Authors';
+    document.getElementById('pGrp').value=(Array.isArray(p.data.user_groups)?p.data.user_groups[0]:p.data.user_groups)||'Principal Investigators';
     document.getElementById('pBio').value=p.data.bio||'';
     document.getElementById('pEmail').value=p.data.email||'';
     document.getElementById('pWeb').value=getSocial(soc,'globe')||getSocial(soc,'home')||'';
