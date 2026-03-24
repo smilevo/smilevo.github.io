@@ -590,7 +590,7 @@ async function loadPeople() {
   try {
     const dirs = await apiList('content/authors');
     const items = dirs.filter(d=>d.type==='dir');
-    const res = await Promise.allSettled(items.map(d=>apiGet('content/authors/'+d.name+'/index.md')));
+    const res = await Promise.allSettled(items.map(d=>apiGet('content/authors/'+d.name+'/_index.md')));
     S.people=[];
     res.forEach((r,i)=>{ if (r.status==='fulfilled') {
       const f=r.value, raw=dec64(f.content), {data,body}=parseFM(raw);
@@ -685,7 +685,7 @@ async function savePerson() {
     if (soc.length) data.social=soc;
     const body=S.em==='edit'?(S.people.find(x=>x.slug===slug)||{}).body||'':'';
     const content=buildFM(data,body);
-    const path='content/authors/'+slug+'/index.md';
+    const path='content/authors/'+slug+'/_index.md';
     const msg=(S.em==='edit'?'Update':'Add')+' author: '+data.title;
     await apiPut(path, content, S.esha, msg);
     toast(msg,'ok'); closeModal('pMod'); await loadPeople();
