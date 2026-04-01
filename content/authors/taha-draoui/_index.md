@@ -13,9 +13,10 @@ interests:
 social:
   - "icon: envelope"
 user_groups:
-  - MSc Students
+  - PhD Students
 highlight_name: false
 ---
+
 
 
 Taha Draoui is a computer science graduate student with experience in software engineering, backend development, and SE for AI research. He has contributed to industry and academic projects involving web technologies and research in software quality assurance for machine learning projects.
