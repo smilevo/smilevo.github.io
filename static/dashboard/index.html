@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmileLab Admin Dashboard</title>
+<style>
+:root{--sw:240px;--th:56px;--r:8px;--rl:12px;--tr:.2s ease}
+[data-theme=dark]{--bg:#0d1117;--sf:#161b22;--s2:#21262d;--s3:#30363d;--br:#30363d;--tx:#c9d1d9;--t2:#8b949e;--t3:#6e7681;--pr:#58a6ff;--pb:rgba(88,166,255,.12);--ph:#388bfd;--dr:#f85149;--db:rgba(248,81,73,.12);--gr:#3fb950;--gb:rgba(63,185,80,.12);--wr:#d29922;--wb:rgba(210,153,34,.12);--ir:#79c0ff}
+[data-theme=light]{--bg:#f6f8fa;--sf:#fff;--s2:#f6f8fa;--s3:#eaeef2;--br:#d0d7de;--tx:#1f2328;--t2:#656d76;--t3:#8c959f;--pr:#0969da;--pb:rgba(9,105,218,.08);--ph:#0550ae;--dr:#cf222e;--db:rgba(207,34,46,.08);--gr:#1a7f37;--gb:rgba(26,127,55,.08);--wr:#9a6700;--wb:rgba(154,103,0,.08);--ir:#0550ae}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:14px}
+body{background:var(--bg);color:var(--tx);overflow-x:hidden}
+a{color:var(--pr);text-decoration:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit;font-size:inherit}
+input,textarea,select{font-family:inherit;font-size:14px;color:var(--tx)}
+/* LOGIN */
+.login-ov{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:9999}
+.login-card{background:var(--sf);border:1px solid var(--br);border-radius:var(--rl);padding:40px;width:420px;max-width:calc(100vw - 32px);box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.login-logo{text-align:center;margin-bottom:28px}
+.login-logo .ico{font-size:44px;line-height:1}
+.login-logo h1{font-size:22px;font-weight:700;margin:10px 0 4px}
+.login-logo p{color:var(--t2);font-size:13px}
+.lg label{display:block;font-size:11px;font-weight:600;color:var(--t2);text-transform:uppercase;letter-spacing:.06em;margin-bottom:5px;margin-top:12px}
+.lg input{width:100%;padding:9px 12px;background:var(--s2);border:1px solid var(--br);border-radius:var(--r);outline:none;transition:border-color var(--tr)}
+.lg input:focus{border-color:var(--pr)}
+.lg .hint{font-size:11px;color:var(--t3);margin-top:3px}
+.btn-login{width:100%;padding:11px;background:var(--pr);color:#fff;border-radius:var(--r);font-size:14px;font-weight:600;margin-top:14px;transition:background var(--tr)}
+.btn-login:hover{background:var(--ph)}
+.btn-login:disabled{opacity:.5;cursor:not-allowed}
+#loginErr{display:none;color:var(--dr);font-size:12px;margin-top:8px;padding:8px 10px;background:var(--db);border-radius:6px}
+/* APP */
+#app{display:flex;height:100vh;overflow:hidden}
+/* SIDEBAR */
+#sidebar{width:var(--sw);background:var(--sf);border-right:1px solid var(--br);display:flex;flex-direction:column;flex-shrink:0;transition:width var(--tr);overflow:hidden;z-index:100}
+#sidebar.collapsed{width:0}
+.sb-brand{display:flex;align-items:center;gap:10px;padding:16px;border-bottom:1px solid var(--br);font-weight:700;font-size:15px;white-space:nowrap}
+.sb-brand .ico{font-size:22px;flex-shrink:0}
+.sb-nav{flex:1;padding:8px 0;overflow-y:auto}
+.nav-item{display:flex;align-items:center;gap:10px;padding:9px 14px;color:var(--t2);cursor:pointer;border-radius:6px;margin:2px 6px;white-space:nowrap;transition:background var(--tr),color var(--tr);font-size:13px}
+.nav-item:hover{background:var(--s2);color:var(--tx)}
+.nav-item.active{background:var(--pb);color:var(--pr);font-weight:500}
+.nav-ico{font-size:15px;width:20px;text-align:center;flex-shrink:0}
+.sb-foot{padding:12px;border-top:1px solid var(--br)}
+.btn-out{width:100%;padding:8px;color:var(--t2);border:1px solid var(--br);border-radius:var(--r);font-size:12px;transition:all var(--tr)}
+.btn-out:hover{color:var(--dr);border-color:var(--dr);background:var(--db)}
+/* MAIN */
+#main{flex:1;display:flex;flex-direction:column;overflow:hidden;min-width:0}
+/* TOPBAR */
+#topbar{height:var(--th);background:var(--sf);border-bottom:1px solid var(--br);display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex-shrink:0}
+.tb-left{display:flex;align-items:center;gap:10px}
+.tb-left h2{font-size:17px;font-weight:600;white-space:nowrap}
+.btn-sb{padding:6px 8px;border-radius:6px;color:var(--t2);font-size:18px;line-height:1;transition:background var(--tr)}
+.btn-sb:hover{background:var(--s2)}
+.tb-right{display:flex;align-items:center;gap:10px}
+.repo-tag{font-size:11px;color:var(--t2);background:var(--s2);padding:4px 10px;border-radius:20px;border:1px solid var(--br);max-width:220px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.btn-theme{padding:6px 9px;border-radius:6px;color:var(--t2);font-size:16px;transition:background var(--tr)}
+.btn-theme:hover{background:var(--s2)}
+/* SECTIONS */
+#sections{flex:1;overflow-y:auto;padding:24px}
+.sec{display:none}
+.sec.active{display:block}
+.toolbar{display:flex;align-items:center;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.tbar-r{margin-left:auto;display:flex;gap:8px;align-items:center}
+/* BUTTONS */
+.btn{padding:7px 14px;border-radius:var(--r);font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:all var(--tr);line-height:1.4;cursor:pointer;border:none}
+.btn-p{background:var(--pr);color:#fff}
+.btn-p:hover{background:var(--ph)}
+.btn-s{background:var(--s2);color:var(--tx);border:1px solid var(--br)}
+.btn-s:hover{background:var(--s3)}
+.btn-d{background:var(--dr);color:#fff}
+.btn-d:hover{opacity:.85}
+.btn-sm{padding:5px 10px;font-size:12px}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.bic{width:28px;height:28px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:13px;color:var(--t2);transition:all var(--tr);cursor:pointer;border:none;background:none;flex-shrink:0}
+.bic:hover{background:var(--s2);color:var(--tx)}
+.bic.del:hover{background:var(--db);color:var(--dr)}
+/* PEOPLE */
+.grp-sec{margin-bottom:28px}
+.grp-title{font-size:11px;font-weight:700;color:var(--t2);text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}
+.pcard{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:14px;display:flex;align-items:center;gap:12px;transition:border-color var(--tr),box-shadow var(--tr)}
+.pcard:hover{border-color:var(--pr);box-shadow:0 0 0 1px var(--pr)}
+.pavatar{width:38px;height:38px;border-radius:50%;background:var(--pb);color:var(--pr);display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0}
+.pinfo{flex:1;min-width:0}
+.pname{font-weight:600;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prole{font-size:11px;color:var(--t2);margin-top:1px}
+.cacts{display:flex;gap:3px;flex-shrink:0;opacity:0;transition:opacity var(--tr)}
+.pcard:hover .cacts{opacity:1}
+/* LISTS */
+.litem{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:13px 14px;margin-bottom:8px;display:flex;align-items:flex-start;gap:12px;transition:border-color var(--tr)}
+.litem:hover{border-color:var(--pr)}
+.lbody{flex:1;min-width:0}
+.ltitle{font-weight:600;font-size:13px;margin-bottom:3px;line-height:1.4}
+.lmeta{font-size:11px;color:var(--t2);display:flex;gap:10px;flex-wrap:wrap}
+.lacts{display:flex;gap:3px;flex-shrink:0;opacity:0;transition:opacity var(--tr)}
+.litem:hover .lacts{opacity:1}
+/* PUBS */
+.pubi{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:13px 14px;margin-bottom:8px}
+.pubi-h{display:flex;align-items:flex-start;gap:10px}
+.pubi-b{flex:1;min-width:0}
+.pub-title{font-weight:600;font-size:13px;margin-bottom:3px;line-height:1.4}
+.pub-meta{font-size:11px;color:var(--t2);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.pub-auth{font-size:11px;color:var(--t3);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pubi-acts{display:flex;gap:3px;flex-shrink:0;opacity:0;transition:opacity var(--tr)}
+.pubi:hover .pubi-acts{opacity:1}
+.tbadge{display:inline-block;padding:2px 7px;border-radius:20px;font-size:10px;font-weight:600;background:var(--s2);color:var(--t3);border:1px solid var(--br)}
+/* SEARCH */
+.srch{padding:7px 12px;background:var(--sf);border:1px solid var(--br);border-radius:var(--r);color:var(--tx);outline:none;font-size:13px;width:240px;transition:border-color var(--tr)}
+.srch:focus{border-color:var(--pr)}
+.fsel{padding:7px 10px;background:var(--sf);border:1px solid var(--br);border-radius:var(--r);color:var(--tx);outline:none;font-size:13px;cursor:pointer}
+/* BADGES */
+.bdg{display:inline-flex;align-items:center;padding:1px 7px;border-radius:20px;font-size:11px;font-weight:500}
+.bdg-c{background:var(--s2);color:var(--t2);border:1px solid var(--br)}
+.bdg-n{background:var(--gb);color:var(--gr)}
+.bdg-e{background:var(--s2);color:var(--t3)}
+/* DBLP */
+.dblp-ctrl{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.dblp-ctrl input{padding:7px 12px;background:var(--sf);border:1px solid var(--br);border-radius:var(--r);color:var(--tx);outline:none;font-size:13px;width:200px}
+.dblp-ctrl input:focus{border-color:var(--pr)}
+.dblp-bar{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--br);margin-bottom:10px}
+.dblp-bar label{display:flex;align-items:center;gap:7px;font-size:13px;cursor:pointer;color:var(--t2)}
+.ditem{background:var(--sf);border:1px solid var(--br);border-radius:var(--r);padding:10px 13px;margin-bottom:6px}
+.ditem.isnew{border-left:3px solid var(--gr)}
+.ditem.isex{opacity:.55}
+.ditem label{display:flex;gap:10px;cursor:pointer;align-items:flex-start}
+.ditem input[type=checkbox]{margin-top:3px;flex-shrink:0}
+.dt{font-size:13px;font-weight:500;margin-bottom:3px;line-height:1.3}
+.dm{font-size:11px;color:var(--t2);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+/* MODAL */
+.mov{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;align-items:center;justify-content:center;z-index:1000;padding:16px}
+.mov.open{display:flex}
+.modal{background:var(--sf);border:1px solid var(--br);border-radius:var(--rl);width:100%;max-width:560px;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 8px 32px rgba(0,0,0,.3);animation:min .18s ease}
+.mlg{max-width:700px}
+.msm{max-width:360px}
+@keyframes min{from{opacity:0;transform:scale(.95) translateY(-8px)}to{opacity:1;transform:none}}
+.mh{padding:15px 18px;border-bottom:1px solid var(--br);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.mh h3{font-size:15px;font-weight:600}
+.mcl{width:26px;height:26px;border-radius:6px;color:var(--t2);font-size:19px;display:flex;align-items:center;justify-content:center}
+.mcl:hover{background:var(--s2);color:var(--tx)}
+.mb{flex:1;overflow-y:auto;padding:18px}
+.mf{padding:13px 18px;border-top:1px solid var(--br);display:flex;justify-content:flex-end;gap:8px;flex-shrink:0}
+/* FORMS */
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fg{display:flex;flex-direction:column;gap:4px}
+.fg.full{grid-column:1/-1}
+.fg label{font-size:11px;font-weight:600;color:var(--t2);text-transform:uppercase;letter-spacing:.04em}
+.fg input,.fg textarea,.fg select{padding:7px 10px;background:var(--s2);border:1px solid var(--br);border-radius:6px;outline:none;transition:border-color var(--tr);width:100%;color:var(--tx)}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--pr)}
+.fg textarea{resize:vertical;line-height:1.5}
+.fg textarea.code{font-family:'Consolas','Monaco',monospace;font-size:12px}
+.fh{font-size:11px;color:var(--t3)}
+/* TOAST */
+#toasts{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:7px;z-index:9999}
+.toast{padding:11px 14px;border-radius:var(--r);background:var(--sf);border:1px solid var(--br);box-shadow:0 8px 32px rgba(0,0,0,.3);font-size:13px;display:flex;align-items:center;gap:9px;min-width:220px;max-width:360px;animation:tin .22s ease;border-left-width:3px}
+.toast.ok{border-left-color:var(--gr)}
+.toast.err{border-left-color:var(--dr)}
+.toast.warn{border-left-color:var(--wr)}
+.toast.info{border-left-color:var(--ir)}
+@keyframes tin{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
+/* MISC */
+.spin{text-align:center;padding:48px;color:var(--t2)}
+.spin::after{content:'';display:block;width:28px;height:28px;border:3px solid var(--br);border-top-color:var(--pr);border-radius:50%;margin:10px auto 0;animation:sp .7s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.empty{text-align:center;padding:48px;color:var(--t2)}
+.sbar{padding:10px 14px;border-radius:var(--r);font-size:13px;margin-bottom:14px;border:1px solid}
+.sbar.info{background:var(--pb);color:var(--pr);border-color:var(--pr)}
+.sbar.ok{background:var(--gb);color:var(--gr);border-color:var(--gr)}
+.sbar.err{background:var(--db);color:var(--dr);border-color:var(--dr)}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--s3);border-radius:3px}
+@media(max-width:768px){#sidebar{position:fixed;top:0;left:0;height:100%;transform:translateX(-100%);transition:transform var(--tr)}#sidebar.mob{transform:none}.fgrid{grid-template-columns:1fr}.fg.full{grid-column:1}.pgrid{grid-template-columns:1fr}.srch{width:100%}}
+</style>
+</head>
+<body>
+
+<div id="loginScreen" class="login-ov">
+  <div class="login-card">
+    <div class="login-logo"><div class="ico">&#x1F52C;</div><h1>SmileLab Dashboard</h1><p>Research Lab Admin Panel</p></div>
+    <div class="lg">
+      <label>GitHub Personal Access Token</label>
+      <input id="tokIn" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" autocomplete="off">
+      <div class="hint">Needs repo read/write scope &mdash; <a href="https://github.com/settings/tokens" target="_blank">Create token</a></div>
+      <label>Repository</label>
+      <input id="repoIn" type="text" value="masmoudi662/smilevo.github.io">
+      <div id="loginErr"></div>
+      <button id="loginBtn" class="btn-login" onclick="doLogin()">Connect to GitHub</button>
+    </div>
+  </div>
+</div>
+
+<div id="app" style="display:none">
+  <aside id="sidebar">
+    <div class="sb-brand"><span class="ico">&#x1F52C;</span><span>SmileLab</span></div>
+    <nav class="sb-nav">
+      <div class="nav-item active" onclick="showSection('people')" data-s="people"><span class="nav-ico">&#x1F465;</span><span>People</span></div>
+      <div class="nav-item" onclick="showSection('events')" data-s="events"><span class="nav-ico">&#x1F4C5;</span><span>Events</span></div>
+      <div class="nav-item" onclick="showSection('news')" data-s="news"><span class="nav-ico">&#x1F4F0;</span><span>News / Posts</span></div>
+      <div class="nav-item" onclick="showSection('publications')" data-s="publications"><span class="nav-ico">&#x1F4DA;</span><span>Publications</span></div>
+      <div class="nav-item" onclick="showSection('dblp')" data-s="dblp"><span class="nav-ico">&#x1F504;</span><span>DBLP Import</span></div>
+    </nav>
+    <div class="sb-foot"><button class="btn-out" onclick="doLogout()">&#x23FB; Logout</button></div>
+  </aside>
+
+  <div id="main">
+    <header id="topbar">
+      <div class="tb-left">
+        <button class="btn-sb" onclick="toggleSidebar()">&#9776;</button>
+        <h2 id="pgTitle">People</h2>
+      </div>
+      <div class="tb-right">
+        <span id="repoTag" class="repo-tag"></span>
+        <button class="btn-theme" onclick="toggleTheme()" id="themeBtn">&#x1F319;</button>
+      </div>
+    </header>
+
+    <div id="sections">
+
+      <section id="sec-people" class="sec active">
+        <div class="toolbar">
+          <button class="btn btn-p" onclick="openPersonModal()">&#xFF0B; Add Person</button>
+          <div class="tbar-r"><button class="btn btn-s btn-sm" onclick="loadPeople()">&#x21BA; Refresh</button></div>
+        </div>
+        <div id="ppl-wrap"><div class="spin"></div></div>
+      </section>
+
+      <section id="sec-events" class="sec">
+        <div class="toolbar">
+          <button class="btn btn-p" onclick="openEventModal()">&#xFF0B; Add Event</button>
+          <div class="tbar-r"><button class="btn btn-s btn-sm" onclick="loadEvents()">&#x21BA; Refresh</button></div>
+        </div>
+        <div id="ev-wrap"><div class="spin"></div></div>
+      </section>
+
+      <section id="sec-news" class="sec">
+        <div class="toolbar">
+          <button class="btn btn-p" onclick="openPostModal()">&#xFF0B; Add Post</button>
+          <div class="tbar-r"><button class="btn btn-s btn-sm" onclick="loadPosts()">&#x21BA; Refresh</button></div>
+        </div>
+        <div id="news-wrap"><div class="spin"></div></div>
+      </section>
+
+      <section id="sec-publications" class="sec">
+        <div class="toolbar">
+          <input id="pubQ" class="srch" type="text" placeholder="&#x1F50D; Search..." oninput="filterPubs()">
+          <select id="pubY" class="fsel" onchange="filterPubs()"><option value="">All Years</option></select>
+          <select id="pubT" class="fsel" onchange="filterPubs()">
+            <option value="">All Types</option>
+            <option value="1">Conference</option><option value="2">Journal</option>
+            <option value="3">Preprint</option><option value="4">Report</option>
+            <option value="5">Book</option><option value="6">Book Chapter</option><option value="7">Thesis</option>
+          </select>
+          <div class="tbar-r">
+            <button class="btn btn-p" onclick="openPubModal()">&#xFF0B; Add</button>
+            <button class="btn btn-s btn-sm" onclick="loadPublications()">&#x21BA; Refresh</button>
+          </div>
+        </div>
+        <div id="pub-stats" style="font-size:12px;color:var(--t2);margin-bottom:12px"></div>
+        <div id="pub-wrap"><div class="spin"></div></div>
+      </section>
+
+      <section id="sec-dblp" class="sec">
+        <div class="dblp-ctrl">
+          <span style="font-size:13px;color:var(--t2)">DBLP PID:</span>
+          <input id="dblpPid" type="text" value="140/0883" placeholder="e.g. 140/0883">
+          <button class="btn btn-p" onclick="fetchDblp()">Fetch from DBLP</button>
+          <span style="font-size:12px;color:var(--t3)">https://dblp.org/pid/{pid}.xml</span>
+        </div>
+        <div id="dblp-status"></div>
+        <div id="dblp-bar" style="display:none" class="dblp-bar">
+          <label><input type="checkbox" id="selAll" onchange="toggleSelectAll(this)"> Select all new</label>
+          <span id="dblp-cnt" style="font-size:12px;color:var(--t2)"></span>
+          <div style="margin-left:auto"><button class="btn btn-p btn-sm" onclick="importSelected()">&#x2B07; Import Selected</button></div>
+        </div>
+        <div id="dblp-res"></div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<div id="mov" class="mov" onclick="overlayClick(event)">
+
+  <div id="pMod" class="modal" style="display:none">
+    <div class="mh"><h3 id="pModT">Add Person</h3><button class="mcl" onclick="closeModal('pMod')">&#x00D7;</button></div>
+    <div class="mb">
+      <div class="fgrid">
+        <div class="fg"><label>Slug</label><input id="pSlug" type="text" placeholder="john-doe"><span class="fh">Directory name &mdash; cannot change after creation</span></div>
+        <div class="fg"><label>Display Name</label><input id="pName" type="text"></div>
+        <div class="fg"><label>Role / Title</label><input id="pRole" type="text" placeholder="PhD Student"></div>
+        <div class="fg"><label>User Group</label><select id="pGrp"><option>Principal Investigators</option><option>PhD Students</option><option>MSc Students</option><option>BSc Students</option><option>Collaborators</option><option>Developers</option><option>Alumni</option></select></div>
+        <div class="fg full"><label>Bio</label><textarea id="pBio" rows="3"></textarea></div>
+        <div class="fg"><label>Email</label><input id="pEmail" type="email"></div>
+        <div class="fg"><label>Website URL</label><input id="pWeb" type="url" placeholder="https://..."></div>
+        <div class="fg"><label>GitHub Username</label><input id="pGH" type="text"></div>
+        <div class="fg"><label>Twitter Handle</label><input id="pTW" type="text"></div>
+        <div class="fg"><label>Google Scholar ID</label><input id="pGS" type="text"></div>
+        <div class="fg"><label>ORCID</label><input id="pOR" type="text" placeholder="0000-0000-0000-0000"></div>
+        <div class="fg"><label>Superuser</label><select id="pSU"><option value="false">No</option><option value="true">Yes</option></select></div>
+      </div>
+    </div>
+    <div class="mf"><button class="btn btn-s" onclick="closeModal('pMod')">Cancel</button><button id="pSvBtn" class="btn btn-p" onclick="savePerson()">Save Person</button></div>
+  </div>
+
+  <div id="eMod" class="modal" style="display:none">
+    <div class="mh"><h3 id="eModT">Add Event</h3><button class="mcl" onclick="closeModal('eMod')">&#x00D7;</button></div>
+    <div class="mb">
+      <div class="fgrid">
+        <div class="fg full"><label>Title</label><input id="evTi" type="text"></div>
+        <div class="fg full"><label>Conference / Event Name</label><input id="evEv" type="text"></div>
+        <div class="fg"><label>Start Date</label><input id="evD1" type="date"></div>
+        <div class="fg"><label>End Date</label><input id="evD2" type="date"></div>
+        <div class="fg full"><label>Location</label><input id="evLo" type="text"></div>
+        <div class="fg full"><label>Summary</label><textarea id="evSu" rows="3"></textarea></div>
+        <div class="fg full"><label>Abstract / Body (Markdown)</label><textarea id="evBo" rows="5" class="code"></textarea></div>
+        <div class="fg full"><label>Event URL</label><input id="evUr" type="url"></div>
+      </div>
+    </div>
+    <div class="mf"><button class="btn btn-s" onclick="closeModal('eMod')">Cancel</button><button id="eSvBtn" class="btn btn-p" onclick="saveEvent()">Save Event</button></div>
+  </div>
+
+  <div id="nMod" class="modal mlg" style="display:none">
+    <div class="mh"><h3 id="nModT">Add Post</h3><button class="mcl" onclick="closeModal('nMod')">&#x00D7;</button></div>
+    <div class="mb">
+      <div class="fgrid">
+        <div class="fg full"><label>Title</label><input id="ntTi" type="text"></div>
+        <div class="fg"><label>Date</label><input id="ntDt" type="date"></div>
+        <div class="fg"><label>Tags (comma-separated)</label><input id="ntTg" type="text"></div>
+        <div class="fg full"><label>Summary</label><textarea id="ntSu" rows="2"></textarea></div>
+        <div class="fg full"><label>Content (Markdown)</label><textarea id="ntBo" rows="14" class="code"></textarea></div>
+      </div>
+    </div>
+    <div class="mf"><button class="btn btn-s" onclick="closeModal('nMod')">Cancel</button><button id="nSvBtn" class="btn btn-p" onclick="savePost()">Save Post</button></div>
+  </div>
+
+  <div id="pubMod" class="modal mlg" style="display:none">
+    <div class="mh"><h3 id="pubModT">Add Publication</h3><button class="mcl" onclick="closeModal('pubMod')">&#x00D7;</button></div>
+    <div class="mb">
+      <div class="fgrid">
+        <div class="fg full"><label>Title</label><input id="pbTi" type="text"></div>
+        <div class="fg"><label>Date</label><input id="pbDt" type="date"></div>
+        <div class="fg"><label>Type</label><select id="pbTy"><option value="1">Conference paper</option><option value="2">Journal article</option><option value="3">Preprint</option><option value="4">Report</option><option value="5">Book</option><option value="6">Book chapter</option><option value="7">Thesis</option></select></div>
+        <div class="fg full"><label>Authors (one per line)</label><textarea id="pbAu" rows="3"></textarea></div>
+        <div class="fg full"><label>Publication / Venue</label><input id="pbVe" type="text"></div>
+        <div class="fg full"><label>Abstract</label><textarea id="pbAb" rows="4"></textarea></div>
+        <div class="fg"><label>DOI</label><input id="pbDo" type="text"></div>
+        <div class="fg"><label>Source URL</label><input id="pbUr" type="url"></div>
+        <div class="fg"><label>PDF URL</label><input id="pbPF" type="url"></div>
+        <div class="fg"><label>Code URL</label><input id="pbCo" type="url"></div>
+        <div class="fg full"><label>Tags (comma-separated)</label><input id="pbTg" type="text"></div>
+      </div>
+    </div>
+    <div class="mf"><button class="btn btn-s" onclick="closeModal('pubMod')">Cancel</button><button id="pubSvBtn" class="btn btn-p" onclick="savePublication()">Save Publication</button></div>
+  </div>
+
+  <div id="cfDlg" class="modal msm" style="display:none">
+    <div class="mh"><h3>Confirm Delete</h3></div>
+    <div class="mb"><p id="cfMsg" style="line-height:1.5;font-size:14px"></p></div>
+    <div class="mf"><button class="btn btn-s" onclick="resolveConfirm(false)">Cancel</button><button class="btn btn-d" onclick="resolveConfirm(true)">Delete</button></div>
+  </div>
+
+</div>
+
+<div id="toasts"></div>
+
+<script>
+
+const S = {
+  token:'', repo:'', section:'people',
+  people:[], events:[], posts:[], pubs:[],
+  dblpAll:[], dblpNew:[],
+  em:null, eslug:null, esha:null, epath:null,
+  cfCb:null
+};
+const GH = 'https://api.github.com';
+
+/* ── GitHub API ── */
+async function apiGet(path) {
+  const r = await fetch(GH+'/repos/'+S.repo+'/contents/'+path, {
+    headers:{Authorization:'token '+S.token, Accept:'application/vnd.github.v3+json'}
+  });
+  if (!r.ok) { const e=await r.json(); throw new Error(e.message||r.status); }
+  return r.json();
+}
+async function apiList(path) {
+  try {
+    const r = await fetch(GH+'/repos/'+S.repo+'/contents/'+path, {
+      headers:{Authorization:'token '+S.token, Accept:'application/vnd.github.v3+json'}
+    });
+    if (!r.ok) return [];
+    const d = await r.json();
+    return Array.isArray(d) ? d : [];
+  } catch(e) { return []; }
+}
+async function apiPut(path, content, sha, msg) {
+  const body = {message:msg, content:btoa(unescape(encodeURIComponent(content)))};
+  if (sha) body.sha = sha;
+  const r = await fetch(GH+'/repos/'+S.repo+'/contents/'+path, {
+    method:'PUT',
+    headers:{Authorization:'token '+S.token, Accept:'application/vnd.github.v3+json', 'Content-Type':'application/json'},
+    body:JSON.stringify(body)
+  });
+  if (!r.ok) { const e=await r.json(); throw new Error(e.message||r.status); }
+  return r.json();
+}
+async function apiDelete(path, sha, msg) {
+  const r = await fetch(GH+'/repos/'+S.repo+'/contents/'+path, {
+    method:'DELETE',
+    headers:{Authorization:'token '+S.token, Accept:'application/vnd.github.v3+json', 'Content-Type':'application/json'},
+    body:JSON.stringify({message:msg, sha})
+  });
+  if (!r.ok) { const e=await r.json(); throw new Error(e.message||r.status); }
+  return r.json();
+}
+
+/* ── Base64 / encoding ── */
+function dec64(b64) { return decodeURIComponent(escape(atob(b64.replace(/\s/g,'')))); }
+
+/* ── Frontmatter ── */
+function parseFM(md) {
+  if (!md.startsWith('---')) return {data:{}, body:md};
+  const end = md.indexOf('\n---', 3);
+  if (end === -1) return {data:{}, body:md};
+  const yaml = md.slice(4, end);
+  const body = md.slice(end+4).replace(/^\n/,'');
+  return {data:parseYaml(yaml), body};
+}
+function parseYaml(yaml) {
+  const obj = {};
+  const lines = yaml.split('\n');
+  let i = 0;
+  while (i < lines.length) {
+    const line = lines[i];
+    if (!line.trim() || line.trim().startsWith('#')) { i++; continue; }
+    const m = line.match(/^([a-zA-Z_][\w-]*):\s*(.*)/);
+    if (!m) { i++; continue; }
+    const key=m[1], rest=m[2].trim();
+    if (rest==='' || rest==='|' || rest==='>') {
+      const items=[];
+      i++;
+      while (i<lines.length && /^\s+-\s/.test(lines[i])) {
+        items.push(lines[i].replace(/^\s+-\s+/,'').replace(/^["']|["']$/g,'').trim());
+        i++;
+      }
+      obj[key] = items.length ? items : '';
+      continue;
+    } else if (rest.startsWith('[')) {
+      try { obj[key]=JSON.parse(rest.replace(/'/g,'"')); } catch { obj[key]=rest; }
+    } else {
+      obj[key] = rest.replace(/^["']|["']$/g,'');
+    }
+    i++;
+  }
+  return obj;
+}
+function buildFM(data, body) {
+  let s = '---\n';
+  for (const [k,v] of Object.entries(data)) {
+    if (v===null||v===undefined||v==='') continue;
+    if (Array.isArray(v)) {
+      if (!v.length) continue;
+      s += k+':\n'+v.map(x=>'  - '+ys(String(x))).join('\n')+'\n';
+    } else if (typeof v==='boolean') {
+      s += k+': '+v+'\n';
+    } else {
+      s += k+': '+ys(String(v))+'\n';
+    }
+  }
+  s += '---\n';
+  if (body) s += '\n'+body;
+  return s;
+}
+function ys(s) {
+  if (!s) return '""';
+  if (/[:#\[\]{}|>&*!,?@`]/.test(s)||s.includes('\n')||s.startsWith(' ')||s.endsWith(' ')) {
+    return '"'+s.replace(/\\/g,'\\\\').replace(/"/g,'\\"')+'"';
+  }
+  return s;
+}
+
+/* ── Auth ── */
+async function doLogin() {
+  const tok = document.getElementById('tokIn').value.trim();
+  const repo = document.getElementById('repoIn').value.trim();
+  const btn = document.getElementById('loginBtn');
+  const err = document.getElementById('loginErr');
+  if (!tok||!repo) { err.style.display='block'; err.textContent='Token and repo are required.'; return; }
+  btn.disabled=true; btn.textContent='Connecting...'; err.style.display='none';
+  try {
+    const r = await fetch(GH+'/repos/'+repo, {
+      headers:{Authorization:'token '+tok, Accept:'application/vnd.github.v3+json'}
+    });
+    if (!r.ok) throw new Error('Invalid token or repo not found ('+r.status+')');
+    S.token=tok; S.repo=repo;
+    localStorage.setItem('smilelab_token', tok);
+    localStorage.setItem('smilelab_repo', repo);
+    document.getElementById('loginScreen').style.display='none';
+    document.getElementById('app').style.display='flex';
+    document.getElementById('repoTag').textContent=repo;
+    await loadPeople();
+  } catch(e) {
+    err.style.display='block'; err.textContent=e.message;
+  } finally {
+    btn.disabled=false; btn.textContent='Connect to GitHub';
+  }
+}
+function doLogout() {
+  S.token=''; S.repo='';
+  localStorage.removeItem('smilelab_token');
+  localStorage.removeItem('smilelab_repo');
+  document.getElementById('app').style.display='none';
+  document.getElementById('loginScreen').style.display='flex';
+}
+
+/* ── Navigation ── */
+const TITLES = {people:'People',events:'Events',news:'News / Posts',publications:'Publications',dblp:'DBLP Import'};
+function showSection(name) {
+  S.section=name;
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.getElementById('sec-'+name).classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.toggle('active', n.dataset.s===name));
+  document.getElementById('pgTitle').textContent=TITLES[name]||name;
+  if (name==='people'&&!S.people.length) loadPeople();
+  else if (name==='events'&&!S.events.length) loadEvents();
+  else if (name==='news'&&!S.posts.length) loadPosts();
+  else if (name==='publications'&&!S.pubs.length) loadPublications();
+}
+function toggleSidebar() {
+  const sb=document.getElementById('sidebar');
+  if (window.innerWidth<=768) sb.classList.toggle('mob');
+  else sb.classList.toggle('collapsed');
+}
+function toggleTheme() {
+  const ht=document.documentElement;
+  const t=ht.getAttribute('data-theme')==='dark'?'light':'dark';
+  ht.setAttribute('data-theme',t);
+  document.getElementById('themeBtn').textContent=t==='dark'?'\u{1F319}':'\u2600\uFE0F';
+  localStorage.setItem('smilelab_theme',t);
+}
+
+/* ── Toast ── */
+function toast(msg, type, dur) {
+  type=type||'info'; dur=dur||3500;
+  const el=document.createElement('div');
+  el.className='toast '+type;
+  el.textContent=msg;
+  document.getElementById('toasts').appendChild(el);
+  setTimeout(()=>el.remove(), dur);
+}
+
+/* ── Modal ── */
+function openModal(id) {
+  document.getElementById('mov').classList.add('open');
+  document.querySelectorAll('.modal').forEach(m=>m.style.display='none');
+  document.getElementById(id).style.display='flex';
+}
+function closeModal(id) {
+  document.getElementById(id).style.display='none';
+  document.getElementById('mov').classList.remove('open');
+  S.em=null; S.eslug=null; S.esha=null; S.epath=null;
+}
+function overlayClick(e) {
+  if (e.target.id==='mov') {
+    document.querySelectorAll('.modal').forEach(m=>m.style.display='none');
+    document.getElementById('mov').classList.remove('open');
+  }
+}
+function confirmDialog(msg) {
+  document.getElementById('cfMsg').textContent=msg;
+  openModal('cfDlg');
+  return new Promise(r=>{ S.cfCb=r; });
+}
+function resolveConfirm(val) {
+  closeModal('cfDlg');
+  if (S.cfCb) { S.cfCb(val); S.cfCb=null; }
+}
+
+/* ── Helpers ── */
+function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function slugify(s) { return s.toLowerCase().trim().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,80); }
+function setLoad(id) { document.getElementById(id).innerHTML='<div class="spin"></div>'; }
+function getSocial(arr, icon) { const i=(arr||[]).find(x=>x.icon===icon); return i?i.link:''; }
+
+/* ══════════════════════════════════════════════
+   PEOPLE
+══════════════════════════════════════════════ */
+async function loadPeople() {
+  setLoad('ppl-wrap');
+  try {
+    const dirs = await apiList('content/authors');
+    const items = dirs.filter(d=>d.type==='dir');
+    const res = await Promise.allSettled(items.map(d=>apiGet('content/authors/'+d.name+'/_index.md')));
+    S.people=[];
+    res.forEach((r,i)=>{ if (r.status==='fulfilled') {
+      const f=r.value, raw=dec64(f.content), {data,body}=parseFM(raw);
+      S.people.push({slug:items[i].name, sha:f.sha, path:f.path, data, body});
+    }});
+    S.people.sort((a,b)=>(a.data.title||a.slug).localeCompare(b.data.title||b.slug));
+    renderPeople();
+  } catch(e) { document.getElementById('ppl-wrap').innerHTML='<div class="empty">Error: '+esc(e.message)+'</div>'; }
+}
+function renderPeople() {
+  const el=document.getElementById('ppl-wrap');
+  if (!S.people.length) { el.innerHTML='<div class="empty">No people found. Add the first one!</div>'; return; }
+  const ORDER=['Principal Investigators','PhD Students','MSc Students','BSc Students','Collaborators','Developers','Alumni'];
+  const grps={};
+  S.people.forEach(p=>{
+    const g=(Array.isArray(p.data.user_groups)?p.data.user_groups[0]:p.data.user_groups)||'Other';
+    (grps[g]=grps[g]||[]).push(p);
+  });
+  let html='';
+  [...ORDER,...Object.keys(grps).filter(g=>!ORDER.includes(g))].forEach(g=>{
+    if (!grps[g]) return;
+    const ini=s=>s.split(' ').map(w=>w[0]||'').slice(0,2).join('').toUpperCase();
+    html+='<div class="grp-sec"><div class="grp-title">'+esc(g)+' <span class="bdg bdg-c">'+grps[g].length+'</span></div><div class="pgrid">';
+    grps[g].forEach(p=>{
+      html+='<div class="pcard"><div class="pavatar">'+ini(p.data.title||p.slug)+'</div>'
+        +'<div class="pinfo"><div class="pname">'+esc(p.data.title||p.slug)+'</div><div class="prole">'+esc(p.data.role||'')+'</div></div>'
+        +'<div class="cacts">'
+        +'<button class="bic" title="Edit" onclick="openPersonModal(\''+esc(p.slug)+'\')">&#9998;</button>'
+        +'<button class="bic del" title="Delete" onclick="deletePerson(\''+esc(p.slug)+'\')">&#128465;</button>'
+        +'</div></div>';
+    });
+    html+='</div></div>';
+  });
+  el.innerHTML=html;
+}
+function openPersonModal(slug) {
+  document.getElementById('pModT').textContent=slug?'Edit Person':'Add Person';
+  document.getElementById('pSlug').disabled=!!slug;
+  if (slug) {
+    const p=S.people.find(x=>x.slug===slug); if (!p) return;
+    S.em='edit'; S.eslug=slug; S.esha=p.sha; S.epath=p.path;
+    const soc=p.data.social||[];
+    document.getElementById('pSlug').value=slug;
+    document.getElementById('pName').value=p.data.title||'';
+    document.getElementById('pRole').value=p.data.role||'';
+    document.getElementById('pGrp').value=(Array.isArray(p.data.user_groups)?p.data.user_groups[0]:p.data.user_groups)||'Principal Investigators';
+    document.getElementById('pBio').value=p.data.bio||'';
+    document.getElementById('pEmail').value=p.data.email||'';
+    document.getElementById('pWeb').value=getSocial(soc,'globe')||getSocial(soc,'home')||'';
+    document.getElementById('pGH').value=(getSocial(soc,'github')||'').replace('https://github.com/','');
+    document.getElementById('pTW').value=(getSocial(soc,'twitter')||'').replace('https://twitter.com/','');
+    document.getElementById('pGS').value=(getSocial(soc,'google-scholar')||'').replace('https://scholar.google.com/citations?user=','').replace(/&.*/,'');
+    document.getElementById('pOR').value=(getSocial(soc,'orcid')||'').replace('https://orcid.org/','');
+    document.getElementById('pSU').value=String(p.data.superuser||'false');
+  } else {
+    S.em='add'; S.eslug=null; S.esha=null; S.epath=null;
+    ['pSlug','pName','pRole','pBio','pEmail','pWeb','pGH','pTW','pGS','pOR'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('pGrp').value='PhD Students';
+    document.getElementById('pSU').value='false';
+  }
+  openModal('pMod');
+}
+async function savePerson() {
+  const btn=document.getElementById('pSvBtn');
+  btn.disabled=true; btn.textContent='Saving...';
+  try {
+    const slug=document.getElementById('pSlug').value.trim();
+    if (!slug) { toast('Slug is required','err'); return; }
+    const soc=[];
+    const em=document.getElementById('pEmail').value.trim();
+    const we=document.getElementById('pWeb').value.trim();
+    const gh=document.getElementById('pGH').value.trim();
+    const tw=document.getElementById('pTW').value.trim();
+    const gs=document.getElementById('pGS').value.trim();
+    const or=document.getElementById('pOR').value.trim();
+    if (em) soc.push({icon:'envelope',icon_pack:'fas',link:'mailto:'+em});
+    if (we) soc.push({icon:'globe',icon_pack:'fas',link:we});
+    if (gh) soc.push({icon:'github',icon_pack:'fab',link:'https://github.com/'+gh});
+    if (tw) soc.push({icon:'twitter',icon_pack:'fab',link:'https://twitter.com/'+tw.replace('@','')});
+    if (gs) soc.push({icon:'google-scholar',icon_pack:'ai',link:'https://scholar.google.com/citations?user='+gs});
+    if (or) soc.push({icon:'orcid',icon_pack:'ai',link:'https://orcid.org/'+or});
+    const exist=S.em==='edit'?(S.people.find(x=>x.slug===slug)||{}).data||{}:{};
+    const data={...exist,
+      title:document.getElementById('pName').value.trim(),
+      role:document.getElementById('pRole').value.trim(),
+      bio:document.getElementById('pBio').value.trim(),
+      email:em,
+      superuser:document.getElementById('pSU').value==='true',
+      user_groups:[document.getElementById('pGrp').value],
+      highlight_name:exist.highlight_name||false
+    };
+    if (soc.length) data.social=soc;
+    const body=S.em==='edit'?(S.people.find(x=>x.slug===slug)||{}).body||'':'';
+    const content=buildFM(data,body);
+    const path='content/authors/'+slug+'/_index.md';
+    const msg=(S.em==='edit'?'Update':'Add')+' author: '+data.title;
+    await apiPut(path, content, S.esha, msg);
+    toast(msg,'ok'); closeModal('pMod'); await loadPeople();
+  } catch(e) { toast('Error: '+e.message,'err'); }
+  finally { btn.disabled=false; btn.textContent='Save Person'; }
+}
+async function deletePerson(slug) {
+  const p=S.people.find(x=>x.slug===slug); if (!p) return;
+  const ok=await confirmDialog('Delete person "'+esc(p.data.title||slug)+'"? This cannot be undone.');
+  if (!ok) return;
+  try {
+    await apiDelete(p.path, p.sha, 'Delete author: '+(p.data.title||slug));
+    toast('Deleted '+(p.data.title||slug),'ok'); await loadPeople();
+  } catch(e) { toast('Error: '+e.message,'err'); }
+}
+
+/* ══════════════════════════════════════════════
+   EVENTS
+══════════════════════════════════════════════ */
+async function loadEvents() {
+  setLoad('ev-wrap');
+  try {
+    const dirs=await apiList('content/event');
+    const items=dirs.filter(d=>d.type==='dir');
+    const res=await Promise.allSettled(items.map(d=>apiGet('content/event/'+d.name+'/index.md')));
+    S.events=[];
+    res.forEach((r,i)=>{ if (r.status==='fulfilled') {
+      const f=r.value, {data,body}=parseFM(dec64(f.content));
+      S.events.push({slug:items[i].name, sha:f.sha, path:f.path, data, body});
+    }});
+    S.events.sort((a,b)=>(b.data.date||'').localeCompare(a.data.date||''));
+    renderEvents();
+  } catch(e) { document.getElementById('ev-wrap').innerHTML='<div class="empty">Error: '+esc(e.message)+'</div>'; }
+}
+function renderEvents() {
+  const el=document.getElementById('ev-wrap');
+  if (!S.events.length) { el.innerHTML='<div class="empty">No events found.</div>'; return; }
+  el.innerHTML=S.events.map(ev=>'<div class="litem">'
+    +'<div class="lbody"><div class="ltitle">'+esc(ev.data.title||ev.slug)+'</div>'
+    +'<div class="lmeta"><span>'+(ev.data.date||'').slice(0,10)+'</span>'
+    +(ev.data.date_end?'<span>&rarr; '+ev.data.date_end.slice(0,10)+'</span>':'')
+    +(ev.data.location?'<span>&#x1F4CD; '+esc(ev.data.location)+'</span>':'')
+    +'</div></div>'
+    +'<div class="lacts">'
+    +'<button class="bic" onclick="openEventModal(\''+esc(ev.slug)+'\')">&#9998;</button>'
+    +'<button class="bic del" onclick="deleteEvent(\''+esc(ev.slug)+'\')">&#128465;</button>'
+    +'</div></div>').join('');
+}
+function openEventModal(slug) {
+  document.getElementById('eModT').textContent=slug?'Edit Event':'Add Event';
+  if (slug) {
+    const ev=S.events.find(x=>x.slug===slug); if (!ev) return;
+    S.em='edit'; S.eslug=slug; S.esha=ev.sha; S.epath=ev.path;
+    document.getElementById('evTi').value=ev.data.title||'';
+    document.getElementById('evEv').value=ev.data.event||'';
+    document.getElementById('evD1').value=(ev.data.date||'').slice(0,10);
+    document.getElementById('evD2').value=(ev.data.date_end||'').slice(0,10);
+    document.getElementById('evLo').value=ev.data.location||'';
+    document.getElementById('evSu').value=ev.data.summary||'';
+    document.getElementById('evBo').value=ev.body||'';
+    document.getElementById('evUr').value=ev.data.event_url||'';
+  } else {
+    S.em='add'; S.eslug=null; S.esha=null; S.epath=null;
+    ['evTi','evEv','evD1','evD2','evLo','evSu','evBo','evUr'].forEach(id=>document.getElementById(id).value='');
+  }
+  openModal('eMod');
+}
+async function saveEvent() {
+  const btn=document.getElementById('eSvBtn');
+  btn.disabled=true; btn.textContent='Saving...';
+  try {
+    const title=document.getElementById('evTi').value.trim();
+    if (!title) { toast('Title is required','err'); return; }
+    const slug=S.eslug||slugify(title);
+    const d1=document.getElementById('evD1').value;
+    const data={
+      title, event:document.getElementById('evEv').value.trim()||title,
+      event_url:document.getElementById('evUr').value.trim(),
+      location:document.getElementById('evLo').value.trim(),
+      summary:document.getElementById('evSu').value.trim(),
+      date:d1?d1+'T09:00:00Z':new Date().toISOString(),
+      date_end:document.getElementById('evD2').value?document.getElementById('evD2').value+'T18:00:00Z':'',
+      all_day:true, publishDate:new Date().toISOString()
+    };
+    const body=document.getElementById('evBo').value;
+    const content=buildFM(data,body);
+    const path='content/event/'+slug+'/index.md';
+    const msg=(S.em==='edit'?'Update':'Add')+' event: '+title;
+    await apiPut(path,content,S.esha,msg);
+    toast(msg,'ok'); closeModal('eMod'); await loadEvents();
+  } catch(e) { toast('Error: '+e.message,'err'); }
+  finally { btn.disabled=false; btn.textContent='Save Event'; }
+}
+async function deleteEvent(slug) {
+  const ev=S.events.find(x=>x.slug===slug); if (!ev) return;
+  const ok=await confirmDialog('Delete event "'+esc(ev.data.title||slug)+'"?');
+  if (!ok) return;
+  try {
+    await apiDelete(ev.path,ev.sha,'Delete event: '+(ev.data.title||slug));
+    toast('Deleted event','ok'); await loadEvents();
+  } catch(e) { toast('Error: '+e.message,'err'); }
+}
+
+/* ══════════════════════════════════════════════
+   POSTS / NEWS
+══════════════════════════════════════════════ */
+async function loadPosts() {
+  setLoad('news-wrap');
+  try {
+    const dirs=await apiList('content/post');
+    const items=dirs.filter(d=>d.type==='dir');
+    const res=await Promise.allSettled(items.map(d=>apiGet('content/post/'+d.name+'/index.md')));
+    S.posts=[];
+    res.forEach((r,i)=>{ if (r.status==='fulfilled') {
+      const f=r.value, {data,body}=parseFM(dec64(f.content));
+      S.posts.push({slug:items[i].name, sha:f.sha, path:f.path, data, body});
+    }});
+    S.posts.sort((a,b)=>(b.data.date||'').localeCompare(a.data.date||''));
+    renderPosts();
+  } catch(e) { document.getElementById('news-wrap').innerHTML='<div class="empty">Error: '+esc(e.message)+'</div>'; }
+}
+function renderPosts() {
+  const el=document.getElementById('news-wrap');
+  if (!S.posts.length) { el.innerHTML='<div class="empty">No posts found.</div>'; return; }
+  el.innerHTML=S.posts.map(p=>'<div class="litem">'
+    +'<div class="lbody"><div class="ltitle">'+esc(p.data.title||p.slug)+'</div>'
+    +'<div class="lmeta"><span>'+(p.data.date||'').slice(0,10)+'</span>'
+    +([].concat(p.data.tags||[]).map(t=>'<span class="bdg bdg-c">'+esc(t)+'</span>').join(''))
+    +(p.data.summary?'<span>'+esc(p.data.summary.slice(0,80))+'...</span>':'')
+    +'</div></div>'
+    +'<div class="lacts">'
+    +'<button class="bic" onclick="openPostModal(\''+esc(p.slug)+'\')">&#9998;</button>'
+    +'<button class="bic del" onclick="deletePost(\''+esc(p.slug)+'\')">&#128465;</button>'
+    +'</div></div>').join('');
+}
+function openPostModal(slug) {
+  document.getElementById('nModT').textContent=slug?'Edit Post':'Add Post';
+  if (slug) {
+    const p=S.posts.find(x=>x.slug===slug); if (!p) return;
+    S.em='edit'; S.eslug=slug; S.esha=p.sha; S.epath=p.path;
+    document.getElementById('ntTi').value=p.data.title||'';
+    document.getElementById('ntDt').value=(p.data.date||'').slice(0,10);
+    document.getElementById('ntSu').value=p.data.summary||'';
+    document.getElementById('ntTg').value=[].concat(p.data.tags||[]).join(', ');
+    document.getElementById('ntBo').value=p.body||'';
+  } else {
+    S.em='add'; S.eslug=null; S.esha=null; S.epath=null;
+    ['ntTi','ntSu','ntTg','ntBo'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('ntDt').value=new Date().toISOString().slice(0,10);
+  }
+  openModal('nMod');
+}
+async function savePost() {
+  const btn=document.getElementById('nSvBtn');
+  btn.disabled=true; btn.textContent='Saving...';
+  try {
+    const title=document.getElementById('ntTi').value.trim();
+    if (!title) { toast('Title is required','err'); return; }
+    const slug=S.eslug||slugify(title);
+    const tags=document.getElementById('ntTg').value.split(',').map(t=>t.trim()).filter(Boolean);
+    const data={title, date:document.getElementById('ntDt').value||new Date().toISOString().slice(0,10),
+      summary:document.getElementById('ntSu').value.trim()};
+    if (tags.length) data.tags=tags;
+    const body=document.getElementById('ntBo').value;
+    const content=buildFM(data,body);
+    const path='content/post/'+slug+'/index.md';
+    const msg=(S.em==='edit'?'Update':'Add')+' post: '+title;
+    await apiPut(path,content,S.esha,msg);
+    toast(msg,'ok'); closeModal('nMod'); await loadPosts();
+  } catch(e) { toast('Error: '+e.message,'err'); }
+  finally { btn.disabled=false; btn.textContent='Save Post'; }
+}
+async function deletePost(slug) {
+  const p=S.posts.find(x=>x.slug===slug); if (!p) return;
+  const ok=await confirmDialog('Delete post "'+esc(p.data.title||slug)+'"?');
+  if (!ok) return;
+  try {
+    await apiDelete(p.path,p.sha,'Delete post: '+(p.data.title||slug));
+    toast('Deleted post','ok'); await loadPosts();
+  } catch(e) { toast('Error: '+e.message,'err'); }
+}
+
+/* ══════════════════════════════════════════════
+   PUBLICATIONS
+══════════════════════════════════════════════ */
+const PTYPES={'1':'Conference','2':'Journal','3':'Preprint','4':'Report','5':'Book','6':'Book Chapter','7':'Thesis'};
+async function loadPublications() {
+  setLoad('pub-wrap');
+  try {
+    const dirs=await apiList('content/publication');
+    const items=dirs.filter(d=>d.type==='dir');
+    const res=await Promise.allSettled(items.map(d=>apiGet('content/publication/'+d.name+'/index.md')));
+    S.pubs=[];
+    res.forEach((r,i)=>{ if (r.status==='fulfilled') {
+      const f=r.value, {data,body}=parseFM(dec64(f.content));
+      S.pubs.push({slug:items[i].name, sha:f.sha, path:f.path, data, body});
+    }});
+    S.pubs.sort((a,b)=>(b.data.date||'').localeCompare(a.data.date||''));
+    const years=[...new Set(S.pubs.map(p=>(p.data.date||'').slice(0,4)).filter(Boolean))].sort().reverse();
+    const sel=document.getElementById('pubY');
+    sel.innerHTML='<option value="">All Years</option>'+years.map(y=>'<option value="'+y+'">'+y+'</option>').join('');
+    renderPubs();
+  } catch(e) { document.getElementById('pub-wrap').innerHTML='<div class="empty">Error: '+esc(e.message)+'</div>'; }
+}
+function renderPubs(list) {
+  list=list||S.pubs;
+  const el=document.getElementById('pub-wrap');
+  document.getElementById('pub-stats').textContent=list.length+' of '+S.pubs.length+' publications';
+  if (!list.length) { el.innerHTML='<div class="empty">No publications match.</div>'; return; }
+  el.innerHTML=list.map(p=>{
+    const au=[].concat(p.data.authors||[]);
+    const auStr=(au.slice(0,4).join(', ')+(au.length>4?' et al.':''));
+    const tk=[].concat(p.data.publication_types||[])[0];
+    const year=(p.data.date||'').slice(0,4);
+    return '<div class="pubi"><div class="pubi-h"><div class="pubi-b">'
+      +'<div class="pub-title">'+esc(p.data.title||p.slug)+'</div>'
+      +'<div class="pub-meta"><span class="tbadge">'+(PTYPES[tk]||'Other')+'</span>'
+      +(year?'<span>'+year+'</span>':'')
+      +(p.data.publication?'<span>'+esc(p.data.publication.replace(/\*/g,'').slice(0,60))+'</span>':'')
+      +(p.data.doi?'<a href="https://doi.org/'+esc(p.data.doi)+'" target="_blank">DOI</a>':'')
+      +'</div>'
+      +(auStr?'<div class="pub-auth">'+esc(auStr)+'</div>':'')
+      +'</div>'
+      +'<div class="pubi-acts">'
+      +'<button class="bic" onclick="openPubModal(\''+esc(p.slug)+'\')">&#9998;</button>'
+      +'<button class="bic del" onclick="deletePub(\''+esc(p.slug)+'\')">&#128465;</button>'
+      +'</div></div></div>';
+  }).join('');
+}
+function filterPubs() {
+  const q=document.getElementById('pubQ').value.toLowerCase();
+  const yr=document.getElementById('pubY').value;
+  const ty=document.getElementById('pubT').value;
+  const filtered=S.pubs.filter(p=>{
+    const t=(p.data.title||'').toLowerCase();
+    const a=[].concat(p.data.authors||[]).join(' ').toLowerCase();
+    const v=(p.data.publication||'').toLowerCase();
+    const matchQ=!q||t.includes(q)||a.includes(q)||v.includes(q);
+    const matchY=!yr||(p.data.date||'').startsWith(yr);
+    const matchT=!ty||[].concat(p.data.publication_types||[]).includes(ty);
+    return matchQ&&matchY&&matchT;
+  });
+  renderPubs(filtered);
+}
+function openPubModal(slug) {
+  document.getElementById('pubModT').textContent=slug?'Edit Publication':'Add Publication';
+  if (slug) {
+    const p=S.pubs.find(x=>x.slug===slug); if (!p) return;
+    S.em='edit'; S.eslug=slug; S.esha=p.sha; S.epath=p.path;
+    document.getElementById('pbTi').value=p.data.title||'';
+    document.getElementById('pbDt').value=(p.data.date||'').slice(0,10);
+    document.getElementById('pbTy').value=[].concat(p.data.publication_types||[])[0]||'1';
+    document.getElementById('pbAu').value=[].concat(p.data.authors||[]).join('\n');
+    document.getElementById('pbVe').value=p.data.publication||'';
+    document.getElementById('pbAb').value=p.data.abstract||'';
+    document.getElementById('pbDo').value=p.data.doi||'';
+    document.getElementById('pbUr').value=p.data.url_source||'';
+    document.getElementById('pbPF').value=p.data.url_pdf||'';
+    document.getElementById('pbCo').value=p.data.url_code||'';
+    document.getElementById('pbTg').value=[].concat(p.data.tags||[]).join(', ');
+  } else {
+    S.em='add'; S.eslug=null; S.esha=null; S.epath=null;
+    ['pbTi','pbAu','pbVe','pbAb','pbDo','pbUr','pbPF','pbCo','pbTg'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('pbDt').value=new Date().toISOString().slice(0,10);
+    document.getElementById('pbTy').value='1';
+  }
+  openModal('pubMod');
+}
+async function savePublication() {
+  const btn=document.getElementById('pubSvBtn');
+  btn.disabled=true; btn.textContent='Saving...';
+  try {
+    const title=document.getElementById('pbTi').value.trim();
+    if (!title) { toast('Title is required','err'); return; }
+    const slug=S.eslug||slugify(title);
+    const authors=document.getElementById('pbAu').value.split('\n').map(s=>s.trim()).filter(Boolean);
+    const tags=document.getElementById('pbTg').value.split(',').map(s=>s.trim()).filter(Boolean);
+    const exist=S.em==='edit'?(S.pubs.find(x=>x.slug===slug)||{}).data||{}:{};
+    const data={...exist, title,
+      date:document.getElementById('pbDt').value||new Date().toISOString().slice(0,10),
+      authors,
+      publication_types:[document.getElementById('pbTy').value],
+      publication:document.getElementById('pbVe').value.trim(),
+      abstract:document.getElementById('pbAb').value.trim(),
+      doi:document.getElementById('pbDo').value.trim(),
+      url_source:document.getElementById('pbUr').value.trim(),
+      url_pdf:document.getElementById('pbPF').value.trim(),
+      url_code:document.getElementById('pbCo').value.trim()
+    };
+    if (tags.length) data.tags=tags;
+    const body=S.em==='edit'?(S.pubs.find(x=>x.slug===slug)||{}).body||'':'';
+    const content=buildFM(data,body);
+    const path='content/publication/'+slug+'/index.md';
+    const msg=(S.em==='edit'?'Update':'Add')+' publication: '+title.slice(0,60);
+    await apiPut(path,content,S.esha,msg);
+    toast(msg,'ok'); closeModal('pubMod'); await loadPublications();
+  } catch(e) { toast('Error: '+e.message,'err'); }
+  finally { btn.disabled=false; btn.textContent='Save Publication'; }
+}
+async function deletePub(slug) {
+  const p=S.pubs.find(x=>x.slug===slug); if (!p) return;
+  const ok=await confirmDialog('Delete "'+esc((p.data.title||slug).slice(0,60))+'"?');
+  if (!ok) return;
+  try {
+    await apiDelete(p.path,p.sha,'Delete publication: '+(p.data.title||slug));
+    toast('Deleted publication','ok'); await loadPublications();
+  } catch(e) { toast('Error: '+e.message,'err'); }
+}
+
+/* ══════════════════════════════════════════════
+   DBLP IMPORT
+══════════════════════════════════════════════ */
+const DTYPE={inproceedings:'1',article:'2',phdthesis:'7',mastersthesis:'7',book:'5',incollection:'6',techreport:'4'};
+async function fetchDblp() {
+  const pid=document.getElementById('dblpPid').value.trim();
+  if (!pid) { toast('Enter a DBLP PID','warn'); return; }
+  const stEl=document.getElementById('dblp-status');
+  stEl.innerHTML='<div class="spin"></div>';
+  document.getElementById('dblp-bar').style.display='none';
+  document.getElementById('dblp-res').innerHTML='';
+  try {
+    const r=await fetch('https://dblp.org/pid/'+pid+'.xml');
+    if (!r.ok) throw new Error('DBLP fetch failed: '+r.status);
+    const text=await r.text();
+    const doc=new DOMParser().parseFromString(text,'text/xml');
+    S.dblpAll=[];
+    doc.querySelectorAll('r > *').forEach(e=>{
+      const title=(e.querySelector('title')||{}).textContent||'';
+      const year=(e.querySelector('year')||{}).textContent||'';
+      const venue=((e.querySelector('booktitle')||e.querySelector('journal'))||{}).textContent||'';
+      const ee=(e.querySelector('ee')||{}).textContent||'';
+      const au=[...e.querySelectorAll('author')].map(a=>a.textContent);
+      if (title&&year) S.dblpAll.push({title:title.replace(/\.$/,''), year, venue, ee, authors:au, type:e.tagName});
+    });
+    const existing=new Set(S.pubs.map(p=>(p.data.title||'').toLowerCase().trim()));
+    S.dblpNew=S.dblpAll.filter(p=>!existing.has(p.title.toLowerCase().trim()));
+    stEl.innerHTML='<div class="sbar info">Fetched '+S.dblpAll.length+' publications &mdash; <strong>'+S.dblpNew.length+' new</strong> not yet in repo.</div>';
+    renderDblp();
+    if (S.dblpAll.length) { document.getElementById('dblp-bar').style.display='flex'; updateDblpCount(); }
+  } catch(e) {
+    stEl.innerHTML='<div class="sbar err">Error: '+esc(e.message)+'</div>';
+  }
+}
+function renderDblp() {
+  document.getElementById('dblp-res').innerHTML=S.dblpAll.map((p,i)=>{
+    const isNew=S.dblpNew.includes(p);
+    return '<div class="ditem '+(isNew?'isnew':'isex')+'">'
+      +'<label><input type="checkbox" class="dchk" data-i="'+i+'" '+(isNew?'checked':'')
+      +' onchange="updateDblpCount()"><div>'
+      +'<div class="dt">'+esc(p.title)+'</div>'
+      +'<div class="dm"><span>'+esc(p.year)+'</span>'
+      +(p.venue?'<span>'+esc(p.venue)+'</span>':'')
+      +'<span>'+esc(p.authors.slice(0,3).join(', '))+(p.authors.length>3?' et al.':'')+'</span>'
+      +'<span class="bdg '+(isNew?'bdg-n':'bdg-e')+'">'+(isNew?'NEW':'Exists')+'</span>'
+      +'</div></div></label></div>';
+  }).join('');
+}
+function toggleSelectAll(cb) {
+  document.querySelectorAll('.dchk').forEach(c=>{
+    const i=parseInt(c.dataset.i);
+    if (!cb.checked||S.dblpNew.includes(S.dblpAll[i])) c.checked=cb.checked;
+  });
+  updateDblpCount();
+}
+function updateDblpCount() {
+  const n=document.querySelectorAll('.dchk:checked').length;
+  document.getElementById('dblp-cnt').textContent=n+' selected';
+}
+async function importSelected() {
+  const checks=[...document.querySelectorAll('.dchk:checked')];
+  if (!checks.length) { toast('No publications selected','warn'); return; }
+  const btn=document.querySelector('#dblp-bar .btn-p');
+  btn.disabled=true; btn.textContent='Importing...';
+  let ok=0, fail=0;
+  for (const chk of checks) {
+    const p=S.dblpAll[parseInt(chk.dataset.i)];
+    const slug=slugify(p.title);
+    const data={title:p.title, date:p.year+'-01-01', authors:p.authors,
+      publication_types:[DTYPE[p.type]||'1'], publication:p.venue||'',
+      url_source:p.ee||''};
+    const path='content/publication/'+slug+'/index.md';
+    try {
+      let sha=null;
+      try { const ex=await apiGet(path); sha=ex.sha; } catch {}
+      await apiPut(path, buildFM(data,''), sha, 'Add publication: '+p.title.slice(0,60));
+      ok++;
+    } catch(e) { fail++; console.error('Import failed:',p.title,e); }
+  }
+  btn.disabled=false; btn.textContent='\u2B07 Import Selected';
+  toast('Imported '+ok+(fail?' ('+fail+' failed)':''),'ok');
+  if (ok>0) await loadPublications();
+}
+
+/* ── Init ── */
+function init() {
+  const t=localStorage.getItem('smilelab_token');
+  const rp=localStorage.getItem('smilelab_repo');
+  const th=localStorage.getItem('smilelab_theme')||'dark';
+  document.documentElement.setAttribute('data-theme',th);
+  document.getElementById('themeBtn').textContent=th==='dark'?'\u{1F319}':'\u2600\uFE0F';
+  if (t) document.getElementById('tokIn').value=t;
+  if (rp) document.getElementById('repoIn').value=rp;
+  if (t&&rp) {
+    S.token=t; S.repo=rp;
+    document.getElementById('loginScreen').style.display='none';
+    document.getElementById('app').style.display='flex';
+    document.getElementById('repoTag').textContent=rp;
+    loadPeople();
+  }
+}
+init();
+
+</script>
+</body>
+</html>

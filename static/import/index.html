@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DBLP Importer — SmileLab</title>
+<style>
+:root[data-theme="dark"]{
+  --bg:#0d0f18;--bg2:#161927;--bg3:#1e2235;--card:#181b2a;
+  --txt:#e4e8f5;--txt2:#8b93b8;--muted:#555d7a;
+  --accent:#6c63ff;--accent2:#a78bfa;--acl:rgba(108,99,255,.13);
+  --border:#252a42;--border2:#31374f;
+  --ok:#4ecb8d;--okl:rgba(78,203,141,.14);
+  --err:#f06292;--errl:rgba(240,98,146,.13);
+  --warn:#ffb340;--warnl:rgba(255,179,64,.13);
+  --info:#38bdf8;--infol:rgba(56,189,248,.13);
+  --shadow:0 8px 32px rgba(0,0,0,.45);--shadow-sm:0 2px 10px rgba(0,0,0,.3);
+}
+:root[data-theme="light"]{
+  --bg:#f0f2fa;--bg2:#fff;--bg3:#e8ecf7;--card:#fff;
+  --txt:#1a1d2e;--txt2:#4a5270;--muted:#8890b0;
+  --accent:#6c63ff;--accent2:#7c74ff;--acl:rgba(108,99,255,.1);
+  --border:#dde1f0;--border2:#c8ceea;
+  --ok:#2e9e6e;--okl:rgba(46,158,110,.1);
+  --err:#d32f2f;--errl:rgba(211,47,47,.1);
+  --warn:#e65c00;--warnl:rgba(230,92,0,.1);
+  --info:#0284c7;--infol:rgba(2,132,199,.1);
+  --shadow:0 4px 20px rgba(0,0,0,.09);--shadow-sm:0 2px 8px rgba(0,0,0,.06);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
+
+/* ── Layout ── */
+.topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(10px)}
+.brand{display:flex;align-items:center;gap:11px}
+.brand-ico{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.brand-name{font-size:15px;font-weight:700}
+.brand-sub{font-size:10px;color:var(--muted)}
+.tb-right{display:flex;align-items:center;gap:10px}
+.theme-btn{width:36px;height:36px;border-radius:9px;background:var(--bg3);border:1.5px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:17px}
+.theme-btn:hover{background:var(--border)}
+.user-chip{display:flex;align-items:center;gap:7px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:5px 10px;font-size:12px;color:var(--txt2)}
+.user-chip button{background:none;border:none;cursor:pointer;color:var(--muted);font-size:12px;padding:0 2px}
+.user-chip button:hover{color:var(--err)}
+.container{max-width:1100px;margin:0 auto;padding:28px 24px}
+
+/* ── Login ── */
+#login-screen{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg)}
+.login-card{background:var(--bg2);border:1.5px solid var(--border);border-radius:18px;padding:44px 40px;width:100%;max-width:420px;box-shadow:var(--shadow)}
+.login-brand{display:flex;align-items:center;gap:14px;margin-bottom:32px}
+.l-ico{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-size:26px}
+.l-name{font-size:20px;font-weight:700}
+.l-sub{font-size:12px;color:var(--muted);margin-top:2px}
+
+/* ── Form ── */
+.fg{margin-bottom:16px}
+.fg label{display:block;font-size:11.5px;font-weight:600;color:var(--txt2);margin-bottom:6px;text-transform:uppercase;letter-spacing:.03em}
+.fc{width:100%;background:var(--bg3);border:1.5px solid var(--border);border-radius:9px;padding:10px 14px;color:var(--txt);font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s;font-family:inherit}
+.fc:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--acl)}
+.fc::placeholder{color:var(--muted)}
+.hint{font-size:11px;color:var(--muted);margin-top:4px}
+
+/* ── Buttons ── */
+.btn{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:8px;border:none;cursor:pointer;font-size:14px;font-weight:500;transition:all .2s;white-space:nowrap}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none!important}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover:not(:disabled){background:var(--accent2);transform:translateY(-1px)}
+.btn-secondary{background:var(--bg3);color:var(--txt);border:1.5px solid var(--border)}
+.btn-secondary:hover:not(:disabled){background:var(--border)}
+.btn-ok{background:var(--okl);color:var(--ok);border:1.5px solid rgba(78,203,141,.3)}
+.btn-ok:hover:not(:disabled){background:rgba(78,203,141,.25)}
+.btn-full{width:100%;justify-content:center}
+.btn-sm{padding:6px 12px;font-size:12.5px;border-radius:7px}
+
+/* ── Controls panel ── */
+.controls-panel{background:var(--bg2);border:1.5px solid var(--border);border-radius:14px;padding:20px 22px;margin-bottom:22px}
+.cp-row{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap}
+.cp-row .fg{margin-bottom:0;flex:1;min-width:180px}
+.pid-group{display:flex;gap:0}
+.pid-group .fc{border-radius:9px 0 0 9px;border-right:none}
+.pid-group .btn{border-radius:0 9px 9px 0;padding:10px 20px}
+
+/* ── Status bar ── */
+.status-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.stat-pill{display:flex;align-items:center;gap:6px;padding:5px 12px;border-radius:20px;font-size:12.5px;font-weight:500}
+.sp-total{background:var(--acl);color:var(--accent)}
+.sp-new{background:var(--okl);color:var(--ok)}
+.sp-exists{background:var(--bg3);color:var(--muted)}
+.sp-selected{background:var(--warnl);color:var(--warn)}
+
+/* ── Filter tabs ── */
+.filter-bar{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:20px}
+.f-tab{padding:6px 14px;border-radius:20px;border:1.5px solid var(--border);background:var(--bg2);color:var(--txt2);font-size:12.5px;cursor:pointer;transition:all .15s;font-weight:500}
+.f-tab:hover{background:var(--bg3)}
+.f-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* ── Action bar ── */
+.action-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:20px;padding:14px 18px;background:var(--bg2);border:1.5px solid var(--border);border-radius:12px}
+.ab-spacer{flex:1}
+.sel-count{font-size:13px;color:var(--txt2)}
+
+/* ── Year group ── */
+.year-group{margin-bottom:32px}
+.year-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.year-lbl{font-size:18px;font-weight:700}
+.year-cnt{background:var(--bg3);border-radius:20px;padding:2px 10px;font-size:12px;color:var(--muted);font-weight:500}
+
+/* ── Publication card ── */
+.pub-card{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start;transition:all .2s;cursor:pointer}
+.pub-card:hover{border-color:var(--accent);box-shadow:0 0 0 3px var(--acl)}
+.pub-card.checked{border-color:var(--accent);background:var(--acl)}
+.pub-card.exists{opacity:.65}
+.pub-check{flex-shrink:0;margin-top:2px}
+.pub-check input[type=checkbox]{width:17px;height:17px;accent-color:var(--accent);cursor:pointer}
+.pub-body{flex:1;min-width:0}
+.pub-top{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;flex-wrap:wrap}
+.pub-title{font-size:14px;font-weight:600;line-height:1.4;flex:1;min-width:200px}
+.badges{display:flex;gap:5px;flex-shrink:0;flex-wrap:wrap}
+.badge{padding:2px 8px;border-radius:5px;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.b-new{background:var(--okl);color:var(--ok)}
+.b-exists{background:var(--bg3);color:var(--muted)}
+.b-conf{background:var(--acl);color:var(--accent)}
+.b-journal{background:rgba(56,189,248,.14);color:var(--info)}
+.b-preprint{background:var(--warnl);color:var(--warn)}
+.pub-meta{font-size:12px;color:var(--txt2);margin-bottom:4px}
+.pub-venue{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:2px}
+.pub-authors{font-size:11.5px;color:var(--muted);margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pub-doi{font-size:11px;color:var(--accent);margin-top:4px;display:inline-flex;align-items:center;gap:4px;text-decoration:none}
+.pub-doi:hover{text-decoration:underline}
+
+/* ── Progress overlay ── */
+.progress-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(6px);z-index:500;display:flex;align-items:center;justify-content:center}
+.progress-box{background:var(--bg2);border:1.5px solid var(--border);border-radius:16px;padding:32px 36px;min-width:360px;max-width:500px;box-shadow:var(--shadow)}
+.pb-title{font-size:17px;font-weight:600;margin-bottom:6px}
+.pb-sub{font-size:13px;color:var(--txt2);margin-bottom:20px}
+.progress-bar{height:6px;background:var(--border);border-radius:3px;overflow:hidden;margin-bottom:14px}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:3px;transition:width .3s}
+.pb-log{max-height:180px;overflow-y:auto;font-size:12px;color:var(--txt2);font-family:'Courier New',monospace;line-height:1.8}
+.pb-log .log-ok{color:var(--ok)}
+.pb-log .log-err{color:var(--err)}
+.pb-log .log-skip{color:var(--muted)}
+.pb-actions{display:flex;justify-content:flex-end;margin-top:16px}
+
+/* ── Alerts ── */
+.alert{padding:12px 16px;border-radius:10px;font-size:13.5px;margin-bottom:18px;display:flex;align-items:flex-start;gap:10px;line-height:1.5}
+.alert-ico{flex-shrink:0;font-size:16px}
+.a-err{background:var(--errl);border:1px solid rgba(240,98,146,.28);color:var(--err)}
+.a-info{background:var(--infol);border:1px solid rgba(56,189,248,.25);color:var(--info)}
+.a-ok{background:var(--okl);border:1px solid rgba(78,203,141,.28);color:var(--ok)}
+.a-warn{background:var(--warnl);border:1px solid rgba(255,179,64,.28);color:var(--warn)}
+
+/* ── Loading ── */
+.loading{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 20px;color:var(--muted);gap:16px}
+.spinner{width:38px;height:38px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── Empty ── */
+.empty{text-align:center;padding:60px 20px;color:var(--muted)}
+.empty .e-ico{font-size:46px;margin-bottom:14px}
+.empty h3{font-size:17px;color:var(--txt2);margin-bottom:7px}
+.empty p{font-size:13px}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+/* ── Error msg ── */
+.err-msg{background:var(--errl);border:1px solid rgba(240,98,146,.28);border-radius:7px;padding:9px 13px;font-size:13px;color:var(--err);margin-top:10px}
+
+/* ── Responsive ── */
+@media(max-width:640px){
+  .cp-row{flex-direction:column}
+  .container{padding:16px}
+  .topbar{padding:12px 16px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ LOGIN ══ -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-brand">
+      <div class="l-ico">📚</div>
+      <div><div class="l-name">DBLP Importer</div><div class="l-sub">SmileLab Publication Tool</div></div>
+    </div>
+    <p style="font-size:13px;color:var(--txt2);margin-bottom:24px;line-height:1.6">
+      Import publications from DBLP directly into your Hugo site via GitHub. Enter your credentials to get started.
+    </p>
+    <div class="fg">
+      <label>GitHub Repository</label>
+      <input class="fc" id="l-repo" value="masmoudi662/smilevo.github.io" placeholder="owner/repo">
+    </div>
+    <div class="fg">
+      <label>Personal Access Token</label>
+      <input class="fc" id="l-token" type="password" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+      <div class="hint">Needs <strong>repo</strong> scope · <a href="https://github.com/settings/tokens" target="_blank" style="color:var(--accent)">Generate here →</a></div>
+    </div>
+    <div id="l-err" class="err-msg" style="display:none"></div>
+    <button class="btn btn-primary btn-full" style="margin-top:10px" id="l-btn" onclick="doLogin()">
+      🔑 Connect to Repository
+    </button>
+  </div>
+</div>
+
+<!-- ══ APP ══ -->
+<div id="app" style="display:none">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-ico">📚</div>
+      <div>
+        <div class="brand-name">DBLP Importer</div>
+        <div class="brand-sub">SmileLab Publication Tool</div>
+      </div>
+    </div>
+    <div class="tb-right">
+      <button class="theme-btn" id="theme-btn" onclick="toggleTheme()" title="Toggle theme">🌙</button>
+      <div class="user-chip">
+        🔗 <span id="chip-repo">...</span>
+        <button onclick="logout()" title="Logout">⏏</button>
+      </div>
+      <a href="/dashboard/" class="btn btn-secondary btn-sm">← Dashboard</a>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Controls -->
+    <div class="controls-panel">
+      <div class="cp-row">
+        <div class="fg" style="max-width:320px">
+          <label>DBLP Person ID</label>
+          <div class="pid-group">
+            <input class="fc" id="dblp-pid" value="140/0883" placeholder="e.g. 140/0883">
+            <button class="btn btn-primary" id="fetch-btn" onclick="fetchDblp()">
+              <span id="fetch-ico">🔍</span> <span id="fetch-lbl">Fetch</span>
+            </button>
+          </div>
+          <div class="hint">Find at <a href="https://dblp.org" target="_blank" style="color:var(--accent)">dblp.org</a> → URL: dblp.org/pid/<strong>{pid}</strong>.html</div>
+        </div>
+        <div class="fg" style="max-width:260px">
+          <label>Publication Path</label>
+          <input class="fc" id="pub-path" value="content/publication" placeholder="content/publication">
+        </div>
+        <div class="fg" style="max-width:200px;align-self:flex-end">
+          <label>Year Range</label>
+          <div style="display:flex;gap:6px">
+            <input class="fc" id="yr-from" type="number" placeholder="From" style="width:50%">
+            <input class="fc" id="yr-to" type="number" placeholder="To" style="width:50%">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alert area -->
+    <div id="alert-area"></div>
+
+    <!-- Status + filters (hidden until data loaded) -->
+    <div id="results-area" style="display:none">
+      <div class="status-bar" id="status-bar"></div>
+      <div class="filter-bar" id="filter-bar"></div>
+      <div class="action-bar">
+        <button class="btn btn-secondary btn-sm" onclick="selectAllNew()">✅ Select All New</button>
+        <button class="btn btn-secondary btn-sm" onclick="selectAll()">☑ Select All</button>
+        <button class="btn btn-secondary btn-sm" onclick="deselectAll()">☐ Deselect All</button>
+        <div class="ab-spacer"></div>
+        <span class="sel-count" id="sel-count">0 selected</span>
+        <button class="btn btn-ok" id="import-btn" onclick="startImport()">
+          📥 Import Selected
+        </button>
+      </div>
+      <div id="pub-list"></div>
+    </div>
+
+    <!-- Loading state -->
+    <div id="loading-area" style="display:none">
+      <div class="loading"><div class="spinner"></div><div id="loading-msg">Loading…</div></div>
+    </div>
+
+  </div><!-- /container -->
+</div><!-- /app -->
+
+<!-- ══ PROGRESS OVERLAY ══ -->
+<div class="progress-overlay" id="prog-overlay" style="display:none">
+  <div class="progress-box">
+    <div class="pb-title">📥 Importing Publications</div>
+    <div class="pb-sub" id="prog-sub">Preparing…</div>
+    <div class="progress-bar"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
+    <div class="pb-log" id="prog-log"></div>
+    <div class="pb-actions">
+      <button class="btn btn-secondary" id="prog-close" onclick="closeProgress()" style="display:none">Done ✓</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ════════════════════════════════
+//  STATE
+// ════════════════════════════════
+let TOKEN = '', REPO = '';
+let allPubs = [];          // all DBLP publications parsed
+let existingSlugs = new Set(); // slugs already in content/publication/
+let activeFilter = 'all';
+let selectedSlugs = new Set();
+
+// ════════════════════════════════
+//  UTILS
+// ════════════════════════════════
+const $ = id => document.getElementById(id);
+const esc = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+function slugify(str) {
+  return str.toLowerCase()
+    .replace(/[^\w\s-]/g,'').replace(/[\s_]+/g,'-').replace(/^-+|-+$/g,'')
+    .substring(0, 90);
+}
+
+function generatePubSlug(pub) {
+  // Match existing pattern: {lastname}-{year}-{first-content-word}
+  const stopWords = new Set(['a','an','the','on','in','of','for','with','and','or','to','is','are','using','based','via','towards','toward','new']);
+  const lastName = (pub.authors[0]||'unknown').replace(/\s+\d+$/,'').split(/\s+/).pop().toLowerCase();
+  const words = pub.title.toLowerCase().replace(/[^\w\s]/g,'').split(/\s+/).filter(w=>w.length>2&&!stopWords.has(w));
+  const kw = words[0] || 'paper';
+  return slugify(`${lastName}-${pub.year}-${kw}`);
+}
+
+function cleanAuthorName(name) {
+  return name.replace(/\s+\d{4}$/, '')  // remove disambiguation year suffix
+             .replace(/\s+\d+$/, '')     // remove disambiguation number suffix
+             .trim();
+}
+
+function fmtAuthors(authors, max=4) {
+  const cleaned = authors.map(cleanAuthorName);
+  if (cleaned.length <= max) return cleaned.join(', ');
+  return cleaned.slice(0, max).join(', ') + ` +${cleaned.length-max} more`;
+}
+
+function extractDoi(ee) {
+  if (!ee) return '';
+  const m = ee.match(/doi\.org\/(.+)/);
+  return m ? decodeURIComponent(m[1]) : '';
+}
+
+// ════════════════════════════════
+//  THEME
+// ════════════════════════════════
+function toggleTheme() {
+  const html = document.documentElement;
+  const t = html.dataset.theme==='dark' ? 'light' : 'dark';
+  html.dataset.theme = t;
+  $('theme-btn').textContent = t==='dark' ? '🌙' : '☀️';
+  localStorage.setItem('smilelab_theme', t);
+}
+
+// ════════════════════════════════
+//  AUTH
+// ════════════════════════════════
+async function doLogin() {
+  const token = $('l-token').value.trim();
+  const repo = $('l-repo').value.trim();
+  if (!token || !repo) { showLoginErr('Please fill in all fields'); return; }
+
+  const btn = $('l-btn');
+  btn.disabled = true; btn.textContent = '🔄 Connecting…';
+  $('l-err').style.display = 'none';
+
+  try {
+    const r = await fetch(`https://api.github.com/repos/${repo}`, {
+      headers: { 'Authorization': `token ${token}` }
+    });
+    if (!r.ok) throw new Error(r.status===401 ? 'Invalid token' : 'Repository not found or no access');
+    TOKEN = token; REPO = repo;
+    localStorage.setItem('smilelab_token', token);
+    localStorage.setItem('smilelab_repo', repo);
+    initApp();
+  } catch(e) {
+    showLoginErr(e.message);
+  } finally {
+    btn.disabled = false; btn.textContent = '🔑 Connect to Repository';
+  }
+}
+function showLoginErr(msg) { const el=$('l-err'); el.textContent=msg; el.style.display='block'; }
+
+function logout() {
+  localStorage.removeItem('smilelab_token');
+  localStorage.removeItem('smilelab_repo');
+  TOKEN=''; REPO=''; allPubs=[]; existingSlugs.clear(); selectedSlugs.clear();
+  $('app').style.display='none';
+  $('login-screen').style.display='flex';
+  $('l-token').value='';
+}
+
+// ════════════════════════════════
+//  GITHUB API
+// ════════════════════════════════
+async function ghFetch(path, opts={}) {
+  const r = await fetch(`https://api.github.com/repos/${REPO}/${path}`, {
+    ...opts,
+    headers: {
+      'Authorization': `token ${TOKEN}`,
+      'Accept': 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json',
+      ...(opts.headers||{})
+    }
+  });
+  if (!r.ok) {
+    const e = await r.json().catch(()=>({message:r.statusText}));
+    throw new Error(e.message || r.statusText);
+  }
+  return r.json();
+}
+
+function toBase64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let bin = '';
+  bytes.forEach(b => bin += String.fromCharCode(b));
+  return btoa(bin);
+}
+
+async function getExistingSlugs(pubPath) {
+  try {
+    const items = await ghFetch(`contents/${pubPath}`);
+    return new Set(items.filter(i=>i.type==='dir').map(i=>i.name));
+  } catch(e) {
+    console.warn('Could not list existing publications:', e.message);
+    return new Set();
+  }
+}
+
+async function writeFile(path, content, sha, msg) {
+  const body = { message: msg, content: toBase64(content) };
+  if (sha) body.sha = sha;
+  return ghFetch(`contents/${path}`, { method:'PUT', body:JSON.stringify(body) });
+}
+
+async function getFileSha(path) {
+  try { const r = await ghFetch(`contents/${path}`); return r.sha; }
+  catch(_) { return null; }
+}
+
+// ════════════════════════════════
+//  DBLP XML PARSER
+// ════════════════════════════════
+async function fetchDblpXml(pid) {
+  const url = `https://dblp.org/pid/${pid}.xml`;
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`DBLP returned ${r.status}: ${r.statusText}`);
+  const text = await r.text();
+  return text;
+}
+
+function parseDblpXml(xmlText) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(xmlText, 'text/xml');
+
+  const parseErr = doc.querySelector('parsererror');
+  if (parseErr) throw new Error('Failed to parse DBLP XML: ' + parseErr.textContent.substring(0,100));
+
+  const pubs = [];
+  const records = doc.querySelectorAll('r > *');
+
+  records.forEach(rec => {
+    const tag = rec.tagName.toLowerCase();
+    if (!['article','inproceedings','incollection','phdthesis','mastersthesis','proceedings','book'].includes(tag)) return;
+
+    const authors = [...rec.querySelectorAll('author')].map(a => cleanAuthorName(a.textContent.trim()));
+    const editors = [...rec.querySelectorAll('editor')].map(e => cleanAuthorName(e.textContent.trim()));
+    const allAuthors = authors.length ? authors : editors;
+
+    const rawTitle = (rec.querySelector('title')?.textContent || '').trim().replace(/\.$/, '');
+    const year = (rec.querySelector('year')?.textContent || '').trim();
+    if (!rawTitle || !year) return;
+
+    // All <ee> elements (may be multiple: DOI + URL)
+    const ees = [...rec.querySelectorAll('ee')].map(e => e.textContent.trim());
+    const doiEe = ees.find(e => e.includes('doi.org')) || ees[0] || '';
+    const doi = extractDoi(doiEe);
+
+    // Venue
+    let venue = '', pubType = '1', typeName = 'Conference';
+    if (tag === 'article') {
+      venue = rec.querySelector('journal')?.textContent?.trim() || '';
+      pubType = '2'; typeName = 'Journal';
+    } else if (tag === 'inproceedings' || tag === 'proceedings') {
+      venue = rec.querySelector('booktitle')?.textContent?.trim() || '';
+      pubType = '1'; typeName = 'Conference';
+    } else if (tag === 'incollection') {
+      venue = rec.querySelector('booktitle')?.textContent?.trim() || '';
+      pubType = '6'; typeName = 'Book Chapter';
+    } else if (tag === 'phdthesis') {
+      venue = rec.querySelector('school')?.textContent?.trim() || '';
+      pubType = '7'; typeName = 'Thesis';
+    } else if (tag === 'mastersthesis') {
+      venue = rec.querySelector('school')?.textContent?.trim() || '';
+      pubType = '7'; typeName = 'Thesis';
+    } else if (tag === 'book') {
+      pubType = '5'; typeName = 'Book';
+    }
+
+    const key = rec.getAttribute('key') || '';
+
+    pubs.push({
+      key, tag, title: rawTitle, year: parseInt(year, 10),
+      authors: allAuthors, venue, doi, url: doiEe,
+      pubType, typeName,
+      slug: '', // filled after
+    });
+  });
+
+  // Generate slugs
+  pubs.forEach(p => { p.slug = generatePubSlug(p); });
+
+  // Sort by year desc, then title
+  pubs.sort((a,b) => b.year - a.year || a.title.localeCompare(b.title));
+  return pubs;
+}
+
+// ════════════════════════════════
+//  MARKDOWN BUILDER
+// ════════════════════════════════
+function buildPublicationMd(pub) {
+  const authorsJson = JSON.stringify(pub.authors.map(cleanAuthorName));
+  const typesJson = JSON.stringify([pub.pubType]);
+  const title = pub.title.replace(/\\/g,'\\\\').replace(/"/g,'\\"');
+  const venue = pub.venue.replace(/\\/g,'\\\\').replace(/"/g,'\\"');
+  const date = `${pub.year}-01-01`;
+
+  return `---
+title: "${title}"
+date: "${date}"
+authors: ${authorsJson}
+publication: "${venue}"
+publication_types: ${typesJson}
+abstract: ""
+url_pdf: ""
+doi: "${pub.doi}"
+---
+`;
+}
+
+// ════════════════════════════════
+//  FETCH & RENDER
+// ════════════════════════════════
+async function fetchDblp() {
+  const pid = $('dblp-pid').value.trim();
+  if (!pid) { showAlert('Please enter a DBLP person ID', 'err'); return; }
+
+  const pubPath = $('pub-path').value.trim() || 'content/publication';
+  const yrFrom = parseInt($('yr-from').value)||0;
+  const yrTo = parseInt($('yr-to').value)||9999;
+
+  // Reset state
+  selectedSlugs.clear();
+  allPubs = [];
+  $('results-area').style.display = 'none';
+  $('alert-area').innerHTML = '';
+  showLoading('Fetching publications from DBLP…');
+
+  try {
+    // Parallel: fetch DBLP + list existing slugs
+    const [xmlText, existing] = await Promise.all([
+      fetchDblpXml(pid),
+      getExistingSlugs(pubPath)
+    ]);
+
+    existingSlugs = existing;
+    let pubs = parseDblpXml(xmlText);
+
+    // Apply year filter
+    if (yrFrom || yrTo < 9999) {
+      pubs = pubs.filter(p => p.year >= yrFrom && p.year <= yrTo);
+    }
+
+    allPubs = pubs;
+    hideLoading();
+
+    if (!pubs.length) {
+      showAlert('No publications found for this DBLP ID.', 'warn');
+      return;
+    }
+
+    const newCount = pubs.filter(p=>!existingSlugs.has(p.slug)).length;
+    showAlert(`Loaded <strong>${pubs.length}</strong> publications from DBLP · <strong>${newCount}</strong> not yet in repository · <strong>${existing.size}</strong> existing entries scanned.`, 'ok');
+
+    activeFilter = 'all';
+    renderResults();
+
+  } catch(e) {
+    hideLoading();
+    let msg = e.message;
+    if (msg.includes('Failed to fetch') || msg.includes('NetworkError') || msg.includes('CORS')) {
+      msg = `Could not fetch DBLP data. This may be a CORS issue.<br><br>
+        <strong>Workaround:</strong> Open <a href="https://dblp.org/pid/${pid}.xml" target="_blank" style="color:var(--accent)">this DBLP URL</a> in your browser,
+        save the XML file, then use the manual import option below.`;
+    }
+    showAlert(msg, 'err');
+  }
+}
+
+function renderResults() {
+  const yrFrom = parseInt($('yr-from').value)||0;
+  const yrTo = parseInt($('yr-to').value)||9999;
+
+  const filteredPubs = allPubs.filter(p => {
+    if (activeFilter === 'new') return !existingSlugs.has(p.slug);
+    if (activeFilter === 'conference') return p.pubType === '1';
+    if (activeFilter === 'journal') return p.pubType === '2';
+    if (activeFilter === 'exists') return existingSlugs.has(p.slug);
+    return true;
+  });
+
+  // Status bar
+  const total = allPubs.length;
+  const newC = allPubs.filter(p=>!existingSlugs.has(p.slug)).length;
+  const existsC = total - newC;
+  const selC = selectedSlugs.size;
+  $('status-bar').innerHTML = `
+    <div class="stat-pill sp-total">📚 ${total} total</div>
+    <div class="stat-pill sp-new">✨ ${newC} new</div>
+    <div class="stat-pill sp-exists">✓ ${existsC} existing</div>
+    ${selC ? `<div class="stat-pill sp-selected">☑ ${selC} selected</div>` : ''}
+  `;
+  $('sel-count').textContent = `${selC} selected`;
+  $('import-btn').disabled = selC === 0;
+
+  // Filter bar
+  const conf = allPubs.filter(p=>p.pubType==='1').length;
+  const jour = allPubs.filter(p=>p.pubType==='2').length;
+  const other = allPubs.filter(p=>!['1','2'].includes(p.pubType)).length;
+  $('filter-bar').innerHTML = `
+    <button class="f-tab ${activeFilter==='all'?'active':''}" onclick="setFilter('all')">All (${total})</button>
+    <button class="f-tab ${activeFilter==='new'?'active':''}" onclick="setFilter('new')">✨ New (${newC})</button>
+    <button class="f-tab ${activeFilter==='conference'?'active':''}" onclick="setFilter('conference')">Conference (${conf})</button>
+    <button class="f-tab ${activeFilter==='journal'?'active':''}" onclick="setFilter('journal')">Journal (${jour})</button>
+    ${other ? `<button class="f-tab ${activeFilter==='other'?'active':''}" onclick="setFilter('other')">Other (${other})</button>` : ''}
+    <button class="f-tab ${activeFilter==='exists'?'active':''}" onclick="setFilter('exists')">✓ Exists (${existsC})</button>
+  `;
+
+  // Group by year
+  const byYear = {};
+  filteredPubs.forEach(p => {
+    if (!byYear[p.year]) byYear[p.year] = [];
+    byYear[p.year].push(p);
+  });
+  const years = Object.keys(byYear).sort((a,b)=>b-a);
+
+  let html = '';
+  if (!filteredPubs.length) {
+    html = `<div class="empty"><div class="e-ico">🔍</div><h3>No results</h3><p>Try a different filter.</p></div>`;
+  } else {
+    years.forEach(yr => {
+      const group = byYear[yr];
+      html += `<div class="year-group">
+        <div class="year-head">
+          <div class="year-lbl">${yr}</div>
+          <div class="year-cnt">${group.length} paper${group.length!==1?'s':''}</div>
+        </div>
+        ${group.map(pubCard).join('')}
+      </div>`;
+    });
+  }
+
+  $('pub-list').innerHTML = html;
+  $('results-area').style.display = '';
+}
+
+function pubCard(pub) {
+  const isNew = !existingSlugs.has(pub.slug);
+  const isChecked = selectedSlugs.has(pub.slug);
+  const typeMap = {'1':'b-conf','2':'b-journal','6':'b-conf','7':'b-journal','5':'b-journal'};
+  const typeCls = typeMap[pub.pubType] || 'b-conf';
+
+  return `<div class="pub-card${isChecked?' checked':''}${!isNew?' exists':''}" onclick="togglePub('${pub.slug}')">
+    <div class="pub-check">
+      <input type="checkbox" ${isChecked?'checked':''} ${!isNew?'':''}
+        onclick="event.stopPropagation();togglePub('${pub.slug}')"
+        id="cb-${pub.slug}">
+    </div>
+    <div class="pub-body">
+      <div class="pub-top">
+        <div class="pub-title">${esc(pub.title)}</div>
+        <div class="badges">
+          <span class="badge ${isNew?'b-new':'b-exists'}">${isNew?'NEW':'EXISTS'}</span>
+          <span class="badge ${typeCls}">${pub.typeName}</span>
+        </div>
+      </div>
+      ${pub.venue ? `<div class="pub-venue">${esc(pub.venue)}</div>` : ''}
+      <div class="pub-authors">${esc(fmtAuthors(pub.authors))}</div>
+      ${pub.doi ? `<a class="pub-doi" href="https://doi.org/${esc(pub.doi)}" target="_blank" onclick="event.stopPropagation()">🔗 DOI: ${esc(pub.doi.substring(0,40))}${pub.doi.length>40?'…':''}</a>` : ''}
+    </div>
+  </div>`;
+}
+
+function togglePub(slug) {
+  if (selectedSlugs.has(slug)) selectedSlugs.delete(slug);
+  else selectedSlugs.add(slug);
+  // Update card UI
+  const card = document.querySelector(`.pub-card[onclick="togglePub('${slug}')"]`);
+  const cb = $(`cb-${slug}`);
+  if (card) {
+    card.classList.toggle('checked', selectedSlugs.has(slug));
+    if (cb) cb.checked = selectedSlugs.has(slug);
+  }
+  // Update counts
+  $('sel-count').textContent = `${selectedSlugs.size} selected`;
+  $('import-btn').disabled = selectedSlugs.size === 0;
+  $('status-bar').querySelector('.sp-selected')?.remove();
+  if (selectedSlugs.size) {
+    const sp = document.createElement('div');
+    sp.className='stat-pill sp-selected';
+    sp.textContent=`☑ ${selectedSlugs.size} selected`;
+    $('status-bar').appendChild(sp);
+  }
+}
+
+function setFilter(f) { activeFilter=f; renderResults(); }
+function selectAllNew() { allPubs.filter(p=>!existingSlugs.has(p.slug)).forEach(p=>selectedSlugs.add(p.slug)); renderResults(); }
+function selectAll() { allPubs.forEach(p=>selectedSlugs.add(p.slug)); renderResults(); }
+function deselectAll() { selectedSlugs.clear(); renderResults(); }
+
+// ════════════════════════════════
+//  IMPORT
+// ════════════════════════════════
+async function startImport() {
+  const toImport = allPubs.filter(p => selectedSlugs.has(p.slug));
+  if (!toImport.length) return;
+
+  const pubPath = $('pub-path').value.trim() || 'content/publication';
+  $('prog-overlay').style.display = 'flex';
+  $('prog-close').style.display = 'none';
+  $('prog-log').innerHTML = '';
+  $('prog-fill').style.width = '0%';
+  $('prog-sub').textContent = `Importing ${toImport.length} publication${toImport.length!==1?'s':''}…`;
+
+  let done=0, ok=0, skipped=0, failed=0;
+
+  for (const pub of toImport) {
+    const filePath = `${pubPath}/${pub.slug}/index.md`;
+    const msg = `Add publication: ${pub.title.substring(0,60)}`;
+    addLog(`⏳ ${pub.slug}…`);
+
+    try {
+      const content = buildPublicationMd(pub);
+      // Check if file exists (to get SHA for update)
+      const existingSha = await getFileSha(filePath);
+      await writeFile(filePath, content, existingSha, msg);
+      existingSlugs.add(pub.slug);
+      ok++;
+      updateLog(`<span class="log-ok">✅ ${esc(pub.slug)}</span>`);
+    } catch(e) {
+      failed++;
+      updateLog(`<span class="log-err">❌ ${esc(pub.slug)}: ${esc(e.message)}</span>`);
+    }
+
+    done++;
+    $('prog-fill').style.width = `${Math.round(done/toImport.length*100)}%`;
+    $('prog-sub').textContent = `${done}/${toImport.length} · ${ok} saved · ${failed} failed`;
+    await new Promise(r=>setTimeout(r,150)); // brief pause to avoid rate limiting
+  }
+
+  $('prog-sub').textContent = `Complete · ${ok} imported · ${failed} failed · ${skipped} skipped`;
+  $('prog-close').style.display = '';
+
+  // Refresh the list to show updated EXISTS badges
+  selectedSlugs.clear();
+  renderResults();
+}
+
+let logLines = [];
+function addLog(html) {
+  logLines.push(html);
+  if (logLines.length > 50) logLines.shift();
+  $('prog-log').innerHTML = logLines.join('\n');
+  $('prog-log').scrollTop = $('prog-log').scrollHeight;
+}
+function updateLog(html) {
+  logLines[logLines.length-1] = html;
+  $('prog-log').innerHTML = logLines.join('\n');
+  $('prog-log').scrollTop = $('prog-log').scrollHeight;
+}
+function closeProgress() { $('prog-overlay').style.display='none'; logLines=[]; }
+
+// ════════════════════════════════
+//  UI HELPERS
+// ════════════════════════════════
+function showAlert(msg, type='info') {
+  const icons = {ok:'✅',err:'❌',warn:'⚠️',info:'ℹ️'};
+  $('alert-area').innerHTML = `<div class="alert a-${type}"><span class="alert-ico">${icons[type]||'ℹ️'}</span><div>${msg}</div></div>`;
+}
+function showLoading(msg) { $('loading-area').style.display=''; $('loading-msg').textContent=msg; $('results-area').style.display='none'; }
+function hideLoading() { $('loading-area').style.display='none'; }
+
+// ════════════════════════════════
+//  INIT
+// ════════════════════════════════
+function initApp() {
+  $('login-screen').style.display='none';
+  $('app').style.display='';
+  $('chip-repo').textContent = REPO;
+  // Auto-fetch on load
+  fetchDblp();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // Theme
+  const t = localStorage.getItem('smilelab_theme')||'dark';
+  document.documentElement.dataset.theme = t;
+  $('theme-btn').textContent = t==='dark'?'🌙':'☀️';
+
+  // Enter key on login fields
+  ['l-token','l-repo'].forEach(id => {
+    $(id).addEventListener('keydown', e => { if(e.key==='Enter') doLogin(); });
+  });
+
+  // Enter key on PID field
+  $('dblp-pid').addEventListener('keydown', e => { if(e.key==='Enter') fetchDblp(); });
+  $('yr-from').addEventListener('keydown', e => { if(e.key==='Enter') fetchDblp(); });
+  $('yr-to').addEventListener('keydown', e => { if(e.key==='Enter') fetchDblp(); });
+
+  // Check for saved auth
+  const savedToken = localStorage.getItem('smilelab_token');
+  const savedRepo = localStorage.getItem('smilelab_repo');
+  if (savedToken && savedRepo) {
+    TOKEN = savedToken; REPO = savedRepo;
+    $('l-token').value = savedToken;
+    $('l-repo').value = savedRepo;
+    initApp();
+  }
+});
+</script>
+</body>
+</html>
