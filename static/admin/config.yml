@@ -15,6 +15,21 @@ collections:
       - { label: "Role", name: "role", widget: "string", required: false }
       - { label: "Bio", name: "bio", widget: "text", required: false }
       - { label: "Email", name: "email", widget: "string", required: false }
+      - label: "Organizations"
+        name: "organizations"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "URL", name: "url", widget: "string", required: false }
+      - label: "Social Links"
+        name: "social"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Icon", name: "icon", widget: "string" }
+          - { label: "Icon Pack", name: "icon_pack", widget: "string", default: "fas" }
+          - { label: "Link", name: "link", widget: "string" }
 
   - name: "posts"
     label: "News"
