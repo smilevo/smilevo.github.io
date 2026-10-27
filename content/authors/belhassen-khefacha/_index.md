@@ -65,8 +65,8 @@ highlight_name: false
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-user_groups: 
-- MSc Students
+user_groups:
+- PhD Students
 ---
 
 I'm a Computer Science graduate student at the University of Michigan-Flint, with a Bachelor's degree in Business Computing from the Higher School of Economic and Commercial Sciences. He has experience in software development, specializing in web and application development using technologies like HTML, CSS, JavaScript, PHP, ReactJS, Symfony, Java, and Python.
