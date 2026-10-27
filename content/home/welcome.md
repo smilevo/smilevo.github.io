@@ -20,9 +20,8 @@ design:
 
 <br>
 
-The **Software Maintenance and Intelligent Evolution** (SMILE) Research Group, at Rochester Institute of Technology, focuses on designing and implementing intelligent algorithms to tackle software engineering problems. Our goal is to aid developers in better maintaining and evolving Software Systems. 
+The **Software Maintenance and Intelligent Evolution** (SMILE) Research Group at the University of Michigan-Flint focuses on designing and implementing intelligent algorithms to tackle software engineering problems. Our goal is to help developers better maintain and evolve software systems.
 
-We are always looking for motivated students at all levels (Bachelor, Masters, PhD) to join us and help us with the cool stuff we do. 
+We welcome motivated students at all levels (bachelor’s, master’s, and PhD) who are interested in joining the group.
 
-If you wish to join our group, contact Mohamed Wiem Mkaouer email: mwmvse@rit.edu directly with your Resume.
-
+To inquire, contact Mohamed Wiem Mkaouer at [mmkaouer@umich.edu](mailto:mmkaouer@umich.edu).

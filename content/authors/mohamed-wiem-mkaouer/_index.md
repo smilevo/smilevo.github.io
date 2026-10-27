@@ -10,12 +10,12 @@ authors:
 superuser: true
 
 # Role/position
-role: Assistant Professor of Software Engineering
+role: Professor of Computer Science
 
 # Organizations/Affiliations
 organizations:
-- name: Golisano College of Computing and Information Sciences at Rochester Institute of Technology
-  url: ""
+- name: College of Innovation and Technology, University of Michigan-Flint
+  url: https://directory.umflint.edu/cit/mmkaouer
 
 # Short bio (displayed in user profile at end of posts)
 bio: Research interests software refactoring and quality.
@@ -45,7 +45,7 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: 'mailto:mwmvse@rit.edu'
+  link: 'mailto:mmkaouer@umich.edu'
 - icon: github
   icon_pack: fab
   link: https://github.com/mkaouer
@@ -88,4 +88,4 @@ user_groups:
 - Principal Investigators
 ---
 
-Mohamed Wiem Mkaouer obtained his Ph.D. from the University of Michigan-Dearborn. He is currently an Associate Professor of Software Engineering at Rochester Institute of Technology (RIT), NY. His research interests are in the intersection of Software Engineering with Artificial Intelligence. He leads the SMILE research lab, funded by the National Science Foundation. He has over 100+ research papers with multiple distinguished papers and presentation awards. He was the recipient of the RIT GCCIS Best Emegering Researcher Award.
+Mohamed Wiem Mkaouer obtained his Ph.D. from the University of Michigan-Dearborn. He is a Professor of Computer Science in the College of Innovation and Technology at the University of Michigan-Flint. His research interests are at the intersection of software engineering and artificial intelligence. He leads the SMILE research group, funded by the National Science Foundation. He has over 100 research papers, including papers recognized with distinguished paper and presentation awards. He received the RIT GCCIS Best Emerging Researcher Award.
