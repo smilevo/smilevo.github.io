@@ -69,7 +69,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- MSc Students
+- Alumni
 ---
 
 I'm a current Hard of Hearing Software Engineering master's student at Rochester Institute of Technology(RIT). I will be finishing my master's in May 2022. I completed my undergraduates with a Bachelors's in Software engineering at RIT in 2020. My passions are Software Engineering, Games, and Reading. I am currently doing my thesis on Testing Recurrent Neural Networks. I like walking through the process of software development life cycle and learning strategies on how to approach each of the steps. I enjoy a team environment as it makes projects enjoyable and a great learning experience.

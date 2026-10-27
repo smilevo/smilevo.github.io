@@ -95,7 +95,7 @@ highlight_name: false
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
 user_groups:
-- MSc Students
+- Alumni
 ---
 
 I am a senior software and site reliability engineer with experience building and operating large-scale, cloud-native systems across AWS and Azure. I focus on designing reliable, secure, and observable platforms, leveraging DevOps practices, Kubernetes, and infrastructure-as-code to improve developer productivity and system resilience. My interests lie in applying software engineering, AI-assisted tooling, and rigorous experimentation to create practical solutions that advance software quality and reliability in real-world environments.
