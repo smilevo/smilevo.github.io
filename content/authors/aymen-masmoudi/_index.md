@@ -66,8 +66,8 @@ highlight_name: false
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-user_groups: 
-- MSc Students
+user_groups:
+- PhD Students
 ---
 
 Motivated Computer Science graduate student with a strong foundation in programming, problem-solving, and software development. Experienced in graphic design and video editing, with a keen eye for detail and creativity. Passionate about technology and digital media, eager to apply skills in innovative projects and gain hands-on experience.
