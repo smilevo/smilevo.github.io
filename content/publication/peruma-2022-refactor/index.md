@@ -51,5 +51,5 @@ abstract: 'An essential part of software maintenance and evolution, refactoring 
   require help with refactoring– Code Optimization, Tools and IDEs, Architecture and Design Patterns, Unit
   Testing, and Database. We envision our findings better bridge the support between traditional (or academic)
   aspects of refactoring and their real-world applicability, including better tool support'
-publication: '*Empirical Software Engineering*'
+publication: '*Empirical Software Engineering* (EMSE)'
 ---
