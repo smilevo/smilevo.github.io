@@ -2,6 +2,10 @@
 
 The **Research Group Template** empowers your research group to easily create a beautiful website with a stunning homepage, news, academic publications, events, team profiles, and a contact form.
 
+## SMILE site maintenance
+
+For this site's event video and Google Analytics configuration notes, see the [site maintenance guide](docs/site-maintenance.md).
+
 [Check out the latest demo](https://research-group.netlify.app/) of what you'll get in less than 5 minutes, or [view the showcase](https://wowchemy.com/user-stories/).
 
 _[**Wowchemy**](https://wowchemy.com) makes it easy to create a beautiful website for free. Edit your site in Markdown, Jupyter, or RStudio (via Blogdown), generate it with Hugo, and deploy with GitHub or Netlify. Customize anything on your site with widgets, themes, and language packs._
@@ -40,4 +44,3 @@ Please replace the demo images with your own.
   - https://unsplash.com/photos/WNoLnJo7tS8
 
 [![Analytics](https://ga-beacon.appspot.com/UA-78646709-2/starter-research-group/readme?pixel)](https://github.com/igrigorik/ga-beacon)
-
