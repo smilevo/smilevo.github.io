@@ -3,9 +3,9 @@ title:
 subtitle:
 widget: blank
 headless: true
-weight: 40
+weight: 70
 design:
   columns: '1'
 ---
 
-{{% cta cta_link="./people/" cta_text="Meet the team →" %}}
+{{% cta cta_link="mailto:mmkaouer@umich.edu" cta_text="Interested in joining SMILE? Get in touch →" %}}

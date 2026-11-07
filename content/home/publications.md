@@ -1,25 +1,23 @@
-
 ---
-# Documentation: https://wowchemy.com/docs/page-builder/
 widget: pages
 headless: true
-weight: 20
-
-title: Latest News
+weight: 50
+title: Latest publications
 subtitle:
-
 content:
-  count: 5
+  count: 3
   filters:
     author: ""
     category: ""
     exclude_featured: false
+    page_type: publication
     publication_type: ""
     tag: ""
   offset: 0
   order: desc
-  page_type: post
 design:
   view: 3
   columns: "1"
 ---
+
+Browse the full [publication list](/publication/).

@@ -1,0 +1,28 @@
+{{- $section := .page -}}
+{{- $image := $section.Params.image | default "/files/smile-home-banner.jpg" -}}
+{{- $alt := $section.Params.image_alt | default "SMILE research group" -}}
+<figure class="smile-home-banner">
+  <img src="{{ $image | relURL }}" alt="{{ $alt }}" fetchpriority="high" decoding="async">
+</figure>
+<style>
+  .smile-home-banner {
+    width: 100vw;
+    max-width: none;
+    margin: 0 calc(50% - 50vw);
+    overflow: hidden;
+    background: #e9eef1;
+  }
+  .smile-home-banner img {
+    display: block;
+    width: 100%;
+    height: clamp(260px, 38vw, 560px);
+    object-fit: cover;
+    object-position: center 18%;
+  }
+  @media (max-width: 640px) {
+    .smile-home-banner img {
+      height: 230px;
+      object-position: center 24%;
+    }
+  }
+</style>

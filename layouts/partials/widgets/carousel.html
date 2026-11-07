@@ -1,96 +1,211 @@
-{{ $page := .root }}
-{{ $section := .page }}
-
-<style>
-    .carousel-item{
-      min-height: 600px !important;
-      max-height: 600px !important;
-    }
-    .carousel-indicators {
-      top:625px !important;
-    }
-    .carousel-indicators li{
-      background-color: red;
-  
-    }
-    .carousel-item.active{
-      justify-content: center !important;
-      display: flex !important;
-    }
-    body:not(.dark) .carousel-control-prev-icon{
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%red' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3e%3c/svg%3e")
-    }
-    body:not(.dark) .carousel-control-next-icon{
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%red' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3e%3c/svg%3e")
-    }
-    
-    </style>
-  
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    
-  
-      <div class="carousel-inner" id="carousel-inner">
-      </div>
-      <ol class="carousel-indicators" id="carousel-indicators">
-      </ol>
-      
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-  
+{{- $section := .page -}}
+{{- $slides := $section.Params.slides -}}
+{{- with $slides -}}
+<section class="smile-home-highlights container" aria-labelledby="smile-highlights-title">
+  <div class="smile-home-highlights__heading">
+    <div>
+      <p class="smile-home-highlights__eyebrow">From the group</p>
+      <h2 id="smile-highlights-title">{{ $section.Title }}</h2>
     </div>
-   
-    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
-  <script>
-
-    function readyCall(){
-      var context = new XMLHttpRequest();
-        context.responseType = 'json';
-        context.open('GET', "/files/fbFeed.json",true);
-        context.onreadystatechange = function () {
-            if (context.readyState === 4) {
-              window.fbData = this.response.data;
-              init();
-        }
-        };
-        context.send();
+    {{ with $section.Params.all_news }}<a class="smile-home-highlights__all" href="{{ . | relURL }}">News archive <span aria-hidden="true">→</span></a>{{ end }}
+  </div>
+  <div class="smile-highlights-carousel" data-smile-carousel>
+    <div class="smile-highlights-carousel__slides" aria-live="polite">
+      {{ $count := len $slides }}
+      {{ range $index, $slide := $slides }}
+      <article class="smile-highlights-carousel__slide" data-smile-slide role="group" aria-roledescription="slide" aria-label="{{ printf "Slide %d of %d" (add $index 1) $count }}">
+        <a class="smile-highlights-carousel__image" href="{{ $slide.url | relURL }}" tabindex="-1" aria-hidden="true">
+          <img src="{{ $slide.image | relURL }}" alt="{{ $slide.alt }}" loading="lazy" decoding="async">
+        </a>
+        <div class="smile-highlights-carousel__copy">
+          <time datetime="{{ $slide.date_iso }}">{{ $slide.date }}</time>
+          <h3><a href="{{ $slide.url | relURL }}">{{ $slide.title }}</a></h3>
+          <p>{{ $slide.description }}</p>
+          <a class="smile-highlights-carousel__read" href="{{ $slide.url | relURL }}">Read story <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    {{ if gt (len $slides) 1 }}
+    <div class="smile-highlights-carousel__controls" aria-label="Carousel controls">
+      <div class="smile-highlights-carousel__dots" aria-label="Choose a group highlight">
+        {{ range $index, $slide := $slides }}
+        <button type="button" data-smile-dot="{{ $index }}" aria-label="Show slide {{ add $index 1 }}" aria-current="{{ if eq $index 0 }}true{{ else }}false{{ end }}"></button>
+        {{ end }}
+      </div>
+      <div class="smile-highlights-carousel__arrows">
+        <button type="button" data-smile-previous aria-label="Previous group highlight"><span aria-hidden="true">←</span></button>
+        <button type="button" data-smile-next aria-label="Next group highlight"><span aria-hidden="true">→</span></button>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+<style>
+  .smile-home-highlights {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding-top: 1.4rem;
+    padding-bottom: 2.5rem;
+  }
+  .smile-home-highlights__heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .smile-home-highlights__eyebrow {
+    margin: 0 0 .3rem;
+    color: #315f83;
+    font-size: .82rem;
+    font-weight: 700;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+  }
+  .smile-home-highlights h2 {
+    margin: 0;
+    font-size: clamp(1.55rem, 2.1vw, 2rem);
+  }
+  .smile-home-highlights__all {
+    font-weight: 650;
+    white-space: nowrap;
+  }
+  .smile-highlights-carousel__slide {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, .85fr);
+    overflow: hidden;
+    min-height: 330px;
+    border: 1px solid #e0e5e8;
+    border-radius: 14px;
+    background: #f5f7f8;
+  }
+  .smile-highlights-carousel.is-enhanced .smile-highlights-carousel__slide[hidden] {
+    display: none !important;
+  }
+  .smile-highlights-carousel__image {
+    display: block;
+    min-height: 330px;
+    background: #e8edf0;
+  }
+  .smile-highlights-carousel__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 330px;
+    object-fit: cover;
+  }
+  .smile-highlights-carousel__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: clamp(1.2rem, 3vw, 2.2rem);
+  }
+  .smile-highlights-carousel__copy time {
+    margin-bottom: .55rem;
+    color: #50606a;
+    font-size: .88rem;
+  }
+  .smile-highlights-carousel__copy h3 {
+    margin: 0 0 .65rem;
+    font-size: clamp(1.25rem, 2vw, 1.7rem);
+    line-height: 1.25;
+  }
+  .smile-highlights-carousel__copy p {
+    margin: 0 0 1rem;
+    color: #394851;
+    line-height: 1.55;
+  }
+  .smile-highlights-carousel__read {
+    margin-top: auto;
+    font-weight: 700;
+  }
+  .smile-highlights-carousel__controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .9rem .2rem 0;
+  }
+  .smile-highlights-carousel__dots,
+  .smile-highlights-carousel__arrows {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+  }
+  .smile-highlights-carousel__dots button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #b9c5cc;
+    cursor: pointer;
+  }
+  .smile-highlights-carousel__dots button[aria-current="true"] {
+    background: #1d5d85;
+    transform: scale(1.2);
+  }
+  .smile-highlights-carousel__arrows button {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    place-items: center;
+    border: 1px solid #ccd6dc;
+    border-radius: 50%;
+    background: #fff;
+    color: #193d55;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+  .smile-highlights-carousel button:focus-visible,
+  .smile-highlights-carousel a:focus-visible {
+    outline: 3px solid #1571a6;
+    outline-offset: 3px;
+  }
+  @media (max-width: 760px) {
+    .smile-highlights-carousel__slide {
+      grid-template-columns: 1fr;
     }
-
-    function init(){
-    for (var itr=0;itr<5;itr++){
-      var a=document.getElementById("carousel-inner");
-      var parent = document.createElement("div");
-      parent.classList.add("carousel-item");
-      if(itr == 0){
-      parent.classList.add("active");
-      }
-      var child = document.createElement("div");
-      child.classList.add("fb-post");
-      child.setAttribute("data-href", `${window.fbData[itr]}`);
-      child.setAttribute("data-height", `600`);
-      child.setAttribute("data-width", "750");
-      child.setAttribute("data-lazy", `true`);
-      parent.append(child);
-      document.getElementById("carousel-inner").append(parent);
+    .smile-highlights-carousel__image,
+    .smile-highlights-carousel__image img {
+      min-height: 0;
+      height: auto;
+      aspect-ratio: 16 / 9;
     }
-    
-    for (var itr=0;itr<5;itr++){
-      
-      var a=document.getElementById("carousel-indicators");
-      var li = document.createElement("li");
-      if(itr == 0){
-      li.classList.add("active");
-      }
-      li.setAttribute("data-target", "#carouselExampleIndicators");
-      li.setAttribute("data-slide-to", `${itr}`);
-      a.append(li);
-
+    .smile-highlights-carousel__copy {
+      min-height: 220px;
     }
   }
-  readyCall();
-  </script>
+</style>
+<script>
+  (() => {
+    const init = () => document.querySelectorAll('[data-smile-carousel]').forEach((carousel) => {
+      const slides = Array.from(carousel.querySelectorAll('[data-smile-slide]'));
+      const dots = Array.from(carousel.querySelectorAll('[data-smile-dot]'));
+      if (slides.length < 2) return;
+      let active = 0;
+      const show = (index) => {
+        active = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => {
+          slide.hidden = i !== active;
+          slide.setAttribute('aria-hidden', String(i !== active));
+        });
+        dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === active)));
+      };
+      carousel.classList.add('is-enhanced');
+      show(0);
+      carousel.querySelector('[data-smile-previous]')?.addEventListener('click', () => show(active - 1));
+      carousel.querySelector('[data-smile-next]')?.addEventListener('click', () => show(active + 1));
+      dots.forEach((dot, i) => dot.addEventListener('click', () => show(i)));
+      carousel.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') { event.preventDefault(); show(active - 1); }
+        if (event.key === 'ArrowRight') { event.preventDefault(); show(active + 1); }
+      });
+    });
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
+    else init();
+  })();
+</script>
+{{- end -}}

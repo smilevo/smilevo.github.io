@@ -1,0 +1,100 @@
+{{- $section := .page -}}
+<section class="smile-support-section" aria-labelledby="smile-support-title">
+  <div class="container">
+    <header class="smile-support-section__header">
+      <p class="smile-support-section__eyebrow">Research support</p>
+      <h2 id="smile-support-title">{{ $section.Title }}</h2>
+      {{ with $section.Params.summary }}<p>{{ . }}</p>{{ end }}
+    </header>
+    <div class="smile-support-section__items">
+      {{ range $section.Params.items }}
+      <article class="smile-support-card">
+        <div class="smile-support-card__mark" aria-hidden="true">NSF</div>
+        <div class="smile-support-card__content">
+          <p class="smile-support-card__funder">{{ .funder }} <span aria-hidden="true">·</span> {{ .programme }}</p>
+          <h3>{{ .title }}</h3>
+          <p class="smile-support-card__metadata">{{ .period }} <span aria-hidden="true">·</span> {{ .amount }} <span aria-hidden="true">·</span> Award {{ .award_number }}</p>
+          <p>{{ .description }}</p>
+          <p class="smile-support-card__role"><strong>SMILE connection:</strong> {{ .role }}</p>
+          <div class="smile-support-card__links">
+            <a href="{{ .award_url }}" target="_blank" rel="noopener noreferrer">NSF award record</a>
+            <a href="{{ .story_url }}" target="_blank" rel="noopener noreferrer">UM-Flint announcement</a>
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+<style>
+  .smile-support-section {
+    padding: 2.8rem 0 3.2rem;
+    background: #f5f7f8;
+  }
+  .smile-support-section__header {
+    max-width: 850px;
+    margin-bottom: 1.3rem;
+  }
+  .smile-support-section__eyebrow,
+  .smile-support-card__funder {
+    margin: 0 0 .4rem;
+    color: #315f83;
+    font-size: .84rem;
+    font-weight: 700;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+  }
+  .smile-support-section h2 {
+    margin: 0 0 .65rem;
+    font-size: clamp(1.7rem, 2.3vw, 2.25rem);
+  }
+  .smile-support-section__header > p:last-child {
+    margin: 0;
+    color: #4e5b64;
+  }
+  .smile-support-card {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 1.4rem;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    border: 1px solid #dce3e7;
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(24, 44, 58, .06);
+  }
+  .smile-support-card__mark {
+    display: grid;
+    width: 76px;
+    height: 76px;
+    place-items: center;
+    border-radius: 50%;
+    background: #123d6a;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: .03em;
+  }
+  .smile-support-card__content h3 {
+    margin: 0 0 .5rem;
+    font-size: 1.25rem;
+  }
+  .smile-support-card__metadata {
+    color: #42515b;
+    font-weight: 650;
+  }
+  .smile-support-card__role {
+    margin-bottom: .75rem;
+  }
+  .smile-support-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .6rem 1.2rem;
+    font-weight: 650;
+  }
+  @media (max-width: 640px) {
+    .smile-support-card {
+      grid-template-columns: 1fr;
+      gap: .9rem;
+    }
+  }
+</style>
