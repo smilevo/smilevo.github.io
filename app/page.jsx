@@ -19,7 +19,7 @@ export default function Home() {
     <div className="home-page">
       <header className="hero" id="home">
         <div className="hero-copy">
-          <h1>Behavioral Data Science Lab</h1>
+          <h1>SMILE Research Group</h1>
           <div className="prose">
             <ReactMarkdown>{pageContent.home}</ReactMarkdown>
           </div>

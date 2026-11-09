@@ -1,9 +1,0 @@
-{
-  "enabled": false,
-  "provider": "openalex",
-  "lookbackDays": 45,
-  "reconcileDays": 30,
-  "maxRequests": 100,
-  "maxRunAgeDays": 9,
-  "maxReviewAgeDays": 14
-}

@@ -11,7 +11,6 @@ export default function sitemap() {
     ...(projects.length || pageContent.research.trim() ? ['/research/'] : []),
     ...(gallery.length || pageContent.pictures.trim() ? ['/pictures/'] : []),
     ...(pageContent.about.trim() ? ['/aboutwebsite/'] : []),
-    '/idiofid/',
     ...papers.map((p) => `/publications/${p.id}/`),
     ...people.map((p) => `/people/${p.id}/`),
   ].map((path) => ({ url: `${site.url}${path}` }));

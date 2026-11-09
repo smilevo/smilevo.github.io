@@ -1,0 +1,1130 @@
+[
+  {
+    "from": "/post/22-05-02-msr-best-paper/",
+    "to": "/news/"
+  },
+  {
+    "from": "/post/22-05-14-msr-papers/",
+    "to": "/news/"
+  },
+  {
+    "from": "/post/22-06-28-anthony-phd-defense/",
+    "to": "/news/"
+  },
+  {
+    "from": "/post/22-10-14-ase-2022/",
+    "to": "/news/"
+  },
+  {
+    "from": "/post/22-10-14-iwor-ase/",
+    "to": "/news/"
+  },
+  {
+    "from": "/newsfeed/",
+    "to": "/news/"
+  },
+  {
+    "from": "/people/",
+    "to": "/team/"
+  },
+  {
+    "from": "/publication/",
+    "to": "/publications/"
+  },
+  {
+    "from": "/event/",
+    "to": "/news/"
+  },
+  {
+    "from": "/project/",
+    "to": "/research/"
+  },
+  {
+    "from": "/code/",
+    "to": "/research/"
+  },
+  {
+    "from": "/contact/",
+    "to": "/join/"
+  },
+  {
+    "from": "/publication/bessghaier-2026-searchbased/",
+    "to": "/publications/bessghaier-2026-searchbased/"
+  },
+  {
+    "from": "/publication/messaoud-2026-hierarchical/",
+    "to": "/publications/messaoud-2026-hierarchical/"
+  },
+  {
+    "from": "/publication/littauer-2025-quick/",
+    "to": "/publications/littauer-2025-quick/"
+  },
+  {
+    "from": "/publication/bouaziz-2025-empirical/",
+    "to": "/publications/bouaziz-2025-empirical/"
+  },
+  {
+    "from": "/publication/draoui-2025-analyzing/",
+    "to": "/publications/draoui-2025-analyzing/"
+  },
+  {
+    "from": "/publication/ghadhab-2025-automated/",
+    "to": "/publications/ghadhab-2025-automated/"
+  },
+  {
+    "from": "/publication/alomar-2025-chatgpt/",
+    "to": "/publications/alomar-2025-chatgpt/"
+  },
+  {
+    "from": "/publication/messaoud-2025-detecting/",
+    "to": "/publications/messaoud-2025-detecting/"
+  },
+  {
+    "from": "/publication/thiombiano-2025-distilxlstm/",
+    "to": "/publications/thiombiano-2025-distilxlstm/"
+  },
+  {
+    "from": "/publication/hnich-2025-from/",
+    "to": "/publications/hnich-2025-from/"
+  },
+  {
+    "from": "/publication/thiombiano-2025-moxe/",
+    "to": "/publications/thiombiano-2025-moxe/"
+  },
+  {
+    "from": "/publication/newman-2025-structure/",
+    "to": "/publications/newman-2025-structure/"
+  },
+  {
+    "from": "/publication/newman-2025-scalar/",
+    "to": "/publications/newman-2025-scalar/"
+  },
+  {
+    "from": "/publication/bessghaier-2025-understanding/",
+    "to": "/publications/bessghaier-2025-understanding/"
+  },
+  {
+    "from": "/publication/gurramkonda-2025-vrtestsniffer/",
+    "to": "/publications/gurramkonda-2025-vrtestsniffer/"
+  },
+  {
+    "from": "/publication/aljedaani-2024-accessible/",
+    "to": "/publications/aljedaani-2024-accessible/"
+  },
+  {
+    "from": "/publication/deo-2024-analyzing/",
+    "to": "/publications/deo-2024-analyzing/"
+  },
+  {
+    "from": "/publication/alomar-2024-anticopypaster/",
+    "to": "/publications/alomar-2024-anticopypaster/"
+  },
+  {
+    "from": "/publication/mrad-2024-assessing/",
+    "to": "/publications/mrad-2024-assessing/"
+  },
+  {
+    "from": "/publication/alomar-2024-automating/",
+    "to": "/publications/alomar-2024-automating/"
+  },
+  {
+    "from": "/publication/alomar-2024-behind/",
+    "to": "/publications/alomar-2024-behind/"
+  },
+  {
+    "from": "/publication/alomar-2024-cultivating/",
+    "to": "/publications/alomar-2024-cultivating/"
+  },
+  {
+    "from": "/publication/aljedaani-2024-empirical/",
+    "to": "/publications/aljedaani-2024-empirical/"
+  },
+  {
+    "from": "/publication/begoug-2024-finegrained/",
+    "to": "/publications/begoug-2024-finegrained/"
+  },
+  {
+    "from": "/publication/aljedaani-2024-from/",
+    "to": "/publications/aljedaani-2024-from/"
+  },
+  {
+    "from": "/publication/khelifi-2024-gitrev/",
+    "to": "/publications/khelifi-2024-gitrev/"
+  },
+  {
+    "from": "/publication/chouchen-2024-how/",
+    "to": "/publications/chouchen-2024-how/"
+  },
+  {
+    "from": "/publication/alomar-2024-how/",
+    "to": "/publications/alomar-2024-how/"
+  },
+  {
+    "from": "/publication/peruma-2024-insights/",
+    "to": "/publications/peruma-2024-insights/"
+  },
+  {
+    "from": "/publication/chouchen-2024-multicr/",
+    "to": "/publications/chouchen-2024-multicr/"
+  },
+  {
+    "from": "/publication/bessghaier-2024-prevalence/",
+    "to": "/publications/bessghaier-2024-prevalence/"
+  },
+  {
+    "from": "/publication/peruma-2024-rationale/",
+    "to": "/publications/peruma-2024-rationale/"
+  },
+  {
+    "from": "/publication/messaoud-2024-prduplichecker/",
+    "to": "/publications/messaoud-2024-prduplichecker/"
+  },
+  {
+    "from": "/publication/deshpande-2024-thirdparty/",
+    "to": "/publications/deshpande-2024-thirdparty/"
+  },
+  {
+    "from": "/publication/bessghaier-2024-what/",
+    "to": "/publications/bessghaier-2024-what/"
+  },
+  {
+    "from": "/publication/ouni-2023-empirical/",
+    "to": "/publications/ouni-2023-empirical/"
+  },
+  {
+    "from": "/publication/takebayashi-2023-exploratory/",
+    "to": "/publications/takebayashi-2023-exploratory/"
+  },
+  {
+    "from": "/publication/alomar-2023-automating/",
+    "to": "/publications/alomar-2023-automating/"
+  },
+  {
+    "from": "/publication/alomar-2023-behind/",
+    "to": "/publications/alomar-2023-behind/"
+  },
+  {
+    "from": "/publication/daaji-2023-bpel/",
+    "to": "/publications/daaji-2023-bpel/"
+  },
+  {
+    "from": "/publication/aljedaani-2023-test/",
+    "to": "/publications/aljedaani-2023-test/"
+  },
+  {
+    "from": "/publication/messaoud-2023-duplicate/",
+    "to": "/publications/messaoud-2023-duplicate/"
+  },
+  {
+    "from": "/publication/alomar-2023-how/",
+    "to": "/publications/alomar-2023-how/"
+  },
+  {
+    "from": "/publication/aljedaani-2023-online/",
+    "to": "/publications/aljedaani-2023-online/"
+  },
+  {
+    "from": "/publication/almarimi-2023-improving/",
+    "to": "/publications/almarimi-2023-improving/"
+  },
+  {
+    "from": "/publication/alhindi-2023-issuelabeler/",
+    "to": "/publications/alhindi-2023-issuelabeler/"
+  },
+  {
+    "from": "/publication/alomar-2023-justintime/",
+    "to": "/publications/alomar-2023-justintime/"
+  },
+  {
+    "from": "/publication/palonis-2023-largescale/",
+    "to": "/publications/palonis-2023-largescale/"
+  },
+  {
+    "from": "/publication/chouchen-2023-learning/",
+    "to": "/publications/chouchen-2023-learning/"
+  },
+  {
+    "from": "/publication/khlifi-2023-multilabel/",
+    "to": "/publications/khlifi-2023-multilabel/"
+  },
+  {
+    "from": "/publication/ouni-2023-impact/",
+    "to": "/publications/ouni-2023-impact/"
+  },
+  {
+    "from": "/publication/alomar-2023-use/",
+    "to": "/publications/alomar-2023-use/"
+  },
+  {
+    "from": "/publication/aljedaani-2023-teachers/",
+    "to": "/publications/aljedaani-2023-teachers/"
+  },
+  {
+    "from": "/publication/aljedaani-2023-state/",
+    "to": "/publications/aljedaani-2023-state/"
+  },
+  {
+    "from": "/publication/begoug-2023-what/",
+    "to": "/publications/begoug-2023-what/"
+  },
+  {
+    "from": "/publication/arias-2022-accessibility/",
+    "to": "/publications/arias-2022-accessibility/"
+  },
+  {
+    "from": "/publication/newman-2022-ensemble/",
+    "to": "/publications/newman-2022-ensemble/"
+  },
+  {
+    "from": "/publication/alomar-2022-exploratory/",
+    "to": "/publications/alomar-2022-exploratory/"
+  },
+  {
+    "from": "/publication/alomar-2022-anticopypaster/",
+    "to": "/publications/alomar-2022-anticopypaster/"
+  },
+  {
+    "from": "/publication/aljedaani-2022-automatically/",
+    "to": "/publications/aljedaani-2022-automatically/"
+  },
+  {
+    "from": "/publication/alomar-2022-code/",
+    "to": "/publications/alomar-2022-code/"
+  },
+  {
+    "from": "/publication/saidani-2022-detecting/",
+    "to": "/publications/saidani-2022-detecting/"
+  },
+  {
+    "from": "/publication/alomar-2022-finding/",
+    "to": "/publications/alomar-2022-finding/"
+  },
+  {
+    "from": "/publication/peruma-2022-how/",
+    "to": "/publications/peruma-2022-how/"
+  },
+  {
+    "from": "/publication/peruma-2022-refactor/",
+    "to": "/publications/peruma-2022-refactor/"
+  },
+  {
+    "from": "/publication/sellami-2022-improving/",
+    "to": "/publications/sellami-2022-improving/"
+  },
+  {
+    "from": "/publication/saidani-2022-improving/",
+    "to": "/publications/saidani-2022-improving/"
+  },
+  {
+    "from": "/publication/alshoaibi-2022-learning/",
+    "to": "/publications/alshoaibi-2022-learning/"
+  },
+  {
+    "from": "/publication/daaji-2022-multicriteria/",
+    "to": "/publications/daaji-2022-multicriteria/"
+  },
+  {
+    "from": "/publication/alomar-2022-documentation/",
+    "to": "/publications/alomar-2022-documentation/"
+  },
+  {
+    "from": "/publication/aljedaani-2022-identification/",
+    "to": "/publications/aljedaani-2022-identification/"
+  },
+  {
+    "from": "/publication/alexandre-2022-identification/",
+    "to": "/publications/alexandre-2022-identification/"
+  },
+  {
+    "from": "/publication/soui-2022-impact/",
+    "to": "/publications/soui-2022-impact/"
+  },
+  {
+    "from": "/publication/marmolejos-2022-use/",
+    "to": "/publications/marmolejos-2022-use/"
+  },
+  {
+    "from": "/publication/peruma-2022-refactoring/",
+    "to": "/publications/peruma-2022-refactoring/"
+  },
+  {
+    "from": "/publication/alomar-2022-refactoring/",
+    "to": "/publications/alomar-2022-refactoring/"
+  },
+  {
+    "from": "/publication/alomar-2022-satdbailiff/",
+    "to": "/publications/alomar-2022-satdbailiff/"
+  },
+  {
+    "from": "/publication/alomar-2022-satdbailiffmining/",
+    "to": "/publications/alomar-2022-satdbailiffmining/"
+  },
+  {
+    "from": "/publication/alshoaibi-2022-searchbased/",
+    "to": "/publications/alshoaibi-2022-searchbased/"
+  },
+  {
+    "from": "/publication/deshpande-2022-searchbased/",
+    "to": "/publications/deshpande-2022-searchbased/"
+  },
+  {
+    "from": "/publication/aljedaani-2022-sentiment/",
+    "to": "/publications/aljedaani-2022-sentiment/"
+  },
+  {
+    "from": "/publication/saidani-2022-tracking/",
+    "to": "/publications/saidani-2022-tracking/"
+  },
+  {
+    "from": "/publication/bessghaier-2021-longitudinal/",
+    "to": "/publications/bessghaier-2021-longitudinal/"
+  },
+  {
+    "from": "/publication/hamdi-2021-longitudinal/",
+    "to": "/publications/hamdi-2021-longitudinal/"
+  },
+  {
+    "from": "/publication/hamdi-2021-empirical/",
+    "to": "/publications/hamdi-2021-empirical/"
+  },
+  {
+    "from": "/publication/newman-2021-ensemble/",
+    "to": "/publications/newman-2021-ensemble/"
+  },
+  {
+    "from": "/publication/lyu-2021-experimental/",
+    "to": "/publications/lyu-2021-experimental/"
+  },
+  {
+    "from": "/publication/chouchen-2021-anti/",
+    "to": "/publications/chouchen-2021-anti/"
+  },
+  {
+    "from": "/publication/chouchen-2021-antipatterns/",
+    "to": "/publications/chouchen-2021-antipatterns/"
+  },
+  {
+    "from": "/publication/ghadhab-2021-augmenting/",
+    "to": "/publications/ghadhab-2021-augmenting/"
+  },
+  {
+    "from": "/publication/alomar-2021-behind/",
+    "to": "/publications/alomar-2021-behind/"
+  },
+  {
+    "from": "/publication/saidani-2021-bf/",
+    "to": "/publications/saidani-2021-bf/"
+  },
+  {
+    "from": "/publication/saidani-2021-bfdetector/",
+    "to": "/publications/saidani-2021-bfdetector/"
+  },
+  {
+    "from": "/publication/sagar-2021-comparing/",
+    "to": "/publications/sagar-2021-comparing/"
+  },
+  {
+    "from": "/publication/almarimi-2021-csdetector/",
+    "to": "/publications/almarimi-2021-csdetector/"
+  },
+  {
+    "from": "/publication/alomar-2021-finding/",
+    "to": "/publications/alomar-2021-finding/"
+  },
+  {
+    "from": "/publication/peruma-2021-how/",
+    "to": "/publications/peruma-2021-how/"
+  },
+  {
+    "from": "/publication/alomar-2021-how/",
+    "to": "/publications/alomar-2021-how/"
+  },
+  {
+    "from": "/publication/alomar-2021-we/",
+    "to": "/publications/alomar-2021-we/"
+  },
+  {
+    "from": "/publication/lyu-2021-improving/",
+    "to": "/publications/lyu-2021-improving/"
+  },
+  {
+    "from": "/publication/aljedaani-2021-learning/",
+    "to": "/publications/aljedaani-2021-learning/"
+  },
+  {
+    "from": "/publication/almhana-2021-method/",
+    "to": "/publications/almhana-2021-method/"
+  },
+  {
+    "from": "/publication/almhana-2021-methodlevel/",
+    "to": "/publications/almhana-2021-methodlevel/"
+  },
+  {
+    "from": "/publication/alomar-2021-mining/",
+    "to": "/publications/alomar-2021-mining/"
+  },
+  {
+    "from": "/publication/daaji-2021-multi/",
+    "to": "/publications/daaji-2021-multi/"
+  },
+  {
+    "from": "/publication/alomar-2021-preserving/",
+    "to": "/publications/alomar-2021-preserving/"
+  },
+  {
+    "from": "/publication/fang-2021-classification/",
+    "to": "/publications/fang-2021-classification/"
+  },
+  {
+    "from": "/publication/alomar-2021-documentation/",
+    "to": "/publications/alomar-2021-documentation/"
+  },
+  {
+    "from": "/publication/soui-2021-impact/",
+    "to": "/publications/soui-2021-impact/"
+  },
+  {
+    "from": "/publication/saidani-2021-impact/",
+    "to": "/publications/saidani-2021-impact/"
+  },
+  {
+    "from": "/publication/marmolejos-2021-use/",
+    "to": "/publications/marmolejos-2021-use/"
+  },
+  {
+    "from": "/publication/golubev-2021-one/",
+    "to": "/publications/golubev-2021-one/"
+  },
+  {
+    "from": "/publication/chouchen-2021-predicting/",
+    "to": "/publications/chouchen-2021-predicting/"
+  },
+  {
+    "from": "/publication/ye-2021-recommending/",
+    "to": "/publications/ye-2021-recommending/"
+  },
+  {
+    "from": "/publication/alomar-2021-refactoring/",
+    "to": "/publications/alomar-2021-refactoring/"
+  },
+  {
+    "from": "/publication/alomar-2021-satdbailiff/",
+    "to": "/publications/alomar-2021-satdbailiff/"
+  },
+  {
+    "from": "/publication/ouni-2021-search/",
+    "to": "/publications/ouni-2021-search/"
+  },
+  {
+    "from": "/publication/aljedaani-2021-test/",
+    "to": "/publications/aljedaani-2021-test/"
+  },
+  {
+    "from": "/publication/alomar-2021-automatic/",
+    "to": "/publications/alomar-2021-automatic/"
+  },
+  {
+    "from": "/publication/alomar-2021-toward/",
+    "to": "/publications/alomar-2021-toward/"
+  },
+  {
+    "from": "/publication/peruma-2021-grammar/",
+    "to": "/publications/peruma-2021-grammar/"
+  },
+  {
+    "from": "/publication/chouchen-2021-whoreview/",
+    "to": "/publications/chouchen-2021-whoreview/"
+  },
+  {
+    "from": "/publication/lyu-2020-experimental/",
+    "to": "/publications/lyu-2020-experimental/"
+  },
+  {
+    "from": "/publication/alomar-2020-exploratory/",
+    "to": "/publications/alomar-2020-exploratory/"
+  },
+  {
+    "from": "/publication/peruma-2020-exploratory/",
+    "to": "/publications/peruma-2020-exploratory/"
+  },
+  {
+    "from": "/publication/alizadeh-2020-interactive/",
+    "to": "/publications/alizadeh-2020-interactive/"
+  },
+  {
+    "from": "/publication/chouchen-2020-androlib/",
+    "to": "/publications/chouchen-2020-androlib/"
+  },
+  {
+    "from": "/publication/soui-2020-assessing/",
+    "to": "/publications/soui-2020-assessing/"
+  },
+  {
+    "from": "/publication/soui-2020-bankruptcy/",
+    "to": "/publications/soui-2020-bankruptcy/"
+  },
+  {
+    "from": "/publication/peruma-2020-contextualizing/",
+    "to": "/publications/peruma-2020-contextualizing/"
+  },
+  {
+    "from": "/publication/alomar-2020-developers/",
+    "to": "/publications/alomar-2020-developers/"
+  },
+  {
+    "from": "/publication/alrubaye-2020-does/",
+    "to": "/publications/alrubaye-2020-does/"
+  },
+  {
+    "from": "/publication/alrubaye-2020-how/",
+    "to": "/publications/alrubaye-2020-how/"
+  },
+  {
+    "from": "/publication/alomar-2020-how/",
+    "to": "/publications/alomar-2020-how/"
+  },
+  {
+    "from": "/publication/bogart-2020-increasing/",
+    "to": "/publications/bogart-2020-increasing/"
+  },
+  {
+    "from": "/publication/almarimi-2020-learning/",
+    "to": "/publications/almarimi-2020-learning/"
+  },
+  {
+    "from": "/publication/alkhazi-2020-learning/",
+    "to": "/publications/alkhazi-2020-learning/"
+  },
+  {
+    "from": "/publication/alrubaye-2020-learning/",
+    "to": "/publications/alrubaye-2020-learning/"
+  },
+  {
+    "from": "/publication/mkaouer-2020-manyobjective/",
+    "to": "/publications/mkaouer-2020-manyobjective/"
+  },
+  {
+    "from": "/publication/sarwar-2020-multi/",
+    "to": "/publications/sarwar-2020-multi/"
+  },
+  {
+    "from": "/publication/sarwar-2020-multilabel/",
+    "to": "/publications/sarwar-2020-multilabel/"
+  },
+  {
+    "from": "/publication/almarimi-2020-detection/",
+    "to": "/publications/almarimi-2020-detection/"
+  },
+  {
+    "from": "/publication/bessghaier-2020-diffusion/",
+    "to": "/publications/bessghaier-2020-diffusion/"
+  },
+  {
+    "from": "/publication/newman-2020-generation/",
+    "to": "/publications/newman-2020-generation/"
+  },
+  {
+    "from": "/publication/saidani-2020-prediction/",
+    "to": "/publications/saidani-2020-prediction/"
+  },
+  {
+    "from": "/publication/alomar-2020-relationship/",
+    "to": "/publications/alomar-2020-relationship/"
+  },
+  {
+    "from": "/publication/saidani-2020-predicting/",
+    "to": "/publications/saidani-2020-predicting/"
+  },
+  {
+    "from": "/publication/chouchen-2020-recommending/",
+    "to": "/publications/chouchen-2020-recommending/"
+  },
+  {
+    "from": "/publication/alomar-2020-automatic/",
+    "to": "/publications/alomar-2020-automatic/"
+  },
+  {
+    "from": "/publication/peruma-2020-tsdetect/",
+    "to": "/publications/peruma-2020-tsdetect/"
+  },
+  {
+    "from": "/publication/saidani-2020-web/",
+    "to": "/publications/saidani-2020-web/"
+  },
+  {
+    "from": "/publication/messaoud-2019-multi/",
+    "to": "/publications/messaoud-2019-multi/"
+  },
+  {
+    "from": "/publication/messaoud-2019-multilabel/",
+    "to": "/publications/messaoud-2019-multilabel/"
+  },
+  {
+    "from": "/publication/alomar-2019-can/",
+    "to": "/publications/alomar-2019-can/"
+  },
+  {
+    "from": "/publication/alrubaye-2019-comparison/",
+    "to": "/publications/alrubaye-2019-comparison/"
+  },
+  {
+    "from": "/publication/peruma-2019-contextualizing/",
+    "to": "/publications/peruma-2019-contextualizing/"
+  },
+  {
+    "from": "/publication/alomar-2019-design/",
+    "to": "/publications/alomar-2019-design/"
+  },
+  {
+    "from": "/publication/safdari-2019-learning/",
+    "to": "/publications/safdari-2019-learning/"
+  },
+  {
+    "from": "/publication/alrubaye-2019-learning/",
+    "to": "/publications/alrubaye-2019-learning/"
+  },
+  {
+    "from": "/publication/alrubaye-2019-migrationminer/",
+    "to": "/publications/alrubaye-2019-migrationminer/"
+  },
+  {
+    "from": "/publication/gharbi-2019-classification/",
+    "to": "/publications/gharbi-2019-classification/"
+  },
+  {
+    "from": "/publication/peruma-2019-distribution/",
+    "to": "/publications/peruma-2019-distribution/"
+  },
+  {
+    "from": "/publication/alomar-2019-impact/",
+    "to": "/publications/alomar-2019-impact/"
+  },
+  {
+    "from": "/publication/alrubaye-2019-use/",
+    "to": "/publications/alrubaye-2019-use/"
+  },
+  {
+    "from": "/publication/alshoaibi-2019-price/",
+    "to": "/publications/alshoaibi-2019-price/"
+  },
+  {
+    "from": "/publication/saidani-2019-automated/",
+    "to": "/publications/saidani-2019-automated/"
+  },
+  {
+    "from": "/publication/saidani-2019-towards/",
+    "to": "/publications/saidani-2019-towards/"
+  },
+  {
+    "from": "/publication/alrubaye-2019-variability/",
+    "to": "/publications/alrubaye-2019-variability/"
+  },
+  {
+    "from": "/publication/almarimi-2019-web/",
+    "to": "/publications/almarimi-2019-web/"
+  },
+  {
+    "from": "/publication/newman-2018-study/",
+    "to": "/publications/newman-2018-study/"
+  },
+  {
+    "from": "/publication/peruma-2018-empirical/",
+    "to": "/publications/peruma-2018-empirical/"
+  },
+  {
+    "from": "/publication/alizadeh-2018-interactive/",
+    "to": "/publications/alizadeh-2018-interactive/"
+  },
+  {
+    "from": "/publication/alrubaye-2018-automating/",
+    "to": "/publications/alrubaye-2018-automating/"
+  },
+  {
+    "from": "/publication/mcburney-2018-prioritizing/",
+    "to": "/publications/mcburney-2018-prioritizing/"
+  },
+  {
+    "from": "/publication/mkaouer-2017-robust/",
+    "to": "/publications/mkaouer-2017-robust/"
+  },
+  {
+    "from": "/publication/mcafee-2017-cate/",
+    "to": "/publications/mcafee-2017-cate/"
+  },
+  {
+    "from": "/publication/chester-2017-m/",
+    "to": "/publications/chester-2017-m/"
+  },
+  {
+    "from": "/publication/chester-2017-mperm/",
+    "to": "/publications/chester-2017-mperm/"
+  },
+  {
+    "from": "/publication/shoenberger-2017-use/",
+    "to": "/publications/shoenberger-2017-use/"
+  },
+  {
+    "from": "/publication/dennis-2017-p/",
+    "to": "/publications/dennis-2017-p/"
+  },
+  {
+    "from": "/publication/dennis-2017-plint/",
+    "to": "/publications/dennis-2017-plint/"
+  },
+  {
+    "from": "/publication/soui-2017-plain/",
+    "to": "/publications/soui-2017-plain/"
+  },
+  {
+    "from": "/publication/mcburney-2017-towards/",
+    "to": "/publications/mcburney-2017-towards/"
+  },
+  {
+    "from": "/publication/krutz-2017-added/",
+    "to": "/publications/krutz-2017-added/"
+  },
+  {
+    "from": "/publication/krutz-2017-who/",
+    "to": "/publications/krutz-2017-who/"
+  },
+  {
+    "from": "/publication/mkaouer-2016-interactive/",
+    "to": "/publications/mkaouer-2016-interactive/"
+  },
+  {
+    "from": "/publication/mkaouer-2016-use/",
+    "to": "/publications/mkaouer-2016-use/"
+  },
+  {
+    "from": "/publication/almhana-2016-recommending/",
+    "to": "/publications/almhana-2016-recommending/"
+  },
+  {
+    "from": "/publication/mkaouer-2016-slim/",
+    "to": "/publications/mkaouer-2016-slim/"
+  },
+  {
+    "from": "/publication/mkaouer-2015-many/",
+    "to": "/publications/mkaouer-2015-many/"
+  },
+  {
+    "from": "/publication/mkaouer-2015-manyobjective/",
+    "to": "/publications/mkaouer-2015-manyobjective/"
+  },
+  {
+    "from": "/publication/mkaouer-2014-robust/",
+    "to": "/publications/mkaouer-2014-robust/"
+  },
+  {
+    "from": "/publication/mkaouer-2014-high/",
+    "to": "/publications/mkaouer-2014-high/"
+  },
+  {
+    "from": "/publication/mkaouer-2014-o/",
+    "to": "/publications/mkaouer-2014-o/"
+  },
+  {
+    "from": "/publication/mkaouer-2014-model/",
+    "to": "/publications/mkaouer-2014-model/"
+  },
+  {
+    "from": "/publication/mkaouer-2014-recommendation/",
+    "to": "/publications/mkaouer-2014-recommendation/"
+  },
+  {
+    "from": "/publication/mkaouer-2014-software/",
+    "to": "/publications/mkaouer-2014-software/"
+  },
+  {
+    "from": "/publication/mkaouer-2013-preference/",
+    "to": "/publications/mkaouer-2013-preference/"
+  },
+  {
+    "from": "/publication/mkaouer-2013-preferencebased/",
+    "to": "/publications/mkaouer-2013-preferencebased/"
+  },
+  {
+    "from": "/author/ahmed-aljohani/",
+    "to": "/people/ahmed-aljohani/"
+  },
+  {
+    "from": "/author/amit-dilip-kini/",
+    "to": "/people/amit-dilip-kini/"
+  },
+  {
+    "from": "/author/bladimir-baez-baez/",
+    "to": "/people/bladimir-baez-baez/"
+  },
+  {
+    "from": "/author/dante-secada-oz/",
+    "to": "/people/dante-secada-oz/"
+  },
+  {
+    "from": "/author/diego-hilario-barinas/",
+    "to": "/people/diego-hilario-barinas/"
+  },
+  {
+    "from": "/author/diosdavi-lara-reyes/",
+    "to": "/people/diosdavi-lara-reyes/"
+  },
+  {
+    "from": "/author/eric-tiano/",
+    "to": "/people/eric-tiano/"
+  },
+  {
+    "from": "/author/ian-shoenberger/",
+    "to": "/people/ian-shoenberger/"
+  },
+  {
+    "from": "/author/mohammadreza-shojaei-kol-kachi/",
+    "to": "/people/mohammadreza-shojaei-kol-kachi/"
+  },
+  {
+    "from": "/author/ricky-suberman/",
+    "to": "/people/ricky-suberman/"
+  },
+  {
+    "from": "/author/wajdi-aljedaani/",
+    "to": "/people/wajdi-aljedaani/"
+  },
+  {
+    "from": "/author/abdullah-alsaleh/",
+    "to": "/people/abdullah-alsaleh/"
+  },
+  {
+    "from": "/author/ahmed-hamad/",
+    "to": "/people/ahmed-hamad/"
+  },
+  {
+    "from": "/author/alexander-bogart/",
+    "to": "/people/alexander-bogart/"
+  },
+  {
+    "from": "/author/ali-ouni/",
+    "to": "/people/ali-ouni/"
+  },
+  {
+    "from": "/author/andrew-di-stasi/",
+    "to": "/people/andrew-di-stasi/"
+  },
+  {
+    "from": "/author/anthony-peruma/",
+    "to": "/people/anthony-peruma/"
+  },
+  {
+    "from": "/author/anushkrishna-v/",
+    "to": "/people/anushkrishna-v/"
+  },
+  {
+    "from": "/author/arpita-kale/",
+    "to": "/people/arpita-kale/"
+  },
+  {
+    "from": "/author/ashnil-n-vazirani/",
+    "to": "/people/ashnil-n-vazirani/"
+  },
+  {
+    "from": "/author/aymen-masmoudi/",
+    "to": "/people/aymen-masmoudi/"
+  },
+  {
+    "from": "/author/belhassen-khefacha/",
+    "to": "/people/belhassen-khefacha/"
+  },
+  {
+    "from": "/author/ben-christians/",
+    "to": "/people/ben-christians/"
+  },
+  {
+    "from": "/author/benjamin-adepoju/",
+    "to": "/people/benjamin-adepoju/"
+  },
+  {
+    "from": "/author/brandon-palonis/",
+    "to": "/people/brandon-palonis/"
+  },
+  {
+    "from": "/author/chawki-ben-slimen/",
+    "to": "/people/chawki-ben-slimen/"
+  },
+  {
+    "from": "/author/christian-newman/",
+    "to": "/people/christian-newman/"
+  },
+  {
+    "from": "/author/deema-alshoaibi/",
+    "to": "/people/deema-alshoaibi/"
+  },
+  {
+    "from": "/author/devan-lad/",
+    "to": "/people/devan-lad/"
+  },
+  {
+    "from": "/author/ebtesam-alsogaih/",
+    "to": "/people/ebtesam-alsogaih/"
+  },
+  {
+    "from": "/author/eman-abdullah-alomar/",
+    "to": "/people/eman-abdullah-alomar/"
+  },
+  {
+    "from": "/author/hind-alharbi/",
+    "to": "/people/hind-alharbi/"
+  },
+  {
+    "from": "/author/hiten-gupta/",
+    "to": "/people/hiten-gupta/"
+  },
+  {
+    "from": "/author/hussein-alrubaye/",
+    "to": "/people/hussein-alrubaye/"
+  },
+  {
+    "from": "/author/islem-saidani/",
+    "to": "/people/islem-saidani/"
+  },
+  {
+    "from": "/author/jadder-moya-urbaez/",
+    "to": "/people/jadder-moya-urbaez/"
+  },
+  {
+    "from": "/author/jose-reyes/",
+    "to": "/people/jose-reyes/"
+  },
+  {
+    "from": "/author/kemar-james/",
+    "to": "/people/kemar-james/"
+  },
+  {
+    "from": "/author/kevin-hannigan/",
+    "to": "/people/kevin-hannigan/"
+  },
+  {
+    "from": "/author/khalid-almalki/",
+    "to": "/people/khalid-almalki/"
+  },
+  {
+    "from": "/author/khouloud-matri/",
+    "to": "/people/khouloud-matri/"
+  },
+  {
+    "from": "/author/kirtana-suresh/",
+    "to": "/people/kirtana-suresh/"
+  },
+  {
+    "from": "/author/kunal-setpal/",
+    "to": "/people/kunal-setpal/"
+  },
+  {
+    "from": "/author/leonardo-emmanuel-abreu-pena/",
+    "to": "/people/leonardo-emmanuel-abreu-pena/"
+  },
+  {
+    "from": "/author/licelot-marmolejos/",
+    "to": "/people/licelot-marmolejos/"
+  },
+  {
+    "from": "/author/majed-alqahtani/",
+    "to": "/people/majed-alqahtani/"
+  },
+  {
+    "from": "/author/marouane-kessentini/",
+    "to": "/people/marouane-kessentini/"
+  },
+  {
+    "from": "/author/max-mendelson/",
+    "to": "/people/max-mendelson/"
+  },
+  {
+    "from": "/author/mayuresh-nene/",
+    "to": "/people/mayuresh-nene/"
+  },
+  {
+    "from": "/author/mazen-alotaibi/",
+    "to": "/people/mazen-alotaibi/"
+  },
+  {
+    "from": "/author/mihal-busho/",
+    "to": "/people/mihal-busho/"
+  },
+  {
+    "from": "/author/moataz-chouchen/",
+    "to": "/people/moataz-chouchen/"
+  },
+  {
+    "from": "/author/mohamed-wiem-mkaouer/",
+    "to": "/people/mohamed-wiem-mkaouer/"
+  },
+  {
+    "from": "/author/mrinal-chaudhari/",
+    "to": "/people/mrinal-chaudhari/"
+  },
+  {
+    "from": "/author/murtaza-tamjeed/",
+    "to": "/people/murtaza-tamjeed/"
+  },
+  {
+    "from": "/author/nasir-safdari/",
+    "to": "/people/nasir-safdari/"
+  },
+  {
+    "from": "/author/philip-t-rodriguez/",
+    "to": "/people/philip-t-rodriguez/"
+  },
+  {
+    "from": "/author/priyadarshni-sagar/",
+    "to": "/people/priyadarshni-sagar/"
+  },
+  {
+    "from": "/author/rana-alrubaye/",
+    "to": "/people/rana-alrubaye/"
+  },
+  {
+    "from": "/author/sai-gowtham-kapa/",
+    "to": "/people/sai-gowtham-kapa/"
+  },
+  {
+    "from": "/author/sarah-alanqari/",
+    "to": "/people/sarah-alanqari/"
+  },
+  {
+    "from": "/author/simar-khanna/",
+    "to": "/people/simar-khanna/"
+  },
+  {
+    "from": "/author/steve-simmons/",
+    "to": "/people/steve-simmons/"
+  },
+  {
+    "from": "/author/sultan-almassari/",
+    "to": "/people/sultan-almassari/"
+  },
+  {
+    "from": "/author/sultan-mira/",
+    "to": "/people/sultan-mira/"
+  },
+  {
+    "from": "/author/taha-draoui/",
+    "to": "/people/taha-draoui/"
+  },
+  {
+    "from": "/author/thomas-tribunella/",
+    "to": "/people/thomas-tribunella/"
+  },
+  {
+    "from": "/author/tianjia-wang/",
+    "to": "/people/tianjia-wang/"
+  },
+  {
+    "from": "/author/tmax-jlateh/",
+    "to": "/people/tmax-jlateh/"
+  },
+  {
+    "from": "/author/vaibhavi-raut/",
+    "to": "/people/vaibhavi-raut/"
+  },
+  {
+    "from": "/author/vinayak-sengupta/",
+    "to": "/people/vinayak-sengupta/"
+  }
+]

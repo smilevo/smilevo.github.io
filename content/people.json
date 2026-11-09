@@ -1,537 +1,846 @@
 [
   {
-    "id": "advaitbhat",
-    "name": "Advait Bhat",
+    "id": "ahmed-aljohani",
+    "name": "Ahmed Aljohani",
+    "role": "Alumnus",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/ahmed-aljohani.jpg"
+  },
+  {
+    "id": "amit-dilip-kini",
+    "name": "Amit Dilip Kini",
+    "role": "Data Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Data Engineering",
+      "Data Analytics",
+      "Data Architecture",
+      "Scalable Solutions"
+    ],
+    "image": "/resources/headshots/amit-dilip-kini.jpg"
+  },
+  {
+    "id": "bladimir-baez-baez",
+    "name": "Bladimir Baez Baez",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Web Development",
+      "{'Big data': 'learning, analytics, and applications'}"
+    ],
+    "image": "/resources/headshots/bladimir-baez-baez.jpg"
+  },
+  {
+    "id": "dante-secada-oz",
+    "name": "Dante Secada-oz",
+    "role": "Software Engineering Undergraduate",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Machine Learning Engineering"
+    ],
+    "image": "/resources/headshots/dante-secada-oz.jpg"
+  },
+  {
+    "id": "diego-hilario-barinas",
+    "name": "Diego Hilario Barinas",
+    "role": "Quality Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Software Quality Assurance"
+    ],
+    "image": "/resources/headshots/diego-hilario-barinas.jpg"
+  },
+  {
+    "id": "diosdavi-lara-reyes",
+    "name": "Diosdavi Lara Reyes",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Web Development"
+    ],
+    "image": "/resources/headshots/diosdavi-lara-reyes.jpg"
+  },
+  {
+    "id": "eric-tiano",
+    "name": "Eric Tiano",
+    "role": "Associate Technical Consultant",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/eric-tiano.jpg"
+  },
+  {
+    "id": "ian-shoenberger",
+    "name": "Ian Shoenberger",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/ian-shoenberger.jpg"
+  },
+  {
+    "id": "mohammadreza-shojaei-kol-kachi",
+    "name": "Mohammadreza Shojaei Kol Kachi",
+    "role": "Alumnus",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Data Science"
+    ],
+    "image": "/resources/headshots/mohammadreza-shojaei-kol-kachi.jpg"
+  },
+  {
+    "id": "ricky-suberman",
+    "name": "Ricky Suberman",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ]
+  },
+  {
+    "id": "wajdi-aljedaani",
+    "name": "Wajdi Aljedaani",
+    "role": "Ph.D. Candidate at University of North Texas",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Accessibility",
+      "Artificial Intelligence"
+    ],
+    "image": "/resources/headshots/wajdi-aljedaani.jpg"
+  },
+  {
+    "id": "abdullah-alsaleh",
+    "name": "Abdullah Alsaleh",
+    "role": "Alumnus",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ],
+    "image": "/resources/headshots/abdullah-alsaleh.jpg"
+  },
+  {
+    "id": "ahmed-hamad",
+    "name": "Ahmed Hamad",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/ahmed-hamad.jpg"
+  },
+  {
+    "id": "alexander-bogart",
+    "name": "Alexander Bogart",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/alexander-bogart.jpg"
+  },
+  {
+    "id": "ali-ouni",
+    "name": "Ali Ouni",
+    "role": "Associate Professor",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ],
+    "image": "/resources/headshots/ali-ouni.jpg"
+  },
+  {
+    "id": "andrew-di-stasi",
+    "name": "Andrew Di Stasi",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/andrew-di-stasi.jpg"
+  },
+  {
+    "id": "anthony-peruma",
+    "name": "Anthony Peruma",
+    "role": "Collaborator",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Quality",
+      "Software Refactoring",
+      "Test Smells"
+    ],
+    "image": "/resources/headshots/anthony-peruma.jpg"
+  },
+  {
+    "id": "anushkrishna-v",
+    "name": "Anush Krishna V",
+    "role": "Machine Learning Engineer",
+    "status": "member",
+    "priority": 4,
+    "topics": [
+      "Software Engineering",
+      "Graph Based Machine Learning",
+      "Data Engineering",
+      "Automated Software Maintenance"
+    ],
+    "image": "/resources/headshots/anushkrishna-v.jpeg"
+  },
+  {
+    "id": "arpita-kale",
+    "name": "Arpita Kale",
+    "role": "Implementation Manager",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Java Technologies and framework",
+      "Web technologies and server",
+      "Database"
+    ],
+    "image": "/resources/headshots/arpita-kale.jpg"
+  },
+  {
+    "id": "ashnil-n-vazirani",
+    "name": "Ashnil N Vazirani",
+    "role": "Software Developer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": []
+  },
+  {
+    "id": "aymen-masmoudi",
+    "name": "Aymen Masmoudi",
     "role": "PhD Student",
-    "website": "https://advaitmb.com/",
-    "image": "/resources/headshots/advait-2026.jpeg",
     "status": "member",
     "priority": 3,
     "topics": [
-      "Human-AI Interaction",
-      "Human-Computer Interaction",
-      "Natural Language Processing",
-      "Computational Social Science"
+      "Software engineering",
+      "Web design"
     ],
-    "legacy": {
-      "headshot": "advait.jpeg",
-      "is_visiting": false,
-      "name": "Advait Bhat",
-      "priority": 5,
-      "research_areas": [
-        "Human-AI Interaction",
-        "Human-Computer Interaction",
-        "Natural Language Processing",
-        "Computational Social Science"
-      ],
-      "site": "https://advaitmb.com/",
-      "title": "PhD Student"
-    },
-    "reviewedOn": "2026-09-05",
-    "photoCrop": {
-      "scale": 1.35,
-      "x": 50,
-      "y": 34
-    }
+    "image": "/resources/headshots/aymen-masmoudi.jpg"
   },
   {
-    "id": "antoniasaravanou",
-    "name": "Antonia Saravanou",
-    "role": "Visiting Researcher",
-    "website": "https://antonia42.github.io/",
-    "image": "/resources/headshots/antoniasaravanou.jpg",
-    "status": "alumni",
-    "priority": 5,
-    "topics": [],
-    "legacy": {
-      "headshot": "antoniasaravanou.jpg",
-      "is_visiting": false,
-      "name": "Antonia Saravanou",
-      "priority": 5,
-      "research_areas": null,
-      "site": "https://antonia42.github.io/",
-      "title": "Visiting Researcher",
-      "inactive": true
-    },
-    "reviewedOn": "2026-09-05"
-  },
-  {
-    "id": "ashishsharma",
-    "name": "Ashish Sharma",
+    "id": "belhassen-khefacha",
+    "name": "Belhassen Khefacha",
     "role": "PhD Student",
-    "website": "https://ash-shar.github.io/",
-    "image": "/resources/headshots/ashishsharma.png",
+    "status": "member",
+    "priority": 3,
+    "topics": [
+      "Software engineering",
+      "Web devolopement"
+    ],
+    "image": "/resources/headshots/belhassen-khefacha.jpg"
+  },
+  {
+    "id": "ben-christians",
+    "name": "Ben Christians",
+    "role": "Software Engineer",
     "status": "alumni",
     "priority": 5,
     "topics": [
-      "NLP",
-      "Computational Social Science"
+      "Software Engineering"
     ],
-    "legacy": {
-      "headshot": "ashishsharma.png",
-      "is_visiting": false,
-      "name": "Ashish Sharma",
-      "priority": 5,
-      "research_areas": [
-        "NLP",
-        "Computational Social Science"
-      ],
-      "site": "https://ash-shar.github.io/",
-      "title": "PhD Student",
-      "inactive": true
-    },
-    "reviewedOn": "2026-09-05"
+    "image": "/resources/headshots/ben-christians.jpg"
   },
   {
-    "id": "bretnestor",
-    "name": "Bret Nestor",
-    "role": "Postdoc",
-    "website": "http://www.cs.toronto.edu/~bretnestor/",
-    "image": "/resources/headshots/bretnestor.jpg",
+    "id": "benjamin-adepoju",
+    "name": "Benjamin Adepoju",
+    "role": "Alumnus",
     "status": "alumni",
     "priority": 5,
-    "topics": [],
-    "legacy": {
-      "headshot": "bretnestor.jpg",
-      "is_visiting": false,
-      "name": "Bret Nestor",
-      "priority": 5,
-      "research_areas": null,
-      "site": "http://www.cs.toronto.edu/~bretnestor/",
-      "title": "Postdoc",
-      "inactive": true
-    },
-    "reviewedOn": "2026-09-05"
+    "topics": [
+      "Software Architecture"
+    ]
   },
   {
-    "id": "chengli",
-    "name": "Cheng Li",
-    "role": "PhD Student",
-    "website": "https://chengli0228.github.io/",
-    "image": "/resources/headshots/cl.png",
+    "id": "brandon-palonis",
+    "name": "Brandon Palonis",
+    "role": "Tech Intern",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/brandon-palonis.jpg"
+  },
+  {
+    "id": "chawki-ben-slimen",
+    "name": "Chawki Ben Slimen",
+    "role": "MSc Student",
     "status": "member",
     "priority": 4,
-    "topics": [],
-    "legacy": {
-      "name": "Cheng Li",
-      "title": "PhD Student",
-      "site": "https://chengli0228.github.io/",
-      "headshot": "cl.png",
-      "research_areas": null,
-      "priority": 6,
-      "is_visiting": false
-    },
-    "reviewedOn": "2026-09-05",
-    "photoCrop": {
-      "scale": 1.08,
-      "x": 65,
-      "y": 35
-    }
+    "topics": [
+      "Software engineering",
+      "Computer Science"
+    ],
+    "image": "/resources/headshots/chawki-ben-slimen.jpg"
   },
   {
-    "id": "deniznazarova",
-    "name": "Deniz Nazar",
-    "role": "PhD Student",
-    "website": "https://gonzoden.github.io/",
-    "image": "/resources/headshots/deniz.jpeg",
-    "status": "member",
+    "id": "christian-newman",
+    "name": "Christian D. Newman",
+    "role": "Assistant Professor",
+    "status": "alumni",
     "priority": 5,
     "topics": [
-      "AI in Therapy",
-      "NLP",
-      "Multilingual NLP",
-      "AI Bias",
-      "HCI"
+      "Program Comprehension",
+      "Static Analysis",
+      "Natural language processing"
     ],
-    "legacy": {
-      "headshot": "deniz.jpeg",
-      "is_visiting": false,
-      "name": "Deniz Nazarova",
-      "priority": 5,
-      "research_areas": [
-        "AI in Therapy",
-        "NLP",
-        "Multilingual NLP",
-        "AI Bias",
-        "HCI"
-      ],
-      "site": "https://gonzoden.github.io/",
-      "title": "PhD Student"
-    },
-    "aliases": [
-      "Deniz Nazarova"
-    ],
-    "reviewedOn": "2026-09-05"
+    "image": "/resources/headshots/christian-newman.jpg"
   },
   {
-    "id": "galenweld",
-    "name": "Galen Weld",
-    "role": "Postdoc",
-    "website": "https://galenweld.com/",
-    "image": "/resources/headshots/galenweld.png",
+    "id": "deema-alshoaibi",
+    "name": "Deema ALShoaibi",
+    "role": "PhD student in Software Engineering Department",
     "status": "alumni",
-    "priority": 2,
+    "priority": 5,
     "topics": [
-      "causal inference",
-      " online communities"
+      "Performance Regression",
+      "Regression Testing",
+      "Search Based Software Engineering"
     ],
-    "legacy": {
-      "headshot": "galenweld.png",
-      "is_visiting": false,
-      "name": "Galen Weld",
-      "priority": 2,
-      "research_areas": [
-        "causal inference",
-        " online communities"
-      ],
-      "site": "https://galenweld.com/",
-      "title": "Postdoc"
-    },
-    "reviewedOn": "2026-09-05"
+    "image": "/resources/headshots/deema-alshoaibi.jpg"
   },
   {
-    "id": "innalin",
-    "name": "Inna Lin",
-    "role": "PhD Student",
-    "website": "https://innawy.github.io",
-    "image": "/resources/headshots/innalin.jpg",
-    "status": "member",
-    "priority": 6,
-    "topics": [],
-    "legacy": {
-      "headshot": "innalin.jpg",
-      "is_visiting": false,
-      "name": "Inna Lin",
-      "priority": 4,
-      "research_areas": null,
-      "site": "https://innawy.github.io",
-      "title": "PhD Student"
-    },
-    "reviewedOn": "2026-09-05",
-    "photoCrop": {
-      "scale": 1.28,
-      "x": 50,
-      "y": 30
-    }
+    "id": "devan-lad",
+    "name": "Devan Lad",
+    "role": "Alumnus",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ],
+    "image": "/resources/headshots/devan-lad.png"
   },
   {
-    "id": "jinasuh",
-    "name": "Jina Suh",
-    "role": "Principal Researcher, PI",
-    "website": "https://www.microsoft.com/en-us/research/people/jinsuh/",
-    "image": "/resources/headshots/jinasuh.jpg",
+    "id": "ebtesam-alsogaih",
+    "name": "Ebtesam Alsogaih",
+    "role": "Software engineer | IT Project Manager",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software engineering",
+      "problem solving"
+    ],
+    "image": "/resources/headshots/ebtesam-alsogaih.jpg"
+  },
+  {
+    "id": "eman-abdullah-alomar",
+    "name": "Eman Abdullah Alomar",
+    "role": "Assistant Professor of Software Engineering Department",
     "status": "member",
     "priority": 1,
     "topics": [
-      "Human-Centered Data Science",
-      "Human-Centered Design",
-      "Human-Centered AI"
+      "Software Engineering",
+      "Artificial Intelligence"
     ],
-    "legacy": {
-      "headshot": "jinasuh.jpg",
-      "is_visiting": false,
-      "name": "Jina Suh",
-      "priority": 4,
-      "research_areas": [
-        "Human-Centered Data Science",
-        "Human-Centered Design",
-        "Human-Centered AI"
-      ],
-      "site": "https://www.microsoft.com/en-us/research/people/jinsuh/",
-      "title": "PhD",
-      "inactive": true,
-      "alumniEntry": {
-        "name": "Jina Suh, PhD Student, Fall 2018 - Winter 2023",
-        "site": "https://www.microsoft.com/en-us/research/people/jinsuh/"
-      }
-    },
-    "reviewedOn": "2026-09-09"
+    "website": "https://dblp.uni-trier.de/pers/hd/a/AlOmar:Eman_Abdullah",
+    "image": "/resources/headshots/eman-abdullah-alomar.jpg"
   },
   {
-    "id": "joyhe-yueya",
-    "name": "Joy He-Yueya",
-    "role": "Bachelor's Student",
-    "website": "https://joyheyueya.github.io",
-    "image": "/resources/headshots/joyhe-yueya.jpg",
-    "status": "alumni",
-    "priority": 8,
-    "topics": [],
-    "legacy": {
-      "headshot": "joyhe-yueya.jpg",
-      "is_visiting": false,
-      "name": "Joy He-Yueya",
-      "priority": 8,
-      "research_areas": null,
-      "site": "https://joyheyueya.github.io",
-      "title": "Bachelor's Student",
-      "inactive": true
-    },
-    "reviewedOn": "2026-09-05"
-  },
-  {
-    "id": "kengu",
-    "name": "Ken Gu",
-    "role": "PhD Student",
-    "website": "https://kenqgu.com/",
-    "image": "/resources/headshots/kengu.jpg",
-    "status": "alumni",
-    "priority": 4,
-    "topics": [],
-    "legacy": {
-      "headshot": "kengu.jpg",
-      "is_visiting": false,
-      "name": "Ken Gu",
-      "priority": 4,
-      "research_areas": null,
-      "site": "https://kenqgu.com/",
-      "title": "PhD Student"
-    },
-    "reviewedOn": "2026-09-05"
-  },
-  {
-    "id": "margaretli",
-    "name": "Margaret Li",
-    "role": "PhD Student",
-    "website": "https://margs.li",
-    "image": "/resources/headshots/margaretli.png",
-    "status": "member",
-    "priority": 7,
-    "topics": [
-      "NLP",
-      "Dialogue",
-      "ML"
-    ],
-    "legacy": {
-      "headshot": "margaretli.png",
-      "is_visiting": false,
-      "name": "Margaret Li",
-      "priority": 3,
-      "research_areas": [
-        "NLP",
-        "Dialogue",
-        "ML"
-      ],
-      "site": "https://margs.li",
-      "title": "PhD Student"
-    },
-    "reviewedOn": "2026-09-05",
-    "photoCrop": {
-      "scale": 1.12,
-      "x": 50,
-      "y": 35
-    }
-  },
-  {
-    "id": "melihyilmaz",
-    "name": "Melih Yilmaz",
-    "role": "PhD Student",
-    "website": "",
-    "image": "/resources/headshots/melihyilmaz.png",
+    "id": "hind-alharbi",
+    "name": "Hind Alharbi",
+    "role": "Software Engineer",
     "status": "alumni",
     "priority": 5,
-    "topics": [],
-    "legacy": {
-      "headshot": "melihyilmaz.png",
-      "is_visiting": false,
-      "name": "Melih Yilmaz",
-      "priority": 5,
-      "research_areas": null,
-      "site": null,
-      "title": "PhD Student",
-      "inactive": true
-    },
-    "reviewedOn": "2026-09-05"
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/hind-alharbi.jpg"
   },
   {
-    "id": "mickelliu",
-    "name": "Mickel Liu",
-    "role": "PhD Student",
-    "website": "https://mickel-liu.github.io/",
-    "image": "/resources/headshots/mickelliu.png",
+    "id": "hiten-gupta",
+    "name": "Hiten Gupta",
+    "role": "Software Developer 2",
     "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/hiten-gupta.jpg"
+  },
+  {
+    "id": "hussein-alrubaye",
+    "name": "Hussein Alrubaye",
+    "role": "Senior Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Machine Learning",
+      "Deep Learning"
+    ],
+    "image": "/resources/headshots/hussein-alrubaye.jpg"
+  },
+  {
+    "id": "islem-saidani",
+    "name": "Islem Saidani",
+    "role": "Ph.D. Candidate at ETS Montreal",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Accessibility",
+      "Artificial Intelligence"
+    ],
+    "image": "/resources/headshots/islem-saidani.jpg"
+  },
+  {
+    "id": "jadder-moya-urbaez",
+    "name": "Jadder Moya Urbaez",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/jadder-moya-urbaez.jpg"
+  },
+  {
+    "id": "jose-reyes",
+    "name": "Jose Reyes",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/jose-reyes.jpg"
+  },
+  {
+    "id": "kemar-james",
+    "name": "Kemar James",
+    "role": "Alumnus",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ],
+    "image": "/resources/headshots/kemar-james.jpg"
+  },
+  {
+    "id": "kevin-hannigan",
+    "name": "Kevin Hannigan",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Embedded Software Programming",
+      "Web Applications"
+    ],
+    "image": "/resources/headshots/kevin-hannigan.jpg"
+  },
+  {
+    "id": "khalid-almalki",
+    "name": "Khalid Saeed Almalki",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "mobile development"
+    ],
+    "image": "/resources/headshots/khalid-almalki.jpg"
+  },
+  {
+    "id": "khouloud-matri",
+    "name": "Khouloud Matri",
+    "role": "Software Engineering student",
+    "status": "member",
     "priority": 4,
     "topics": [
-      "Agent Alignment",
-      "Multi-Agent Systems",
-      "Large Language Models",
-      "Reinforcement Learning"
+      "Software engineering",
+      "web development",
+      "embedded systems"
     ],
-    "legacy": {
-      "headshot": "mickelliu.png",
-      "is_visiting": false,
-      "name": "Mickel Liu",
-      "priority": 4,
-      "research_areas": [
-        "Agent Alignment",
-        "Multi-Agent Systems",
-        "Large Language Models",
-        "Reinforcement Learning"
-      ],
-      "site": "https://mickel-liu.github.io/",
-      "title": "PhD Student",
-      "inactive": true
-    },
-    "reviewedOn": "2026-09-05"
+    "image": "/resources/headshots/khouloud-matri.jpg"
   },
   {
-    "id": "mikemerrill",
-    "name": "Mike Merrill",
-    "role": "PhD Student",
-    "website": "https://mikemerrill.io",
-    "image": "/resources/headshots/mikemerrill.jpeg",
+    "id": "kirtana-suresh",
+    "name": "Kirtana Suresh",
+    "role": "Data Engineer",
     "status": "alumni",
     "priority": 5,
-    "topics": [],
-    "legacy": {
-      "headshot": "mikemerrill.jpeg",
-      "is_visiting": false,
-      "name": "Mike Merrill",
-      "priority": 5,
-      "research_areas": null,
-      "site": "https://mikemerrill.io",
-      "title": "PhD Student",
-      "inactive": true
-    },
-    "reviewedOn": "2026-09-05"
+    "topics": [
+      "Software Engineering",
+      "Systems Engineering"
+    ],
+    "image": "/resources/headshots/kirtana-suresh.jpg"
   },
   {
-    "id": "remydeshayes",
-    "name": "Remy Deshayes",
-    "role": "Master's Student",
-    "website": "https://remydeshayes.github.io/",
-    "image": "/resources/headshots/remydeshayes.png",
-    "status": "alumni",
-    "priority": 7,
-    "topics": [],
-    "legacy": {
-      "headshot": "remydeshayes.png",
-      "is_visiting": true,
-      "name": "Remy Deshayes",
-      "priority": 7,
-      "research_areas": null,
-      "site": "https://remydeshayes.github.io/",
-      "title": "Master's Student",
-      "inactive": true
-    },
-    "reviewedOn": "2026-09-05"
-  },
-  {
-    "id": "rongwudannyxu",
-    "name": "Rongwu Danny Xu",
-    "role": "PhD Student",
-    "website": "https://rongwuxu.com/",
-    "image": "/resources/headshots/rongwu.png",
-    "status": "member",
-    "priority": 6,
-    "topics": [],
-    "legacy": {
-      "name": "Rongwu Danny Xu",
-      "title": "PhD Student",
-      "site": "https://rongwuxu.com/",
-      "headshot": "rongwu.png",
-      "research_areas": null,
-      "priority": 6,
-      "is_visiting": false
-    },
-    "reviewedOn": "2026-09-10"
-  },
-  {
-    "id": "timalthoff",
-    "name": "Tim Althoff",
-    "role": "Associate Professor, PI",
-    "website": "http://www.timalthoff.com/",
-    "image": "/resources/headshots/timalthoff.jpg",
-    "status": "member",
-    "priority": 0,
-    "topics": [],
-    "legacy": {
-      "headshot": "timalthoff.jpg",
-      "is_visiting": false,
-      "name": "Tim Althoff",
-      "priority": 1,
-      "research_areas": null,
-      "site": "http://www.timalthoff.com/",
-      "title": "Assistant Professor"
-    },
-    "reviewedOn": "2026-09-09"
-  },
-  {
-    "id": "vinayakgupta",
-    "name": "Vinayak Gupta",
-    "role": "Postdoc",
-    "website": "https://gvinayak.github.io/",
-    "image": "/resources/headshots/vinayakgupta.png",
+    "id": "kunal-setpal",
+    "name": "Kunal Setpal",
+    "role": "iOS Software Development Engineer",
     "status": "alumni",
     "priority": 5,
-    "topics": [],
-    "legacy": {
-      "headshot": "vinayakgupta.png",
-      "is_visiting": false,
-      "name": "Vinayak Gupta",
-      "priority": 5,
-      "research_areas": null,
-      "site": "https://gvinayak.github.io/",
-      "title": "Postdoc",
-      "inactive": true
-    },
-    "reviewedOn": "2026-09-05"
+    "topics": [
+      "Software Engineering",
+      "Design and Development"
+    ],
+    "image": "/resources/headshots/kunal-setpal.jpg"
   },
   {
-    "id": "xinyizhou",
-    "name": "Xinyi Zhou",
-    "role": "Postdoc",
-    "website": "https://xinyizhou.xyz/",
-    "image": "/resources/headshots/xinyizhou.jpg",
+    "id": "leonardo-emmanuel-abreu-pena",
+    "name": "Leonardo Emmanuel Abreu Peña",
+    "role": "Alumnus",
     "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ],
+    "image": "/resources/headshots/leonardo-emmanuel-abreu-pena.jpg"
+  },
+  {
+    "id": "licelot-marmolejos",
+    "name": "Licelot Marmolejos",
+    "role": "Cybersecurity Associate",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/licelot-marmolejos.jpg"
+  },
+  {
+    "id": "majed-alqahtani",
+    "name": "Majed Alqahtani",
+    "role": "Alumnus",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ],
+    "image": "/resources/headshots/majed-alqahtani.jpg"
+  },
+  {
+    "id": "marouane-kessentini",
+    "name": "Marouane Kessentini",
+    "role": "Collaborator",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ],
+    "image": "/resources/headshots/marouane-kessentini.jpg"
+  },
+  {
+    "id": "max-mendelson",
+    "name": "Max Mendelson",
+    "role": "Cybersecurity Associate",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/max-mendelson.jpg"
+  },
+  {
+    "id": "mayuresh-nene",
+    "name": "Mayuresh Nene",
+    "role": "Alumnus",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Natural Language Processing",
+      "Computer Vision."
+    ]
+  },
+  {
+    "id": "mazen-alotaibi",
+    "name": "Mazen Alotaibi",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Data Quality"
+    ],
+    "image": "/resources/headshots/mazen-alotaibi.jpg"
+  },
+  {
+    "id": "mihal-busho",
+    "name": "Mihal Busho",
+    "role": "Senior Associate, Cloud & Digital",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/mihal-busho.jpg"
+  },
+  {
+    "id": "moataz-chouchen",
+    "name": "Moataz Chouchen",
+    "role": "Ph.D. Candidate at ETS Montreal",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Accessibility",
+      "Artificial Intelligence"
+    ],
+    "image": "/resources/headshots/moataz-chouchen.jpg"
+  },
+  {
+    "id": "mohamed-wiem-mkaouer",
+    "name": "Mohamed Wiem Mkaouer",
+    "role": "Professor of Computer Science",
+    "status": "member",
+    "priority": 1,
+    "topics": [
+      "Software Quality",
+      "Systems Refactoring",
+      "Model-driven Engineering",
+      "Software Testing"
+    ],
+    "website": "https://claws.rit.edu/photos/getphotoid.php?Client=MarketingCV&UN=mwmvse&HASH=df8ae73f895634f5802b558493bc200338a56d91&T=1642625696",
+    "image": "/resources/headshots/mohamed-wiem-mkaouer.jpg"
+  },
+  {
+    "id": "mrinal-chaudhari",
+    "name": "Mrinal Chaudhari",
+    "role": "Database Administrator",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Machine learning",
+      "Python",
+      "Statistics"
+    ]
+  },
+  {
+    "id": "murtaza-tamjeed",
+    "name": "Murtaza Tamjeed",
+    "role": "PhD student in Software Engineering Department",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Software Accessibility"
+    ],
+    "image": "/resources/headshots/murtaza-tamjeed.jpg"
+  },
+  {
+    "id": "nasir-safdari",
+    "name": "Nasir Safdari",
+    "role": "Senior Data Scientist",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Development",
+      "Web Application Programming",
+      "Agile Development"
+    ],
+    "image": "/resources/headshots/nasir-safdari.jpg"
+  },
+  {
+    "id": "philip-t-rodriguez",
+    "name": "Philip T Rodriguez",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": []
+  },
+  {
+    "id": "priyadarshni-sagar",
+    "name": "Priyadarshni Sagar",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "web development"
+    ],
+    "image": "/resources/headshots/priyadarshni-sagar.jpg"
+  },
+  {
+    "id": "rana-alrubaye",
+    "name": "Rana Alrubaye",
+    "role": "TEALS Teacher Volunteer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ]
+  },
+  {
+    "id": "sai-gowtham-kapa",
+    "name": "Sai Gowtham Kapa",
+    "role": "Alumnus",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ],
+    "image": "/resources/headshots/sai-gowtham-kapa.jpeg"
+  },
+  {
+    "id": "sarah-alanqari",
+    "name": "Sarah Alanqari",
+    "role": "Instructor",
+    "status": "member",
     "priority": 3,
-    "topics": [],
-    "legacy": {
-      "headshot": "xinyizhou.jpg",
-      "is_visiting": false,
-      "name": "Xinyi Zhou",
-      "priority": 3,
-      "research_areas": null,
-      "site": "https://xinyizhou.xyz/",
-      "title": "Postdoc",
-      "inactive": true
-    },
-    "reviewedOn": "2026-09-05"
+    "topics": [
+      "Software Quality",
+      "Code Refactoring",
+      "Educational Tools in Computing"
+    ]
   },
   {
-    "id": "yasamansefidgar",
-    "name": "Yasaman Sefidgar",
-    "role": "Postdoc",
-    "website": "https://sefyas.github.io/",
-    "image": "/resources/headshots/yasamansefidgar.png",
+    "id": "simar-khanna",
+    "name": "Simar Khanna",
+    "role": "Alumnus",
     "status": "alumni",
-    "priority": 2,
-    "topics": [],
-    "legacy": {
-      "name": "Yasaman Sefidgar",
-      "title": "Postdoc",
-      "site": "https://sefyas.github.io/",
-      "headshot": "yasamansefidgar.png",
-      "research_areas": null,
-      "priority": 2,
-      "is_visiting": false
-    },
-    "reviewedOn": "2026-09-05"
+    "priority": 5,
+    "topics": [
+      "Research",
+      "Software Design",
+      "Game Design & Dev",
+      "XR(VR/AR)",
+      "UI/UX",
+      "Mobile Applications"
+    ]
   },
   {
-    "id": "yigeyuan",
-    "name": "Yige Yuan",
-    "role": "Postdoc",
-    "website": "https://yuanyige.github.io/",
-    "image": "/resources/headshots/yigeyuan.jpeg",
+    "id": "steve-simmons",
+    "name": "Steven Simmons",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/steve-simmons.jpg"
+  },
+  {
+    "id": "sultan-almassari",
+    "name": "Sultan Almassari",
+    "role": "QA Team Lead",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Quality Assurance"
+    ],
+    "image": "/resources/headshots/sultan-almassari.png"
+  },
+  {
+    "id": "sultan-mira",
+    "name": "Sultan Mira",
+    "role": "Software Engineer",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Automated Software Testing",
+      "Android Development",
+      "Design Patterns"
+    ],
+    "image": "/resources/headshots/sultan-mira.jpg"
+  },
+  {
+    "id": "taha-draoui",
+    "name": "Taha Draoui",
+    "role": "PhD Student",
     "status": "member",
-    "priority": 2,
-    "topics": [],
-    "sourceUrl": "https://yuanyige.github.io/",
-    "reviewedOn": "2026-09-05",
-    "photoCrop": {
-      "scale": 1.25,
-      "x": 50,
-      "y": 35
-    }
+    "priority": 3,
+    "topics": [
+      "Software Engineering",
+      "SE for AI"
+    ],
+    "image": "/resources/headshots/taha-draoui.jpg"
+  },
+  {
+    "id": "thomas-tribunella",
+    "name": "Thomas Tribunella",
+    "role": "Alumnus",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ],
+    "image": "/resources/headshots/thomas-tribunella.jpg"
+  },
+  {
+    "id": "tianjia-wang",
+    "name": "Tianjia Wang",
+    "role": "Alumnus",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ]
+  },
+  {
+    "id": "tmax-jlateh",
+    "name": "T-Max Jlateh",
+    "role": "Senior Engineer, SRE",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering",
+      "Artificial Intelligence",
+      "Cloud Engineering"
+    ]
+  },
+  {
+    "id": "vaibhavi-raut",
+    "name": "Vaibhavi Raut",
+    "role": "Alumnus",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Software Engineering"
+    ],
+    "image": "/resources/headshots/vaibhavi-raut.jpg"
+  },
+  {
+    "id": "vinayak-sengupta",
+    "name": "Vinayak Sengupta",
+    "role": "Alumnus",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ],
+    "image": "/resources/headshots/vinayak-sengupta.jpg"
   }
 ]

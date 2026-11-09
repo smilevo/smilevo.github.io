@@ -5,7 +5,7 @@ import PageHeading from '@/components/page-heading';
 export const metadata = {
   title: 'Join us',
   description:
-    'Current postdoctoral and PhD opportunities with the Behavioral Data Science Group at the University of Washington.',
+    'Opportunities for students at all levels to join the SMILE Research Group at the University of Michigan-Flint.',
   alternates: { canonical: '/join/' },
 };
 
@@ -14,8 +14,8 @@ export default function Join() {
   return (
     <>
       <PageHeading title="Join us">
-        Explore current opportunities to work with the Behavioral Data Science Group at the
-        University of Washington.
+        We welcome motivated students at all levels (bachelor’s, master’s and PhD) to join the SMILE
+        Research Group at the University of Michigan-Flint.
       </PageHeading>
       {open.length > 0 ? (
         <div className="opportunity-grid">
@@ -57,12 +57,9 @@ export default function Join() {
       ) : (
         <section className="empty opportunities-empty">
           <h2>No currently advertised openings</h2>
-          <p>
-            New opportunities will be posted here. You can also explore graduate programs at the
-            Allen School.
-          </p>
-          <a className="text-link" href="https://www.cs.washington.edu/academics/graduate/">
-            Allen School graduate programs
+          <p>To inquire about joining the group, contact Mohamed Wiem Mkaouer.</p>
+          <a className="text-link" href="mailto:mmkaouer@umich.edu">
+            mmkaouer@umich.edu
           </a>
         </section>
       )}

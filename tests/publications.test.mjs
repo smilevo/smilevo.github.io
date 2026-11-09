@@ -60,10 +60,8 @@ test('citation retains identifier and capitalization braces', () => {
   assert.match(value, /doi = \{10.1234\/test\}/);
 });
 test('citation escapes special characters in migrated records without losing title protection', () => {
-  const ampersand = bibtex(migratedPapers.find((p) => p.id === 'liupaths2020'));
-  const protectedTitle = bibtex(migratedPapers.find((p) => p.id === 'althoff2016counseling'));
+  const ampersand = bibtex({ ...papers[0], title: 'Decision Points & Selective Reporting' });
   assert.match(ampersand, /Decision Points \\& Selective Reporting/);
-  assert.match(protectedTitle, /Counseling Conversations: \{An\} Application/);
   const escaped = bibtex({
     ...papers[0],
     title: String.raw`A & B_1 is 50% #1 at $5 on C:\tmp ~ ^`,

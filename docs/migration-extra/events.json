@@ -1,0 +1,106 @@
+[
+  {
+    "id": "mohamed-talk-nwit2022",
+    "title": "Wiem Presentation @ Never Works In Theory 2022",
+    "date": "2022-09-24",
+    "summary": "A Large-Scale Survey on Refactoring",
+    "location": "Saint Louis Station Hotel",
+    "url": "https://neverworkintheory.org/"
+  },
+  {
+    "id": "iwor-recording2021",
+    "title": "International Workshop on Refactoring 2021",
+    "date": "2021-12-01",
+    "summary": "2021 International Workshop on Refactoring (IWoR).",
+    "location": "Virtual Conference",
+    "url": "https://iwor.github.io/iwor2021/"
+  },
+  {
+    "id": "mohamed-talk-rittalks2021",
+    "title": "Wiem Presentation @ RIT Tiger Talks",
+    "date": "2021-12-01",
+    "summary": "My Graduate Study - 3 Takeaways.",
+    "location": "Virtual Conference",
+    "url": "https://www.rit.edu/admissions/blog"
+  },
+  {
+    "id": "hussein-talk-icsr2020",
+    "title": "Hussein Al-Rubaye Presentation @ ICSR2020",
+    "date": "2020-12-17",
+    "summary": "How Does Library Migration Impact Software Quality and Comprehension? An Empirical Study.",
+    "location": "Virtual Conference",
+    "url": "https://icsr2020.wordpress.com"
+  },
+  {
+    "id": "ali-mohamed-hussein-talk-icsr2020",
+    "title": "Ali Ouni, Mohamed Wiem Mkaouer, Hussein Alrubaye Presentation @ ICSR2020",
+    "date": "2020-12-01",
+    "summary": "Third-Party Software Library Reuse From Adoption to Migration Presentation.",
+    "location": "Virtual Conference",
+    "url": "https://icsr2020.wordpress.com/"
+  },
+  {
+    "id": "hussein-talk-rpa2017",
+    "title": "Hussein Presentation @ RIT RPA",
+    "date": "2020-12-01",
+    "summary": "Hussein Research Potential Assessment's Presentation.",
+    "location": "Virtual Conference",
+    "url": "https://icsr2020.wordpress.com/"
+  },
+  {
+    "id": "wajdi-talk-chi2020",
+    "title": "Wajdi Aljedaani Presentation @CHI2020",
+    "date": "2020-12-01",
+    "summary": "Finding the Needle in a Haystack - On the Automatic Identification of Accessibility User Reviews.",
+    "location": "Virtual Conference",
+    "url": "https://chi2020.acm.org/"
+  },
+  {
+    "id": "narjes-talk-scc2020",
+    "title": "Narjes Bessghaier Presentation @ SCC2020",
+    "date": "2020-04-17",
+    "summary": "On the Diffusion and Impact of Code Smells in Web Applications.",
+    "location": "Virtual Conference",
+    "url": "https://conferences.computer.org/scc/2020/"
+  },
+  {
+    "id": "curators-talk-senior-project2019",
+    "title": "Curators Senior Design Project Presentation",
+    "date": "2019-12-01",
+    "summary": "Interim Presentation of The Curators.",
+    "location": "Golisano Building 70",
+    "url": "https://seniorproject.se.rit.edu/"
+  },
+  {
+    "id": "mkaouer-presentation-ssbse2019",
+    "title": "Mohamed Wiem Mkaouer Presentation @ SSBSE 2019",
+    "date": "2019-08-31",
+    "summary": "PRICE: Detection of Performance Regression Introducing Code Changes Using Static and Dynamic Metrics",
+    "location": "Park Inn by Radisson Meriton Conference & Spa Hotel",
+    "url": "http://ssbse19.mines-albi.fr/"
+  },
+  {
+    "id": "meteor-talk-senior-project2017",
+    "title": "Meteor Senior Design Presentation",
+    "date": "2017-12-01",
+    "summary": "Meteor interim senior design presentation.",
+    "location": "Golisano Building 70",
+    "url": "https://seniorproject.se.rit.edu/"
+  },
+  {
+    "id": "mkaouer-presentation-ssbse2016",
+    "title": "Mohamed Wiem Mkaouer Presentation @ SSBSE 2016",
+    "date": "2016-10-08",
+    "summary": "SSBSE 2016 second-day afternoon session recording, including Mohamed Wiem Mkaouer's presentation.",
+    "location": "Holiday Inn Raleigh Downtown",
+    "url": "http://ssbse.com/2016/"
+  },
+  {
+    "id": "mkaouer-phd-defense-2016",
+    "title": "Mohamed Wiem Mkaouer Ph.D. Oral Defense",
+    "date": "2016-04-04",
+    "summary": "Defense of Balancing Competing Needs Of Machine And Human In Search-Based Software Refactoring.",
+    "location": "University of Michigan-Dearborn",
+    "url": ""
+  }
+]

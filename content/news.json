@@ -1,31 +1,27 @@
 [
   {
-    "date": "2021-06-10",
-    "headline": "Tim, Inna, Ashish, and Galen win 4 Best Paper awards at WWW, ICWSM, and NLP4IF!",
-    "id": "news-2",
-    "awardIds": [
-      "icwsm-2021-news-sharing",
-      "icwsm-2021-moderation",
-      "nlp4if-2021-deception",
-      "www-2021-empathy"
-    ]
+    "id": "22-10-14-ase-2022",
+    "date": "2022-10-14",
+    "headline": "**ASE 2022 Organizing Committee.** Many thanks to ASE Conferences organizing committee for all the hard work to manage this hybrid event. #ASE2022"
   },
   {
-    "date": "2020-11-02",
-    "headline": "Our fancy site is live!",
-    "id": "news-3"
+    "id": "22-10-14-iwor-ase",
+    "date": "2022-10-14",
+    "headline": "**IWOR @ ASE 2022.** Another great International Workshop on Refactoring! Many thanks to you all 👏 #iwor2022 #ASE2022 #ASE22"
   },
   {
-    "date": "2020-09-02",
-    "headline": "Welcome to our new PhD Students Inna and Ken!",
-    "id": "news-1"
+    "id": "22-06-28-anthony-phd-defense",
+    "date": "2022-06-28",
+    "headline": "**Congratulations Dr. Peruma!.** Congratulations Dr. Peruma for successfully defending your Ph.D. thesis! You kept your advisor Christian and your collaborators busy throughout the past 5 years! You were a tremendous force of good for the Software Engineering Department. Good luck with your new adventure as an Assistant Professor at the University…"
   },
   {
-    "id": "jina-returns-2026",
-    "date": "2026",
-    "headline": "[Jina Suh](/people/jinasuh/) returned to the lab as a principal researcher.",
-    "personIds": [
-      "jinasuh"
-    ]
+    "id": "22-05-14-msr-papers",
+    "date": "2022-05-14",
+    "headline": "**Multiple Publications Accepted At MSR 2022.** We are pleased to announce that we have multiple papers accepted at MSR 2022. The accepted papers include one full research paper and two mining challenge papers."
+  },
+  {
+    "id": "22-05-02-msr-best-paper",
+    "date": "2022-05-02",
+    "headline": "**Best Mining Challenge Paper Award.** We are pleased to announce that our Mining Challenge paper has won the best paper award!!!"
   }
 ]
