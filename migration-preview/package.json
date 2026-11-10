@@ -1,0 +1,19 @@
+{
+  "name": "smile-migration-preview",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "validate": "node scripts/validate-content.mjs",
+    "build": "npm run validate && next build",
+    "preview": "python3 -m http.server 3000 --bind 0.0.0.0 --directory out"
+  },
+  "dependencies": {
+    "next": "16.4.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  }
+}

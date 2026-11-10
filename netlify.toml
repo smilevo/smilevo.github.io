@@ -10,7 +10,11 @@
   HUGO_ENV = "production"
 
 [context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+  command = "cd migration-preview && npm ci && npm run build"
+  publish = "migration-preview/out"
+
+  [context.deploy-preview.environment]
+    NODE_VERSION = "24"
 
 [context.branch-deploy]
   command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"

@@ -1,0 +1,112 @@
+{
+  "site": {
+    "name": "SMILE Research Group",
+    "expandedName": "Software Maintenance and Intelligent Evolution",
+    "institution": "University of Michigan–Flint",
+    "college": "College of Innovation and Technology",
+    "url": "https://mkaouer.net",
+    "description": "The Software Maintenance and Intelligent Evolution (SMILE) Research Group at the University of Michigan–Flint develops intelligent methods to help developers understand, test, refactor, and evolve software systems.",
+    "contactEmail": "mmkaouer@umich.edu",
+    "heroImage": "/images/home/ase-2022-team.jpg",
+    "heroImageAlt": "SMILE researchers and collaborators at the ASE 2022 organizing committee",
+    "profileUrl": "https://directory.umflint.edu/cit/mmkaouer",
+    "teamUrl": "https://mkaouer.net/people/"
+  },
+  "researchAreas": [
+    {
+      "number": "01",
+      "title": "Software maintenance and evolution",
+      "description": "Methods that help developers understand and safely evolve complex software systems."
+    },
+    {
+      "number": "02",
+      "title": "Refactoring and software quality",
+      "description": "Evidence-driven approaches to improving software design, maintainability, and quality."
+    },
+    {
+      "number": "03",
+      "title": "Automated software engineering",
+      "description": "Intelligent and search-based techniques for testing, analysis, and software engineering tasks."
+    },
+    {
+      "number": "04",
+      "title": "Model-driven engineering",
+      "description": "Models and tools that support the design, analysis, and evolution of software-intensive systems."
+    }
+  ],
+  "teamLead": {
+    "name": "Mohamed Wiem Mkaouer",
+    "role": "Professor of Computer Science · Principal Investigator",
+    "image": "/images/people/mohamed-wiem-mkaouer.jpg",
+    "imageAlt": "Portrait of Mohamed Wiem Mkaouer",
+    "profileUrl": "https://mkaouer.net/author/mohamed-wiem-mkaouer/",
+    "directoryUrl": "https://directory.umflint.edu/cit/mmkaouer",
+    "biography": "Mohamed Wiem Mkaouer leads SMILE and is a Professor of Computer Science in the College of Innovation and Technology at the University of Michigan–Flint. His research connects software engineering and artificial intelligence."
+  },
+  "highlights": [
+    {
+      "title": "International Workshop on Refactoring at ASE 2022",
+      "date": "2022-10-14",
+      "label": "From the archive · October 2022",
+      "description": "SMILE’s archive highlights the International Workshop on Refactoring held alongside ASE 2022.",
+      "image": "/images/highlights/iwor-ase-2022.jpg",
+      "imageAlt": "Participants at the International Workshop on Refactoring at ASE 2022",
+      "sourceUrl": "https://mkaouer.net/post/22-10-14-iwor-ase/"
+    },
+    {
+      "title": "Multiple Publications Accepted at MSR 2022",
+      "date": "2022-05-14",
+      "label": "From the archive · May 2022",
+      "description": "A group update on SMILE research accepted to the Mining Software Repositories conference.",
+      "image": "/images/highlights/msr-publications-2022.jpg",
+      "imageAlt": "SMILE research publication highlight from MSR 2022",
+      "sourceUrl": "https://mkaouer.net/post/22-05-14-msr-papers/"
+    },
+    {
+      "title": "Best Mining Challenge Paper Award",
+      "date": "2022-05-02",
+      "label": "From the archive · May 2022",
+      "description": "The group reported a Best Mining Challenge Paper Award for “Refactoring Debt: Myth or Reality?”.",
+      "image": "/images/highlights/msr-best-paper-2022.jpg",
+      "imageAlt": "SMILE group highlight for the Mining Challenge paper award at MSR 2022",
+      "sourceUrl": "https://mkaouer.net/post/22-05-02-msr-best-paper/"
+    }
+  ],
+  "publications": [
+    {
+      "title": "Hierarchical multi-label classification for concrete defects: an industrial case study at Vermeg",
+      "year": 2026,
+      "venue": "J. Syst. Softw.",
+      "doi": "10.1016/j.jss.2025.112588",
+      "authors": "Montassar Ben Messaoud, Ahmed Nour, Ilyes Ben Khalifa, Mohamed Tounsi, and Mohamed Wiem Mkaouer"
+    },
+    {
+      "title": "A search-based file recommendation approach for infrastructure-as-code evolution",
+      "year": 2026,
+      "venue": "J. Syst. Softw.",
+      "doi": "10.1016/j.jss.2025.112746",
+      "authors": "Narjes Bessghaier, Ali Ouni, Mohammed Sayagh, and Mohamed Wiem Mkaouer"
+    },
+    {
+      "title": "VRTestSniffer: test smell detector for virtual reality (VR) software projects",
+      "year": 2025,
+      "venue": "ASE",
+      "doi": "10.1109/ASE63991.2025.00163",
+      "authors": "Faraz Gurramkonda, Avishak Chakroborty, Bruce Maxim, Mohamed Wiem Mkaouer, and Foyzul Hassan"
+    }
+  ],
+  "support": {
+    "program": "NSF GRANTED",
+    "awardNumber": "2431978",
+    "title": "Strategic Use-Inspired Research Growth and Engagement (SURGE)",
+    "period": "2025–2029",
+    "role": "Mohamed Wiem Mkaouer is a co-principal investigator. The University of Michigan is the award recipient, with UM–Flint listed as a place of performance.",
+    "awardUrl": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2431978&HistoricalAwards=false",
+    "announcementUrl": "https://news.umflint.edu/2025/02/03/um-flint-receives-historic-nsf-grant-to-fund-translational-research/"
+  },
+  "links": {
+    "scholar": "https://scholar.google.com/citations?user=UoHgCukAAAAJ&hl=en",
+    "linkedin": "https://www.linkedin.com/in/mkaouer/",
+    "github": "https://github.com/mkaouer"
+  }
+}
