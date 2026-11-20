@@ -8,7 +8,14 @@
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/ahmed-aljohani.jpg"
+    "image": "/resources/headshots/ahmed-aljohani.jpg",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2018-2019"
+      }
+    ]
   },
   {
     "id": "amit-dilip-kini",
@@ -22,7 +29,27 @@
       "Data Architecture",
       "Scalable Solutions"
     ],
-    "image": "/resources/headshots/amit-dilip-kini.jpg"
+    "image": "/resources/headshots/amit-dilip-kini.jpg",
+    "bio": "I am an Information Technology graduate from Mumbai, India. I completed my master's in Data Science at Rochester Institute of Technology. My love for sport and data led to my previous stint of about 10 years at Sportz Interactive. I have over 12.5 years of industry experience and just getting started on Deep Learning. I am very passionate about data and creating scalable transactional/analytical. Long drives and cooking are my ways to pass time. Super excited to see you all. :)",
+    "organization": "Foundry, a Digital Currency Group Company",
+    "education": [
+      {
+        "degree": "MS in Data Science",
+        "institution": "Rochester Institute of Technology",
+        "years": "2021"
+      },
+      {
+        "degree": "Bachelor of Engineering (Information Technology)",
+        "institution": "Thadomal Shahani Engg College Mumbai - India",
+        "years": "2009"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/amit-kini/",
+      "github": "https://github.com/kiniamit",
+      "cv": "/files/Amit_cv.pdf",
+      "email": "amitdkini@gmail.com"
+    }
   },
   {
     "id": "bladimir-baez-baez",
@@ -35,7 +62,17 @@
       "Web Development",
       "{'Big data': 'learning, analytics, and applications'}"
     ],
-    "image": "/resources/headshots/bladimir-baez-baez.jpg"
+    "image": "/resources/headshots/bladimir-baez-baez.jpg",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2017-2018"
+      }
+    ],
+    "links": {
+      "scholar": "https://scholar.google.com/citations?user=PWGZx-AAAAAJ&hl=en"
+    }
   },
   {
     "id": "dante-secada-oz",
@@ -47,31 +84,77 @@
       "Software Engineering",
       "Machine Learning Engineering"
     ],
-    "image": "/resources/headshots/dante-secada-oz.jpg"
+    "image": "/resources/headshots/dante-secada-oz.jpg",
+    "organization": "RIT",
+    "education": [
+      {
+        "degree": "BS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2017-2022"
+      }
+    ]
   },
   {
     "id": "diego-hilario-barinas",
     "name": "Diego Hilario Barinas",
-    "role": "Quality Engineer",
+    "role": "Software Engineer",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Software Engineering",
       "Software Quality Assurance"
     ],
-    "image": "/resources/headshots/diego-hilario-barinas.jpg"
+    "image": "/resources/headshots/diego-hilario-barinas.jpg",
+    "organization": "Alarm.com",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2018-2020"
+      },
+      {
+        "degree": "Bachelor's degree, Computer Software Engineering",
+        "institution": "Instituto Tecnológico de Santo Domingo",
+        "years": "2012 - 2016"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/diego-hilario-barinas-b5123210a/"
+    }
   },
   {
     "id": "diosdavi-lara-reyes",
     "name": "Diosdavi Lara Reyes",
-    "role": "Software Engineer",
+    "role": "Lead Software Engineer",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Software Engineering",
       "Web Development"
     ],
-    "image": "/resources/headshots/diosdavi-lara-reyes.jpg"
+    "image": "/resources/headshots/diosdavi-lara-reyes.jpg",
+    "bio": "6+ years of professional experience working mainly on web technologies, with strong knowledge of the core concepts of software design & development. Proven ability to leverage full-stack expertise to build interactive, scalable and secure applications with quality code. High aptitude for learning new skills and developing professionally.\n\nCurrent tech stack: Golang, .NET Core, React, PostgreSQL",
+    "organization": "Tredium Solutions",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2017-2019"
+      },
+      {
+        "degree": "Bachelor's degree, Telematics Engineering",
+        "institution": "Pontificia Universidad Católica Madre y Maestra",
+        "years": "2011-2016"
+      },
+      {
+        "degree": "Associate's degree, Information Technology",
+        "institution": "ITLA",
+        "years": "2009 - 2012"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/diosdavi/"
+    }
   },
   {
     "id": "eric-tiano",
@@ -82,7 +165,18 @@
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/eric-tiano.jpg"
+    "image": "/resources/headshots/eric-tiano.jpg",
+    "organization": "Perficient",
+    "education": [
+      {
+        "degree": "BS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2018"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/erictiano/"
+    }
   },
   {
     "id": "ian-shoenberger",
@@ -93,7 +187,17 @@
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/ian-shoenberger.jpg"
+    "image": "/resources/headshots/ian-shoenberger.jpg",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2016-2017"
+      }
+    ],
+    "links": {
+      "dblp": "https://dblp.org/pid/198/1535.html"
+    }
   },
   {
     "id": "mohammadreza-shojaei-kol-kachi",
@@ -105,7 +209,14 @@
       "Software Engineering",
       "Data Science"
     ],
-    "image": "/resources/headshots/mohammadreza-shojaei-kol-kachi.jpg"
+    "image": "/resources/headshots/mohammadreza-shojaei-kol-kachi.jpg",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2019-2022"
+      }
+    ]
   },
   {
     "id": "ricky-suberman",
@@ -115,12 +226,20 @@
     "priority": 5,
     "topics": [
       "Software Engineering"
+    ],
+    "image": "/resources/headshots/ricky-suberman.jpg",
+    "education": [
+      {
+        "degree": "BS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2018"
+      }
     ]
   },
   {
     "id": "wajdi-aljedaani",
     "name": "Wajdi Aljedaani",
-    "role": "Ph.D. Candidate at University of North Texas",
+    "role": "Clinical Assistant Professor",
     "status": "alumni",
     "priority": 5,
     "topics": [
@@ -128,19 +247,61 @@
       "Accessibility",
       "Artificial Intelligence"
     ],
-    "image": "/resources/headshots/wajdi-aljedaani.jpg"
+    "image": "/resources/headshots/wajdi-aljedaani.jpg",
+    "bio": "Wajdi Aljedaani received a bachelor's degree in Software Engineering from the Athlone institute of technology, Ireland, in 2014, and received his master's degree in Software Engineering from Rochester Institute of Technology, New York, in 2017. He received his Ph.D. in computer science and engineering from the University of North Texas, where he is now a Clinical Assistant Professor. He worked as a lecturer for three years (2017-2020) at Al-Khari College of Technology, Saudi Arabia. His research interests are software engineering, mining software repository, accessibility, machine learning, and text mining.",
+    "organization": "University of North Texas",
+    "education": [
+      {
+        "degree": "PhD in Computer Science and Engineering",
+        "institution": "University of North Texas"
+      },
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      },
+      {
+        "degree": "BS in Software Engineering",
+        "institution": "Athlone Institute of Technology"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/wajdialjedaani",
+      "scholar": "https://scholar.google.com/citations?user=7nKDsRAAAAAJ&hl=en",
+      "researchgate": "https://www.researchgate.net/profile/Wajdi-Aljedaani-2",
+      "twitter": "https://twitter.com/Wajdialjedaani",
+      "email": "wajdi.j1@gmail.com"
+    }
   },
   {
     "id": "abdullah-alsaleh",
     "name": "Abdullah Alsaleh",
-    "role": "Alumnus",
+    "role": "Data Scientist",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Interest 1",
       "Interest 2"
     ],
-    "image": "/resources/headshots/abdullah-alsaleh.jpg"
+    "image": "/resources/headshots/abdullah-alsaleh.jpg",
+    "bio": "Abdullah Alsaleh is from Saudi Arabia and completed a master's degree in data science at Rochester Institute of Technology.\nI have a bachelor's degree in information technology, and my main areas of interest are Data applications and Web development. Before I decided to pursue my master's degree in data science at Rochester Institute of Technology(RIT), I have worked as a web developer and system administrator in the Education sector for almost 3 years.\nOver the years, my passion for gaining experience, enhancing my skills, and expanding my knowledge in data and analytics of a bigdata have evolved. I always believe in data science as one of the most important success factors in all fields",
+    "education": [
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      },
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/AbdullahA93",
+      "linkedin": "http://linkedin.com/in/abdullah-alsaleh-730334a7",
+      "cv": "/files/Abdullah_CV_2021.pdf"
+    },
+    "organization": "Ministry of Human Resources and Social Development"
   },
   {
     "id": "ahmed-hamad",
@@ -151,7 +312,14 @@
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/ahmed-hamad.jpg"
+    "image": "/resources/headshots/ahmed-hamad.jpg",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2020"
+      }
+    ]
   },
   {
     "id": "alexander-bogart",
@@ -162,43 +330,85 @@
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/alexander-bogart.jpg"
+    "image": "/resources/headshots/alexander-bogart.jpg",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2016-2017"
+      }
+    ]
   },
   {
     "id": "ali-ouni",
     "name": "Ali Ouni",
     "role": "Associate Professor",
-    "status": "alumni",
+    "status": "collaborator",
     "priority": 5,
     "topics": [
       "Interest 1",
       "Interest 2"
     ],
-    "image": "/resources/headshots/ali-ouni.jpg"
+    "image": "/resources/headshots/ali-ouni.jpg",
+    "bio": "Research interests software refactoring and quality.",
+    "education": [
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      },
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      }
+    ]
   },
   {
     "id": "andrew-di-stasi",
     "name": "Andrew Di Stasi",
-    "role": "Software Engineer",
+    "role": "Solutions Architect",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/andrew-di-stasi.jpg"
+    "image": "/resources/headshots/andrew-di-stasi.jpg",
+    "organization": "Protagona",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/andrew-distasi/"
+    }
   },
   {
     "id": "anthony-peruma",
     "name": "Anthony Peruma",
     "role": "Collaborator",
-    "status": "alumni",
+    "status": "collaborator",
     "priority": 5,
     "topics": [
       "Software Quality",
       "Software Refactoring",
       "Test Smells"
     ],
-    "image": "/resources/headshots/anthony-peruma.jpg"
+    "image": "/resources/headshots/anthony-peruma.jpg",
+    "education": [
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      },
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      }
+    ]
   },
   {
     "id": "anushkrishna-v",
@@ -212,7 +422,27 @@
       "Data Engineering",
       "Automated Software Maintenance"
     ],
-    "image": "/resources/headshots/anushkrishna-v.jpeg"
+    "image": "/resources/headshots/anushkrishna-v.jpg",
+    "bio": "AnushKrishna Venkatakrishnan is a Master’s student in Data Science at the Rochester Institute of Technology (RIT), currently engaged in research at the intersection of automated software maintenance and graph-based learning models. He is a full-time ML Engineer at Metabob, where he develops large-scale graph extraction pipelines and workflow orchestration systems for bug detection using Graph Neural Networks. His work has been published at top venues such as the Mining Software Repositories (MSR) conference. He is also leading backend engineering efforts for RIT’s student government and contributed to production-grade data pipelines at scale. Anush is actively advancing research in AI-driven software evolution and third-party library migration.",
+    "organization": "Metabob",
+    "organizationUrl": "https://metabob.com/",
+    "education": [
+      {
+        "degree": "Ms in Data Science",
+        "institution": "Rochester Institute of Technology"
+      },
+      {
+        "degree": "BSc in Computer Science with a minor in Data Science",
+        "institution": "PSG College of Science and Technology"
+      }
+    ],
+    "links": {
+      "email": "av3278@rit.edu",
+      "github": "https://github.com/anushkrishnav",
+      "orcid": "https://orcid.org/0009-0003-5370-6285",
+      "scholar": "https://scholar.google.com/citations?user=j3e7OwkAAAAJ&hl=en",
+      "linkedin": "https://www.linkedin.com/in/anushkrishnav/"
+    }
   },
   {
     "id": "arpita-kale",
@@ -225,7 +455,12 @@
       "Web technologies and server",
       "Database"
     ],
-    "image": "/resources/headshots/arpita-kale.jpg"
+    "image": "/resources/headshots/arpita-kale.jpg",
+    "bio": "Detail oriented and performance focused professional with knowledge and skills in the software development life cycle, honed from a solid educational background and hands-on experience",
+    "organization": "Annex Cloud",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/arpita-kale/"
+    }
   },
   {
     "id": "ashnil-n-vazirani",
@@ -233,7 +468,9 @@
     "role": "Software Developer",
     "status": "alumni",
     "priority": 5,
-    "topics": []
+    "topics": [],
+    "image": "/resources/headshots/ashnil-n-vazirani.jpg",
+    "bio": "I completed my graduate studies in software engineering and worked at Amazon as an SDE intern. I studied software quality assurance in detail and supplemented my studies with additional resources to transform the evidence and sources I had learnt into a real-world application (that is, a tool). I am highly motivated to perform and conduct studies that would be helpful to the community of software engineers and would also provide me with knowledge for the same. I believe in meticulous examination and am highly motivated to never narrow my working/studying hours. While mentioning all my interests and aspects of my career, I make sure to consume knowledge before relevantly listing those in my resume."
   },
   {
     "id": "aymen-masmoudi",
@@ -245,7 +482,21 @@
       "Software engineering",
       "Web design"
     ],
-    "image": "/resources/headshots/aymen-masmoudi.jpg"
+    "image": "/resources/headshots/aymen-masmoudi.jpg",
+    "bio": "Motivated Computer Science graduate student with a strong foundation in programming, problem-solving, and software development. Experienced in graphic design and video editing, with a keen eye for detail and creativity. Passionate about technology and digital media, eager to apply skills in innovative projects and gain hands-on experience.",
+    "education": [
+      {
+        "degree": "Multimedia communication",
+        "institution": "ISAMM",
+        "years": "2024"
+      }
+    ],
+    "links": {
+      "twitter": "https://x.com/masmoudi2003",
+      "github": "https://github.com/masmoudi662",
+      "linkedin": "https://www.linkedin.com/in/aymen-masmoudi-664718357/",
+      "cv": "/files/Aymen_Masmoudi's_CV_2024.pdf"
+    }
   },
   {
     "id": "belhassen-khefacha",
@@ -257,7 +508,19 @@
       "Software engineering",
       "Web devolopement"
     ],
-    "image": "/resources/headshots/belhassen-khefacha.jpg"
+    "image": "/resources/headshots/belhassen-khefacha.jpg",
+    "bio": "I'm a Computer Science graduate student at the University of Michigan-Flint, with a Bachelor's degree in Business Computing from the Higher School of Economic and Commercial Sciences. He has experience in software development, specializing in web and application development using technologies like HTML, CSS, JavaScript, PHP, ReactJS, Symfony, Java, and Python.",
+    "education": [
+      {
+        "degree": "Computer Science",
+        "institution": "ESSECT",
+        "years": "2024"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/belhassen-khefacha-75498b293/",
+      "cv": "/files/Belhassen Khefacha's resume.pdf"
+    }
   },
   {
     "id": "ben-christians",
@@ -268,7 +531,18 @@
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/ben-christians.jpg"
+    "image": "/resources/headshots/ben-christians.jpg",
+    "organization": "Intuit",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2019"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/ben-christians-96bb33107/"
+    }
   },
   {
     "id": "benjamin-adepoju",
@@ -278,18 +552,49 @@
     "priority": 5,
     "topics": [
       "Software Architecture"
-    ]
+    ],
+    "image": "/resources/headshots/benjamin-adepoju.jpg",
+    "bio": "While my main focus is on android development, I am increasingly focusing on the domain of software architecture, design patterns and architecture smells.",
+    "organization": "Computer Science and Engineering",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      },
+      {
+        "degree": "BS in Computer Science",
+        "institution": "Babcock University"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/ba-source",
+      "email": "baaadepoju@gmail.com"
+    }
   },
   {
     "id": "brandon-palonis",
     "name": "Brandon Palonis",
-    "role": "Tech Intern",
+    "role": "Software Engineer",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/brandon-palonis.jpg"
+    "image": "/resources/headshots/brandon-palonis.jpg",
+    "organization": "Estes Express Lines",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      },
+      {
+        "degree": "BS in Computer Science",
+        "institution": "Rochester Institute of Technology"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/brandon-palonis-597016152/"
+    }
   },
   {
     "id": "chawki-ben-slimen",
@@ -301,25 +606,62 @@
       "Software engineering",
       "Computer Science"
     ],
-    "image": "/resources/headshots/chawki-ben-slimen.jpg"
+    "image": "/resources/headshots/chawki-ben-slimen.jpg",
+    "bio": "Dedicated software developer with a strong background in Big Data and cross-platform application development using Flutter. Skilled in machine learning, data analysis Currently pursuing a Master’s degree in Computer Science, with a focus on building data-driven solutions and leveraging predictive analytics to solve real-world problems.",
+    "education": [
+      {
+        "degree": "Master’s degree in big data",
+        "institution": "Institute of Computer Science and Management of Nabeul",
+        "years": "2022"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/chawkibs6",
+      "cv": "/files/Resume_chawki.pdf"
+    }
   },
   {
     "id": "christian-newman",
     "name": "Christian D. Newman",
     "role": "Assistant Professor",
-    "status": "alumni",
+    "status": "collaborator",
     "priority": 5,
     "topics": [
       "Program Comprehension",
       "Static Analysis",
       "Natural language processing"
     ],
-    "image": "/resources/headshots/christian-newman.jpg"
+    "image": "/resources/headshots/christian-newman.jpg",
+    "bio": "Research interests software refactoring and quality.",
+    "organization": "Golisano College of Computing and Information Sciences at Rochester Institute of Technology",
+    "education": [
+      {
+        "degree": "PhD in Computer Science",
+        "institution": "Kent State University, Ohio, USA",
+        "years": "2017"
+      },
+      {
+        "degree": "MSc in Computer Science",
+        "institution": "Kent State University, Ohio, USA",
+        "years": "2013"
+      },
+      {
+        "degree": "BSc in Computer Science",
+        "institution": "Kent State University, Ohio, USA",
+        "years": "2010"
+      }
+    ],
+    "links": {
+      "email": "cdnvse@rit.edu",
+      "twitter": "https://twitter.com/sourceslicer",
+      "scholar": "https://scholar.google.com/citations?user=hb_08rUAAAAJ&hl=en",
+      "github": "https://github.com/cnewman"
+    }
   },
   {
     "id": "deema-alshoaibi",
     "name": "Deema ALShoaibi",
-    "role": "PhD student in Software Engineering Department",
+    "role": "Assistant Professor",
     "status": "alumni",
     "priority": 5,
     "topics": [
@@ -327,19 +669,52 @@
       "Regression Testing",
       "Search Based Software Engineering"
     ],
-    "image": "/resources/headshots/deema-alshoaibi.jpg"
+    "image": "/resources/headshots/deema-alshoaibi.jpg",
+    "organization": "Princess Nourah University",
+    "education": [
+      {
+        "degree": "PhD in Computer and Information Science",
+        "institution": "Rochester Institute of Technology"
+      }
+    ],
+    "links": {
+      "scholar": "https://scholar.google.com/citations?user=d4XPjhkAAAAJ&hl=en",
+      "dblp": "https://dblp.org/pid/247/6457.html",
+      "researchgate": "https://www.researchgate.net/profile/Deema-Alshoaibi",
+      "twitter": "https://twitter.com/dndoor",
+      "email": "da3352@g.rit.edu"
+    }
   },
   {
     "id": "devan-lad",
     "name": "Devan Lad",
-    "role": "Alumnus",
+    "role": "Software Developer",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Interest 1",
       "Interest 2"
     ],
-    "image": "/resources/headshots/devan-lad.png"
+    "image": "/resources/headshots/devan-lad.jpg",
+    "bio": "I'm a Hard of Hearing software engineer. I completed my master's in Software Engineering at Rochester Institute of Technology (RIT) in May 2022. I completed my undergraduates with a Bachelors's in Software engineering at RIT in 2020. My passions are Software Engineering, Games, and Reading. My thesis was on Testing Recurrent Neural Networks. I like walking through the process of software development life cycle and learning strategies on how to approach each of the steps. I enjoy a team environment as it makes projects enjoyable and a great learning experience.",
+    "education": [
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      },
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/devandhrew",
+      "linkedin": "https://www.linkedin.com/in/devan-lad/",
+      "cv": "/files/Devan_Lad_Resume.pdf"
+    },
+    "organization": "General Motors"
   },
   {
     "id": "ebtesam-alsogaih",
@@ -351,12 +726,28 @@
       "Software engineering",
       "problem solving"
     ],
-    "image": "/resources/headshots/ebtesam-alsogaih.jpg"
+    "image": "/resources/headshots/ebtesam-alsogaih.jpg",
+    "organization": "VEDA Holding | SALA Entertainment",
+    "education": [
+      {
+        "degree": "MS in Computer Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2018-2019"
+      },
+      {
+        "degree": "Bachelor's degree in Computer Software Engineering",
+        "institution": "University of Hail",
+        "years": "2008-2013"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/ebtesam-alsogaih-a2b5b4190/"
+    }
   },
   {
     "id": "eman-abdullah-alomar",
     "name": "Eman Abdullah Alomar",
-    "role": "Assistant Professor of Software Engineering Department",
+    "role": "Assistant Professor",
     "status": "member",
     "priority": 1,
     "topics": [
@@ -364,7 +755,31 @@
       "Artificial Intelligence"
     ],
     "website": "https://dblp.uni-trier.de/pers/hd/a/AlOmar:Eman_Abdullah",
-    "image": "/resources/headshots/eman-abdullah-alomar.jpg"
+    "image": "/resources/headshots/eman-abdullah-alomar.jpg",
+    "bio": "Eman Abdullah AlOmar received her Ph.D. in Computing and Information Sciences from Rochester Institute of Technology (RIT). She has an M.Sc. in Software Engineering from RIT and a B.Sc. in Computer Science. During her master's, she was a graduate research assistant at RIT, in which she researched software refactoring. Her main research interests are at the intersection of Software Engineering and Artificial Intelligence. Specifically, Software Maintenance, Software Refactoring, Empirical Software Engineering, Mining Software Repositories, Natural Language Processing, Technical Debt, and Machine Learning.",
+    "organization": "Stevens Institute of Technology",
+    "education": [
+      {
+        "degree": "PhD in Computer and Information Science",
+        "institution": "Rochester Institute of Technology"
+      },
+      {
+        "degree": "MS in Computer Science",
+        "institution": "Rochester Institute of Technology"
+      },
+      {
+        "degree": "BS in Computer Science",
+        "institution": "Rochester Institute of Technology"
+      }
+    ],
+    "links": {
+      "email": "eaa6167@g.rit.edu",
+      "cv": "/files/AlOmar_resume.pdf",
+      "scholar": "https://scholar.google.com/citations?user=aZJysCwAAAAJ&hl=en",
+      "dblp": "https://dblp.uni-trier.de/pers/hd/a/AlOmar:Eman_Abdullah",
+      "researchgate": "https://www.researchgate.net/profile/Eman_Alomar3",
+      "twitter": "https://twitter.com/ECS_Abdullah"
+    }
   },
   {
     "id": "hind-alharbi",
@@ -386,7 +801,17 @@
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/hiten-gupta.jpg"
+    "image": "/resources/headshots/hiten-gupta.jpg",
+    "organization": "Rubrik",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/hiten1928/"
+    }
   },
   {
     "id": "hussein-alrubaye",
@@ -399,20 +824,55 @@
       "Machine Learning",
       "Deep Learning"
     ],
-    "image": "/resources/headshots/hussein-alrubaye.jpg"
+    "image": "/resources/headshots/hussein-alrubaye.jpg",
+    "bio": "Hussein Alrubaye working as a Senior Software Engineer at Microsoft Corporation. My research focused on machine learning and AI to build tools and algorithms that automate the process of API Migration. I have 8 successful apps in Google and iOS stores with millions of users who are using my apps. Also, I am working as software developer for 9 years with .NET, C++, and web security, and have a successfully paid tutorial in Udemy. Also, I got Microsoft Most Valuable Professional.",
+    "organization": "Microsoft",
+    "education": [
+      {
+        "degree": "PhD in Computer and Information Science",
+        "institution": "Rochester Institute of Technology"
+      },
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/hussien89aa",
+      "scholar": "https://scholar.google.com/citations?user=Qq_cPWUAAAAJ&hl=en",
+      "researchgate": "https://www.researchgate.net/profile/Hussein-Alrubaye",
+      "twitter": "https://mobile.twitter.com/husseinphd20",
+      "linkedin": "https://www.linkedin.com/in/halrubaye/",
+      "email": "hussien89aa@outlook.com"
+    }
   },
   {
     "id": "islem-saidani",
     "name": "Islem Saidani",
     "role": "Ph.D. Candidate at ETS Montreal",
-    "status": "alumni",
+    "status": "collaborator",
     "priority": 5,
     "topics": [
       "Software Engineering",
       "Accessibility",
       "Artificial Intelligence"
     ],
-    "image": "/resources/headshots/islem-saidani.jpg"
+    "image": "/resources/headshots/islem-saidani.jpg",
+    "bio": "I am currently working toward the 𝑷𝒉𝑫 𝒅𝒆𝒈𝒓𝒆𝒆 in 𝗦𝗼𝗳𝘁𝘄𝗮𝗿𝗲 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿𝗶𝗻𝗴 at ETS Montreal (Canada). I am specialized in designing and implementing predictive systems based on Machine/Deep Learning. For instance, I have developed DL-CIBuild, a Deep Learning tool for predicting the software build failure.",
+    "education": [
+      {
+        "degree": "PhD in Computer Science and Engineering",
+        "institution": "ETS Montreal"
+      },
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Ecole Nationale des Sciences de lInformatique"
+      }
+    ],
+    "links": {
+      "email": "islem.saidani.1@ens.etsmtl.ca",
+      "linkedin": "https://www.linkedin.com/in/islemsaidani/"
+    }
   },
   {
     "id": "jadder-moya-urbaez",
@@ -423,7 +883,14 @@
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/jadder-moya-urbaez.jpg"
+    "image": "/resources/headshots/jadder-moya-urbaez.jpg",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2018-2019"
+      }
+    ]
   },
   {
     "id": "jose-reyes",
@@ -434,43 +901,91 @@
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/jose-reyes.jpg"
+    "image": "/resources/headshots/jose-reyes.jpg",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2019-2020"
+      }
+    ]
   },
   {
     "id": "kemar-james",
     "name": "Kemar James",
-    "role": "Alumnus",
+    "role": "Software Engineer",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Interest 1",
       "Interest 2"
     ],
-    "image": "/resources/headshots/kemar-james.jpg"
+    "image": "/resources/headshots/kemar-james.jpg",
+    "bio": "Kemar James completed a master's degree in Software Engineering at Rochester Institute of Technology. His interests lie in understanding various data science techniques and applying them to areas of software engineering.",
+    "education": [
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      },
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/k3mar",
+      "linkedin": "https://www.linkedin.com/in/kemar-james/",
+      "cv": "/files/SE_MS_Kemar_James_Resume_RIT.pdf",
+      "email": "kkj7854@rit.edu"
+    }
   },
   {
     "id": "kevin-hannigan",
     "name": "Kevin Hannigan",
-    "role": "Software Engineer",
+    "role": "Staff Engineer",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Embedded Software Programming",
       "Web Applications"
     ],
-    "image": "/resources/headshots/kevin-hannigan.jpg"
+    "image": "/resources/headshots/kevin-hannigan.jpg",
+    "organization": "Regard",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2017-2018"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/kevin-hannigan-z/"
+    }
   },
   {
     "id": "khalid-almalki",
     "name": "Khalid Saeed Almalki",
-    "role": "Software Engineer",
+    "role": "iOS Lead",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Software Engineering",
       "mobile development"
     ],
-    "image": "/resources/headshots/khalid-almalki.jpg"
+    "image": "/resources/headshots/khalid-almalki.jpg",
+    "bio": "Software Engineering. Interests include: software quality, refactoring and mobile development (SWIFT)",
+    "organization": "stc",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      }
+    ],
+    "links": {
+      "linkedin": "https://sa.linkedin.com/in/khalid-saeed-almalki-80642baa"
+    }
   },
   {
     "id": "khouloud-matri",
@@ -483,19 +998,49 @@
       "web development",
       "embedded systems"
     ],
-    "image": "/resources/headshots/khouloud-matri.jpg"
+    "image": "/resources/headshots/khouloud-matri.jpg",
+    "bio": "A motivated student with a solid background in mathematics, logic analysis and computer science.\nI'm interested specially in web development , AI and Iot.",
+    "education": [
+      {
+        "degree": "Second cycle of engineering studies",
+        "institution": "National School of Electronics and Telecommunication (Tunisia)",
+        "years": "2021-2024"
+      },
+      {
+        "degree": "First cycle of engineering studies",
+        "institution": "University of Tunis (Tunisia)",
+        "years": "2018-2021"
+      }
+    ],
+    "links": {
+      "email": "khouloud.matri@enetcom.u-sfax.tn",
+      "github": "https://github.com/KhouloudMatri",
+      "linkedin": "https://www.linkedin.com/in/khouloud-matri-8638191b6/"
+    }
   },
   {
     "id": "kirtana-suresh",
     "name": "Kirtana Suresh",
-    "role": "Data Engineer",
+    "role": "Senior Data Engineer",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Software Engineering",
       "Systems Engineering"
     ],
-    "image": "/resources/headshots/kirtana-suresh.jpg"
+    "image": "/resources/headshots/kirtana-suresh.jpg",
+    "bio": "Certified AWS Solutions Architect Associate",
+    "organization": "Chime",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2020-2021"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/kirtana-suresh/"
+    }
   },
   {
     "id": "kunal-setpal",
@@ -507,19 +1052,54 @@
       "Software Engineering",
       "Design and Development"
     ],
-    "image": "/resources/headshots/kunal-setpal.jpg"
+    "image": "/resources/headshots/kunal-setpal.jpg",
+    "bio": "Innovative Software Engineer with experience in developing scalable, resilient and user friendly software systems using established software design patterns, encapsulation best practices, and more.\n\nPossess excellent troubleshooting skills, able to analyze code and create efficient, cost-effective solutions in a timely manner along with taking on leadership responsibilities.\n\nKnown for solution driven, get-it-done, on-time spirit, with ability to approach the same problem with multiple perspectives to meet challenging business needs and requirements.\n\nPreviously solved problems for Amazon Care as an iOS SDE.",
+    "organization": "Amazon",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2015 - 2017"
+      },
+      {
+        "degree": "Bachelor of Engineering (B.E.) ( Computer and Information Sciences, General)",
+        "institution": "PES Institute of Technology",
+        "years": "2011 - 2015"
+      }
+    ],
+    "links": {
+      "github": "https://www.linkedin.com/in/kunalsetpal/"
+    }
   },
   {
     "id": "leonardo-emmanuel-abreu-pena",
     "name": "Leonardo Emmanuel Abreu Peña",
-    "role": "Alumnus",
+    "role": "Software Engineer",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Interest 1",
       "Interest 2"
     ],
-    "image": "/resources/headshots/leonardo-emmanuel-abreu-pena.jpg"
+    "image": "/resources/headshots/leonardo-emmanuel-abreu-pena.jpg",
+    "bio": "Leonardo Emmanuel Abreu Peña was born in Santo Domingo, Dominican Republic. He completed his software engineering master’s degree at Rochester Institute of Technology. During his time at RIT, he worked as a software developer at the Golisano College of Computer And Information Science, as a graduate research assistant at the Software Design and Productivity Laboratory, and as a Teaching Assistant of the Software Engineering for Data Science course.",
+    "education": [
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      },
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/leonardo-abreu-pena",
+      "cv": "/files/Resume-Leonardo_Abreu.pdf"
+    },
+    "organization": "Leadgogo"
   },
   {
     "id": "licelot-marmolejos",
@@ -530,7 +1110,18 @@
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/licelot-marmolejos.jpg"
+    "image": "/resources/headshots/licelot-marmolejos.jpg",
+    "organization": "Federal Reserve Bank of New York",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      },
+      {
+        "degree": "BS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      }
+    ]
   },
   {
     "id": "majed-alqahtani",
@@ -542,30 +1133,74 @@
       "Interest 1",
       "Interest 2"
     ],
-    "image": "/resources/headshots/majed-alqahtani.jpg"
+    "image": "/resources/headshots/majed-alqahtani.jpg",
+    "bio": "Majed is from Saudi Arabia and is a master's graduate. I have worked as a web developer (front-end, back-end) as a freelance for a year and a half. In my spare time, I like to listen to podcasts interested in industries and aerospace, in addition to playing physical games such as soccer.",
+    "education": [
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      },
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/mma7132",
+      "linkedin": "https://www.linkedin.com/in/majed-alzedan/",
+      "cv": "/files/Resume-Majed-Alqahtani.pdf"
+    }
   },
   {
     "id": "marouane-kessentini",
     "name": "Marouane Kessentini",
     "role": "Collaborator",
-    "status": "alumni",
+    "status": "collaborator",
     "priority": 5,
     "topics": [
       "Interest 1",
       "Interest 2"
     ],
-    "image": "/resources/headshots/marouane-kessentini.jpg"
+    "image": "/resources/headshots/marouane-kessentini.jpg",
+    "education": [
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      },
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      }
+    ]
   },
   {
     "id": "max-mendelson",
     "name": "Max Mendelson",
-    "role": "Cybersecurity Associate",
+    "role": "Cyber/IT Risk Lead Examiner",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/max-mendelson.jpg"
+    "image": "/resources/headshots/max-mendelson.jpg",
+    "organization": "Federal Reserve Bank of New York",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      },
+      {
+        "degree": "BS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/max-mendelson/"
+    }
   },
   {
     "id": "mayuresh-nene",
@@ -576,7 +1211,21 @@
     "topics": [
       "Natural Language Processing",
       "Computer Vision."
-    ]
+    ],
+    "image": "/resources/headshots/mayuresh-nene.jpg",
+    "bio": "I completed my M.S. in Data Science at RIT. I have worked as a Data Analytics Co-op at RIT for 5 months, where I extensively utilized Tableau, MS-Excel and SQL to handle and represent data critical to the institute. I have worked as a Software Engineer Intern for 6 months at Symantec Corporation during my undergraduate study in Computer Science.\nDuring my graduate study, I worked with really amazing professors and mentors on coursework and research projects like Prediction of COVID-19 hotspots, Offensive Language Identification and Duplicate Bug Report Identification, etc. These projects were incredibly empowering because I learnt so much about the process of ideation, experimentation, evaluation and presentation of my work. I really enjoy working on data science solutions, because I believe data has truly enormous capabilities and a lot of untapped potential. I am passionate about working on Machine Learning solutions that can impact human life in any way possible.",
+    "organization": "Computer Science and Engineering",
+    "education": [
+      {
+        "degree": "M.S in Data Science",
+        "institution": "Rochester Institute of Technology",
+        "years": "2022"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/Mayuresh-12",
+      "email": "nene.mayuresh3@gmail.com"
+    }
   },
   {
     "id": "mazen-alotaibi",
@@ -588,31 +1237,71 @@
       "Software Engineering",
       "Data Quality"
     ],
-    "image": "/resources/headshots/mazen-alotaibi.jpg"
+    "image": "/resources/headshots/mazen-alotaibi.jpg",
+    "bio": "I have been involved with a number of developments projects with other teams that mainly focus on providing a software solution to end users.\nI have an interest in software maintenance research, especially software quality, and refactoring. I did a paper on this area, a systematic literature review (SLR) on software refactoring",
+    "organization": "SDAIA",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2017-2018"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/mazen-alotaibi/"
+    }
   },
   {
     "id": "mihal-busho",
     "name": "Mihal Busho",
-    "role": "Senior Associate, Cloud & Digital",
+    "role": "Lead Software Engineer",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/mihal-busho.jpg"
+    "image": "/resources/headshots/mihal-busho.jpg",
+    "bio": "Strong engineering professional with a Master's degree focused in Computer Software Engineering from Rochester Institute of Technology.",
+    "organization": "PwC",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2020"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/mihal-busho/"
+    }
   },
   {
     "id": "moataz-chouchen",
     "name": "Moataz Chouchen",
     "role": "Ph.D. Candidate at ETS Montreal",
-    "status": "alumni",
+    "status": "collaborator",
     "priority": 5,
     "topics": [
       "Software Engineering",
       "Accessibility",
       "Artificial Intelligence"
     ],
-    "image": "/resources/headshots/moataz-chouchen.jpg"
+    "image": "/resources/headshots/moataz-chouchen.jpg",
+    "bio": "AI enthusiast\nFuture Computer Science Engineer\nWant to pursue a PhD degree in SE and AI",
+    "education": [
+      {
+        "degree": "PhD in Computer Science and Engineering",
+        "institution": "ETS Montreal"
+      },
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Ecole Nationale des Sciences de lInformatique"
+      }
+    ],
+    "links": {
+      "email": "moataz.chouchen.1@ens.etsmtl.ca",
+      "linkedin": "https://tn.linkedin.com/in/moataz-chouchen",
+      "cv": "/files/Moataz-Chouchane-Resume.pdf"
+    }
   },
   {
     "id": "mohamed-wiem-mkaouer",
@@ -626,8 +1315,36 @@
       "Model-driven Engineering",
       "Software Testing"
     ],
-    "website": "https://claws.rit.edu/photos/getphotoid.php?Client=MarketingCV&UN=mwmvse&HASH=df8ae73f895634f5802b558493bc200338a56d91&T=1642625696",
-    "image": "/resources/headshots/mohamed-wiem-mkaouer.jpg"
+    "image": "/resources/headshots/mohamed-wiem-mkaouer.jpg",
+    "bio": "Mohamed Wiem Mkaouer obtained his Ph.D. from the University of Michigan-Dearborn. He is a Professor of Computer Science in the College of Innovation and Technology at the University of Michigan-Flint. His research interests are at the intersection of software engineering and artificial intelligence. He leads the SMILE research group, funded by the National Science Foundation. He has over 100 research papers, including papers recognized with distinguished paper and presentation awards. He received the RIT GCCIS Best Emerging Researcher Award.",
+    "organization": "College of Innovation and Technology, University of Michigan-Flint",
+    "organizationUrl": "https://directory.umflint.edu/cit/mmkaouer",
+    "education": [
+      {
+        "degree": "PhD in Computer and Information Science",
+        "institution": "University of Michigan-Dearborn",
+        "years": "2016"
+      },
+      {
+        "degree": "MS in Computer Science",
+        "institution": "University of Tunis (Tunisia)",
+        "years": "2010"
+      },
+      {
+        "degree": "BS in Computer Science",
+        "institution": "University of Tunis (Tunisia)",
+        "years": "2007"
+      }
+    ],
+    "links": {
+      "email": "mmkaouer@umich.edu",
+      "github": "https://github.com/mkaouer",
+      "orcid": "https://orcid.org/0000-0001-6010-7561",
+      "scholar": "https://scholar.google.com/citations?user=UoHgCukAAAAJ&hl=en",
+      "dblp": "https://dblp.org/pid/140/0883.html",
+      "twitter": "https://twitter.com/mwmkaouer",
+      "linkedin": "https://www.linkedin.com/in/mkaouer/"
+    }
   },
   {
     "id": "mrinal-chaudhari",
@@ -639,7 +1356,21 @@
       "Machine learning",
       "Python",
       "Statistics"
-    ]
+    ],
+    "image": "/resources/headshots/mrinal-chaudhari.jpg",
+    "bio": "I completed a master's degree in data science at RIT. I worked for two years in TATA consultancy services as a database administrator. I did my undergrad in information technology from India. I have extensively worked on different databases technologies such as SQL, MySQL, Oracle etc in my prior company. In my master's I have worked on different project based on machine learning and python. I am interested in building ML models and statistical model and eager to understand how real life business problem can be solved using data science technology. Apart from my education and technical skills, I love to sketch and paint. Mostly I like to sketch natural landscape and that's the reason why I like to explore new places.",
+    "organization": "Rochester Institute of Technology",
+    "education": [
+      {
+        "degree": "Data Science",
+        "institution": "Rochester Institute of Technology",
+        "years": "2022"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/MrinalChaudhari",
+      "email": "mrinalchaudhari9@gmail.com"
+    }
   },
   {
     "id": "murtaza-tamjeed",
@@ -651,7 +1382,26 @@
       "Software Engineering",
       "Software Accessibility"
     ],
-    "image": "/resources/headshots/murtaza-tamjeed.jpg"
+    "image": "/resources/headshots/murtaza-tamjeed.jpg",
+    "organization": "Golisano College of Computing and Information Sciences",
+    "education": [
+      {
+        "degree": "PhD in Computer and Information Science",
+        "institution": "Rochester Institute of Technology"
+      },
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/murtazatamjeed",
+      "dblp": "https://dblp.org/pid/292/6208.html",
+      "researchgate": "https://www.researchgate.net/profile/Murtaza-Tamjeed",
+      "twitter": "https://mobile.twitter.com/murtazatamjeed",
+      "linkedin": "https://www.linkedin.com/in/murtaza-tamjeed/",
+      "email": "mt1256@g.rit.edu"
+    }
   },
   {
     "id": "nasir-safdari",
@@ -664,7 +1414,14 @@
       "Web Application Programming",
       "Agile Development"
     ],
-    "image": "/resources/headshots/nasir-safdari.jpg"
+    "image": "/resources/headshots/nasir-safdari.jpg",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2017-2018"
+      }
+    ]
   },
   {
     "id": "philip-t-rodriguez",
@@ -672,7 +1429,9 @@
     "role": "Software Engineer",
     "status": "alumni",
     "priority": 5,
-    "topics": []
+    "topics": [],
+    "image": "/resources/headshots/philip-t-rodriguez.jpg",
+    "bio": "I'm a Software Engineer at Paychex, Inc. I'm married with 1 son."
   },
   {
     "id": "priyadarshni-sagar",
@@ -684,42 +1443,105 @@
       "Software Engineering",
       "web development"
     ],
-    "image": "/resources/headshots/priyadarshni-sagar.jpg"
+    "image": "/resources/headshots/priyadarshni-sagar.jpg",
+    "bio": "I completed my Master's in Data Science at Rochester Institute of Technology. My coursework was closely related to Data Analytics, Machine Learning, Software Development. I believe every problem can be solved if approached systematically. My undergraduate degree in Information Technology has equipped me with the requisite skill of recognizing and defining the structure of the problem. The next step is to analyze the problem and solve it. This is where my degree in Data Science comes into the picture. Using the tools and techniques I learned over the course of the program, I can make your business's data tell stories and produce meaningful business insights, spanning from predictive modeling to optimization. I can build predictive models to automate your business decisions.",
+    "organization": "Tesla",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2019-2021"
+      }
+    ]
   },
   {
     "id": "rana-alrubaye",
     "name": "Rana Alrubaye",
-    "role": "TEALS Teacher Volunteer",
-    "status": "alumni",
-    "priority": 5,
-    "topics": [
-      "Interest 1",
-      "Interest 2"
-    ]
-  },
-  {
-    "id": "sai-gowtham-kapa",
-    "name": "Sai Gowtham Kapa",
-    "role": "Alumnus",
+    "role": "Software Test Engineer",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Interest 1",
       "Interest 2"
     ],
-    "image": "/resources/headshots/sai-gowtham-kapa.jpeg"
+    "image": "/resources/headshots/rana-alrubaye.jpg",
+    "bio": "Rana Alrubaye received her bachelor's degree from the University of Diyala College of Engineering in the computer engineering department.  She completed her master's degree in software engineering at Rochester Institute of Technology. Her research interest is API migration, machine learning, modeling, data mining. She worked as a research assistant in a different research area for three semesters.",
+    "organization": "Microsoft",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2021"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/rana90alrubaye/"
+    }
+  },
+  {
+    "id": "sai-gowtham-kapa",
+    "name": "Sai Gowtham Kapa",
+    "role": "Test Lead",
+    "status": "alumni",
+    "priority": 5,
+    "topics": [
+      "Interest 1",
+      "Interest 2"
+    ],
+    "image": "/resources/headshots/sai-gowtham-kapa.jpg",
+    "bio": "I completed my Master's degree in Software Engineering at Rochester Institute of Technology. I completed my undergrad degree in Computer Science in 2016. I have 2.5 years of work experience as a Quality Assurance Engineer, including automation of testing and system performance evaluation. My interests lie mostly in Software Development and Data Science, having worked in projects pertaining to both areas.",
+    "education": [
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      },
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/sai-gowtham-kapa/",
+      "cv": "/files/Sai_Gowtham_Kapa_Resume.pdf"
+    },
+    "organization": "Mindex"
   },
   {
     "id": "sarah-alanqari",
     "name": "Sarah Alanqari",
-    "role": "Instructor",
+    "role": "PhD Student",
     "status": "member",
     "priority": 3,
     "topics": [
       "Software Quality",
       "Code Refactoring",
       "Educational Tools in Computing"
-    ]
+    ],
+    "image": "/resources/headshots/sarah-alanqari.jpg",
+    "bio": "Instructor in the Department of Computer Science at King Khalid University and PhD student in Computer Software Engineering at Rochester Institute of Technology. Her interests include software quality, code refactoring, and educational tools in computing.",
+    "organization": "King Khalid University",
+    "education": [
+      {
+        "degree": "PhD in Computer Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2024-2028"
+      },
+      {
+        "degree": "Master's Degree in Computer Software Engineering",
+        "institution": "DePaul University",
+        "years": "2021-2023"
+      },
+      {
+        "degree": "Bachelor's Degree in Computer Software Engineering",
+        "institution": "University of Hail",
+        "years": "2013-2018"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/sarah-alanqari-07b57623b/"
+    }
   },
   {
     "id": "simar-khanna",
@@ -734,7 +1556,21 @@
       "XR(VR/AR)",
       "UI/UX",
       "Mobile Applications"
-    ]
+    ],
+    "image": "/resources/headshots/simar-khanna.jpg",
+    "bio": "My name is Simar, and I strive to be the most complete software engineer on the planet",
+    "organization": "Rochester Institute of Technology",
+    "education": [
+      {
+        "degree": "MS Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2022"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/s1mar",
+      "email": "simarkhanna76@gmail.com"
+    }
   },
   {
     "id": "steve-simmons",
@@ -745,7 +1581,21 @@
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/steve-simmons.jpg"
+    "image": "/resources/headshots/steve-simmons.jpg",
+    "organization": "Paychex",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      },
+      {
+        "degree": "BS in Computer Science",
+        "institution": "Rochester Institute of Technology"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/steven-simmons-6416463a/"
+    }
   },
   {
     "id": "sultan-almassari",
@@ -757,12 +1607,30 @@
       "Software Engineering",
       "Quality Assurance"
     ],
-    "image": "/resources/headshots/sultan-almassari.png"
+    "image": "/resources/headshots/sultan-almassari.jpg",
+    "bio": "Sultan Almassari completed a master's degree in Software Engineering at Rochester Institute of Technology (RIT). He had quality assurance experience at Elm information security for three years in Saudi Arabia and worked as a research assistant at RIT. His research interests were quality assurance, refactoring, text mining, and machine learning.",
+    "organization": "Saudi Authority for Data and Artificial Intelligence",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2021"
+      },
+      {
+        "degree": "Information Systems",
+        "institution": "King Saud University",
+        "years": "2014"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/salmassari",
+      "cv": "/files/Almassari_SultanCVv9.1.pdf"
+    }
   },
   {
     "id": "sultan-mira",
     "name": "Sultan Mira",
-    "role": "Software Engineer",
+    "role": "Principal Engineer",
     "status": "alumni",
     "priority": 5,
     "topics": [
@@ -771,7 +1639,19 @@
       "Android Development",
       "Design Patterns"
     ],
-    "image": "/resources/headshots/sultan-mira.jpg"
+    "image": "/resources/headshots/sultan-mira.jpg",
+    "bio": "System Development Specialist",
+    "organization": "HUMAIN",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2018 - 2019"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/sultanmira/"
+    }
   },
   {
     "id": "taha-draoui",
@@ -783,19 +1663,44 @@
       "Software Engineering",
       "SE for AI"
     ],
-    "image": "/resources/headshots/taha-draoui.jpg"
+    "image": "/resources/headshots/taha-draoui.jpg",
+    "bio": "Taha Draoui is a computer science graduate student with experience in software engineering, backend development, and SE for AI research. He has contributed to industry and academic projects involving web technologies and research in software quality assurance for machine learning projects.",
+    "organization": "University Of Michigan Flint",
+    "links": {
+      "github": "https://github.com/tahh1",
+      "linkedin": "https://www.linkedin.com/in/tahadraoui/"
+    }
   },
   {
     "id": "thomas-tribunella",
     "name": "Thomas Tribunella",
-    "role": "Alumnus",
+    "role": "Lead Software Engineer",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Interest 1",
       "Interest 2"
     ],
-    "image": "/resources/headshots/thomas-tribunella.jpg"
+    "image": "/resources/headshots/thomas-tribunella.jpg",
+    "bio": "Thomas Tribunella completed his bachelor's degree in Computer and Information Science at Niagara University and completed his master's degree in Software Engineering at RIT. He has experience with web development and traditional software development.  His research interests include API migration and bug report classification. He also has published one paper, \"Understanding Digital and Crypto Currency \", at the  Business Research Consortium of Western New York conference.",
+    "education": [
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      },
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/tjtiv",
+      "linkedin": "https://www.linkedin.com/in/thomas-tribunella-4416a8ba/",
+      "cv": "/files/Thomas_Tribunella-Resume-2021_03_30.pdf"
+    },
+    "organization": "M&T Bank"
   },
   {
     "id": "tianjia-wang",
@@ -806,7 +1711,25 @@
     "topics": [
       "Interest 1",
       "Interest 2"
-    ]
+    ],
+    "image": "/resources/headshots/tianjia-wang.jpg",
+    "bio": "I completed my master's degree in software engineering at RIT. My research interests are in software reuse and natural language processing. My work focused on studying how developers refactor their code to improve code reusability. In my free time, I enjoy listening to music, traveling and hiking.",
+    "education": [
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      },
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/wangt7",
+      "cv": "/files/TianjiaWang-Resume.pdf"
+    }
   },
   {
     "id": "tmax-jlateh",
@@ -818,7 +1741,26 @@
       "Software Engineering",
       "Artificial Intelligence",
       "Cloud Engineering"
-    ]
+    ],
+    "image": "/resources/headshots/tmax-jlateh.jpg",
+    "bio": "I am a senior software and site reliability engineer with experience building and operating large-scale, cloud-native systems across AWS and Azure. I focus on designing reliable, secure, and observable platforms, leveraging DevOps practices, Kubernetes, and infrastructure-as-code to improve developer productivity and system resilience. My interests lie in applying software engineering, AI-assisted tooling, and rigorous experimentation to create practical solutions that advance software quality and reliability in real-world environments.",
+    "organization": "London Stock Exchange Group",
+    "education": [
+      {
+        "degree": "BS in Informatino Technology",
+        "institution": "Bluecrest University College, Ghana"
+      },
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/tjlatehjr",
+      "linkedin": "https://www.linkedin.com/in/tmaxjlatehjr/",
+      "cv": "/files/Resume-TMax.pdf",
+      "email": "tjlatehjr@yahoo.com"
+    }
   },
   {
     "id": "vaibhavi-raut",
@@ -829,18 +1771,57 @@
     "topics": [
       "Software Engineering"
     ],
-    "image": "/resources/headshots/vaibhavi-raut.jpg"
+    "image": "/resources/headshots/vaibhavi-raut.jpg",
+    "education": [
+      {
+        "degree": "MS in Software Engineering",
+        "institution": "Rochester Institute of Technology",
+        "years": "2020-current"
+      }
+    ],
+    "links": {
+      "twitter": "https://twitter.com/vaibhaviraut4"
+    }
   },
   {
     "id": "vinayak-sengupta",
     "name": "Vinayak Sengupta",
-    "role": "Alumnus",
+    "role": "Data Scientist",
     "status": "alumni",
     "priority": 5,
     "topics": [
       "Interest 1",
       "Interest 2"
     ],
-    "image": "/resources/headshots/vinayak-sengupta.jpg"
+    "image": "/resources/headshots/vinayak-sengupta.jpg",
+    "bio": "Passionate about leveraging Data Science and its branches to bring about a new take on Software Engineering. I am very keen when it comes to both the practices and principles of software engineering and the out-of-box thinking solution that data science brings with information. Strongly feel that today having only one side of knowledge isn't enough and want to be able to imbibe the best of both worlds and bring about a breed of smarter technology-based solutions and thinking. Topics, I can always be approached for are Data Analytics, Machine Learning, Object-Oriented Software Programming. Would love to connect and collaborate with anyone with a passion for technology and a learning curve.",
+    "education": [
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      },
+      {
+        "degree": "Title course 1",
+        "institution": "Name of Institution",
+        "years": "2012"
+      }
+    ],
+    "links": {
+      "github": "https://github.com/vinzlercodes",
+      "linkedin": "https://www.linkedin.com/in/vinayak-sengupta/",
+      "email": "vs4016@rit.edu"
+    },
+    "organization": "Aible"
+  },
+  {
+    "id": "lobna-ghadhab",
+    "name": "Lobna Ghadhab",
+    "role": "Visiting Assistant Professor",
+    "status": "collaborator",
+    "priority": 5,
+    "topics": [],
+    "image": "/resources/headshots/lobna-ghadhab.jpg",
+    "organization": "University of Tunis"
   }
 ]

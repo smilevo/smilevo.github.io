@@ -2,7 +2,9 @@ import PersonPhoto from '@/components/person-photo';
 import HeroNetwork from '@/components/hero-network';
 import ReactMarkdown from 'react-markdown';
 import Link from 'next/link';
-import { papers, people, sponsors, pageContent, awards, news } from '@/lib/content';
+import { papers, people, sponsors, pageContent, awards, news, socialPosts } from '@/lib/content';
+import SocialCarousel from '@/components/social-carousel';
+import { CAROUSEL_COUNT } from '@/lib/social.mjs';
 import {
   latestAwardPapers,
   latestPeopleAwards,
@@ -51,6 +53,15 @@ export default function Home() {
             ))}
         </div>
       </section>
+      {socialPosts.length > 0 && (
+        <section className="section highlight-group" id="social" aria-labelledby="social-heading">
+          <div className="section-heading">
+            <h2 id="social-heading">Social media</h2>
+            <Link href="/social/">See all posts</Link>
+          </div>
+          <SocialCarousel posts={socialPosts.slice(0, CAROUSEL_COUNT)} />
+        </section>
+      )}
       {news.length > 0 && (
         <section
           className="section highlight-group"

@@ -20,20 +20,12 @@
     "to": "/news/"
   },
   {
-    "from": "/newsfeed/",
-    "to": "/news/"
-  },
-  {
     "from": "/people/",
     "to": "/team/"
   },
   {
     "from": "/publication/",
     "to": "/publications/"
-  },
-  {
-    "from": "/event/",
-    "to": "/news/"
   },
   {
     "from": "/project/",
@@ -197,7 +189,7 @@
   },
   {
     "from": "/publication/alomar-2023-automating/",
-    "to": "/publications/alomar-2023-automating/"
+    "to": "/publications/alomar-2024-automating/"
   },
   {
     "from": "/publication/alomar-2023-behind/",
@@ -273,11 +265,11 @@
   },
   {
     "from": "/publication/newman-2022-ensemble/",
-    "to": "/publications/newman-2022-ensemble/"
+    "to": "/publications/newman-2021-ensemble/"
   },
   {
     "from": "/publication/alomar-2022-exploratory/",
-    "to": "/publications/alomar-2022-exploratory/"
+    "to": "/publications/alomar-2020-exploratory/"
   },
   {
     "from": "/publication/alomar-2022-anticopypaster/",
@@ -297,11 +289,11 @@
   },
   {
     "from": "/publication/alomar-2022-finding/",
-    "to": "/publications/alomar-2022-finding/"
+    "to": "/publications/alomar-2021-finding/"
   },
   {
     "from": "/publication/peruma-2022-how/",
-    "to": "/publications/peruma-2022-how/"
+    "to": "/publications/peruma-2022-refactor/"
   },
   {
     "from": "/publication/peruma-2022-refactor/",
@@ -337,11 +329,11 @@
   },
   {
     "from": "/publication/soui-2022-impact/",
-    "to": "/publications/soui-2022-impact/"
+    "to": "/publications/soui-2021-impact/"
   },
   {
     "from": "/publication/marmolejos-2022-use/",
-    "to": "/publications/marmolejos-2022-use/"
+    "to": "/publications/marmolejos-2021-use/"
   },
   {
     "from": "/publication/peruma-2022-refactoring/",
@@ -357,7 +349,7 @@
   },
   {
     "from": "/publication/alomar-2022-satdbailiffmining/",
-    "to": "/publications/alomar-2022-satdbailiffmining/"
+    "to": "/publications/alomar-2022-satdbailiff/"
   },
   {
     "from": "/publication/alshoaibi-2022-searchbased/",
@@ -401,7 +393,7 @@
   },
   {
     "from": "/publication/chouchen-2021-antipatterns/",
-    "to": "/publications/chouchen-2021-antipatterns/"
+    "to": "/publications/chouchen-2021-anti/"
   },
   {
     "from": "/publication/ghadhab-2021-augmenting/",
@@ -409,7 +401,7 @@
   },
   {
     "from": "/publication/alomar-2021-behind/",
-    "to": "/publications/alomar-2021-behind/"
+    "to": "/publications/alomar-2024-behind/"
   },
   {
     "from": "/publication/saidani-2021-bf/",
@@ -417,7 +409,7 @@
   },
   {
     "from": "/publication/saidani-2021-bfdetector/",
-    "to": "/publications/saidani-2021-bfdetector/"
+    "to": "/publications/saidani-2021-bf/"
   },
   {
     "from": "/publication/sagar-2021-comparing/",
@@ -433,11 +425,11 @@
   },
   {
     "from": "/publication/peruma-2021-how/",
-    "to": "/publications/peruma-2021-how/"
+    "to": "/publications/peruma-2022-refactor/"
   },
   {
     "from": "/publication/alomar-2021-how/",
-    "to": "/publications/alomar-2021-how/"
+    "to": "/publications/alomar-2021-we/"
   },
   {
     "from": "/publication/alomar-2021-we/",
@@ -457,7 +449,7 @@
   },
   {
     "from": "/publication/almhana-2021-methodlevel/",
-    "to": "/publications/almhana-2021-methodlevel/"
+    "to": "/publications/almhana-2021-method/"
   },
   {
     "from": "/publication/alomar-2021-mining/",
@@ -465,7 +457,7 @@
   },
   {
     "from": "/publication/daaji-2021-multi/",
-    "to": "/publications/daaji-2021-multi/"
+    "to": "/publications/daaji-2022-multicriteria/"
   },
   {
     "from": "/publication/alomar-2021-preserving/",
@@ -477,7 +469,7 @@
   },
   {
     "from": "/publication/alomar-2021-documentation/",
-    "to": "/publications/alomar-2021-documentation/"
+    "to": "/publications/alomar-2022-documentation/"
   },
   {
     "from": "/publication/soui-2021-impact/",
@@ -509,7 +501,7 @@
   },
   {
     "from": "/publication/alomar-2021-satdbailiff/",
-    "to": "/publications/alomar-2021-satdbailiff/"
+    "to": "/publications/alomar-2022-satdbailiff/"
   },
   {
     "from": "/publication/ouni-2021-search/",
@@ -521,7 +513,7 @@
   },
   {
     "from": "/publication/alomar-2021-automatic/",
-    "to": "/publications/alomar-2021-automatic/"
+    "to": "/publications/alomar-2021-toward/"
   },
   {
     "from": "/publication/alomar-2021-toward/",
@@ -577,11 +569,11 @@
   },
   {
     "from": "/publication/alrubaye-2020-how/",
-    "to": "/publications/alrubaye-2020-how/"
+    "to": "/publications/alrubaye-2020-does/"
   },
   {
     "from": "/publication/alomar-2020-how/",
-    "to": "/publications/alomar-2020-how/"
+    "to": "/publications/alomar-2021-we/"
   },
   {
     "from": "/publication/bogart-2020-increasing/",
@@ -601,7 +593,7 @@
   },
   {
     "from": "/publication/mkaouer-2020-manyobjective/",
-    "to": "/publications/mkaouer-2020-manyobjective/"
+    "to": "/publications/mkaouer-2015-many/"
   },
   {
     "from": "/publication/sarwar-2020-multi/",
@@ -609,7 +601,7 @@
   },
   {
     "from": "/publication/sarwar-2020-multilabel/",
-    "to": "/publications/sarwar-2020-multilabel/"
+    "to": "/publications/sarwar-2020-multi/"
   },
   {
     "from": "/publication/almarimi-2020-detection/",
@@ -641,7 +633,7 @@
   },
   {
     "from": "/publication/alomar-2020-automatic/",
-    "to": "/publications/alomar-2020-automatic/"
+    "to": "/publications/alomar-2021-toward/"
   },
   {
     "from": "/publication/peruma-2020-tsdetect/",
@@ -657,7 +649,7 @@
   },
   {
     "from": "/publication/messaoud-2019-multilabel/",
-    "to": "/publications/messaoud-2019-multilabel/"
+    "to": "/publications/messaoud-2019-multi/"
   },
   {
     "from": "/publication/alomar-2019-can/",
@@ -681,7 +673,7 @@
   },
   {
     "from": "/publication/alrubaye-2019-learning/",
-    "to": "/publications/alrubaye-2019-learning/"
+    "to": "/publications/alrubaye-2020-learning/"
   },
   {
     "from": "/publication/alrubaye-2019-migrationminer/",
@@ -713,7 +705,7 @@
   },
   {
     "from": "/publication/saidani-2019-towards/",
-    "to": "/publications/saidani-2019-towards/"
+    "to": "/publications/saidani-2019-automated/"
   },
   {
     "from": "/publication/alrubaye-2019-variability/",
@@ -733,7 +725,7 @@
   },
   {
     "from": "/publication/alizadeh-2018-interactive/",
-    "to": "/publications/alizadeh-2018-interactive/"
+    "to": "/publications/alizadeh-2020-interactive/"
   },
   {
     "from": "/publication/alrubaye-2018-automating/",
@@ -741,7 +733,7 @@
   },
   {
     "from": "/publication/mcburney-2018-prioritizing/",
-    "to": "/publications/mcburney-2018-prioritizing/"
+    "to": "/publications/mcburney-2017-towards/"
   },
   {
     "from": "/publication/mkaouer-2017-robust/",
@@ -757,7 +749,7 @@
   },
   {
     "from": "/publication/chester-2017-mperm/",
-    "to": "/publications/chester-2017-mperm/"
+    "to": "/publications/chester-2017-m/"
   },
   {
     "from": "/publication/shoenberger-2017-use/",
@@ -769,7 +761,7 @@
   },
   {
     "from": "/publication/dennis-2017-plint/",
-    "to": "/publications/dennis-2017-plint/"
+    "to": "/publications/dennis-2017-p/"
   },
   {
     "from": "/publication/soui-2017-plain/",
@@ -785,7 +777,7 @@
   },
   {
     "from": "/publication/krutz-2017-who/",
-    "to": "/publications/krutz-2017-who/"
+    "to": "/publications/krutz-2017-added/"
   },
   {
     "from": "/publication/mkaouer-2016-interactive/",
@@ -809,7 +801,7 @@
   },
   {
     "from": "/publication/mkaouer-2015-manyobjective/",
-    "to": "/publications/mkaouer-2015-manyobjective/"
+    "to": "/publications/mkaouer-2015-many/"
   },
   {
     "from": "/publication/mkaouer-2014-robust/",
@@ -821,7 +813,7 @@
   },
   {
     "from": "/publication/mkaouer-2014-o/",
-    "to": "/publications/mkaouer-2014-o/"
+    "to": "/publications/mkaouer-2014-high/"
   },
   {
     "from": "/publication/mkaouer-2014-model/",
@@ -841,7 +833,7 @@
   },
   {
     "from": "/publication/mkaouer-2013-preferencebased/",
-    "to": "/publications/mkaouer-2013-preferencebased/"
+    "to": "/publications/mkaouer-2013-preference/"
   },
   {
     "from": "/author/ahmed-aljohani/",
@@ -1126,5 +1118,65 @@
   {
     "from": "/author/vinayak-sengupta/",
     "to": "/people/vinayak-sengupta/"
+  },
+  {
+    "from": "/event/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/mohamed-talk-nwit2022/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/iwor-recording2021/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/mohamed-talk-rittalks2021/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/hussein-talk-icsr2020/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/ali-mohamed-hussein-talk-icsr2020/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/hussein-talk-rpa2017/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/wajdi-talk-chi2020/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/narjes-talk-scc2020/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/curators-talk-senior-project2019/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/mkaouer-presentation-ssbse2019/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/meteor-talk-senior-project2017/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/mkaouer-presentation-ssbse2016/",
+    "to": "/events/"
+  },
+  {
+    "from": "/event/mkaouer-phd-defense-2016/",
+    "to": "/events/"
+  },
+  {
+    "from": "/newsfeed/",
+    "to": "/social/"
   }
 ]

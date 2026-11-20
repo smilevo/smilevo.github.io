@@ -351,3 +351,43 @@ test('optional portrait framing and venue labels reject invalid editorial values
   data.publications[0].venueShort = 42;
   assert.match(validateContent(data).join(), /venueShort/);
 });
+
+test('social posts must be valid, unique Facebook or LinkedIn posts', () => {
+  const base = fixture();
+  const fb = {
+    id: 'fb-1',
+    platform: 'facebook',
+    date: '2022-06-12',
+    approxDate: true,
+    url: 'https://www.facebook.com/someone/posts/123',
+  };
+  const li = {
+    id: 'li-1',
+    platform: 'linkedin',
+    date: '2026-10-01',
+    urn: 'urn:li:share:456',
+    height: 900,
+  };
+  assert.deepEqual(validateContent({ ...base, social: [fb, li] }), []);
+  assert.match(
+    validateContent({ ...base, social: [fb, { ...fb, id: 'fb-2' }] }).join(),
+    /duplicate post/,
+  );
+  assert.match(
+    validateContent({ ...base, social: [li, { ...li, id: 'li-2' }] }).join(),
+    /duplicate post/,
+  );
+  assert.match(
+    validateContent({ ...base, social: [{ ...fb, url: 'https://example.com/posts/1' }] }).join(),
+    /facebook\.com/,
+  );
+  assert.match(
+    validateContent({ ...base, social: [{ ...li, urn: 'share:456' }] }).join(),
+    /urn:li:share/,
+  );
+  assert.match(validateContent({ ...base, social: [{ ...li, height: 50 }] }).join(), /height/);
+  assert.match(
+    validateContent({ ...base, social: [{ id: 'x-1', platform: 'twitter' }] }).join(),
+    /platform/,
+  );
+});

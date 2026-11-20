@@ -1,0 +1,201 @@
+[
+  {
+    "id": "csc-801",
+    "title": "CSC 801 – Pre-Candidacy Research",
+    "term": "2026–present",
+    "year": 2026,
+    "institution": "University of Michigan-Flint",
+    "level": "Doctoral"
+  },
+  {
+    "id": "csc-595-596",
+    "title": "CSC 595/596 – Master's Thesis I/II",
+    "term": "2026–present",
+    "year": 2026,
+    "institution": "University of Michigan-Flint",
+    "level": "Graduate"
+  },
+  {
+    "id": "csc-580",
+    "title": "CSC 580 – Advanced Software Engineering",
+    "term": "2026–present",
+    "year": 2026,
+    "institution": "University of Michigan-Flint",
+    "level": "Graduate"
+  },
+  {
+    "id": "swe-380",
+    "title": "SWE 380 – Software Engineering",
+    "term": "2026–present",
+    "year": 2026,
+    "institution": "University of Michigan-Flint",
+    "level": "Undergraduate"
+  },
+  {
+    "id": "csc-355",
+    "title": "CSC 355 – Game Development",
+    "term": "2025–present",
+    "year": 2025,
+    "institution": "University of Michigan-Flint",
+    "level": "Undergraduate",
+    "sections": 1
+  },
+  {
+    "id": "csc-275",
+    "title": "CSC 275 – Problem Solving & Programming II",
+    "term": "2025–present",
+    "year": 2025,
+    "institution": "University of Michigan-Flint",
+    "level": "Undergraduate",
+    "sections": 1
+  },
+  {
+    "id": "swe-520",
+    "title": "SWE 520 – Software Engineering for AI",
+    "term": "2025",
+    "year": 2025,
+    "institution": "University of Michigan-Flint",
+    "level": "Graduate",
+    "sections": 1,
+    "newlyDeveloped": true
+  },
+  {
+    "id": "swe-488-588",
+    "title": "SWE 488/588 – Software Quality Assurance",
+    "term": "2025",
+    "year": 2025,
+    "institution": "University of Michigan-Flint",
+    "level": "Undergraduate / Graduate",
+    "sections": 4,
+    "newlyDeveloped": true
+  },
+  {
+    "id": "swe-330-535",
+    "title": "SWE 330/535 – Software Design and Architecture",
+    "term": "2024–present",
+    "year": 2024,
+    "institution": "University of Michigan-Flint",
+    "level": "Undergraduate / Graduate",
+    "sections": 2,
+    "newlyDeveloped": true
+  },
+  {
+    "id": "csc-384",
+    "title": "CSC 384 – Database Systems",
+    "term": "2024",
+    "year": 2024,
+    "institution": "University of Michigan-Flint",
+    "level": "Undergraduate",
+    "sections": 2
+  },
+  {
+    "id": "csc-175",
+    "title": "CSC 175 – Problem Solving & Programming I",
+    "term": "2024",
+    "year": 2024,
+    "institution": "University of Michigan-Flint",
+    "level": "Undergraduate",
+    "sections": 2
+  },
+  {
+    "id": "dsci-644",
+    "title": "Software Engineering for Data Science (DSCI 644)",
+    "term": "2021–2023",
+    "year": 2021,
+    "institution": "Rochester Institute of Technology",
+    "level": "Graduate",
+    "sections": 1,
+    "newlyDeveloped": true
+  },
+  {
+    "id": "swen-777",
+    "title": "Software Quality Assurance (SWEN-777)",
+    "term": "2020–2023",
+    "year": 2020,
+    "institution": "Rochester Institute of Technology",
+    "level": "Graduate",
+    "sections": 1,
+    "newlyDeveloped": true
+  },
+  {
+    "id": "swen-352",
+    "title": "Software Testing (SWEN-352)",
+    "term": "2016–2023",
+    "year": 2016,
+    "institution": "Rochester Institute of Technology",
+    "level": "Undergraduate",
+    "sections": 2
+  },
+  {
+    "id": "swen-749",
+    "title": "Software Evolution & Re-Engineering (SWEN-749)",
+    "term": "2017–2019",
+    "year": 2017,
+    "institution": "Rochester Institute of Technology",
+    "level": "Graduate",
+    "sections": 2
+  },
+  {
+    "id": "swen-772",
+    "title": "Software Quality Engineering (SWEN-772)",
+    "term": "2016–2017",
+    "year": 2016,
+    "institution": "Rochester Institute of Technology",
+    "level": "Graduate",
+    "sections": 1
+  },
+  {
+    "id": "cis-350",
+    "title": "Data Structures (CIS-350)",
+    "term": "2016",
+    "year": 2016,
+    "institution": "University of Michigan-Dearborn",
+    "level": "Undergraduate",
+    "sections": 2
+  },
+  {
+    "id": "cis-405-505",
+    "title": "Algorithms Analysis and Design (CIS-405/505)",
+    "term": "2015",
+    "year": 2015,
+    "institution": "University of Michigan-Dearborn",
+    "level": "Undergraduate / Graduate",
+    "sections": 1
+  },
+  {
+    "id": "cis-375",
+    "title": "Software Engineering I (CIS-375)",
+    "term": "2014",
+    "year": 2014,
+    "institution": "University of Michigan-Dearborn",
+    "level": "Undergraduate",
+    "sections": 1
+  },
+  {
+    "id": "cis-296",
+    "title": "Java Programming (CIS-296)",
+    "term": "2014",
+    "year": 2014,
+    "institution": "University of Michigan-Dearborn",
+    "level": "Undergraduate",
+    "sections": 1
+  },
+  {
+    "id": "cis-476-566",
+    "title": "Software Design Patterns (CIS-476/566)",
+    "term": "2014",
+    "year": 2014,
+    "institution": "University of Michigan-Dearborn",
+    "level": "Undergraduate / Graduate",
+    "sections": 1
+  },
+  {
+    "id": "cis-150",
+    "title": "Computer Science I (CIS-150)",
+    "term": "2013–2014",
+    "year": 2013,
+    "institution": "University of Michigan-Dearborn",
+    "level": "Undergraduate",
+    "sections": 2
+  }
+]

@@ -46,7 +46,7 @@ def check(root=ROOT):
     for fragment in ['home','team','publications']:
         if fragment not in anchors.get(exported / 'index.html', set()):
             errors.add('Missing legacy homepage anchor: ' + fragment)
-    required = ['index.html','404.html','team/index.html','publications/index.html','allnews/index.html','vacancies/index.html','awards/index.html','aboutwebsite.html','allnews.html','sitemap.xml','robots.txt','images/favicon.ico','.nojekyll']
+    required = ['index.html','404.html','team/index.html','publications/index.html','allnews/index.html','vacancies/index.html','awards/index.html','events/index.html','social/index.html','teaching/index.html','funding/index.html','talks/index.html','service/index.html','aboutwebsite.html','allnews.html','sitemap.xml','robots.txt','images/favicon.ico','.nojekyll']
     for collection, route in [('people','people'),('publications','publications')]:
         required += [f"{route}/{row['id']}/index.html" for row in json.loads((root / f'content/{collection}.json').read_text())]
     for name in required:

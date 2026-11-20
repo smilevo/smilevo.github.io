@@ -17,7 +17,16 @@ export async function generateMetadata({ params }) {
   return {
     title: p?.title || 'Publication',
     alternates: { canonical: `/publications/${id}/` },
-    other: p ? { citation_title: p.title, citation_publication_date: String(p.year) } : {},
+    other: p
+      ? {
+          citation_title: p.title,
+          citation_publication_date: String(p.year),
+          ...(p.doi ? { citation_doi: p.doi } : {}),
+          ...(p.volume ? { citation_volume: p.volume } : {}),
+          ...(p.issue ? { citation_issue: p.issue } : {}),
+          ...(p.publisher ? { citation_publisher: p.publisher } : {}),
+        }
+      : {},
   };
 }
 export default async function Publication({ params }) {
@@ -38,6 +47,17 @@ export default async function Publication({ params }) {
         </div>
         <h1 className="paper-title">{p.title}</h1>
         <p>{p.authorNames?.join(', ') || p.authors}</p>
+        {(p.volume || p.pages || p.publisher) && (
+          <p className="paper-citation">
+            {[
+              p.volume && `Vol. ${p.volume}${p.issue ? `(${p.issue})` : ''}`,
+              p.pages && `pp. ${p.pages}`,
+              p.publisher,
+            ]
+              .filter(Boolean)
+              .join(' · ')}
+          </p>
+        )}
         {p.award && <div className="award">{p.award}</div>}
         <div className="hero-links">
           {p.pdf && (
@@ -53,11 +73,31 @@ export default async function Publication({ params }) {
         </div>
       </header>
       {p.image && (
-        <img className="detail-image" src={p.image} alt={`Research illustration for ${p.title}`} />
+        <figure className="graphical-abstract">
+          <img src={p.image} alt={`Graphical abstract for ${p.title}`} />
+          <figcaption>
+            Graphical abstract
+            {p.imageSource === 'generated' ? ' (illustration generated from the abstract)' : ''}
+            {p.imageCaption ? `: ${p.imageCaption}` : ''}
+          </figcaption>
+        </figure>
       )}
       {p.description && (
         <section className="prose section">
+          <h2>Abstract</h2>
           <ReactMarkdown>{p.description}</ReactMarkdown>
+        </section>
+      )}
+      {p.keywords?.length > 0 && (
+        <section className="section">
+          <h2>Keywords</h2>
+          <div className="tags">
+            {p.keywords.map((k) => (
+              <span className="tag" key={k}>
+                {k}
+              </span>
+            ))}
+          </div>
         </section>
       )}
       {updates.length > 0 && (

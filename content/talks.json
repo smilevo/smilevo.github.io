@@ -1,0 +1,98 @@
+[
+  {
+    "id": "2026-data-leakage-aseai",
+    "year": 2026,
+    "title": "Data Leakage Detection in Machine Learning Workflows",
+    "venue": "African Fall School on Software Engineering and AI (ASEAI)"
+  },
+  {
+    "id": "2025-bridging-the-gap",
+    "year": 2025,
+    "title": "Bridging the Gap: AI-Driven Software Testing and Quality Assurance",
+    "venue": "IEEE Summer School on Computational Intelligence for Software Engineering (AISE'25)"
+  },
+  {
+    "id": "2025-refactoring-ai-era",
+    "year": 2025,
+    "title": "Software Refactoring: Challenges and Opportunities in the Era of Artificial Intelligence",
+    "venue": "ICETC 2025 and SANER 2025"
+  },
+  {
+    "id": "2025-academic-journey",
+    "year": 2025,
+    "title": "My Academic Journey: 3 Takeaways",
+    "venue": "University of Michigan-Flint Center for Global Engagement"
+  },
+  {
+    "id": "2024-software-quality-llms",
+    "year": 2024,
+    "title": "Cultivating Software Quality Improvement in the Classroom: An Experience with LLMs",
+    "venue": "University of Michigan-Flint Research Seminar Series"
+  },
+  {
+    "id": "2024-improving-software-quality",
+    "year": 2024,
+    "title": "Improving Software Quality: Research-Driven Industrial and Educational Case Studies",
+    "venue": "University of Michigan-Dearborn Research Seminar Series"
+  },
+  {
+    "id": "2023-jit-duplicates",
+    "year": 2023,
+    "title": "Just-in-time Code Duplicates Extraction",
+    "venue": "ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM) 2023"
+  },
+  {
+    "id": "2022-refactoring-survey",
+    "year": 2022,
+    "title": "A Large-Scale Survey of Software Refactoring",
+    "venue": "Strange Loop"
+  },
+  {
+    "id": "2022-intro-refactoring",
+    "year": 2022,
+    "title": "Introduction to Software Refactoring",
+    "venue": "Tunis Business School"
+  },
+  {
+    "id": "2022-extract-method",
+    "year": 2022,
+    "title": "Extract Method Refactoring",
+    "venue": "International Conference on Automated Software Engineering (ASE) 2022"
+  },
+  {
+    "id": "2021-ai-maintenance",
+    "year": 2021,
+    "title": "Supporting Software Maintenance and Evolution using AI",
+    "venue": "RIT Data Science Club"
+  },
+  {
+    "id": "2021-challenges-se",
+    "year": 2021,
+    "title": "Challenges in Software Engineering",
+    "venue": "Higher Institute of Management, Sousse"
+  },
+  {
+    "id": "2021-ts-detect",
+    "year": 2021,
+    "title": "TS-Detect: An OS Tool for Detecting Bad Programming Practices in Test Code",
+    "venue": "RIT IGM"
+  },
+  {
+    "id": "2021-sbse-tutorial",
+    "year": 2021,
+    "title": "Search-Based Software Engineering",
+    "venue": "GECCO Tutorials"
+  },
+  {
+    "id": "2020-library-reuse",
+    "year": 2020,
+    "title": "Third-Party Software Library Reuse: From Adoption to Migration",
+    "venue": "ICSRE 2020"
+  },
+  {
+    "id": "2020-intro-testing",
+    "year": 2020,
+    "title": "Introduction to Software Testing",
+    "venue": "First Year Computing Student Orientation"
+  }
+]

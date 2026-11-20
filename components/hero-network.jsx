@@ -4,7 +4,12 @@ import { useEffect, useId, useRef, useState } from 'react';
 import { createNetwork, cursorPull, projectNode } from '@/lib/hero-network.mjs';
 
 const network = createNetwork();
-const initial = network.nodes.map((node) => projectNode(node, 0));
+// Rounded so the server-rendered attributes match the client's exactly (hydration).
+const round = (value) => Math.round(value * 100) / 100;
+const initial = network.nodes.map((node) => {
+  const point = projectNode(node, 0);
+  return { x: round(point.x), y: round(point.y), radius: round(point.radius) };
+});
 
 export default function HeroNetwork() {
   const gradientId = useId();

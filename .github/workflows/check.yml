@@ -1,8 +1,7 @@
 name: Check website
+# Manual only, to avoid using Actions minutes on every pull request.
+# Run it from the Actions tab (Run workflow) or locally with `npm run check`.
 on:
-  pull_request:
-  push:
-    branches: ["codex/**"]
   workflow_dispatch:
 permissions:
   contents: read

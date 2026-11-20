@@ -88,5 +88,35 @@
       "mohamed-wiem-mkaouer",
       "ali-ouni"
     ]
+  },
+  {
+    "id": "leakcheck",
+    "title": "LeakCheck",
+    "description": "A deep-learning and static-analysis tool for detecting test-data leakage in Python notebooks.",
+    "code": "https://github.com/smilevo/LeakCheck",
+    "personIds": [
+      "taha-draoui",
+      "mohamed-wiem-mkaouer"
+    ]
+  },
+  {
+    "id": "anticopypaster",
+    "title": "AntiCopyPaster",
+    "description": "An IntelliJ IDEA plugin that tracks copy-paste activity and suggests extracting duplicated code into a new method.",
+    "code": "https://github.com/JetBrains-Research/anti-copy-paster",
+    "personIds": [
+      "eman-abdullah-alomar",
+      "mohamed-wiem-mkaouer"
+    ]
+  },
+  {
+    "id": "performance-regression",
+    "title": "Performance Regression",
+    "description": "An open-source dataset of commits that introduce performance regressions.",
+    "url": "https://smilevo.github.io/price/",
+    "personIds": [
+      "deema-alshoaibi",
+      "mohamed-wiem-mkaouer"
+    ]
   }
 ]

@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "id": "icpc-2025-honorable-mention",
+    "title": "Honorable Mention",
+    "organization": "IEEE/ACM International Conference on Program Comprehension (ICPC) 2025",
+    "date": "2025",
+    "sourceUrl": "https://github.com/mkaouer/Resume_CV_Mohamed_Wiem_Mkaouer",
+    "highlight": true,
+    "publicationIds": ["newman-2025-scalar"]
+  },
+  {
+    "id": "icsme-2024-best-paper",
+    "title": "Best Paper Award",
+    "organization": "IEEE International Conference on Software Maintenance and Evolution (ICSME) 2024",
+    "date": "2024",
+    "sourceUrl": "https://github.com/mkaouer/Resume_CV_Mohamed_Wiem_Mkaouer",
+    "highlight": true,
+    "personIds": ["mohamed-wiem-mkaouer"]
+  },
+  {
+    "id": "sigcse-2024-best-paper",
+    "title": "Best Paper Award",
+    "organization": "ACM SIGCSE Technical Symposium on Computer Science Education 2024",
+    "date": "2024",
+    "sourceUrl": "https://github.com/mkaouer/Resume_CV_Mohamed_Wiem_Mkaouer",
+    "highlight": true,
+    "personIds": ["mohamed-wiem-mkaouer"]
+  },
+  {
+    "id": "msr-2022-best-paper",
+    "title": "Best Mining Challenge Paper Award and Best Student Paper Award",
+    "organization": "IEEE/ACM International Conference on Mining Software Repositories (MSR) 2022",
+    "date": "2022",
+    "sourceUrl": "https://github.com/mkaouer/Resume_CV_Mohamed_Wiem_Mkaouer",
+    "highlight": true,
+    "publicationIds": ["peruma-2022-refactoring"]
+  },
+  {
+    "id": "icgse-2020-best-paper",
+    "title": "Best Paper Award",
+    "organization": "International Conference on Global Software Engineering (ICGSE) 2020",
+    "date": "2020",
+    "sourceUrl": "https://github.com/mkaouer/Resume_CV_Mohamed_Wiem_Mkaouer",
+    "highlight": true,
+    "publicationIds": ["almarimi-2020-detection"]
+  },
+  {
+    "id": "rit-2020-emerging-scholar",
+    "title": "Outstanding Emerging Scholar Award",
+    "organization": "RIT Golisano College of Computing and Information Sciences (GCCIS)",
+    "date": "2020",
+    "sourceUrl": "https://github.com/mkaouer/Resume_CV_Mohamed_Wiem_Mkaouer",
+    "highlight": false,
+    "personIds": ["mohamed-wiem-mkaouer"]
+  },
+  {
+    "id": "iwor-2019-best-paper",
+    "title": "Best Paper Award",
+    "organization": "IEEE International Workshop on Refactoring (IWoR) 2019",
+    "date": "2019",
+    "sourceUrl": "https://github.com/mkaouer/Resume_CV_Mohamed_Wiem_Mkaouer",
+    "highlight": true,
+    "publicationIds": ["alomar-2019-can"]
+  },
+  {
+    "id": "iwor-2019-best-presentation",
+    "title": "Best Presentation Award",
+    "organization": "IEEE International Workshop on Refactoring (IWoR) 2019",
+    "date": "2019",
+    "sourceUrl": "https://github.com/mkaouer/Resume_CV_Mohamed_Wiem_Mkaouer",
+    "highlight": true,
+    "publicationIds": ["alomar-2019-can"]
+  }
+]

@@ -6,7 +6,7 @@ Usage (from the repo root, with the Hugo folders still present):
     pip install pyyaml
     python3 scripts/migrate_hugo.py                # write to _migration/ for review
     python3 scripts/migrate_hugo.py --apply        # write straight into content/ and public/
-    python3 scripts/migrate_hugo.py --collaborators visitor|alumni|skip
+    python3 scripts/migrate_hugo.py --collaborators collaborator|alumni|visitor|skip
 
 Nothing in the Hugo folders is modified or deleted. Re-running is safe (output is regenerated).
 A human-readable report of everything that needs review is written to _migration/REPORT.md.
@@ -136,7 +136,7 @@ def load_people(out_public, collab_mode):
             if collab_mode == "skip":
                 note(f"- Collaborator skipped (no profile): {name}")
                 # keep a minimal record so paper links still resolve
-            status = "alumni" if collab_mode in ("alumni", "skip") else "visitor"
+            status = {"collaborator": "collaborator", "visitor": "visitor"}.get(collab_mode, "alumni")
         pid = slug(folder.name)
         role = clean_str(fm.get("role")) or GROUP_ROLE.get(group, "Member")
         topics = []
@@ -153,11 +153,11 @@ def load_people(out_public, collab_mode):
         person = {"id": pid, "name": name, "role": role, "status": status, "priority": priority, "topics": topics}
         if website:
             person["website"] = website
-        for ext in ("jpg", "jpeg", "png"):
-            av = folder / f"avatar.{ext}"
-            if av.is_file():
-                person["image"] = copy_asset(av, "resources/headshots", f"{pid}.{ext}", out_public)
-                break
+        # Legacy folders include "avatar .jpg" (stray space) and uppercase .PNG/.JPG
+        found = [f for f in folder.iterdir() if re.fullmatch(r"avatar\s*\.(jpe?g|png)", f.name, re.I)]
+        if found:
+            ext = found[0].suffix.lower().replace(".jpeg", ".jpg")
+            person["image"] = copy_asset(found[0], "resources/headshots", f"{pid}{ext}", out_public)
         else:
             note(f"- No avatar: {name} ({pid})")
         people.append(person)
@@ -392,7 +392,7 @@ def load_service():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--apply", action="store_true", help="write into content/ and public/ instead of _migration/")
-    ap.add_argument("--collaborators", choices=["alumni", "visitor", "skip"], default="alumni")
+    ap.add_argument("--collaborators", choices=["collaborator", "alumni", "visitor", "skip"], default="collaborator")
     args = ap.parse_args()
 
     out = ROOT if args.apply else ROOT / "_migration"
@@ -448,8 +448,8 @@ def main():
     (extra / "teaching.json").write_text(json.dumps(load_teaching(), ensure_ascii=False, indent=2), encoding="utf-8")
     (extra / "service.json").write_text(json.dumps(load_service(), ensure_ascii=False, indent=2), encoding="utf-8")
 
-    redirects += [("/newsfeed/", "/news/"), ("/people/", "/team/"), ("/publication/", "/publications/"),
-                  ("/event/", "/news/"), ("/project/", "/research/"), ("/code/", "/research/"),
+    redirects += [("/people/", "/team/"), ("/publication/", "/publications/"),
+                  ("/newsfeed/", "/social/"), ("/event/", "/news/"), ("/project/", "/research/"), ("/code/", "/research/"),
                   ("/contact/", "/join/")]
     redirects += [(f"/publication/{p['id']}/", f"/publications/{p['id']}/") for p in pubs]
     redirects += [(f"/author/{p['id']}/", f"/people/{p['id']}/") for p in people]

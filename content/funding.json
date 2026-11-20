@@ -1,0 +1,62 @@
+[
+  {
+    "id": "nsf-shf-small-configuration-drift",
+    "title": "SHF: Small: Towards a Unified Approach for DevOps Configuration Drift Detection",
+    "sponsor": "NSF",
+    "role": "PI",
+    "period": "Jul 2026 – Jun 2029",
+    "start": 2026,
+    "amount": 600000,
+    "status": "active"
+  },
+  {
+    "id": "nsf-surge",
+    "title": "Strategic Use-Inspired Research Growth and Engagement (SURGE): A Model for Regional Public Universities (formerly GRANTED)",
+    "sponsor": "NSF",
+    "role": "Co-PI",
+    "period": "Jan 2025 – Dec 2030",
+    "start": 2025,
+    "amount": 3372553,
+    "status": "active"
+  },
+  {
+    "id": "nsf-ccri-refactoring",
+    "title": "Collaborative Research: CCRI: New: A Software Refactoring Community Infrastructure",
+    "sponsor": "NSF",
+    "role": "PI",
+    "period": "Oct 2024 – Apr 2027",
+    "start": 2024,
+    "amount": 220008,
+    "status": "active"
+  },
+  {
+    "id": "rit-seed-refactoring-code-review",
+    "title": "Exploring the Relationship Between Refactoring and Code Review",
+    "sponsor": "RIT SEED funding",
+    "role": "PI",
+    "period": "2022",
+    "start": 2022,
+    "amount": 7000,
+    "status": "completed"
+  },
+  {
+    "id": "nsf-reu-software-engineering",
+    "title": "REU Site: Cultivating Next Generation Software Engineering Researchers",
+    "sponsor": "NSF",
+    "role": "Co-PI",
+    "period": "2018 – 2021",
+    "start": 2018,
+    "amount": 372000,
+    "status": "completed"
+  },
+  {
+    "id": "rit-bug-localization",
+    "title": "Better Bug Localization Through the Identification of Dependency Between Bugs",
+    "sponsor": "RIT Grant Writer Boot Camp",
+    "role": "PI",
+    "period": "2017",
+    "start": 2017,
+    "amount": 5000,
+    "status": "completed"
+  }
+]

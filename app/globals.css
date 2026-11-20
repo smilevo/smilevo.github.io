@@ -536,6 +536,28 @@ footer {
 .profile h2 {
   margin-bottom: 12px;
 }
+.profile-org {
+  margin: 0 0 12px;
+  color: var(--muted, #555);
+}
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+}
+.profile-about p {
+  max-width: 70ch;
+}
+.education-list {
+  margin: 0;
+  padding-left: 1.2em;
+}
+.education-list li {
+  margin-bottom: 6px;
+}
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -565,6 +587,27 @@ footer {
   width: 100%;
   background: var(--wash);
   padding: 22px;
+}
+.graphical-abstract {
+  margin: 30px auto;
+  background: var(--wash);
+  padding: 22px;
+}
+.graphical-abstract img {
+  display: block;
+  max-height: 420px;
+  width: 100%;
+  object-fit: contain;
+}
+.graphical-abstract figcaption {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted, #555);
+  text-align: center;
+}
+.paper-citation {
+  font-size: 14px;
+  opacity: 0.8;
 }
 .back-link {
   font-size: 13px;
@@ -1163,5 +1206,187 @@ h2 + .news-item {
   }
   .hero-network {
     bottom: calc(-1 * var(--space-lg));
+  }
+}
+
+/* Facebook carousel and feed */
+.fb-carousel {
+  position: relative;
+  padding: 0 56px;
+}
+.fb-slide {
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+}
+.fb-post-wrap {
+  width: 100%;
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.fb-fallback {
+  margin-top: 12px;
+  font-size: 14px;
+}
+.fb-blocked {
+  margin: 12px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+.fb-arrow {
+  position: absolute;
+  top: 260px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #c00;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+}
+.fb-arrow:hover {
+  background: var(--wash);
+}
+.fb-prev {
+  left: 0;
+}
+.fb-next {
+  right: 0;
+}
+.fb-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.fb-dots button {
+  width: 36px;
+  height: 6px;
+  padding: 0;
+  border: 0;
+  background: rgba(204, 0, 0, 0.35);
+  cursor: pointer;
+}
+.fb-dots button[aria-current='true'] {
+  background: #c00;
+}
+.fb-arrow:focus-visible,
+.fb-dots button:focus-visible,
+.fb-pagination button:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+}
+.fb-feed-item {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+.fb-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 32px;
+}
+.fb-pagination button {
+  min-width: 40px;
+  padding: 8px 14px;
+  border: 1px solid var(--purple);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--purple);
+  font: inherit;
+  cursor: pointer;
+}
+.fb-pagination button[aria-current='page'] {
+  background: var(--purple);
+  color: var(--paper);
+}
+.fb-pagination button:disabled {
+  border-color: var(--line);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+@media (max-width: 700px) {
+  .fb-carousel {
+    padding: 0 8px;
+  }
+  .fb-arrow {
+    top: 4px;
+    width: 36px;
+    height: 36px;
+    font-size: 28px;
+    background: rgba(255, 255, 255, 0.85);
+  }
+}
+
+/* Social media posts: platform badge and LinkedIn embed */
+.social-post {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.social-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--wash);
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+.social-post .fb-post-wrap,
+.social-post .li-post-wrap {
+  margin-top: 28px;
+}
+.li-post-wrap {
+  width: 100%;
+  max-width: 504px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.li-post {
+  width: 100%;
+  max-width: 504px;
+  border: 0;
+}
+
+/* Past members: smaller photo cards */
+.people-grid-compact {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 28px 16px;
+}
+.people-grid-compact .person-card h3 {
+  font-size: 15px;
+  margin: 10px 0 3px;
+}
+.people-grid-compact .person-card p {
+  font-size: 12px;
+}
+@media (max-width: 1100px) {
+  .people-grid-compact {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .people-grid-compact {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px 12px;
+  }
+}
+@media (max-width: 520px) {
+  .people-grid-compact {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

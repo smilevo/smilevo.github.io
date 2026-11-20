@@ -1,4 +1,4 @@
-import { opportunities, people, safeUrl } from '@/lib/content';
+import { opportunities, people, safeUrl, pageContent } from '@/lib/content';
 import { openOpportunities } from '@/lib/relationships.mjs';
 import ReactMarkdown from 'react-markdown';
 import PageHeading from '@/components/page-heading';
@@ -17,6 +17,11 @@ export default function Join() {
         We welcome motivated students at all levels (bachelor’s, master’s and PhD) to join the SMILE
         Research Group at the University of Michigan-Flint.
       </PageHeading>
+      {pageContent.recruitment.trim() && (
+        <section className="section prose">
+          <ReactMarkdown>{pageContent.recruitment}</ReactMarkdown>
+        </section>
+      )}
       {open.length > 0 ? (
         <div className="opportunity-grid">
           {open.map((opportunity) => {
@@ -54,15 +59,7 @@ export default function Join() {
             );
           })}
         </div>
-      ) : (
-        <section className="empty opportunities-empty">
-          <h2>No currently advertised openings</h2>
-          <p>To inquire about joining the group, contact Mohamed Wiem Mkaouer.</p>
-          <a className="text-link" href="mailto:mmkaouer@umich.edu">
-            mmkaouer@umich.edu
-          </a>
-        </section>
-      )}
+      ) : null}
     </>
   );
 }
